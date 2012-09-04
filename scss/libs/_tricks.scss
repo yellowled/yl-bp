@@ -1,0 +1,201 @@
+// Adapted from formalize.me
+@mixin gradient-button($bg: #ddd, $fg: #000, $rad: 4px) {
+	background: $bg;
+    @include background-clip(padding-box);
+    @include background-image(linear-gradient(lighten($bg, 13.2%), $bg));
+    border: 1px solid;
+    border-color: $bg darken($bg, 13.2%) darken($bg, 26.5%);
+    @include border-radius($rad);
+    color: $fg;
+    outline: 0;
+    padding: 3px 10px;
+    text-decoration: none;
+    text-shadow: invert($fg) 0 1px 1px;
+    width: auto;
+
+    *padding-top: 2px;
+    *padding-bottom: 0;
+
+    &:hover { @include background-image(linear-gradient(lighten($bg, 13.2%), lighten($bg, 6.5%) 1px, darken($bg, 6.5%))); }
+
+    &:active {
+        @include background-image(linear-gradient(lighten($bg, 13.2%), $bg 1px, lighten($bg, 6.5%)));
+        @include box-shadow(inset rgba($black, 0.25) 0 1px 2px 0);
+        border-color: darken($bg, 26.5%) darken($bg, 13.2%) $bg;
+    }
+
+	&:focus {
+		@include box-shadow(#06f 0 0 5px 0);
+    	z-index: 1;
+	}
+
+	&:active, &:visited,
+	&:hover, &:focus { color: $fg; }
+}
+// Folded corner
+// http://nicolasgallagher.com/pure-css-folded-corner-effect/
+@mixin folded-corner($box-color, $container-color) {
+	background: $box-color;
+	position: relative;
+
+	&:before {
+		border-width: 0 1em 1em 0;
+		border-style: solid;
+		border-color: darken($box-color,25%) $container-color;
+		content: "";
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 0;
+		@include box-shadow(0 1px 1px rgba(0,0,0,0.3), -1px 1px 1px rgba(0,0,0,0.2));
+	}
+}
+
+// Speech bubble
+// http://nicolasgallagher.com/pure-css-speech-bubbles/
+@mixin speech-bubble($box-color,$border-color: $box-color,$border-width: 2px,$border-radius: 10px) {
+	background: $box-color;
+	border: $border-width solid $border-color;
+	margin: 0 0 1.5em;
+	padding: 1em;
+	position: relative;
+	@include border-radius($border-radius);
+
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		font-size: 100%;
+		height: 0;
+		line-height: 1.5em;
+		position: absolute;
+		width: 0;
+	}
+
+	&:before {
+		bottom: -(16px+$border-width);
+		left: (42px-$border-width);
+		border-width: (16px+$border-width) (16px+$border-width) 0;
+		border-style: solid;
+		border-color: $border-color transparent;
+	}
+
+	&:after {
+		bottom: -15px;
+		left: 43px;
+		border-width: 15px 15px 0;
+		border-style: solid;
+		border-color: $box-color transparent;
+	}
+}
+
+// CSS ribbon
+// http://nicolasgallagher.com/an-introduction-to-css-pseudo-element-hacks/
+@mixin ribbon-both($ribbon-color, $text-color, $container-horizontal-padding, $corner-width: 10px) {
+	background: $ribbon-color;
+	color: $text-color;
+	margin-left: -1 * ($container-horizontal-padding + $corner-width);
+	margin-right: -1 * ($container-horizontal-padding + $corner-width);
+	position: relative;
+
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 0;
+		border-width: 0 $corner-width $corner-width 0;
+		border-style: solid;
+		border-color: transparent darken($ribbon-color,25%);
+	}
+
+	&:after {
+		left: auto;
+		right: 0;
+		border-width: 0 0 $corner-width $corner-width;
+	}
+}
+
+@mixin ribbon-left($ribbon-color, $text-color, $container-horizontal-padding, $ribbon-width: 100%, $corner-width: 10px) {
+	background: $ribbon-color;
+	color: $text-color;
+	margin-left: -1 * ($container-horizontal-padding + $corner-width);
+	padding-left: $container-horizontal-padding + $corner-width;
+	position: relative;
+	text-align: left;
+	width: $ribbon-width;
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: 100%;
+		left: 0;
+		border-width: 0 $corner-width $corner-width 0;
+		border-style: solid;
+		border-color: transparent darken($ribbon-color,25%);
+	}
+}
+
+@mixin ribbon-right($ribbon-color, $text-color, $container-horizontal-padding, $ribbon-width: 100%, $corner-width: 10px) {
+	background: $ribbon-color;
+	color: $text-color;
+	margin-right: -1 * ($container-horizontal-padding + $corner-width);
+	padding-right: $container-horizontal-padding + $corner-width;
+	position: relative;
+	right: -1 * (100% - $ribbon-width);
+	text-align: right;
+	width: $ribbon-width;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: 100%;
+		right: 0;
+		border-width: 0 0 $corner-width $corner-width;
+		border-style: solid;
+		border-color: transparent darken($ribbon-color,25%);
+	}
+}
+
+// Triangles
+@mixin triangle($color, $orientation: bottom, $size: 8px) {
+	position: relative;
+
+	&:after {
+		@if $orientation == left or $orientation == right {
+			border-color: transparent $color;
+		} @else {
+			border-color: $color transparent;
+		}
+	    border-style: solid;
+	    @if $orientation == left {
+	    	border-width: $size $size $size 0;
+	    } @else if $orientation == right {
+	    	border-width: $size 0 $size $size;
+	    } @else if $orientation == top {
+	    	border-width: 0 $size $size;
+	    } @else {
+	    	border-width: $size $size 0;
+	    }
+	    margin: -($size);
+	    content: "";
+	    display: block;
+	    position: absolute;
+	    @if $orientation == left {
+	    	top: 50%;
+	    	left: 0;
+	    } @else if $orientation == right {
+	    	top: 50%;
+	    	right: 0;
+	    } @else if $orientation == top {
+	    	top: 0;
+	    	left: 50%;
+	    } @else {
+	    	bottom: 0;
+	    	left: 50%;
+	    }
+	    width: 0;
+	    z-index: 10;
+	}
+}

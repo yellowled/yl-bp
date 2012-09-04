@@ -1,0 +1,23 @@
+// Use Compass w/out legacy support
+$legacy-support-for-ie6: false;
+$experimental-support-for-khtml: false;
+@import "compass";
+
+// Typical colors
+$white: #fff;
+$black: #000;
+$off-white: #fcfcfc;
+$off-black: #222;
+// Color definitions
+$page-bg: $off-white;
+$page-fg: $off-black;
+
+// Fallback font stacks
+$serif: Georgia, Cambria, serif;
+$sans: Helvetica, Arial, sans-serif;
+$mono: Consolas, Courier, monospace;
+
+// Context-sensitive conversion of pixels to ems
+@function px-to-em($px, $context: 16px) {
+	@return ($px / $context) * 1em;
+}

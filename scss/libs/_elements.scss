@@ -1,0 +1,56 @@
+// Figures
+@mixin simple-figure($border: #aaa) {
+	img {
+		border-top: 1px solid $border;
+		border-bottom: 1px solid $border;
+	}
+
+	figcaption { text-align: center; }
+}
+
+@mixin fancy-figure {
+	position: relative;
+
+	img { @include box-shadow(0 0 4px rgba(0,0,0,.7)); }
+
+	figcaption {
+		background: rgba(0,0,0,.7);
+		color: #fff;
+		padding: 2px 10px;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		text-align: center;
+		width: 100%;
+		@include box-sizing(border-box);
+	}
+}
+// Tables
+@mixin simple-table($border: #ccc) {
+	border-bottom: 1px solid $border;
+	width: 100%;
+
+	tr { border-top: 1px solid $border; }
+
+	caption { text-align: center; }
+}
+
+@mixin striped-table($border: #aaa, $odd: #eee, $even: #ddd, $head: #ccc, $foot: $head) {
+	border: 1px solid $border;
+	border-top: 0 none;
+	width: 100%;
+
+	thead { background-color: $head; }
+	tfoot { background-color: $foot; }
+
+	tbody tr {
+		&:nth-child(odd) { background-color: $odd; }
+		&:nth-child(even){ background-color: $even;}
+	}
+
+	tr { border-top: 1px solid $border; }
+
+	th, td { padding: 0 4px; }
+
+	caption { text-align: center; }
+}

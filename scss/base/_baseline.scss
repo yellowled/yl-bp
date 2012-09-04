@@ -1,0 +1,49 @@
+@mixin ligatures {
+	-moz-font-feature-settings: "liga=1, dlig=1";
+    -ms-font-feature-settings: "liga", "dlig";
+    -webkit-font-feature-settings: "liga", "dlig";
+    -o-font-feature-settings: "liga", "dlig";
+    font-feature-settings: "liga", "dlig";
+}
+// Typographic baseline
+body {
+	// ideal width: 685px;
+	font-size: px-to-em(16px);
+	line-height: px-to-em(26px);
+}
+
+pre, code, kbd, samp { font-size: px-to-em(14px); }
+
+pre { margin: px-to-em(26px, 14px) 0; }
+
+h1 {
+	font-size: px-to-em(48px);
+	line-height: px-to-em(52px,48px);
+	margin: px-to-em(26px,48px) 0;
+}
+
+h2 {
+	font-size: px-to-em(32px);
+	line-height: px-to-em(52px,32px);
+	margin: px-to-em(26px,32px) 0;
+}
+
+h3 {
+	font-size: px-to-em(24px);
+	line-height: px-to-em(26px,24px);
+	margin: px-to-em(26px,24px) 0;
+}
+
+h4 {
+	font-size: px-to-em(20px);
+	line-height: px-to-em(26px,20px);
+	margin: px-to-em(26px,20px) 0;
+}
+
+h5, h6 { font-size: 1em; }
+
+h5, h6, menu,
+p, ul, ol, dl,
+table, figure { margin: px-to-em(26px) 0;}
+
+blockquote { margin: px-to-em(26px) px-to-em(40px); }

@@ -1,0 +1,183 @@
+@import "presets";
+
+// Added via JS to <textarea> and class="input-full".
+// Applies only to IE7. Other browsers don't need it.
+.input_full_wrap {
+    display: block;
+    padding-right: 8px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    position: relative;
+    vertical-align: top;
+    top: 5px;
+    top: 0 \0;  // IE8, IE9, IE10
+    *top: -5px; // IE7
+}
+// iPad
+@media (-webkit-min-device-pixel-ratio: 1) and (max-device-width: 1024px) {
+    input[type="radio"],
+    input[type="checkbox"] {
+        vertical-align: baseline;
+        top: 2px;
+    }
+}
+@media (max-device-width:480px) {
+    // iPhone 3
+    @media (-webkit-min-device-pixel-ratio: 1) {
+        input[type="radio"],
+        input[type="checkbox"] {
+            vertical-align: baseline;
+            top: 0;
+        }
+    }
+    // iPhone 4
+    @media (-webkit-min-device-pixel-ratio: 2) {
+        input[type="radio"],
+        input[type="checkbox"] {
+            vertical-align: baseline;
+            top: 0;
+        }
+    }
+}
+
+button:focus, input:focus,
+select:focus, textarea:focus, {
+    @include box-shadow(#06f 0 0 5px 0);
+    z-index: 1; // for Opera
+}
+
+input[type="file"],
+input[type="radio"],
+input[type="checkbox"] {
+    &:focus,
+    &:active { @include box-shadow(none); }
+}
+
+button, input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    @include border-radius(4px);
+    @include background-clip(padding-box);
+    background: #ddd;
+    @include background-image(linear-gradient(#fff, #ddd));
+    border: 1px solid;
+    border-color: #ddd #bbb #999;
+    color: #000;
+    outline: 0;
+    padding: 3px 10px;
+    text-shadow: #fff 0 1px 1px;
+    width: auto;
+    &:hover { @include background-image(linear-gradient(#fff, #eee 1px, #ccc)); }
+    &:active {
+        @include background-image(linear-gradient(#fff, #ddd 1px, #eee));
+        @include box-shadow(inset rgba(#000, 0.25) 0 1px 2px 0);
+        border-color: #999 #bbb #ddd;
+    }
+    // IE7
+    *padding-top: 2px;
+    *padding-bottom: 0;
+}
+
+button {
+    // IE7
+    *padding-top: 1px;
+    *padding-bottom: 1px;
+}
+
+// input[type="date"],
+// input[type="datetime"],
+// input[type="datetime-local"],
+// input[type="month"],
+// input[type="number"],
+// input[type="password"],
+// input[type="time"],
+// input[type="week"],
+textarea, select,
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"] {
+    @include box-sizing(border-box);
+    @include background-clip(padding-box);
+    @include border-radius(0);
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid;
+    border-color: #c1c1c1 #c1c1c1 #e1e1e1;
+    color: #222;
+    outline: 0;
+    padding: 2px 3px;
+    text-align: left;
+    height: 1.8em;
+    // IE7
+    *padding-top: 2px;
+    *padding-bottom: 1px;
+    *height: auto;
+    &[disabled] { background-color: #eee; }
+}
+
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled] {
+    @include box-shadow(none);
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    user-select: none;
+    color: #888;
+    cursor: default;
+}
+// Separate rule for Firefox.
+// Separate rule for IE, too.
+// Cannot stack with WebKit's.
+::-webkit-input-placeholder { color: #888; }
+
+input:-moz-placeholder,
+textarea:-moz-placeholder { color: #888; }
+
+input.placeholder_text,
+textarea.placeholder_text { color: #888; }
+
+:invalid {
+    // Suppress red glow that Firefox
+    // adds to form fields by default,
+    // even when user is still typing.
+    @include box-shadow(none);
+}
+
+textarea,
+select[size],
+select[multiple] { height: auto; }
+// Tweaks for Safari + Chrome.
+@media (-webkit-min-device-pixel-ratio: 0) {
+    select {
+        background-image: url('data:image/gif;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==');
+        background-repeat: no-repeat;
+        background-position: right center;
+        padding-right: 20px;
+    }
+
+    select[size],
+    select[multiple] {
+        background-image: none;
+        padding: 0;
+    }
+}
+
+textarea {
+    min-height: 40px;
+    overflow: auto;
+    resize: vertical;
+    width: 100%;
+}
+
+optgroup {
+    color: #222;
+    font-style: normal;
+    font-weight: normal;
+}

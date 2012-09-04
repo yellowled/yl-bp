@@ -1,0 +1,125 @@
+// Base styles
+html, button,
+input, select,
+textarea {
+    color: #222;
+    font-family: sans-serif;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+// These selection declarations have to be separate.
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+// A better looking default horizontal rule
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+// Remove the gap between images and the bottom of their containers
+img { vertical-align: middle; }
+
+// Responsive media objects
+// http://unstoppablerobotninja.com/entry/fluid-images
+// audio, video,
+// embed, object,
+img { max-width: 100%; }
+
+// video,
+img { height: auto; }
+
+// Remove default fieldset styles.
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+// Allow only vertical resizing of textareas.
+textarea { resize: vertical; }
+
+// Chrome Frame prompt
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+// Automagic quotes, http://html5doctor.com/blockquote-q-cite/
+q { quotes: '“' '”' '‘' '’'; }
+:lang(de) q { quotes: '„' '“' '‚' '‘'; }
+/*:lang(de) q { quotes: '»' '«' '›' '‹'; }*/
+/* pre-2011 WebKit */
+q:before   { content: '“'; content: open-quote;  }
+q:after    { content: '”'; content: close-quote; }
+q q:before { content: '‘'; content: open-quote;  }
+q q:after  { content: '’'; content: close-quote; }
+:lang(de) q:before   { content: '„'; content: open-quote;  }
+:lang(de) q:after    { content: '“'; content: close-quote; }
+:lang(de) q q:before { content: '‚'; content: open-quote;  }
+:lang(de) q q:after  { content: '‘'; content: close-quote; }
+blockquote p { quotes: '“' '”'; }
+blockquote p:before { content: ''; content: no-open-quote; }
+blockquote p:after  { content: ''; content: no-close-quote; }
+blockquote p:first-child:before { content: '“'; content: open-quote;  }
+blockquote p:last-child:after   { content: '”'; content: close-quote; }
+:lang(de) blockquote p,
+blockquote:lang(de) p { quotes: '„' '“'; }
+:lang(de) blockquote p:before,
+blockquote:lang(de)  p:before { content: ''; content: no-open-quote; }
+:lang(de) blockquote p:after,
+blockquote:lang(de)  p:after { content: ''; content: no-close-quote; }
+:lang(de) blockquote p:first-child:before,
+blockquote:lang(de)  p:first-child:before { content: '„'; content: open-quote; }
+:lang(de) blockquote p:last-child:after,
+blockquote:lang(de)  p:last-child:after  { content: '“'; content: close-quote; }
+// cite adjacent to blockquote
+blockquote + cite {
+    display: block;
+    margin: 0 0 1.5em 40px;
+
+    &:before { content: "– "; }
+}
+// stuff not covered by normalize.css
+dt { font-weight: bold; }
+
+caption, th { text-align: left; }
+// nested lists
+li {
+    ul, ol { margin: 0; }
+}
+// nested code
+pre code { font-size: 1em; }
+// automagic hypenation
+p {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    // not for preformatted text (inline)
+    code, samp,
+    kbd {
+        -webkit-hyphens: none;
+        -moz-hyphens: none;
+        -ms-hypens: none;
+        hyphens: none;
+    }
+}
