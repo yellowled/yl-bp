@@ -14,7 +14,10 @@ body {
 
 pre, code, kbd, samp { font-size: px-to-em(14px); }
 
-pre { margin: px-to-em(26px, 14px) 0; }
+pre {
+	line-height: px-to-em(26px,14px);
+	margin: px-to-em(26px, 14px) 0;
+}
 
 h1 {
 	font-size: px-to-em(48px);
