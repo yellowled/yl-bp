@@ -94,7 +94,7 @@ blockquote:lang(de)  p:last-child:after  { content: '“'; content: close-quote;
 // cite adjacent to blockquote
 blockquote + cite {
     display: block;
-    margin: 0 0 1.5em 40px;
+    margin: 0 0 px-to-em(26px) 40px;
 
     &:before { content: "– "; }
 }
