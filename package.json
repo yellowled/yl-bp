@@ -1,0 +1,16 @@
+{
+	"name":			"yl-bp",
+	"title":		"yl-bp",
+	"version":		"0.0.1",
+	"description":	"grunt build script for my HTML boilerplate.",
+	"homepage":		"https://github.com/yellowled/yl-bp",
+	"author": {
+		"name":		"Matthias Mees",
+		"url":		"http://yellowled.de"
+	},
+	"dependencies":	{
+		"grunt-compass":		">=0.3.0",
+		"grunt-contrib-clean":	">=0.2.0",
+		"grunt-contrib-copy":	">=0.2.2"
+	}
+}
