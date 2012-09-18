@@ -3,28 +3,52 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-compass');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
+
     // Config
     grunt.initConfig({
         pkg: '<json:package.json>',
+
         lint: {
-            files: ['grunt.js','scripts/main.js']
+            all: ['grunt.js','scripts/main.js']
         },
+
+        clean: {
+            deploy: ['dist/']
+        },
+
         concat: {
-            dist: {
+            dev: {
                 src: ['scripts/plugins.js', 'scripts/main.js'],
-                dest: 'dist/scripts/main.js'
+                dest: 'scripts/master.js'
+            },
+
+            deploy: {
+                src: ['scripts/plugins.js', 'scripts/main.js'],
+                dest: 'dist/scripts/master.js'
             }
         },
+
         min: {
-            dist: {
-                src: ['<config:concat.dist.dest>'],
-                dest: '<config:concat.dist.dest>'
+            deploy: {
+                src: ['<config:concat.deploy.dest>'],
+                dest: '<config:concat.deploy.dest>'
             }
         },
+
         compass: {
-            dist: {
+            dev: {
                 src: 'scss',
                 dest: 'styles',
+                outputstyle: 'nested',
+                linecomments: false,
+                forcecompile: true,
+                debugsass: false,
+                images: 'img'
+            },
+
+            deploy: {
+                src: 'scss',
+                dest: 'dist/styles',
                 outputstyle: 'compressed',
                 linecomments: false,
                 forcecompile: true,
@@ -32,24 +56,33 @@ module.exports = function(grunt) {
                 images: 'img'
             }
         },
-        clean: {
-            dist: ['dist/']
-        },
+
         copy: {
-            dist: {
+            deploy: {
                 files: {
                     'dist/': ['*.html', '.htaccess', 'robots.txt'],
-                    'dist/styles/': 'styles/**',
                     'dist/img/': 'img/**',
                     'dist/scripts/vendor/': 'scripts/vendor/**'
                 }
             }
         },
+
         watch: {
-            files: ['<config:lint.files>','scss/**/*.scss','*.html','.htaccess','robots.txt','img/**'],
-            tasks: ['lint','clean:dist','concat','min','compass:dist','copy']
+            js: {
+                files: ['scripts/plugins.js', 'scripts/main.js'],
+                tasks: 'lint:all concat:dev'
+            },
+
+            scss: {
+                files: ['scss/**/*.scss'],
+                tasks: 'compass:dev'
+            }
         }
     });
-    // Default task.
-    grunt.registerTask('default', 'watch');
+    // Default task
+    grunt.registerTask('default', 'dev');
+    // In development
+    grunt.registerTask('dev', 'lint concat:dev compass:dev');
+    // Deployment
+    grunt.registerTask('deploy', 'clean:deploy lint concat:deploy min:deploy compass:deploy copy:deploy');
 };
