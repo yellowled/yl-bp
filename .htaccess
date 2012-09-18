@@ -155,7 +155,7 @@ FileETag None
   Options +FollowSymlinks
 # Options +SymLinksIfOwnerMatch
   RewriteEngine On
-# RewriteBase /
+  RewriteBase /
 </IfModule>
 
 # Suppress or force the "www." at the beginning of URLs
@@ -173,11 +173,11 @@ FileETag None
 # </IfModule>
 
 # Route requests for /css/style.20110203.css to /css/style.css
-# <IfModule mod_rewrite.c>
-#   RewriteCond %{REQUEST_FILENAME} !-f
-#   RewriteCond %{REQUEST_FILENAME} !-d
-#   RewriteRule ^(.+)\.(\d+)\.(js|css|png|jpg|gif)$ $1.$3 [L]
-# </IfModule>
+<IfModule mod_rewrite.c>
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^(.+)\.(\d+)\.(js|css|png|jpg|gif)$ $1.$3 [L]
+</IfModule>
 
 # Prevent 404 errors for non-existing redirected folders
 Options -MultiViews
