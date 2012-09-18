@@ -66,8 +66,8 @@ module.exports = function(grunt) {
             deploy: {
                 files: {
                     'dist/': ['*.html', '.htaccess', 'robots.txt'],
-                    'dist/img/': 'img/**',
-                    'dist/scripts/vendor/': 'scripts/vendor/**'
+                    'dist/scripts/vendor/': 'scripts/vendor/**',
+                    'dist/img/': 'img/**'
                 }
             }
         },
