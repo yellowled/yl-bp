@@ -85,7 +85,7 @@ module.exports = function(grunt) {
         }
     });
     // Default task
-    grunt.registerTask('default', 'dev');
+    grunt.registerTask('default', 'watch');
     // In development
     grunt.registerTask('dev', 'lint htmllint concat:dev compass:dev');
     // Deployment
