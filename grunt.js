@@ -4,6 +4,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-html');
+    grunt.loadNpmTasks('grunt-imagine');
 
     // Config
     grunt.initConfig({
@@ -62,12 +63,26 @@ module.exports = function(grunt) {
             }
         },
 
+        pngmin: {
+            src: ['img/*.png'],
+            dest: 'dist/img/'
+        },
+        // Not used in any task, needs to be fired manually
+        pngnq: {
+            src: ['img/*.png'],
+            dest: 'dist/img/'
+        },
+
+        jpgmin: {
+            src: ['img/*.jpg', 'img/*.jpeg'],
+            dest: 'dist/img/'
+        },
+
         copy: {
             deploy: {
                 files: {
                     'dist/': ['*.html', '.htaccess', 'robots.txt'],
-                    'dist/scripts/vendor/': 'scripts/vendor/**',
-                    'dist/img/': 'img/**'
+                    'dist/scripts/vendor/': 'scripts/vendor/**'
                 }
             }
         },
@@ -89,5 +104,5 @@ module.exports = function(grunt) {
     // In development
     grunt.registerTask('dev', 'lint htmllint concat:dev compass:dev');
     // Deployment
-    grunt.registerTask('deploy', 'clean:deploy lint htmllint concat:deploy min:deploy compass:deploy copy:deploy');
+    grunt.registerTask('deploy', 'clean:deploy lint htmllint concat:deploy min:deploy compass:deploy pngmin jpgmin copy:deploy');
 };
