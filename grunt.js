@@ -17,6 +17,11 @@ module.exports = function(grunt) {
             deploy: ['dist/']
         },
 
+        server: {
+            port: 8000,
+            base: '.'
+        },
+
         concat: {
             dev: {
                 src: ['scripts/plugins.js', 'scripts/main.js'],
@@ -95,7 +100,7 @@ module.exports = function(grunt) {
         }
     });
     // Default task
-    grunt.registerTask('default', 'watch');
+    grunt.registerTask('default', 'server watch');
     // In development
     grunt.registerTask('dev', 'lint concat:dev compass:dev');
     // Deployment
