@@ -6,7 +6,13 @@ Now uses [grunt](http://gruntjs.com) build script, so do `npm install` first to 
 
 ## jQuery plugins included
 
-* Lightbox: [Colorbox](https://github.com/jackmoore/colorbox)
-* Slideshow: [Responsive Slides](https://github.com/viljamis/ResponsiveSlides.js)
-* Tabs: [AccessibleTabs](https://github.com/ginader/Accessible-Tabs)
-* Tooltips: [Tipsy](https://github.com/jaz303/tipsy)
+* [AccessibleTabs](https://github.com/ginader/Accessible-Tabs)
+* [Colorbox](https://github.com/jackmoore/colorbox)
+* [Responsive Slides](https://github.com/viljamis/ResponsiveSlides.js)
+* [Tipsy](https://github.com/jaz303/tipsy)
+
+## JS helpers included
+
+* [AccessifyHTML5](https://github.com/yatil/accessifyhtml5.js)
+* [formalize.me](https://github.com/nathansmith/formalize)
+* [iOS-Orientationchange-Fix](https://github.com/scottjehl/iOS-Orientationchange-Fix)
