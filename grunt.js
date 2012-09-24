@@ -38,6 +38,26 @@ module.exports = function(grunt) {
             deploy: {
                 src: ['<config:concat.deploy.dest>'],
                 dest: '<config:concat.deploy.dest>'
+            },
+            colorbox: {
+                src: 'scripts/plugins/jquery.colorbox.js',
+                dest: 'dist/scripts/plugins/jquery.colorbox.js'
+            },
+            syncheight: {
+                src: 'scripts/plugins/jquery.syncheight.js',
+                dest: 'dist/scripts/plugins/jquery.syncheight.js'
+            },
+            tabs: {
+                src: 'scripts/plugins/jquery.tabs.js',
+                dest: 'dist/scripts/plugins/jquery.tabs.js'
+            },
+            tipsy: {
+                src: 'scripts/plugins/jquery.tipsy.js',
+                dest: 'dist/scripts/plugins/jquery.tipsy.js'
+            },
+            slideshow: {
+                src: 'scripts/plugins/responsiveslides.js',
+                dest: 'dist/scripts/plugins/responsiveslides.js'
             }
         },
 
@@ -104,5 +124,5 @@ module.exports = function(grunt) {
     // In development
     grunt.registerTask('dev', 'lint concat:dev compass:dev');
     // Deployment
-    grunt.registerTask('deploy', 'clean:deploy lint concat:deploy min:deploy compass:deploy pngmin jpgmin copy:deploy');
+    grunt.registerTask('deploy', 'clean:deploy lint concat:deploy min compass:deploy pngmin jpgmin copy:deploy');
 };
