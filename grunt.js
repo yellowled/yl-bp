@@ -3,7 +3,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-compass');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-html');
     grunt.loadNpmTasks('grunt-imagine');
 
     // Config
@@ -12,10 +11,6 @@ module.exports = function(grunt) {
 
         lint: {
             all: ['grunt.js','scripts/main.js']
-        },
-
-        htmllint: {
-            all: ['*.html']
         },
 
         clean: {
@@ -102,7 +97,7 @@ module.exports = function(grunt) {
     // Default task
     grunt.registerTask('default', 'watch');
     // In development
-    grunt.registerTask('dev', 'lint htmllint concat:dev compass:dev');
+    grunt.registerTask('dev', 'lint concat:dev compass:dev');
     // Deployment
-    grunt.registerTask('deploy', 'clean:deploy lint htmllint concat:deploy min:deploy compass:deploy pngmin jpgmin copy:deploy');
+    grunt.registerTask('deploy', 'clean:deploy lint concat:deploy min:deploy compass:deploy pngmin jpgmin copy:deploy');
 };

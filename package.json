@@ -12,7 +12,6 @@
 		"grunt-compass":		">=0.3.0",
 		"grunt-contrib-clean":	">=0.2.0",
 		"grunt-contrib-copy":	">=0.2.2",
-		"grunt-html":			">=0.1.1",
 		"grunt-imagine":		">=0.2.0"
 	}
 }
