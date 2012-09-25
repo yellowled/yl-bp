@@ -149,10 +149,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-imagine');
+    grunt.loadNpmTasks('grunt-modernizr');
     // Default task
     grunt.registerTask('default', 'server watch');
     // In development
     grunt.registerTask('dev', 'lint concat:dev compass:dev');
     // Deployment
-    grunt.registerTask('deploy', 'clean:deploy lint concat:deploy min compass:deploy pngmin jpgmin copy:deploy');
+    grunt.registerTask('deploy', 'clean:deploy lint concat:deploy min compass:deploy pngmin jpgmin copy:deploy modernizr');
 };
