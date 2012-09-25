@@ -1,10 +1,4 @@
 module.exports = function(grunt) {
-    // Load required tasks
-    grunt.loadNpmTasks('grunt-compass');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-imagine');
-
     // Config
     grunt.initConfig({
         pkg: '<json:package.json>',
@@ -119,6 +113,11 @@ module.exports = function(grunt) {
             }
         }
     });
+    // Load required tasks
+    grunt.loadNpmTasks('grunt-compass');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-imagine');
     // Default task
     grunt.registerTask('default', 'server watch');
     // In development
