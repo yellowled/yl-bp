@@ -1,7 +1,7 @@
 {
 	"name":			"yl-bp",
 	"title":		"yl-bp",
-	"version":		"0.0.1",
+	"version":		"0.0.2",
 	"description":	"grunt build script for my HTML boilerplate.",
 	"homepage":		"https://github.com/yellowled/yl-bp",
 	"author": {
@@ -12,6 +12,7 @@
 		"grunt-compass":		">=0.3.0",
 		"grunt-contrib-clean":	">=0.2.0",
 		"grunt-contrib-copy":	">=0.2.2",
-		"grunt-imagine":		">=0.2.0"
+		"grunt-imagine":		">=0.2.0",
+		"grunt-modernizr":		">=0.1.2"
 	}
 }
