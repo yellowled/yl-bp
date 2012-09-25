@@ -16,6 +16,37 @@ module.exports = function(grunt) {
             base: '.'
         },
 
+        modernizr: {
+            'devFile' : 'scripts/vendor/modernizr-2.6.2.min.js',
+            'outputFile' : 'dist/scripts/vendor/modernizr-2.6.2.min.js',
+            'extra' : {
+                'shiv' : false,
+                'printshiv' : true,
+                'load' : false,
+                'mq' : true,
+                'cssclasses' : true
+            },
+            'extensibility' : {
+                'addtest' : false,
+                'prefixed' : false,
+                'teststyles' : false,
+                'testprops' : false,
+                'testallprops' : false,
+                'hasevents' : false,
+                'prefixes' : false,
+                'domprefixes' : false
+            },
+            'uglify' : true,
+            // Define any tests you want to impliticly include.
+            'tests' : [],
+            'parseFiles' : true,
+            // parseFiles = true: crawl all *.js, *.css, *.scss files; override by defining "files" array
+            // 'files' : [],
+            'matchCommunityTests' : false,
+            'customTests' : [],
+            'excludeFiles' : []
+        },
+
         concat: {
             dev: {
                 src: ['scripts/plugins.js', 'scripts/main.js'],
