@@ -119,3 +119,8 @@ $lboxbg: #fff;
 .cboxIE #cboxBottomRight,
 .cboxIE #cboxMiddleLeft,
 .cboxIE #cboxMiddleRight { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF); }
+
+.lt-ie9 #cboxLoadedContent img {
+	height: auto;
+	width: auto;
+}
