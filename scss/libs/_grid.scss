@@ -15,6 +15,7 @@ $sgs-gutter: 15px;
 	padding: 0 $gutter;
 	width: $grid-type * ($span-columns / $total-columns);
 	@include box-sizing(border-box);
+	*behavior: url('/scripts/vendor/boxsizing.htc');
 }
 // For nested grids
 @mixin grid-nest { padding: 0; }
