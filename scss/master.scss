@@ -1,4 +1,5 @@
 @import "base/normalize";
+@import "base/defaults";
 @import "core/presets";
 @import "core/helpers";
 @import "libs/elements";
@@ -6,7 +7,6 @@
 @import "libs/tricks";
 @import "libs/forms";
 @import "base/baseline";
-@import "base/defaults";
 @import "jquery/colorbox";
 @import "jquery/slideshow";
 @import "jquery/tabs";
