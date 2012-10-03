@@ -1,37 +1,10 @@
 // Media Queries for Responsive Design.
-@media only screen and (max-width: 700px) {
-	body {
-		// ideal width: 554px;
-		font-size: px-to-em(14px);
-		line-height: px-to-em(23px,14px);
-	}
+$legacy:   481px;
+$tablet:   768px;
+$laptop:  1024px;
+$desktop: 1400px;
 
-	h1 {
-		font-size: px-to-em(32px,14px);
-		line-height: px-to-em(46px,32px);
-		margin: px-to-em(23px,32px) 0;
-	}
-
-	h2 {
-		font-size: px-to-em(24px,14px);
-		line-height: px-to-em(46px,24px);
-		margin: px-to-em(23px,24px) 0;
-	}
-
-	h3 {
-		font-size: px-to-em(20px,14px);
-		line-height: px-to-em(23px,20px);
-		margin: px-to-em(23px,20px) 0;
-	}
-}
-
-@media only screen and (min-width:1400px) {
-	body {
-		// ideal width: 829px;
-		font-size: px-to-em(18px);
-		line-height: px-to-em(29px,18px);
-	}
-
-	h1 { line-height: px-to-em(58px,54px); }
-	h2 { line-height: px-to-em(58px,36px); }
-}
+@media only screen and (min-width: $legacy) { @import "../layout/legacy"; }
+@media only screen and (min-width: $tablet) { @import "../layout/tablet"; }
+@media only screen and (min-width: $laptop) { @import "../layout/laptop"; }
+@media only screen and (min-width: $desktop) { @import "../layout/desktop"; }
