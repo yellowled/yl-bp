@@ -8,7 +8,7 @@ textarea {
 
 body {
     font-size: 1em;
-    line-height: 1.6;
+    line-height: 1.5;
     margin: 0;
 }
 
@@ -29,7 +29,7 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 1em 0;
+    margin: 1.5em 0;
     padding: 0;
 }
 
@@ -99,8 +99,8 @@ blockquote + cite {
     &:before { content: "– "; }
 }
 
-blockquote>cite { margin: px-to-em(26px) 0; }
-blockquote + cite { margin: 0 0 px-to-em(26px) 40px; }
+blockquote>cite { margin: 1.5em 0; }
+blockquote + cite { margin: 0 0 1.5em 3em; }
 
 // stuff not covered by normalize.css
 dt { font-weight: bold; }
