@@ -1,9 +1,9 @@
 // $('#lightbox a').colorbox({
 // 	rel: "lbox",
 // 	current: "Bild {current} von {total}",
-// 	previous: "Zurück",
-// 	next: "Weiter",
-// 	close: "Schließen",
+// 	previous: "«<span class='visuallyhidden'> Zurück</span>",
+// 	next: "<span class='visuallyhidden'>Weiter </span>»",
+// 	close: "×<span class='visuallyhidden'>Schließen</span>",
 // 	maxWidth: "100%",
 // 	maxHeight: "100%"
 // });
