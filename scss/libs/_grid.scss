@@ -4,12 +4,14 @@ $sgs-row-width: 95%;
 $sgs-row-max-width: 1140px;
 $sgs-columns: 12;
 $sgs-gutter: 15px;
+
 // Mixins
 @mixin grid-row($row-limit: $sgs-row-max-width, $row-width: $sgs-row-width, $center: auto) {
 	margin: 0 $center;
 	@if $row-limit != 0 { max-width: $row-limit; }
 	width: $row-width;
 }
+
 @mixin grid-box($span-columns, $gutter: $sgs-gutter, $total-columns: $sgs-columns, $grid-type: 100%) {
 	float: left;
 	padding: 0 $gutter;
@@ -17,7 +19,9 @@ $sgs-gutter: 15px;
 	@include box-sizing(border-box);
 	*behavior: url('/scripts/vendor/boxsizing.htc');
 }
+
 // For nested grids
 @mixin grid-nest { padding: 0; }
+
 // Last box of a row
 @mixin grid-end { float: right; }
