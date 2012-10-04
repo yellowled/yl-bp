@@ -91,13 +91,17 @@ blockquote:lang(de)  p:after { content: ''; content: no-close-quote; }
 blockquote:lang(de)  p:first-child:before { content: '„'; content: open-quote; }
 :lang(de) blockquote p:last-child:after,
 blockquote:lang(de)  p:last-child:after  { content: '“'; content: close-quote; }
-// cite adjacent to blockquote
+// citations
+blockquote>cite,
 blockquote + cite {
     display: block;
-    margin: 0 0 px-to-em(26px) 40px;
 
     &:before { content: "– "; }
 }
+
+blockquote>cite { margin: px-to-em(26px) 0; }
+blockquote + cite { margin: 0 0 px-to-em(26px) 40px; }
+
 // stuff not covered by normalize.css
 dt { font-weight: bold; }
 
