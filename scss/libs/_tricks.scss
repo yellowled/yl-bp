@@ -32,6 +32,7 @@
 	&:active, &:visited,
 	&:hover, &:focus { color: $fg; }
 }
+
 // Folded corner
 // http://nicolasgallagher.com/pure-css-folded-corner-effect/
 @mixin folded-corner($box-color, $container-color) {
