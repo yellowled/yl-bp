@@ -16,6 +16,9 @@ $slidewidth: 480px;
 		list-style: none;
 		padding-left: 0;
 	}
+
+	.prev { float: left; }
+	.next { float: right; }
 }
 
 .rslides {
@@ -36,9 +39,6 @@ $slidewidth: 480px;
 		max-width: 100%;
 	}
 }
-
-.slideshow .prev { float: left; }
-.slideshow .next { float: right; }
 
 .rslides_tabs {
 	margin: 0;
