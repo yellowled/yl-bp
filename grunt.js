@@ -142,12 +142,24 @@ module.exports = function(grunt) {
                 files: ['scss/**/*.scss'],
                 tasks: 'compass:dev'
             }
+        },
+
+        hashres: {
+            deploy: {
+                files: [
+                    'dist/scripts/master.js',
+                    'dist/styles/master.css',
+                    'dist/styles/oldie.css'
+                ],
+                out: 'dist/*.html'
+            }
         }
     });
     // Load required tasks
     grunt.loadNpmTasks('grunt-compass');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-hashres');
     grunt.loadNpmTasks('grunt-imagine');
     grunt.loadNpmTasks('grunt-modernizr');
     // Default task
@@ -155,5 +167,5 @@ module.exports = function(grunt) {
     // In development
     grunt.registerTask('dev', 'lint concat:dev compass:dev');
     // Deployment
-    grunt.registerTask('deploy', 'clean:deploy lint concat:deploy min compass:deploy pngmin jpgmin copy:deploy modernizr');
+    grunt.registerTask('deploy', 'clean:deploy lint concat:deploy min compass:deploy pngmin jpgmin copy:deploy modernizr hashres:deploy');
 };

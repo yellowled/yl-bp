@@ -11,6 +11,7 @@ Now uses [grunt](http://gruntjs.com) build script, so do `npm install` first to 
 * [grunt-compass](https://github.com/kahlil/grunt-compass)
 * [grunt-contrib-clean](https://github.com/gruntjs/grunt-contrib-clean)
 * [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy)
+* [grunt-hashres](https://github.com/Luismahou/grunt-hashres)
 * [grunt-imagine](https://github.com/asciidisco/grunt-imagine)
 * [grunt-modernizr](https://github.com/doctyper/grunt-modernizr)
 
