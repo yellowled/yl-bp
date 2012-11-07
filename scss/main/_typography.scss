@@ -7,10 +7,7 @@
 }
 
 // Typography -- ideal line length: 554px;
-body {
-	font-family: $sans;
-	font-size: px-to-em(14px);
-}
+body { font-size: px-to-em(14px); }
 
 h1 {
 	font-size: px-to-em(24px,14px);

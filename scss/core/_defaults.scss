@@ -2,8 +2,9 @@
 html, button,
 input, select,
 textarea {
-    color: #222;
-    font-family: sans-serif;
+    background: $off-white;
+    color: $off-black;
+    font-family: $sans;
 }
 
 body {
