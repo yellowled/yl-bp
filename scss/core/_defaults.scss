@@ -60,8 +60,9 @@ textarea { resize: vertical; }
 .chromeframe {
     margin: 0;
     background: #ccc;
-    color: #222;
+    color: $off-black;
     padding: 0.25em;
+    text-align: center;
 }
 
 // Automagic quotes, http://html5doctor.com/blockquote-q-cite/
