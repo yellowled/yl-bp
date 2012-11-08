@@ -13,13 +13,266 @@ if (!(window.console && console.log)) {
 
 // Place any jQuery/helper plugins in here.
 // https://github.com/scottjehl/iOS-Orientationchange-Fix
-(function(m){if(!(/iPhone|iPad|iPod/.test(navigator.platform)&&navigator.userAgent.indexOf("AppleWebKit")>-1)){return}var l=m.document;if(!l.querySelector){return}var n=l.querySelector("meta[name=viewport]"),a=n&&n.getAttribute("content"),k=a+",maximum-scale=1",d=a+",maximum-scale=10",g=true,j,i,h,c;if(!n){return}function f(){n.setAttribute("content",d);g=true}function b(){n.setAttribute("content",k);g=false}function e(o){c=o.accelerationIncludingGravity;j=Math.abs(c.x);i=Math.abs(c.y);h=Math.abs(c.z);if(!m.orientation&&(j>7||((h>6&&i<8||h<8&&i>6)&&j>5))){if(g){b()}}else{if(!g){f()}}}m.addEventListener("orientationchange",f,false);m.addEventListener("devicemotion",e,false)})(this);
+(function(w){
+    // This fix addresses an iOS bug, so return early if the UA claims it's something else.
+    var ua = navigator.userAgent;
+    if( !( /iPhone|iPad|iPod/.test( navigator.platform ) && /OS [1-5]_[0-9_]* like Mac OS X/i.test(ua) && ua.indexOf( "AppleWebKit" ) > -1 ) ){
+        return;
+    }
+
+    var doc = w.document;
+
+    if( !doc.querySelector ){ return; }
+
+    var meta = doc.querySelector( "meta[name=viewport]" ),
+        initialContent = meta && meta.getAttribute( "content" ),
+        disabledZoom = initialContent + ",maximum-scale=1",
+        enabledZoom = initialContent + ",maximum-scale=10",
+        enabled = true,
+        x, y, z, aig;
+
+    if( !meta ){ return; }
+
+    function restoreZoom(){
+        meta.setAttribute( "content", enabledZoom );
+        enabled = true;
+    }
+
+    function disableZoom(){
+        meta.setAttribute( "content", disabledZoom );
+        enabled = false;
+    }
+
+    function checkTilt( e ){
+        aig = e.accelerationIncludingGravity;
+        x = Math.abs( aig.x );
+        y = Math.abs( aig.y );
+        z = Math.abs( aig.z );
+        // If portrait orientation and in one of the danger zones
+        if( (!w.orientation || w.orientation === 180) && ( x > 7 || ( ( z > 6 && y < 8 || z < 8 && y > 6 ) && x > 5 ) ) ){
+            if( enabled ){
+                disableZoom();
+            }
+        }
+        else if( !enabled ){
+            restoreZoom();
+        }
+    }
+
+    w.addEventListener( "orientationchange", restoreZoom, false );
+    w.addEventListener( "devicemotion", checkTilt, false );
+
+})( this );
 // https://github.com/yatil/accessifyhtml5.js
-var AccessifyHTML5=function(b){var a={article:{role:"article"},aside:{role:"complementary"},nav:{role:"navigation"},output:{"aria-live":"polite"},section:{role:"region"},"[required]":{"aria-required":"true"}};if(b){if(b.header){a[b.header]={role:"banner"}}if(b.footer){a[b.footer]={role:"contentinfo"}}if(b.main){a[b.main]={role:"main"}}}$.each(a,function(c,d){$(c).attr(d)})};
+var AccessifyHTML5 = function (defaults) {
+    var fixes = {
+        'article'       : { 'role':          'article'       },
+        'aside'         : { 'role':          'complementary' },
+        'nav'           : { 'role':          'navigation'    },
+        'output'        : { 'aria-live':     'polite'        },
+        'section'       : { 'role':          'region'        },
+        '[required]'    : { 'aria-required': 'true'          }
+    };
+
+    if (defaults) {
+        if (defaults.header) {
+            fixes[defaults.header] = {
+                'role': 'banner'
+            };
+        }
+        if (defaults.footer) {
+            fixes[defaults.footer] = {
+                'role': 'contentinfo'
+            }
+        }
+        if (defaults.main) {
+            fixes[defaults.main] = {
+                'role': 'main'
+            }
+        }
+    }
+
+    $.each(fixes,
+        function(index, item) {
+            $(index).attr(item);
+        }
+    );
+
+};
 // https://github.com/nathansmith/formalize
 $(window).load(function(){
-	var $hasForm = $('#main').has('form');
+	var $hasForm = $('body').has('form');
 	if($hasForm.size() > 0){
-		var FORMALIZE=function(e,t,n,r){function i(e){var t=n.createElement("b");return t.innerHTML="<!--[if IE "+e+"]><br><![endif]-->",!!t.getElementsByTagName("br").length}var s="placeholder"in n.createElement("input"),o="autofocus"in n.createElement("input"),u=i(6),a=i(7);return{go:function(){var e,t=this.init;for(e in t)t.hasOwnProperty(e)&&t[e]()},init:{disable_link_button:function(){e(n.documentElement).on("click","a.button_disabled",function(){return!1})},full_input_size:function(){if(!a||!e("textarea, input.input_full").length)return;e("textarea, input.input_full").wrap('<span class="input_full_wrap"></span>')},ie6_skin_inputs:function(){if(!u||!e("input, select, textarea").length)return;var t=/button|submit|reset/,n=/date|datetime|datetime-local|email|month|number|password|range|search|tel|text|time|url|week/;e("input").each(function(){var r=e(this);this.getAttribute("type").match(t)?(r.addClass("ie6_button"),this.disabled&&r.addClass("ie6_button_disabled")):this.getAttribute("type").match(n)&&(r.addClass("ie6_input"),this.disabled&&r.addClass("ie6_input_disabled"))}),e("textarea, select").each(function(){this.disabled&&e(this).addClass("ie6_input_disabled")})},autofocus:function(){if(o||!e(":input[autofocus]").length)return;var t=e("[autofocus]")[0];t.disabled||t.focus()},placeholder:function(){if(s||!e(":input[placeholder]").length)return;FORMALIZE.misc.add_placeholder(),e(":input[placeholder]").each(function(){if(this.type==="password")return;var t=e(this),n=t.attr("placeholder");t.focus(function(){t.val()===n&&t.val("").removeClass("placeholder_text")}).blur(function(){FORMALIZE.misc.add_placeholder()}),t.closest("form").submit(function(){t.val()===n&&t.val("").removeClass("placeholder_text")}).on("reset",function(){setTimeout(FORMALIZE.misc.add_placeholder,50)})})}},misc:{add_placeholder:function(){if(s||!e(":input[placeholder]").length)return;e(":input[placeholder]").each(function(){if(this.type==="password")return;var t=e(this),n=t.attr("placeholder");(!t.val()||t.val()===n)&&t.val(n).addClass("placeholder_text")})}}}}(jQuery,this,this.document);jQuery(document).ready(function(){FORMALIZE.go()})
+		var FORMALIZE = (function($, window, document, undefined) {
+          // Internet Explorer detection.
+          function IE(version) {
+            var b = document.createElement('b');
+            b.innerHTML = '<!--[if IE ' + version + ']><br><![endif]-->';
+            return !!b.getElementsByTagName('br').length;
+          }
+
+          // Private constants.
+          var PLACEHOLDER_SUPPORTED = 'placeholder' in document.createElement('input');
+          var AUTOFOCUS_SUPPORTED = 'autofocus' in document.createElement('input');
+          var IE6 = IE(6);
+          var IE7 = IE(7);
+
+          // Expose innards of FORMALIZE.
+          return {
+            // FORMALIZE.go
+            go: function() {
+              var i, j = this.init;
+
+              for (i in j) {
+                j.hasOwnProperty(i) && j[i]();
+              }
+            },
+            // FORMALIZE.init
+            init: {
+              // FORMALIZE.init.disable_link_button
+              disable_link_button: function() {
+                $(document.documentElement).on('click', 'a.button_disabled', function() {
+                  return false;
+                });
+              },
+              // FORMALIZE.init.full_input_size
+              full_input_size: function() {
+                if (!IE7 || !$('textarea, input.input_full').length) {
+                  return;
+                }
+
+                // This fixes width: 100% on <textarea> and class="input_full".
+                // It ensures that form elements don't go wider than container.
+                $('textarea, input.input_full').wrap('<span class="input_full_wrap"></span>');
+              },
+              // FORMALIZE.init.ie6_skin_inputs
+              ie6_skin_inputs: function() {
+                // Test for Internet Explorer 6.
+                if (!IE6 || !$('input, select, textarea').length) {
+                  // Exit if the browser is not IE6,
+                  // or if no form elements exist.
+                  return;
+                }
+
+                // For <input type="submit" />, etc.
+                var button_regex = /button|submit|reset/;
+
+                // For <input type="text" />, etc.
+                var type_regex = /date|datetime|datetime-local|email|month|number|password|range|search|tel|text|time|url|week/;
+
+                $('input').each(function() {
+                  var el = $(this);
+
+                  // Is it a button?
+                  if (this.getAttribute('type').match(button_regex)) {
+                    el.addClass('ie6_button');
+
+                    /* Is it disabled? */
+                    if (this.disabled) {
+                      el.addClass('ie6_button_disabled');
+                    }
+                  }
+                  // Or is it a textual input?
+                  else if (this.getAttribute('type').match(type_regex)) {
+                    el.addClass('ie6_input');
+
+                    /* Is it disabled? */
+                    if (this.disabled) {
+                      el.addClass('ie6_input_disabled');
+                    }
+                  }
+                });
+
+                $('textarea, select').each(function() {
+                  /* Is it disabled? */
+                  if (this.disabled) {
+                    $(this).addClass('ie6_input_disabled');
+                  }
+                });
+              },
+              // FORMALIZE.init.autofocus
+              autofocus: function() {
+                if (AUTOFOCUS_SUPPORTED || !$(':input[autofocus]').length) {
+                  return;
+                }
+
+                var el = $('[autofocus]')[0];
+
+                if (!el.disabled) {
+                  el.focus();
+                }
+              },
+              // FORMALIZE.init.placeholder
+              placeholder: function() {
+                if (PLACEHOLDER_SUPPORTED || !$(':input[placeholder]').length) {
+                  // Exit if placeholder is supported natively,
+                  // or if page does not have any placeholder.
+                  return;
+                }
+
+                FORMALIZE.misc.add_placeholder();
+
+                $(':input[placeholder]').each(function() {
+                  // Placeholder obscured in older browsers,
+                  // so there's no point adding to password.
+                  if (this.type === 'password') {
+                    return;
+                  }
+
+                  var el = $(this);
+                  var text = el.attr('placeholder');
+
+                  el.focus(function() {
+                    if (el.val() === text) {
+                      el.val('').removeClass('placeholder_text');
+                    }
+                  }).blur(function() {
+                    FORMALIZE.misc.add_placeholder();
+                  });
+
+                  // Prevent <form> from accidentally
+                  // submitting the placeholder text.
+                  el.closest('form').submit(function() {
+                    if (el.val() === text) {
+                      el.val('').removeClass('placeholder_text');
+                    }
+                  }).on('reset', function() {
+                    setTimeout(FORMALIZE.misc.add_placeholder, 50);
+                  });
+                });
+              }
+            },
+            // FORMALIZE.misc
+            misc: {
+              // FORMALIZE.misc.add_placeholder
+              add_placeholder: function() {
+                if (PLACEHOLDER_SUPPORTED || !$(':input[placeholder]').length) {
+                  // Exit if placeholder is supported natively,
+                  // or if page does not have any placeholder.
+                  return;
+                }
+
+                $(':input[placeholder]').each(function() {
+                  // Placeholder obscured in older browsers,
+                  // so there's no point adding to password.
+                  if (this.type === 'password') {
+                    return;
+                  }
+
+                  var el = $(this);
+                  var text = el.attr('placeholder');
+
+                  if (!el.val() || el.val() === text) {
+                    el.val(text).addClass('placeholder_text');
+                  }
+                });
+              }
+            }
+          };
+        // Alias jQuery, window, document.
+        })(jQuery, this, this.document);
+
+        // Automatically calls all functions in FORMALIZE.init
+        jQuery(document).ready(function() { FORMALIZE.go(); });
 	}
 });
