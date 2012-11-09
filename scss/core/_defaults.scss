@@ -68,7 +68,7 @@ textarea { resize: vertical; }
 // Automagic quotes, http://html5doctor.com/blockquote-q-cite/
 q { quotes: '“' '”' '‘' '’'; }
 :lang(de) q { quotes: '„' '“' '‚' '‘'; }
-/*:lang(de) q { quotes: '»' '«' '›' '‹'; }*/
+//:lang(de) q { quotes: '»' '«' '›' '‹'; }
 /* pre-2011 WebKit */
 q:before   { content: '“'; content: open-quote;  }
 q:after    { content: '”'; content: close-quote; }
