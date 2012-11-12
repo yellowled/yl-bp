@@ -134,15 +134,28 @@ module.exports = function(grunt) {
             }
         },
 
+        reload: {
+            port: 8001,
+            proxy: {
+                host: 'localhost',
+                port: 8000
+            }
+        },
+
         watch: {
+            html: {
+                files: ['*.html'],
+                tasks: 'reload'
+            },
+
             js: {
                 files: ['scripts/plugins.js', 'scripts/main.js'],
-                tasks: 'concat:dev'
+                tasks: 'concat:dev reload'
             },
 
             scss: {
                 files: ['scss/**/*.scss'],
-                tasks: 'compass:dev'
+                tasks: 'compass:dev reload'
             }
         },
 
@@ -164,6 +177,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-hashres');
     grunt.loadNpmTasks('grunt-imagine');
     grunt.loadNpmTasks('grunt-modernizr');
+    grunt.loadNpmTasks('grunt-reload');
     // Default task
     grunt.registerTask('default', 'server watch');
     // In development
