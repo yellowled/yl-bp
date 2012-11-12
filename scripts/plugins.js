@@ -83,12 +83,12 @@ var AccessifyHTML5 = function (defaults) {
         if (defaults.footer) {
             fixes[defaults.footer] = {
                 'role': 'contentinfo'
-            }
+            };
         }
         if (defaults.main) {
             fixes[defaults.main] = {
                 'role': 'main'
-            }
+            };
         }
     }
 

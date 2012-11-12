@@ -4,7 +4,9 @@ module.exports = function(grunt) {
         pkg: '<json:package.json>',
 
         lint: {
-            all: ['grunt.js','scripts/plugins.js','scripts/main.js']
+            all: ['grunt.js',
+                  // 'scripts/plugins.js',
+                  'scripts/main.js']
         },
 
         clean: {
