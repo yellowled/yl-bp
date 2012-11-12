@@ -14,6 +14,7 @@ Now uses [grunt](http://gruntjs.com) build script, so do `npm install` first to 
 * [grunt-hashres](https://github.com/Luismahou/grunt-hashres)
 * [grunt-imagine](https://github.com/asciidisco/grunt-imagine)
 * [grunt-modernizr](https://github.com/doctyper/grunt-modernizr)
+* [grunt-reload](https://github.com/webxl/grunt-reload)
 
 ## jQuery plugins included
 
