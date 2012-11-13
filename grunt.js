@@ -166,7 +166,8 @@ module.exports = function(grunt) {
                     'dist/styles/master.css',
                     'dist/styles/oldie.css'
                 ],
-                out: 'dist/*.html'
+                out: 'dist/*.html',
+                fileNameFormat: '${hash}.${ext}'
             }
         }
     });
