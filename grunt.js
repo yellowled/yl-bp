@@ -129,7 +129,7 @@ module.exports = function(grunt) {
             deploy: {
                 files: {
                     'dist/': ['*.html', '.htaccess', 'robots.txt'],
-                    'dist/scripts/vendor/': ['scripts/vendor/jquery-1.8.2.min.js', 'scripts/vendor/boxsizing.htc']
+                    'dist/scripts/vendor/': ['scripts/vendor/jquery-1.8.3.min.js', 'scripts/vendor/boxsizing.htc']
                 }
             }
         },
