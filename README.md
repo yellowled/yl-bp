@@ -9,7 +9,7 @@ Now uses [grunt](http://gruntjs.com) build script, so do `npm install` first to 
 ## grunt plugins used
 
 * [grunt-compass](https://github.com/kahlil/grunt-compass)
-* [grunt-contrib-clean](https://github.com/gruntjs/grunt-contrib-clean)
+* [grunt-cleanx](https://github.com/99corps/grunt-cleanx)
 * [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy)
 * [grunt-hashres](https://github.com/Luismahou/grunt-hashres)
 * [grunt-imagine](https://github.com/asciidisco/grunt-imagine)
