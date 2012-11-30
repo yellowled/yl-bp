@@ -10,7 +10,24 @@ module.exports = function(grunt) {
         },
 
         clean: {
-            deploy: ['dist/']
+            deploy: {
+                dirs: [
+                    'dist/styles/',
+                    'dist/scripts/vendor/',
+                    'dist/scripts/plugins/',
+                    'dist/scripts/',
+                    'dist/img/',
+                    'dist/'
+                ],
+                files: [
+                    'dist/styles/*',
+                    'dist/scripts/vendor/*',
+                    'dist/scripts/plugins/*',
+                    'dist/scripts/*',
+                    'dist/img/*',
+                    'dist/*'
+                ]
+            }
         },
 
         server: {
@@ -173,7 +190,7 @@ module.exports = function(grunt) {
     });
     // Load required tasks
     grunt.loadNpmTasks('grunt-compass');
-    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-cleanx');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-hashres');
     grunt.loadNpmTasks('grunt-imagine');
