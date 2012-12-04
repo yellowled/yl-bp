@@ -9,6 +9,10 @@ module.exports = function(grunt) {
                   'scripts/main.js']
         },
 
+        htmllint: {
+            all: ['*.html']
+        },
+
         clean: {
             deploy: {
                 dirs: [
@@ -193,13 +197,14 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-cleanx');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-hashres');
+    grunt.loadNpmTasks('grunt-html');
     grunt.loadNpmTasks('grunt-imagine');
     grunt.loadNpmTasks('grunt-modernizr');
     grunt.loadNpmTasks('grunt-reload');
     // Default task
     grunt.registerTask('default', 'server watch');
     // In development
-    grunt.registerTask('dev', 'lint concat:dev compass:dev');
+    grunt.registerTask('dev', 'htmllint lint concat:dev compass:dev');
     // Deployment
     grunt.registerTask('deploy', 'clean:deploy lint concat:deploy min compass:deploy pngmin jpgmin copy:deploy modernizr hashres:deploy');
 };

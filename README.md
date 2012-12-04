@@ -12,6 +12,7 @@ Now uses [grunt](http://gruntjs.com) build script, so do `npm install` first to 
 * [grunt-cleanx](https://github.com/99corps/grunt-cleanx)
 * [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy)
 * [grunt-hashres](https://github.com/Luismahou/grunt-hashres)
+* [grunt-html](https://github.com/jzaefferer/grunt-html)
 * [grunt-imagine](https://github.com/asciidisco/grunt-imagine)
 * [grunt-modernizr](https://github.com/doctyper/grunt-modernizr)
 * [grunt-reload](https://github.com/webxl/grunt-reload)
