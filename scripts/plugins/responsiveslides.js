@@ -1,4 +1,4 @@
-/*! ResponsiveSlides.js v1.32
+/*! ResponsiveSlides.js v1.51
  * http://responsiveslides.com
  * http://viljamis.com
  *
@@ -20,7 +20,7 @@
       "nav": false,             // Boolean: Show navigation, true or false
       "random": false,          // Boolean: Randomize the order of the slides, true or false
       "pause": false,           // Boolean: Pause on hover, true or false
-      "pauseControls": false,   // Boolean: Pause when hovering controls, true or false
+      "pauseControls": true,    // Boolean: Pause when hovering controls, true or false
       "prevText": "Previous",   // String: Text for the "previous" button
       "nextText": "Next",       // String: Text for the "next" button
       "maxwidth": "",           // Integer: Max-width of the slideshow, in pixels
@@ -38,11 +38,7 @@
       var $this = $(this),
 
         // Local variables
-        selectTab,
-        startCycle,
-        restartCycle,
-        rotate,
-        $tabs,
+        vendor, selectTab, startCycle, restartCycle, rotate, $tabs,
 
         // Helpers
         index = 0,
@@ -66,27 +62,63 @@
         $pager = $("<ul class='" + namespace + "_tabs " + namespaceIdx + "_tabs' />"),
 
         // Styles for visible and hidden slides
-        visible = {"float": "left", "position": "relative"},
-        hidden = {"float": "none", "position": "absolute"},
+        visible = {"float": "left", "position": "relative", "opacity": 1, "zIndex": 2},
+        hidden = {"float": "none", "position": "absolute", "opacity": 0, "zIndex": 1},
+
+        // Detect transition support
+        supportsTransitions = (function () {
+          var docBody = document.body || document.documentElement;
+          var styles = docBody.style;
+          var prop = "transition";
+          if (typeof styles[prop] === "string") {
+            return true;
+          }
+          // Tests for vendor specific prop
+          vendor = ["Moz", "Webkit", "Khtml", "O", "ms"];
+          prop = prop.charAt(0).toUpperCase() + prop.substr(1);
+          var i;
+          for (i = 0; i < vendor.length; i++) {
+            if (typeof styles[vendor[i] + prop] === "string") {
+              return true;
+            }
+          }
+          return false;
+        })(),
 
         // Fading animation
         slideTo = function (idx) {
           settings.before();
-          $slide
-            .stop()
-            .fadeOut(fadeTime, function () {
-              $(this)
-                .removeClass(visibleClass)
-                .css(hidden);
-            })
-            .eq(idx)
-            .fadeIn(fadeTime, function () {
-              $(this)
-                .addClass(visibleClass)
-                .css(visible);
+          // If CSS3 transitions are supported
+          if (supportsTransitions) {
+            $slide
+              .removeClass(visibleClass)
+              .css(hidden)
+              .eq(idx)
+              .addClass(visibleClass)
+              .css(visible);
+            index = idx;
+            setTimeout(function () {
               settings.after();
-              index = idx;
-            });
+            }, fadeTime);
+          // If not, use jQuery fallback
+          } else {
+            $slide
+              .stop()
+              .fadeOut(fadeTime, function () {
+                $(this)
+                  .removeClass(visibleClass)
+                  .css(hidden)
+                  .css("opacity", 1);
+              })
+              .eq(idx)
+              .fadeIn(fadeTime, function () {
+                $(this)
+                  .addClass(visibleClass)
+                  .css(visible);
+                settings.after();
+                index = idx;
+              });
+          }
         };
 
       // Random order
@@ -113,10 +145,24 @@
       // Hide all slides, then show first one
       $slide
         .hide()
+        .css(hidden)
         .eq(0)
         .addClass(visibleClass)
         .css(visible)
         .show();
+
+      // CSS transitions
+      if (supportsTransitions) {
+        $slide
+          .show()
+          .css({
+            // -ms prefix isn't needed as IE10 uses prefix free version
+            "-webkit-transition": "opacity " + fadeTime + "ms ease-in-out",
+            "-moz-transition": "opacity " + fadeTime + "ms ease-in-out",
+            "-o-transition": "opacity " + fadeTime + "ms ease-in-out",
+            "transition": "opacity " + fadeTime + "ms ease-in-out"
+          });
+      }
 
       // Only run if there's more than one slide
       if ($slide.size() > 1) {
