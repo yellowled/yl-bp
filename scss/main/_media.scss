@@ -4,6 +4,9 @@ $tablet:   768px;
 $laptop:  1024px;
 $desktop: 1400px;
 
+// IE10 fix
+@-ms-viewport { width: device-width; }
+
 @media only screen and (min-width: $legacy) { @import "../layout/legacy"; }
 @media only screen and (min-width: $tablet) { @import "../layout/tablet"; }
 @media only screen and (min-width: $laptop) { @import "../layout/laptop"; }
