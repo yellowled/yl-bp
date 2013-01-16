@@ -1,4 +1,4 @@
-/*! ResponsiveSlides.js v1.51
+/*! ResponsiveSlides.js v1.53
  * http://responsiveslides.com
  * http://viljamis.com
  *
@@ -14,7 +14,7 @@
     // Default settings
     var settings = $.extend({
       "auto": true,             // Boolean: Animate automatically, true or false
-      "speed": 1000,            // Integer: Speed of the transition, in milliseconds
+      "speed": 500,             // Integer: Speed of the transition, in milliseconds
       "timeout": 4000,          // Integer: Time between slide transitions, in milliseconds
       "pager": false,           // Boolean: Show pager, true or false
       "nav": false,             // Boolean: Show navigation, true or false
@@ -24,7 +24,8 @@
       "prevText": "Previous",   // String: Text for the "previous" button
       "nextText": "Next",       // String: Text for the "next" button
       "maxwidth": "",           // Integer: Max-width of the slideshow, in pixels
-      "controls": "",           // Selector: Where controls should be appended to, default is after the <ul>
+      "navContainer": "",       // Selector: Where auto generated controls should be appended to, default is after the <ul>
+      "manualControls": "",     // Selector: Declare custom pager navigation
       "namespace": "rslides",   // String: change the default namespace used
       before: function () {},   // Function: Before callback
       after: function () {}     // Function: After callback
@@ -38,7 +39,12 @@
       var $this = $(this),
 
         // Local variables
-        vendor, selectTab, startCycle, restartCycle, rotate, $tabs,
+        vendor,
+        selectTab,
+        startCycle,
+        restartCycle,
+        rotate,
+        $tabs,
 
         // Helpers
         index = 0,
@@ -173,7 +179,7 @@
         }
 
         // Pager
-        if (settings.pager) {
+        if (settings.pager && !settings.manualControls) {
           var tabMarkup = [];
           $slide.each(function (i) {
             var n = i + 1;
@@ -184,14 +190,30 @@
           });
           $pager.append(tabMarkup);
 
-          $tabs = $pager.find("a");
-
           // Inject pager
-          if (options.controls) {
-            $(settings.controls).append($pager);
+          if (options.navContainer) {
+            $(settings.navContainer).append($pager);
           } else {
             $this.after($pager);
           }
+        }
+
+        // Manual pager controls
+        if (settings.manualControls) {
+          $pager = $(settings.manualControls);
+          $pager.addClass(namespace + "_tabs " + namespaceIdx + "_tabs");
+        }
+
+        // Add pager slide class prefixes
+        if (settings.pager || settings.manualControls) {
+          $pager.find('li').each(function (i) {
+            $(this).addClass(slideClassPrefix + (i + 1));
+          });
+        }
+
+        // If we have a pager, we need to set up the selectTab function
+        if (settings.pager || settings.manualControls) {
+          $tabs = $pager.find('a');
 
           // Select pager item
           selectTab = function (idx) {
@@ -215,7 +237,7 @@
               var idx = index + 1 < length ? index + 1 : 0;
 
               // Remove active state and set new if pager is set
-              if (settings.pager) {
+              if (settings.pager || settings.manualControls) {
                 selectTab(idx);
               }
 
@@ -247,7 +269,7 @@
         }
 
         // Pager click event handler
-        if (settings.pager) {
+        if (settings.pager || settings.manualControls) {
           $tabs.bind("click", function (e) {
             e.preventDefault();
 
@@ -290,21 +312,23 @@
             "<a href='#' class='" + navClass + " next'>" + settings.nextText + "</a>";
 
           // Inject navigation
-          if (options.controls) {
-            $(settings.controls).append(navMarkup);
+          if (options.navContainer) {
+            $(settings.navContainer).append(navMarkup);
           } else {
             $this.after(navMarkup);
           }
 
           var $trigger = $("." + namespaceIdx + "_nav"),
-            $prev = $("." + namespaceIdx + "_nav.prev");
+            $prev = $trigger.filter(".prev");
 
           // Click event handler
           $trigger.bind("click", function (e) {
             e.preventDefault();
 
+            var $visibleClass = $("." + visibleClass);
+
             // Prevent clicking if currently animated
-            if ($("." + visibleClass).queue('fx').length) {
+            if ($visibleClass.queue('fx').length) {
               return;
             }
 
@@ -318,13 +342,13 @@
             //  });
 
             // Determine where to slide
-            var idx = $slide.index($("." + visibleClass)),
+            var idx = $slide.index($visibleClass),
               prevIdx = idx - 1,
               nextIdx = idx + 1 < length ? index + 1 : 0;
 
             // Go to slide
             slideTo($(this)[0] === $prev[0] ? prevIdx : nextIdx);
-            if (settings.pager) {
+            if (settings.pager || settings.manualControls) {
               selectTab($(this)[0] === $prev[0] ? prevIdx : nextIdx);
             }
 
