@@ -166,17 +166,17 @@ module.exports = function(grunt) {
         watch: {
             html: {
                 files: ['*.html'],
-                tasks: 'reload'
+                tasks: 'concat:dev compass:dev reload'
             },
 
             js: {
                 files: ['scripts/plugins.js', 'scripts/main.js'],
-                tasks: 'concat:dev reload'
+                tasks: 'concat:dev compass:dev reload'
             },
 
             scss: {
                 files: ['scss/**/*.scss'],
-                tasks: 'compass:dev reload'
+                tasks: 'concat:dev compass:dev reload'
             }
         },
 
