@@ -33,12 +33,17 @@ h4 {
 	margin: px-to-em(21px,16px) 0;
 }
 
-h5, h6 { font-size: 1em; }
+h5,
+h6 { font-size: 1em; }
 
-h5, h6,
+h5,
+h6,
 blockquote,
-ul, ol, dl,
-p, table {
+ul,
+ol,
+dl,
+p,
+table {
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
 }

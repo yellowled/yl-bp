@@ -4,15 +4,15 @@ $experimental-support-for-khtml: false;
 @import "compass";
 
 // Typical colors
-$white: #fff;
-$black: #000;
+$white:     #fff;
+$black:     #000;
 $off-white: #fcfcfc;
 $off-black: #222;
 
 // Fallback font stacks
 $serif: Times, Cambria, serif;
-$sans: Helvetica, Arial, sans-serif;
-$mono: Consolas, Courier, monospace;
+$sans:  Helvetica, Arial, sans-serif;
+$mono:  Consolas, Courier, monospace;
 
 // Context-sensitive conversion of pixels to ems
 @function px-to-em($px, $context: 16px) {

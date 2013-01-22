@@ -14,8 +14,10 @@ input[type="checkbox"] {
     *top: -5px; // IE7
 }
 
-button:focus, input:focus,
-select:focus, textarea:focus, {
+button:focus,
+input:focus,
+select:focus,
+textarea:focus, {
     @include box-shadow(#06f 0 0 5px 0);
     z-index: 1; // for Opera
 }
@@ -27,7 +29,8 @@ input[type="checkbox"] {
     &:active { @include box-shadow(none); }
 }
 
-button, input[type="button"],
+button,
+input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     @include border-radius(4px);

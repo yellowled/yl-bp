@@ -54,6 +54,7 @@ $inactive: #eee;
 		border-bottom: 1px solid $background;
 	}
 
-	.on a, a:hover,
+	.on a,
+    a:hover,
 	a:focus { color: #222; }
 }

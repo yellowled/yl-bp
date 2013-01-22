@@ -1,6 +1,8 @@
 // Base styles
-html, button,
-input, select,
+html,
+button,
+input,
+select,
 textarea {
     background: $off-white;
     color: $off-black;
@@ -69,11 +71,13 @@ textarea { resize: vertical; }
 q { quotes: '“' '”' '‘' '’'; }
 :lang(de) q { quotes: '„' '“' '‚' '‘'; }
 //:lang(de) q { quotes: '»' '«' '›' '‹'; }
+
 blockquote p { quotes: '“' '”'; }
 blockquote p:before { content: ''; content: no-open-quote; }
 blockquote p:after  { content: ''; content: no-close-quote; }
 blockquote p:first-child:before { content: '“'; content: open-quote;  }
 blockquote p:last-child:after   { content: '”'; content: close-quote; }
+
 :lang(de) blockquote p,
 blockquote:lang(de) p { quotes: '„' '“'; }
 :lang(de) blockquote p:before,
@@ -99,13 +103,16 @@ blockquote + cite { margin: 0 0 1.5em 3em; }
 dt { font-weight: bold; }
 dd { margin: 0; }
 
-caption, th { text-align: left; }
+caption,
+th { text-align: left; }
+
 // nested lists
 li {
     ul, ol { margin: 0; }
 }
 // nested code
 pre code { font-size: 1em; }
+
 // automagic hypenation
 p {
     -webkit-hyphens: auto;
@@ -113,7 +120,8 @@ p {
     -ms-hyphens: auto;
     hyphens: auto;
     // not for preformatted text (inline)
-    code, samp,
+    code,
+    samp,
     kbd {
         -webkit-hyphens: none;
         -moz-hyphens: none;

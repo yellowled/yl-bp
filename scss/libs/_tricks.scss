@@ -29,8 +29,10 @@
     	z-index: 1;
 	}
 
-	&:active, &:visited,
-	&:hover, &:focus { color: $fg; }
+	&:active,
+    &:visited,
+	&:hover,
+    &:focus { color: $fg; }
 }
 
 // Folded corner

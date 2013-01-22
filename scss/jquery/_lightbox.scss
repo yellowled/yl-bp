@@ -43,8 +43,10 @@
 	height: 100%;
 }
 
-#cboxPrevious, #cboxNext,
-#cboxClose, #cboxSlideshow { cursor: pointer; }
+#cboxPrevious,
+#cboxNext,
+#cboxClose,
+#cboxSlideshow { cursor: pointer; }
 
 .cboxPhoto {
 	float:left;
@@ -82,9 +84,12 @@ $lboxbg: #fff;
 
 #cboxLoadedContent { margin-bottom: 30px; }
 
-#cboxTitle, #cboxCurrent,
-#cboxSlideshow, #cboxPrevious,
-#cboxNext, #cboxClose {
+#cboxTitle,
+#cboxCurrent,
+#cboxSlideshow,
+#cboxPrevious,
+#cboxNext,
+#cboxClose {
 	font-weight: bold;
 	position: absolute;
 	bottom: 12px;
