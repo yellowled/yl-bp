@@ -30,5 +30,4 @@ A (small) demo is available at [demo.netzgestaltung.net](http://demo.netzgestalt
 
 * [AccessifyHTML5](https://github.com/yatil/accessifyhtml5.js)
 * [box-sizing-Polyfill](https://github.com/Schepp/box-sizing-polyfill)
-* [formalize.me](https://github.com/nathansmith/formalize)
 * [iOS-Orientationchange-Fix](https://github.com/scottjehl/iOS-Orientationchange-Fix)
