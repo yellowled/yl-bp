@@ -3,7 +3,7 @@ input[type="checkbox"] {
     position: relative;
     vertical-align: top;
     top: 5px;
-    top: 0 \0;  // IE8, IE9, IE10
+    top: 0 \0;  // IE8-10
     *top: -5px; // IE7
 }
 
@@ -12,7 +12,7 @@ input:focus,
 select:focus,
 textarea:focus, {
     @include box-shadow(#06f 0 0 5px 0);
-    z-index: 1; // for Opera
+    z-index: 1; // Opera
 }
 
 input[type="file"],
@@ -109,15 +109,14 @@ input:-moz-placeholder,
 textarea:-moz-placeholder { color: #888; }
 
 :invalid {
-    // Suppress red glow that Firefox
-    // adds to form fields by default,
-    // even when user is still typing.
+    // Suppress red glow that Firefox adds to form fields by default, even when user is still typing.
     @include box-shadow(none);
 }
 
 textarea,
 select[size],
 select[multiple] { height: auto; }
+
 // Tweaks for Safari + Chrome.
 @media (-webkit-min-device-pixel-ratio: 0) {
     select {

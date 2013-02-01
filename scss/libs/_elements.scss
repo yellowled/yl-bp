@@ -28,6 +28,7 @@
 		@include box-sizing(border-box);
 	}
 }
+
 // Tables
 @mixin simple-table($border: #ccc) {
 	border-bottom: 1px solid $border;

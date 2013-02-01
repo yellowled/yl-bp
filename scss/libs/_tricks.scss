@@ -1,4 +1,4 @@
-// Adapted from formalize.me
+// Button
 @mixin gradient-button($bg: #ddd, $fg: #000, $rad: 4px) {
 	background: $bg;
     @include background-clip(padding-box);
