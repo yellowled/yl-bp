@@ -42,8 +42,10 @@
 }
 
 .clearfix:after { clear: both; }
-// IE 7 only
-.clearfix { *zoom: 1; }
+
+@if $ie7-support {
+    .clearfix { *zoom: 1; }
+}
 
 
 // IMAGE REPLACEMENT
@@ -51,8 +53,9 @@
 //     background-color: transparent;
 //     border: 0;
 //     overflow: hidden;
-//     // IE 7 fallback
-//     *text-indent: -9999px;
+//     @if $ie7-support {
+//         *text-indent: -9999px;
+//     }
 // }
 
 // .ir:before {

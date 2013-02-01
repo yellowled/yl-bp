@@ -12,9 +12,10 @@
     text-decoration: none;
     text-shadow: invert($fg) 0 1px 1px;
     width: auto;
-
-    *padding-top: 2px;
-    *padding-bottom: 0;
+    @if $ie7-support {
+        *padding-top: 2px;
+        *padding-bottom: 0;
+    }
 
     &:hover { @include background-image(linear-gradient(lighten($bg, 13.2%), lighten($bg, 6.5%) 1px, darken($bg, 6.5%))); }
 

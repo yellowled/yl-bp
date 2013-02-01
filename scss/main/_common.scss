@@ -1,5 +1,4 @@
 // Common styles for all media/resolutions
 .js #jshint {
-	display: none;
-	visibility: hidden;
+	@extend .hidden;
 }

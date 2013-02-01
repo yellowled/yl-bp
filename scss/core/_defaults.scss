@@ -129,18 +129,12 @@ blockquote + cite { margin: 0 0 1.5em 3em; }
 
 // HYPENATION
 p {
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
+    @include hyphens(auto);
 
     // not for preformatted text (inline)
     code,
     samp,
     kbd {
-        -webkit-hyphens: none;
-        -moz-hyphens: none;
-        -ms-hypens: none;
-        hyphens: none;
+        @include hyphens(none);
     }
 }
