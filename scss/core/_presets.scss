@@ -1,4 +1,5 @@
 // SETTINGS
+// --------------------------------------------------------------------
 $legacy-support-for-ie6: false;
 $experimental-support-for-khtml: false;
 
@@ -9,16 +10,19 @@ $ie7-support: false;
 @-ms-viewport { width: device-width; }
 
 // USE COMPASS
+// --------------------------------------------------------------------
 @import "compass";
 
 
 // FALLBACK FONT STACKS
+// --------------------------------------------------------------------
 $serif: Times, Cambria, serif;
 $sans:  Helvetica, Arial, sans-serif;
 $mono:  Consolas, Courier, monospace;
 
 
 // STANDARD COLORS
+// --------------------------------------------------------------------
 $white:     #fff;
 $black:     #000;
 $off-white: #fcfcfc;

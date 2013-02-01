@@ -1,4 +1,5 @@
-// Button
+// BUTTON
+// --------------------------------------------------------------------
 @mixin gradient-button($bg: #ddd, $fg: #000, $rad: 4px) {
 	background: $bg;
     @include background-clip(padding-box);
@@ -36,8 +37,9 @@
     &:focus { color: $fg; }
 }
 
-// Folded corner
+// FOLDED CORNER
 // http://nicolasgallagher.com/pure-css-folded-corner-effect/
+// --------------------------------------------------------------------
 @mixin folded-corner($box-color, $container-color) {
 	background: $box-color;
 	position: relative;
@@ -56,8 +58,9 @@
 	}
 }
 
-// Speech bubble
+// SPEECH BUBBLE
 // http://nicolasgallagher.com/pure-css-speech-bubbles/
+// --------------------------------------------------------------------
 @mixin speech-bubble($box-color,$border-color: $box-color,$border-width: 2px,$border-radius: 10px) {
 	background: $box-color;
 	border: $border-width solid $border-color;
@@ -94,8 +97,9 @@
 	}
 }
 
-// CSS ribbon
+// CSS RIBBON
 // http://nicolasgallagher.com/an-introduction-to-css-pseudo-element-hacks/
+// --------------------------------------------------------------------
 @mixin ribbon-both($ribbon-color, $text-color, $container-horizontal-padding, $corner-width: 10px) {
 	background: $ribbon-color;
 	color: $text-color;
@@ -162,7 +166,8 @@
 	}
 }
 
-// Triangles
+// TRIANGLES
+// --------------------------------------------------------------------
 @mixin triangle($color, $orientation: bottom, $size: 8px) {
 	position: relative;
 

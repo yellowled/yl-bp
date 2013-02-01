@@ -1,5 +1,5 @@
 // HIDE ELEMENTS
-//
+// --------------------------------------------------------------------
 // Hide only visually, but have it available for screenreaders
 .visuallyhidden {
     border: 0;
@@ -35,6 +35,7 @@
 
 
 // CLEARFIX
+// --------------------------------------------------------------------
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -49,6 +50,7 @@
 
 
 // IMAGE REPLACEMENT
+// --------------------------------------------------------------------
 // .ir {
 //     background-color: transparent;
 //     border: 0;

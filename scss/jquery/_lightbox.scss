@@ -1,21 +1,25 @@
-// CUSTOMIZE
-$lboxbg: #fff;
-
-
+// JQUERY COLORBOX
+// --------------------------------------------------------------------
 // JS USAGE
 //
 // $('#lightbox a').colorbox({
-// 	rel: "lbox",
-// 	current: "Bild {current} von {total}",
-// 	previous: "«<span class='visuallyhidden'> Zurück</span>",
-// 	next: "<span class='visuallyhidden'>Weiter </span>»",
-// 	close: "×<span class='visuallyhidden'>Schließen</span>",
-// 	maxWidth: "100%",
-// 	maxHeight: "100%"
+//  rel: "lbox",
+//  current: "Bild {current} von {total}",
+//  previous: "«<span class='visuallyhidden'> Zurück</span>",
+//  next: "<span class='visuallyhidden'>Weiter </span>»",
+//  close: "×<span class='visuallyhidden'>Schließen</span>",
+//  maxWidth: "100%",
+//  maxHeight: "100%"
 // });
 
 
-// CORE STYLES, DON'T ALTER
+// CUSTOMIZE
+// --------------------------------------------------------------------
+$lboxbg: #fff;
+
+
+// CORE STYLES (don't alter)
+// --------------------------------------------------------------------
 #colorbox,
 #cboxOverlay,
 #cboxWrapper {
@@ -71,6 +75,7 @@ $lboxbg: #fff;
 
 
 // USER STYLES
+// --------------------------------------------------------------------
 #cboxOverlay { background: #222; }
 
 #cboxContent {
@@ -120,8 +125,9 @@ $lboxbg: #fff;
 }
 
 // FIXES
-//
-// IE7/IE8: PNG alpha transparency, http://jacklmoore.com/notes/ie-transparency-problems/
+// --------------------------------------------------------------------
+// IE7/IE8: PNG alpha transparency
+// http://jacklmoore.com/notes/ie-transparency-problems/
 .cboxIE #cboxTopLeft,
 .cboxIE #cboxTopCenter,
 .cboxIE #cboxTopRight,

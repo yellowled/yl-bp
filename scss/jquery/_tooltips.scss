@@ -1,7 +1,5 @@
-// CUSTOMIZE
-$tipbg: #000;
-
-
+// JQUERY TOOLTIPS
+// --------------------------------------------------------------------
 // JS USAGE
 //
 // $('#tooltips a[title]').tipsy({
@@ -9,7 +7,13 @@ $tipbg: #000;
 // });
 
 
+// CUSTOMIZE
+// --------------------------------------------------------------------
+$tipbg: #000;
+
+
 // CORE STYLES
+// --------------------------------------------------------------------
 .tipsy {
     font-size: .75em;
     padding: 5px;
@@ -36,9 +40,8 @@ $tipbg: #000;
 }
 
 
-// ARROW STYLES
-//
-// Only include the ones actually used
+// ARROW STYLES (only include the ones actually used)
+// --------------------------------------------------------------------
 // .tipsy-arrow-n { border-bottom-color: $tipbg; }
 .tipsy-arrow-s { border-top-color: $tipbg; }
 // .tipsy-arrow-e { border-left-color: $tipbg; }

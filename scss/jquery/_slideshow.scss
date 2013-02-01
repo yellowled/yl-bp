@@ -1,18 +1,22 @@
-// CUSTOMIZE
-$slidewidth: 480px;
-
-
+// JQUERY RESPONSIVE SLIDESHOW
+// --------------------------------------------------------------------
 // JS USAGE
 //
 // $('.slideshow ul').responsiveSlides({
-// 	pager: true,
-// 	nav: true,
-// 	prevText: "Zurück",
-// 	nextText: "Weiter"
+//  pager: true,
+//  nav: true,
+//  prevText: "Zurück",
+//  nextText: "Weiter"
 // });
 
 
+// CUSTOMIZE
+// --------------------------------------------------------------------
+$slidewidth: 480px;
+
+
 // CORE STYLES
+// --------------------------------------------------------------------
 .slideshow {
 	margin: 1.625em 0;
 	max-width: 100%;

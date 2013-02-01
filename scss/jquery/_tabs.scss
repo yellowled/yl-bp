@@ -1,25 +1,29 @@
+// JQUERY ACCESSIBLE TABS
+// --------------------------------------------------------------------
+// JS USAGE
+//
+// $('#tabs').accessibleTabs({
+//  currentClass: 'on',
+//  tabhead: 'h3',
+//  tabheadClass: 'visuallyhidden',
+//  tabbody: '.panel',
+//  fx: 'fadeIn',
+//  currentInfoText: 'Aktuelles Tab: ',
+//  currentInfoClass: 'visuallyhidden',
+//  syncheights: true
+// });
+
+
 // CUSTOMIZE
+// --------------------------------------------------------------------
 $tabswidth: 560px;
 $bordercolor: #aaa;
 $background: #fff;
 $inactive: #eee;
 
 
-// JS USAGE
-//
-// $('#tabs').accessibleTabs({
-// 	currentClass: 'on',
-// 	tabhead: 'h3',
-// 	tabheadClass: 'visuallyhidden',
-// 	tabbody: '.panel',
-// 	fx: 'fadeIn',
-// 	currentInfoText: 'Aktuelles Tab: ',
-// 	currentInfoClass: 'visuallyhidden',
-// 	syncheights: true
-// });
-
-
 // CORE STYLES
+// --------------------------------------------------------------------
 .tabs {
 	max-width: 100%;
 	width: $tabswidth;

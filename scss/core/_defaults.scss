@@ -1,4 +1,5 @@
 // BASE
+// --------------------------------------------------------------------
 html,
 button,
 input,
@@ -72,6 +73,7 @@ img { vertical-align: middle; }
 
 // RESPONSIVE MEDIA OBJECTS
 // http://unstoppablerobotninja.com/entry/fluid-images
+// --------------------------------------------------------------------
 // embed, object,
 // audio, video,
 img { max-width: 100%; }
@@ -81,6 +83,7 @@ img { height: auto; }
 
 
 // FORMS
+// --------------------------------------------------------------------
 // Remove default fieldset styles.
 fieldset {
     border: 0;
@@ -94,6 +97,7 @@ textarea { resize: vertical; }
 
 // QUOTES
 // http://html5doctor.com/blockquote-q-cite/
+// --------------------------------------------------------------------
 q { quotes: '“' '”' '‘' '’'; }
 :lang(de) q { quotes: '„' '“' '‚' '‘'; }
 //:lang(de) q { quotes: '»' '«' '›' '‹'; }
@@ -127,7 +131,8 @@ blockquote>cite { margin: 1.5em 0; }
 blockquote + cite { margin: 0 0 1.5em 3em; }
 
 
-// HYPENATION
+// HYPHENATION
+// --------------------------------------------------------------------
 p {
     @include hyphens(auto);
 
