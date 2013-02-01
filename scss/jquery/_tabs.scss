@@ -1,3 +1,12 @@
+// CUSTOMIZE
+$tabswidth: 560px;
+$bordercolor: #aaa;
+$background: #fff;
+$inactive: #eee;
+
+
+// JS USAGE
+//
 // $('#tabs').accessibleTabs({
 // 	currentClass: 'on',
 // 	tabhead: 'h3',
@@ -9,11 +18,8 @@
 // 	syncheights: true
 // });
 
-$tabswidth: 560px;
-$bordercolor: #aaa;
-$background: #fff;
-$inactive: #eee;
 
+// CORE STYLES
 .tabs {
 	max-width: 100%;
 	width: $tabswidth;

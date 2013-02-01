@@ -1,3 +1,9 @@
+// CUSTOMIZE
+$slidewidth: 480px;
+
+
+// JS USAGE
+//
 // $('.slideshow ul').responsiveSlides({
 // 	pager: true,
 // 	nav: true,
@@ -5,8 +11,8 @@
 // 	nextText: "Weiter"
 // });
 
-$slidewidth: 480px;
 
+// CORE STYLES
 .slideshow {
 	margin: 1.625em 0;
 	max-width: 100%;

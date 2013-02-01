@@ -1,3 +1,9 @@
+// CUSTOMIZE
+$lboxbg: #fff;
+
+
+// JS USAGE
+//
 // $('#lightbox a').colorbox({
 // 	rel: "lbox",
 // 	current: "Bild {current} von {total}",
@@ -8,7 +14,8 @@
 // 	maxHeight: "100%"
 // });
 
-// ColorBox Core Styles: consistent between example themes, should not be altered
+
+// CORE STYLES, DON'T ALTER
 #colorbox,
 #cboxOverlay,
 #cboxWrapper {
@@ -62,9 +69,8 @@
 	border:0;
 }
 
-// User Styles
-$lboxbg: #fff;
 
+// USER STYLES
 #cboxOverlay { background: #222; }
 
 #cboxContent {
@@ -113,7 +119,9 @@ $lboxbg: #fff;
 	display: block;
 }
 
-// Fixes IE7/IE8 PNG alpha transparency, http://jacklmoore.com/notes/ie-transparency-problems/
+// FIXES
+//
+// IE7/IE8: PNG alpha transparency, http://jacklmoore.com/notes/ie-transparency-problems/
 .cboxIE #cboxTopLeft,
 .cboxIE #cboxTopCenter,
 .cboxIE #cboxTopRight,
@@ -123,6 +131,7 @@ $lboxbg: #fff;
 .cboxIE #cboxMiddleLeft,
 .cboxIE #cboxMiddleRight { filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF); }
 
+// IE8: "shrinking" image in lightbox
 .lt-ie9 #cboxLoadedContent img {
 	height: auto;
 	width: auto;
