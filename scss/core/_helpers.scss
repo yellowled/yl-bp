@@ -1,25 +1,5 @@
-// Image replacement
-// .ir {
-//     background-color: transparent;
-//     border: 0;
-//     overflow: hidden;
-//     // IE 6/7 fallback
-//     *text-indent: -9999px;
-// }
-
-// .ir:before {
-//     content: "";
-//     display: block;
-//     width: 0;
-//     height: 150%;
-// }
-
-// Hide from both screenreaders and browsers
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
+// HIDE ELEMENTS
+//
 // Hide only visually, but have it available for screenreaders
 .visuallyhidden {
     border: 0;
@@ -47,7 +27,14 @@
 // Hide visually and from screenreaders, but maintain layout
 // .invisible { visibility: hidden; }
 
-// Clearfix: contain floats
+// Hide from both screenreaders and browsers
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+
+// CLEARFIX
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -55,5 +42,22 @@
 }
 
 .clearfix:after { clear: both; }
-// For IE 6/7 only
+// IE 7 only
 .clearfix { *zoom: 1; }
+
+
+// IMAGE REPLACEMENT
+// .ir {
+//     background-color: transparent;
+//     border: 0;
+//     overflow: hidden;
+//     // IE 7 fallback
+//     *text-indent: -9999px;
+// }
+
+// .ir:before {
+//     content: "";
+//     display: block;
+//     width: 0;
+//     height: 150%;
+// }

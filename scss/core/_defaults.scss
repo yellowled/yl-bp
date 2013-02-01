@@ -1,4 +1,4 @@
-// Base styles
+// BASE
 html,
 button,
 input,
@@ -26,6 +26,36 @@ body {
     text-shadow: none;
 }
 
+// Chrome Frame prompt
+.chromeframe {
+    margin: 0;
+    background: #ccc;
+    color: $off-black;
+    padding: 0.25em;
+    text-align: center;
+}
+
+// Not covered by normalize.css
+nav ul,
+nav ol {
+    list-style: none;
+    padding: 0;
+}
+
+dt { font-weight: bold; }
+dd { margin: 0; }
+
+caption,
+th { text-align: left; }
+
+// Nested lists
+li {
+    ul, ol { margin: 0; }
+}
+
+// Nested code
+pre code { font-size: 1em; }
+
 // A better looking default horizontal rule
 hr {
     display: block;
@@ -39,7 +69,8 @@ hr {
 // Remove the gap between images and the bottom of their containers
 img { vertical-align: middle; }
 
-// Responsive media objects
+
+// RESPONSIVE MEDIA OBJECTS
 // http://unstoppablerobotninja.com/entry/fluid-images
 // embed, object,
 // audio, video,
@@ -48,6 +79,8 @@ img { max-width: 100%; }
 // video,
 img { height: auto; }
 
+
+// FORMS
 // Remove default fieldset styles.
 fieldset {
     border: 0;
@@ -58,16 +91,9 @@ fieldset {
 // Allow only vertical resizing of textareas.
 textarea { resize: vertical; }
 
-// Chrome Frame prompt
-.chromeframe {
-    margin: 0;
-    background: #ccc;
-    color: $off-black;
-    padding: 0.25em;
-    text-align: center;
-}
 
-// Automagic quotes, http://html5doctor.com/blockquote-q-cite/
+// QUOTES
+// http://html5doctor.com/blockquote-q-cite/
 q { quotes: '“' '”' '‘' '’'; }
 :lang(de) q { quotes: '„' '“' '‚' '‘'; }
 //:lang(de) q { quotes: '»' '«' '›' '‹'; }
@@ -88,6 +114,7 @@ blockquote:lang(de)  p:after { content: ''; content: no-close-quote; }
 blockquote:lang(de)  p:first-child:before { content: '„'; content: open-quote; }
 :lang(de) blockquote p:last-child:after,
 blockquote:lang(de)  p:last-child:after  { content: '“'; content: close-quote; }
+
 // citations
 blockquote>cite,
 blockquote + cite {
@@ -99,26 +126,14 @@ blockquote + cite {
 blockquote>cite { margin: 1.5em 0; }
 blockquote + cite { margin: 0 0 1.5em 3em; }
 
-// stuff not covered by normalize.css
-dt { font-weight: bold; }
-dd { margin: 0; }
 
-caption,
-th { text-align: left; }
-
-// nested lists
-li {
-    ul, ol { margin: 0; }
-}
-// nested code
-pre code { font-size: 1em; }
-
-// automagic hypenation
+// HYPENATION
 p {
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
+
     // not for preformatted text (inline)
     code,
     samp,
@@ -129,6 +144,3 @@ p {
         hyphens: none;
     }
 }
-
-nav ul,
-nav ol { padding: 0; }
