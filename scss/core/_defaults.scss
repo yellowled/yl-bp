@@ -121,7 +121,8 @@ blockquote:lang(de)  p:last-of-type:after  { content: '“'; content: close-quot
 
 // Quote source attribution
 blockquote > small,
-blockquote + small {
+blockquote + small,
+blockquote + figcaption {
     display: block;
     font-size: 1em;
 
@@ -129,7 +130,8 @@ blockquote + small {
 }
 
 blockquote > small { margin: 1.5em 0; }
-blockquote + small { margin: 0 0 1.5em 40px; }
+blockquote + small,
+blockquote + figcaption { margin: 0 0 1.5em 40px; }
 
 
 // HYPHENATION
