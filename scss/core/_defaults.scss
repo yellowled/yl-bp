@@ -105,8 +105,8 @@ q { quotes: '“' '”' '‘' '’'; }
 blockquote p { quotes: '“' '”'; }
 blockquote p:before { content: ''; content: no-open-quote; }
 blockquote p:after  { content: ''; content: no-close-quote; }
-blockquote p:first-child:before { content: '“'; content: open-quote;  }
-blockquote p:last-child:after   { content: '”'; content: close-quote; }
+blockquote p:first-of-type:before { content: '“'; content: open-quote;  }
+blockquote p:last-of-type:after   { content: '”'; content: close-quote; }
 
 :lang(de) blockquote p,
 blockquote:lang(de) p { quotes: '„' '“'; }
@@ -114,21 +114,22 @@ blockquote:lang(de) p { quotes: '„' '“'; }
 blockquote:lang(de)  p:before { content: ''; content: no-open-quote; }
 :lang(de) blockquote p:after,
 blockquote:lang(de)  p:after { content: ''; content: no-close-quote; }
-:lang(de) blockquote p:first-child:before,
-blockquote:lang(de)  p:first-child:before { content: '„'; content: open-quote; }
-:lang(de) blockquote p:last-child:after,
-blockquote:lang(de)  p:last-child:after  { content: '“'; content: close-quote; }
+:lang(de) blockquote p:first-of-type:before,
+blockquote:lang(de)  p:first-of-type:before { content: '„'; content: open-quote; }
+:lang(de) blockquote p:last-of-type:after,
+blockquote:lang(de)  p:last-of-type:after  { content: '“'; content: close-quote; }
 
-// citations
-blockquote>cite,
-blockquote + cite {
+// Quote source attribution
+blockquote > small,
+blockquote + small {
     display: block;
+    font-size: 1em;
 
     &:before { content: "– "; }
 }
 
-blockquote>cite { margin: 1.5em 0; }
-blockquote + cite { margin: 0 0 1.5em 3em; }
+blockquote > small { margin: 1.5em 0; }
+blockquote + small { margin: 0 0 1.5em 40px; }
 
 
 // HYPHENATION
