@@ -120,18 +120,21 @@ blockquote:lang(de)  p:first-of-type:before { content: '„'; content: open-quot
 blockquote:lang(de)  p:last-of-type:after  { content: '“'; content: close-quote; }
 
 // Quote source attribution
-blockquote > small,
-blockquote + small,
-blockquote + figcaption {
-    display: block;
-    font-size: 1em;
+blockquote {
+    & > small,
+    & + small,
+    & + figcaption {
+        display: block;
+        font-size: 1em;
 
-    &:before { content: "– "; }
+        &:before { content: "– "; }
+    }
+
+    & > small { margin: 1.5em 0; }
+
+    & + small,
+    & + figcaption { margin: 1.5em 0 1.5em 40px; }
 }
-
-blockquote > small { margin: 1.5em 0; }
-blockquote + small,
-blockquote + figcaption { margin: 0 0 1.5em 40px; }
 
 
 // HYPHENATION
