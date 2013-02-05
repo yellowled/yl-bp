@@ -8,8 +8,11 @@
     border-color: $bg darken($bg, 13.2%) darken($bg, 26.5%);
     @include border-radius($rad);
     color: $fg;
+    display: inline-block;
     outline: 0;
-    padding: 3px 10px;
+    padding: 3px 0;
+    line-height: normal;
+    text-align: center;
     text-decoration: none;
     text-shadow: invert($fg) 0 1px 1px;
     width: auto;
