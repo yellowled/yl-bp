@@ -30,7 +30,7 @@ body {
 // Chrome Frame prompt
 .chromeframe {
     margin: 0;
-    background: #ccc;
+    background: $mid-grey;
     color: $off-black;
     padding: 0.25em;
     text-align: center;
@@ -62,7 +62,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $mid-grey;
     margin: 1.5em 0;
     padding: 0;
 }
