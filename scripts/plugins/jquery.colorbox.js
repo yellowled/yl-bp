@@ -1,7 +1,6 @@
-/*
-	jQuery ColorBox v1.3.31
+/*!
+	jQuery ColorBox v1.4.1 - 2013-02-14
 	(c) 2013 Jack Moore - jacklmoore.com/colorbox
-	updated: 2013-01-28
 	license: http://www.opensource.org/licenses/mit-license.php
 */
 (function ($, document, window) {
@@ -32,7 +31,13 @@
 		opacity: 0.9,
 		preloading: true,
 		className: false,
+		
+		// alternate image paths for high-res displays
+		retinaImage: false,
+		retinaUrl: false,
+		retinaSuffix: '@2x.$1',
 
+		// internationalization
 		current: "image {current} of {total}",
 		previous: "previous",
 		next: "next",
@@ -49,6 +54,8 @@
 		slideshowSpeed: 2500,
 		slideshowStart: "start slideshow",
 		slideshowStop: "stop slideshow",
+		photoRegex: /\.(gif|png|jp(e|g|eg)|bmp|ico)((#|\?).*)?$/i,
+
 		onOpen: false,
 		onLoad: false,
 		onComplete: false,
@@ -104,6 +111,7 @@
 	$prev,
 	$close,
 	$groupControls,
+	$events = $({}),
 	
 	// Variables for cached values or use across multiple functions
 	settings,
@@ -157,10 +165,21 @@
 	}
 	
 	// Checks an href to see if it is a photo.
-	// There is a force photo option (photo: true) for hrefs that cannot be matched by this regex.
+	// There is a force photo option (photo: true) for hrefs that cannot be matched by the regex.
 	function isImage(url) {
-		return settings.photo || /\.(gif|png|jp(e|g|eg)|bmp|ico)((#|\?).*)?$/i.test(url);
+		return settings.photo || settings.photoRegex.test(url);
 	}
+
+	function retinaUrl(url) {
+		return settings.retinaUrl && window.devicePixelRatio > 1 ? url.replace(settings.photoRegex, settings.retinaSuffix) : url;
+	}
+
+    function trapFocus(e) {
+        if (!$.contains($box[0], e.target) && $box[0] !== e.target) {
+            e.stopPropagation();
+            $box.focus();
+        }
+    }
 
 	// Assigns function results to their respective properties
 	function makeSettings() {
@@ -192,9 +211,13 @@
 	}
 
 	function trigger(event, callback) {
+		// for external use
 		$(document).trigger(event);
-		$('*', $box).trigger(event);
-		if (callback) {
+
+		// for internal use
+		$events.trigger(event);
+
+		if ($.isFunction(callback)) {
 			callback.call(element);
 		}
 	}
@@ -205,36 +228,52 @@
 		timeOut,
 		className = prefix + "Slideshow_",
 		click = "click." + prefix,
+		clear,
+		set,
 		start,
 		stop;
 		
 		if (settings.slideshow && $related[1]) {
+			clear = function () {
+				clearTimeout(timeOut);
+			};
+
+			set = function () {
+				if (settings.loop || $related[index + 1]) {
+					timeOut = setTimeout(publicMethod.next, settings.slideshowSpeed);
+				}
+			};
+
 			start = function () {
 				$slideshow
 					.html(settings.slideshowStop)
 					.unbind(click)
-					.bind(event_complete, function () {
-						if (settings.loop || $related[index + 1]) {
-							timeOut = setTimeout(publicMethod.next, settings.slideshowSpeed);
-						}
-					})
-					.bind(event_load, function () {
-						clearTimeout(timeOut);
-					})
-					.one(click + ' ' + event_cleanup, stop);
+					.one(click, stop);
+
+				$events
+					.bind(event_complete, set)
+					.bind(event_load, clear)
+					.bind(event_cleanup, stop);
+
 				$box.removeClass(className + "off").addClass(className + "on");
-				timeOut = setTimeout(publicMethod.next, settings.slideshowSpeed);
 			};
 			
 			stop = function () {
-				clearTimeout(timeOut);
+				clear();
+				
+				$events
+					.unbind(event_complete, set)
+					.unbind(event_load, clear)
+					.unbind(event_cleanup, stop);
+				
 				$slideshow
 					.html(settings.slideshowStart)
-					.unbind([event_complete, event_load, event_cleanup, click].join(' '))
+					.unbind(click)
 					.one(click, function () {
 						publicMethod.next();
 						start();
 					});
+
 				$box.removeClass(className + "on").addClass(className + "off");
 			};
 			
@@ -279,6 +318,12 @@
 				}
 			}
 			
+            $overlay.css({
+                opacity: parseFloat(settings.opacity),
+                cursor: settings.overlayClose ? "pointer" : "auto",
+                visibility: 'visible'
+            }).show();
+            
 			if (!open) {
 				open = active = true; // Prevents the page-change action from queuing up if the visitor holds down the left or right keys.
 				
@@ -292,19 +337,7 @@
 				interfaceWidth = $leftBorder.width() + $rightBorder.width() + $content.outerWidth(true) - $content.width();
 				loadedHeight = $loaded.outerHeight(true);
 				loadedWidth = $loaded.outerWidth(true);
-
-				if (settings.returnFocus) {
-					$(element).blur();
-					$(document).one(event_closed, function () {
-						$(element).focus();
-					});
-				}
 				
-				$overlay.css({
-					opacity: parseFloat(settings.opacity),
-					cursor: settings.overlayClose ? "pointer" : "auto",
-					visibility: 'visible'
-				}).show();
 				
 				// Opens inital empty ColorBox prior to content being loaded.
 				settings.w = setSize(settings.initialWidth, 'x');
@@ -317,11 +350,33 @@
 					}).trigger('resize.' + event_ie6);
 				}
 				
+				slideshow();
+
 				trigger(event_open, settings.onOpen);
 				
 				$groupControls.add($title).hide();
 				
 				$close.html(settings.close).show();
+
+                $box.focus();
+                
+                // Confine focus to the modal
+                // Uses event capturing that is not supported in IE8-
+                if (document.addEventListener) {
+
+                    document.addEventListener('focus', trapFocus, true);
+                    
+                    $events.one(event_closed, function () {
+                        document.removeEventListener('focus', trapFocus, true);
+                    });
+                }
+
+                // Return focus on closing
+                if (settings.returnFocus) {
+                    $events.one(event_closed, function () {
+                        $(element).focus();
+                    });
+                }
 			}
 			
 			publicMethod.load(true);
@@ -335,17 +390,23 @@
 			init = false;
 
 			$window = $(window);
-			$box = $tag(div).attr({id: colorbox, 'class': isIE ? prefix + (isIE6 ? 'IE6' : 'IE') : ''}).hide();
+			$box = $tag(div).attr({
+                id: colorbox,
+                'class': isIE ? prefix + (isIE6 ? 'IE6' : 'IE') : '',
+                role: 'dialog',
+                tabindex: '-1'
+            }).hide();
 			$overlay = $tag(div, "Overlay", isIE6 ? 'position:absolute' : '').hide();
 			$loadingOverlay = $tag(div, "LoadingOverlay").add($tag(div, "LoadingGraphic"));
 			$wrap = $tag(div, "Wrapper");
 			$content = $tag(div, "Content").append(
 				$title = $tag(div, "Title"),
 				$current = $tag(div, "Current"),
-				$next = $tag(div, "Next"),
-				$prev = $tag(div, "Previous"),
-				$slideshow = $tag(div, "Slideshow").bind(event_open, slideshow),
-				$close = $tag(div, "Close")
+                $prev = $tag('button', "Previous"),
+				$next = $tag('button', "Next"),
+				$slideshow = $tag('button', "Slideshow"),
+                $loadingOverlay,
+				$close = $tag('button', "Close")
 			);
 			
 			$wrap.append( // The 3x3 Grid that makes up ColorBox
@@ -412,7 +473,7 @@
 						e.preventDefault();
 						publicMethod.close();
 					}
-					if (open && settings.arrowKey && $related[1]) {
+                    if (open && settings.arrowKey && $related[1] && !e.altKey) {
 						if (key === 37) {
 							e.preventDefault();
 							$prev.click();
@@ -424,8 +485,12 @@
 				});
 
 				if ($.isFunction($.fn.on)) {
+					// For jQuery 1.7+
 					$(document).on('click.'+prefix, '.'+boxElement, clickHandler);
-				} else { // For jQuery 1.3.x -> 1.6.x
+				} else {
+					// For jQuery 1.3.x -> 1.6.x
+					// This code is never reached in jQuery 1.9, so do not contact me about 'live' being removed.
+					// This is not here for jQuery 1.9, it's here for legacy users.
 					$('.'+boxElement).live('click.'+prefix, clickHandler);
 				}
 			}
@@ -605,7 +670,7 @@
 		}
 		
 		var callback, speed = settings.transition === "none" ? 0 : settings.speed;
-		
+
 		$loaded.empty().remove(); // Using empty first may prevent some IE7 issues.
 
 		$loaded = $tag(div, 'LoadedContent').append(object);
@@ -630,11 +695,9 @@
 		$loadingBay.hide();
 		
 		// floating the IMG removes the bottom line-height and fixed a problem where IE miscalculates the width of the parent element as 100% of the document width.
-		//$(photo).css({'float': 'none', marginLeft: 'auto', marginRight: 'auto'});
 		
 		$(photo).css({'float': 'none'});
 
-		
 		callback = function () {
 			var total = $related.length,
 				iframe,
@@ -654,7 +717,7 @@
 			
 			complete = function () {
 				clearTimeout(loadingTimer);
-				$loadingOverlay.remove();
+				$loadingOverlay.hide();
 				trigger(event_complete, settings.onComplete);
 			};
 			
@@ -693,10 +756,10 @@
 								src = src.call(i);
 							}
 						} else {
-							src = i.href;
+							src = $(i).attr('href');
 						}
 
-						if (isImage(src)) {
+						if (src && (isImage(src) || data.photo)) {
 							img = new Image();
 							img.src = src;
 						}
@@ -733,7 +796,7 @@
 					.one('load', complete)
 					.appendTo($loaded);
 				
-				$(document).one(event_purge, function () {
+				$events.one(event_purge, function () {
 					iframe.src = "//about:blank";
 				});
 
@@ -811,7 +874,7 @@
 		href = settings.href;
 		
 		loadingTimer = setTimeout(function () {
-			$loadingOverlay.appendTo($content);
+			$loadingOverlay.show();
 		}, 100);
 		
 		if (settings.inline) {
@@ -819,7 +882,7 @@
 			// An event is bound to put inline content back when ColorBox closes or loads new content.
 			$inline = $tag(div).hide().insertBefore($(href)[0]);
 
-			$(document).one(event_purge, function () {
+			$events.one(event_purge, function () {
 				$inline.replaceWith($loaded.children());
 			});
 
@@ -831,6 +894,9 @@
 		} else if (settings.html) {
 			prep(settings.html);
 		} else if (isImage(href)) {
+
+			href = retinaUrl(href);
+
 			$(photo = new Image())
 			.addClass(prefix + 'Photo')
 			.bind('error',function () {
@@ -839,6 +905,11 @@
 			})
 			.one('load', function () {
 				var percent;
+
+				if (settings.retinaImage && window.devicePixelRatio > 1) {
+					photo.height = photo.height / window.devicePixelRatio;
+					photo.width = photo.width / window.devicePixelRatio;
+				}
 
 				if (settings.scalePhotos) {
 					setResize = function () {
@@ -856,7 +927,7 @@
 				}
 				
 				if (settings.h) {
-					photo.style.marginTop = Math.max(settings.h - photo.height, 0) / 2 + 'px';
+					photo.style.marginTop = Math.max(settings.mh - photo.height, 0) / 2 + 'px';
 				}
 				
 				if ($related[1] && (settings.loop || $related[index + 1])) {
