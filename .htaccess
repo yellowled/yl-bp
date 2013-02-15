@@ -126,10 +126,10 @@ AddType text/vtt                            vtt
   ExpiresByType image/svg+xml             "access plus 1 month"
   ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
 # CSS and JavaScript
-  # ExpiresByType text/css                  "access plus 1 year"
-  # ExpiresByType application/javascript    "access plus 1 year"
-  ExpiresByType text/css                  "access plus 1 week"
-  ExpiresByType application/javascript    "access plus 1 week"
+  ExpiresByType text/css                  "access plus 1 year"
+  ExpiresByType application/javascript    "access plus 1 year"
+  # ExpiresByType text/css                  "access plus 1 week"
+  # ExpiresByType application/javascript    "access plus 1 week"
 </IfModule>
 
 # Prevent mobile network providers from modifying your site
@@ -173,11 +173,11 @@ FileETag None
 # </IfModule>
 
 # Route requests for /css/style.20110203.css to /css/style.css
-<IfModule mod_rewrite.c>
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^(.+)\.(\d+)\.(js|css|png|jpg|gif)$ $1.$3 [L]
-</IfModule>
+# <IfModule mod_rewrite.c>
+#   RewriteCond %{REQUEST_FILENAME} !-f
+#   RewriteCond %{REQUEST_FILENAME} !-d
+#   RewriteRule ^(.+)\.(\d+)\.(js|css|png|jpg|gif)$ $1.$3 [L]
+# </IfModule>
 
 # Prevent 404 errors for non-existing redirected folders
 Options -MultiViews
