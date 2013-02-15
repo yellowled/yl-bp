@@ -1,6 +1,6 @@
 // FIGURES
 // --------------------------------------------------------------------
-@mixin simple-figure($border: #aaa) {
+@mixin simple-figure($border: $dark-grey) {
 	img {
 		border-top: 1px solid $border;
 		border-bottom: 1px solid $border;
@@ -12,14 +12,14 @@
 @mixin fancy-figure {
 	position: relative;
 
-	img { @include box-shadow(0 0 4px rgba(0,0,0,.7)); }
+	img { @include box-shadow(0 0 4px $shadow); }
 
-	.no-boxshadow & img { border: 1px solid #aaa; }
+	.no-boxshadow & img { border: 1px solid $dark-grey; }
 
 	figcaption {
-		background: #222;
-		background: rgba(0,0,0,.7);
-		color: #fff;
+		background: $off-black;
+		background: $shadow;
+		color: $white;
 		padding: 2px 10px;
 		position: absolute;
 		left: 0;
@@ -32,7 +32,7 @@
 
 // TABLES
 // --------------------------------------------------------------------
-@mixin simple-table($border: #ccc) {
+@mixin simple-table($border: $mid-grey) {
 	border-bottom: 1px solid $border;
 	width: 100%;
 
@@ -41,7 +41,7 @@
 	caption { text-align: center; }
 }
 
-@mixin striped-table($border: #aaa, $odd: #eee, $even: #ddd, $head: #ccc, $foot: $head) {
+@mixin striped-table($border: $dark-grey, $odd: $lite-grey, $even: #ddd, $head: $mid-grey, $foot: $head) {
 	border: 1px solid $border;
 	border-top: 0 none;
 	width: 100%;
