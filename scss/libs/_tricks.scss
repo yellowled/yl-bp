@@ -1,6 +1,6 @@
 // BUTTON
 // --------------------------------------------------------------------
-@mixin gradient-button($bg: #ddd, $fg: #000, $rad: 4px) {
+@mixin gradient-button($bg: $alt-grey, $fg: $black, $rad: 4px) {
 	background: $bg;
     @include background-clip(padding-box);
     @include background-image(linear-gradient(lighten($bg, 13.2%), $bg));

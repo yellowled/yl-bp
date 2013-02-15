@@ -41,7 +41,7 @@
 	caption { text-align: center; }
 }
 
-@mixin striped-table($border: $dark-grey, $odd: $lite-grey, $even: #ddd, $head: $mid-grey, $foot: $head) {
+@mixin striped-table($border: $dark-grey, $odd: $lite-grey, $even: $alt-grey, $head: $mid-grey, $foot: $head) {
 	border: 1px solid $border;
 	border-top: 0 none;
 	width: 100%;
