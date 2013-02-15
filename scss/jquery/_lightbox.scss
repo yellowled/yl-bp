@@ -8,6 +8,8 @@
 //  previous: "«<span class='visuallyhidden'> Zurück</span>",
 //  next: "<span class='visuallyhidden'>Weiter </span>»",
 //  close: "×<span class='visuallyhidden'>Schließen</span>",
+//  xhrError: "Dieser Inhalt konnte nicht geladen werden.",
+//  imgError: "Dieses Bild konnte nicht geladen werden.",
 //  maxWidth: "100%",
 //  maxHeight: "100%"
 // });
@@ -54,11 +56,6 @@ $lboxbg: $white;
 	height: 100%;
 }
 
-#cboxPrevious,
-#cboxNext,
-#cboxClose,
-#cboxSlideshow { cursor: pointer; }
-
 .cboxPhoto {
 	float:left;
 	margin:auto;
@@ -104,6 +101,19 @@ $lboxbg: $white;
 	font-weight: bold;
 	position: absolute;
 	bottom: 12px;
+}
+
+#cboxPrevious,
+#cboxNext,
+#cboxSlideshow,
+#cboxClose {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    width: auto;
 }
 
 #cboxTitle {
