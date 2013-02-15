@@ -9,7 +9,7 @@
 
 // CUSTOMIZE
 // --------------------------------------------------------------------
-$tipbg: #000;
+$tipbg: $black;
 
 
 // CORE STYLES
@@ -23,7 +23,7 @@ $tipbg: #000;
 
 .tipsy-inner {
     background-color: $tipbg;
-    color: #fff;
+    color: $white;
     max-width: 20em;
     padding: 5px 8px 4px;
     text-align: center;
