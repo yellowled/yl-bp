@@ -15,7 +15,7 @@
 
 // CUSTOMIZE
 // --------------------------------------------------------------------
-$lboxbg: #fff;
+$lboxbg: $white;
 
 
 // CORE STYLES (don't alter)
@@ -76,7 +76,7 @@ $lboxbg: #fff;
 
 // USER STYLES
 // --------------------------------------------------------------------
-#cboxOverlay { background: #222; }
+#cboxOverlay { background: $off-black; }
 
 #cboxContent {
 	background: $lboxbg;
@@ -86,11 +86,11 @@ $lboxbg: #fff;
 	@include border-radius(4px);
 }
 
-.cboxIframe { background:$lboxbg; }
+.cboxIframe { background: $lboxbg; }
 
 #cboxError {
 	padding: 50px;
-	border: 1px solid #ccc;
+	border: 1px solid $mid-grey;
 }
 
 #cboxLoadedContent { margin-bottom: 30px; }
