@@ -33,20 +33,20 @@ input[type="reset"],
 input[type="submit"] {
     @include border-radius(4px);
     @include background-clip(padding-box);
-    background: #ddd;
-    @include background-image(linear-gradient(#fff, #ddd));
+    background: $alt-grey;
+    @include background-image(linear-gradient($white, $alt-grey));
     border: 1px solid;
-    border-color: #ddd #bbb #999;
-    color: #000;
+    border-color: $alt-grey #bbb #999;
+    color: $black;
     outline: 0;
     padding: 3px 10px;
-    text-shadow: #fff 0 1px 1px;
+    text-shadow: $white 0 1px 1px;
     width: auto;
-    &:hover { @include background-image(linear-gradient(#fff, #eee 1px, #ccc)); }
+    &:hover { @include background-image(linear-gradient($white, $lite-grey 1px, $mid-grey)); }
     &:active {
-        @include background-image(linear-gradient(#fff, #ddd 1px, #eee));
-        @include box-shadow(inset rgba(#000, 0.25) 0 1px 2px 0);
-        border-color: #999 #bbb #ddd;
+        @include background-image(linear-gradient($white, $alt-grey 1px, $lite-grey));
+        @include box-shadow(inset rgba($black, 0.25) 0 1px 2px 0);
+        border-color: #999 #bbb $alt-grey;
     }
     @if $ie7-support {
         *padding-top: 2px;
@@ -82,7 +82,7 @@ input[type="url"] {
     background-color: #fafafa;
     border: 1px solid;
     border-color: #c1c1c1 #c1c1c1 #e1e1e1;
-    color: #222;
+    color: $off-black;
     outline: 0;
     padding: 2px 3px;
     text-align: left;
@@ -92,7 +92,7 @@ input[type="url"] {
         *padding-bottom: 1px;
         *height: auto;
     }
-    &[disabled] { background-color: #eee; }
+    &[disabled] { background-color: $lite-grey; }
 }
 
 button[disabled],
@@ -149,7 +149,7 @@ textarea {
 }
 
 optgroup {
-    color: #222;
+    color: $off-black;
     font-style: normal;
     font-weight: normal;
 }
