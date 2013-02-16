@@ -32,12 +32,14 @@ h6 { font-size: 1em; }
 
 h5,
 h6,
-blockquote,
+p,
 ul,
 ol,
 dl,
-p,
+pre,
+blockquote,
 table {
+    line-height: px-to-em(21px,14px);
 	margin-top: 1.5em;
 	margin-bottom: 1.5em;
 }
