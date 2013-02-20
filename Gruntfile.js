@@ -131,7 +131,7 @@ module.exports = function(grunt) {
                     optimizationLevel: 3,
                     progressive: false
                 },
-                // Might be tweaked if project requires a more complex directory structure
+                // Tweak if project requires complex directory structure
                 files: {
                     'dist/img/': 'img/*'
                 }
@@ -203,5 +203,5 @@ module.exports = function(grunt) {
     // Development
     grunt.registerTask('check', ['htmllint', 'jshint']);
     // Deployment
-    grunt.registerTask('deploy', ['clean:deploy', 'jshint', 'concat:dev', 'uglify', 'compass:deploy', 'imagemin:deploy', 'copy:deploy', 'modernizr', 'hashres:deploy']);
+    grunt.registerTask('deploy', ['clean:deploy', 'copy:deploy', 'concat:dev', 'compass:deploy', 'uglify', 'imagemin:deploy', 'modernizr', 'hashres:deploy']);
 };
