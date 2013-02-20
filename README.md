@@ -4,7 +4,7 @@ This is what I usually use to start HTML5 projects.
 
 ## Build script
 
-Uses [Grunt](http://gruntjs.com) build script, so do `npm install` first to install required Grunt plugins locally. Requires at least Grunt 0.4.0.
+Uses [Grunt](http://gruntjs.com) build script (requires **at least** Grunt 0.4.0), so do `npm install` first to install required Grunt plugins locally.
 
 A (small) demo is available at [demo.netzgestaltung.net](http://demo.netzgestaltung.net).
 
