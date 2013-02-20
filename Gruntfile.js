@@ -128,7 +128,7 @@ module.exports = function(grunt) {
         imagemin: {
             deploy: {
                 options: {
-                    optimizationLevel: 3,
+                    optimizationLevel: 0,
                     progressive: false
                 },
                 // Tweak if project requires complex directory structure
