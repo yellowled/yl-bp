@@ -4,20 +4,25 @@ This is what I usually use to start HTML5 projects.
 
 ## Build script
 
-Now uses [grunt](http://gruntjs.com) build script, so do `npm install` first to install required grunt modules locally. Also requires tools for optimizing PNG/JPG images, see [grunt-imagine](https://github.com/asciidisco/grunt-imagine) docs.
+Uses [Grunt](http://gruntjs.com) build script, so do `npm install` first to install required Grunt plugins locally. Requires at least Grunt 0.4.0.
 
 A (small) demo is available at [demo.netzgestaltung.net](http://demo.netzgestaltung.net).
 
-## grunt plugins used
+## Grunt plugins used
 
-* [grunt-compass](https://github.com/kahlil/grunt-compass)
-* [grunt-cleanx](https://github.com/99corps/grunt-cleanx)
-* [grunt-contrib-copy](https://github.com/gruntjs/grunt-contrib-copy)
-* [grunt-hashres](https://github.com/Luismahou/grunt-hashres)
-* [grunt-html](https://github.com/jzaefferer/grunt-html)
-* [grunt-imagine](https://github.com/asciidisco/grunt-imagine)
-* [grunt-modernizr](https://github.com/doctyper/grunt-modernizr)
-* [grunt-reload](https://github.com/webxl/grunt-reload)
+* [grunt-contrib-clean](https://npmjs.org/package/grunt-contrib-clean)
+* [grunt-contrib-compass](https://npmjs.org/package/grunt-contrib-compass)
+* [grunt-contrib-concat](https://npmjs.org/package/grunt-contrib-concat)
+* [grunt-contrib-connect](https://npmjs.org/package/grunt-contrib-connect)
+* [grunt-contrib-copy](https://npmjs.org/package/grunt-contrib-copy)
+* [grunt-contrib-imagemin](https://npmjs.org/package/grunt-contrib-imagemin)
+* [grunt-contrib-jshint](https://npmjs.org/package/grunt-contrib-jshint)
+* [grunt-contrib-livereload](https://npmjs.org/package/grunt-contrib-livereload)
+* [grunt-contrib-uglify](https://npmjs.org/package/grunt-contrib-watch)
+* [grunt-hashres](https://npmjs.org/package/grunt-hashres)
+* [grunt-html](https://npmjs.org/package/grunt-html)
+* [grunt-modernizr](https://npmjs.org/package/grunt-modernizr)
+* [grunt-regarde](https://github.com/yeoman/grunt-regarde)
 
 ## jQuery plugins included
 
