@@ -18,7 +18,7 @@ A (small) demo is available at [demo.netzgestaltung.net](http://demo.netzgestalt
 * [grunt-contrib-imagemin](https://npmjs.org/package/grunt-contrib-imagemin)
 * [grunt-contrib-jshint](https://npmjs.org/package/grunt-contrib-jshint)
 * [grunt-contrib-livereload](https://npmjs.org/package/grunt-contrib-livereload)
-* [grunt-contrib-uglify](https://npmjs.org/package/grunt-contrib-watch)
+* [grunt-contrib-uglify](https://npmjs.org/package/grunt-contrib-uglify)
 * [grunt-hashres](https://npmjs.org/package/grunt-hashres)
 * [grunt-html](https://npmjs.org/package/grunt-html)
 * [grunt-modernizr](https://npmjs.org/package/grunt-modernizr)
