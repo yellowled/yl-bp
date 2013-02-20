@@ -78,25 +78,15 @@ module.exports = function(grunt) {
                 src: 'scripts/master.js',
                 dest: 'dist/scripts/master.js'
             },
-            colorbox: {
-                src: 'scripts/plugins/jquery.colorbox.js',
-                dest: 'dist/scripts/plugins/jquery.colorbox.js'
-            },
-            syncheight: {
-                src: 'scripts/plugins/jquery.syncheight.js',
-                dest: 'dist/scripts/plugins/jquery.syncheight.js'
-            },
-            tabs: {
-                src: 'scripts/plugins/jquery.tabs.js',
-                dest: 'dist/scripts/plugins/jquery.tabs.js'
-            },
-            tipsy: {
-                src: 'scripts/plugins/jquery.tipsy.js',
-                dest: 'dist/scripts/plugins/jquery.tipsy.js'
-            },
-            slideshow: {
-                src: 'scripts/plugins/responsiveslides.js',
-                dest: 'dist/scripts/plugins/responsiveslides.js'
+            plugins: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: '.',
+                        src: ['scripts/plugins/*.js'],
+                        dest: 'dist/'
+                    }
+                ]
             }
         },
 
