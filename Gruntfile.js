@@ -125,18 +125,20 @@ module.exports = function(grunt) {
             }
         },
 
-        // NOTE: If there are no images to optimize, this task will fail and
-        // abort the build script, so it should be removed from the build process.
         imagemin: {
             deploy: {
                 options: {
                     optimizationLevel: 0,
                     progressive: false
                 },
-                // Tweak if project requires complex directory structure
-                files: {
-                    'dist/img/': 'img/*'
-                }
+                files: [
+                    {
+                        expand: true,
+                        cwd: '.',
+                        src: ['img/**/*.png', 'img/**/*.jpg'],
+                        dest: 'dist/'
+                    }
+                ]
             }
         },
 
