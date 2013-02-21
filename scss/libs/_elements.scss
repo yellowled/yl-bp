@@ -12,13 +12,13 @@
 @mixin fancy-figure {
 	position: relative;
 
-	img { @include box-shadow(0 0 4px $shadow); }
+	img { @include box-shadow(0 0 4px rgba($black,.7)); }
 
 	.no-boxshadow & img { border: 1px solid $dark-grey; }
 
 	figcaption {
 		background: $off-black;
-		background: $shadow;
+		background: rgba($black,.7);
 		color: $white;
 		padding: 2px 10px;
 		position: absolute;
