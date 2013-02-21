@@ -1,5 +1,5 @@
 /*!
-	jQuery ColorBox v1.4.1 - 2013-02-14
+	jQuery ColorBox v1.4.3 - 2013-02-18
 	(c) 2013 Jack Moore - jacklmoore.com/colorbox
 	license: http://www.opensource.org/licenses/mit-license.php
 */
@@ -166,20 +166,20 @@
 	
 	// Checks an href to see if it is a photo.
 	// There is a force photo option (photo: true) for hrefs that cannot be matched by the regex.
-	function isImage(url) {
+	function isImage(settings, url) {
 		return settings.photo || settings.photoRegex.test(url);
 	}
 
-	function retinaUrl(url) {
+	function retinaUrl(settings, url) {
 		return settings.retinaUrl && window.devicePixelRatio > 1 ? url.replace(settings.photoRegex, settings.retinaSuffix) : url;
 	}
 
-    function trapFocus(e) {
-        if (!$.contains($box[0], e.target) && $box[0] !== e.target) {
-            e.stopPropagation();
-            $box.focus();
-        }
-    }
+	function trapFocus(e) {
+		if ('contains' in $box[0] && !$box[0].contains(e.target)) {
+			e.stopPropagation();
+			$box.focus();
+		}
+	}
 
 	// Assigns function results to their respective properties
 	function makeSettings() {
@@ -759,7 +759,8 @@
 							src = $(i).attr('href');
 						}
 
-						if (src && (isImage(src) || data.photo)) {
+						if (src && isImage(data, src)) {
+							src = retinaUrl(data, src);
 							img = new Image();
 							img.src = src;
 						}
@@ -893,9 +894,9 @@
 			prep(" ");
 		} else if (settings.html) {
 			prep(settings.html);
-		} else if (isImage(href)) {
+		} else if (isImage(settings, href)) {
 
-			href = retinaUrl(href);
+			href = retinaUrl(settings, href);
 
 			$(photo = new Image())
 			.addClass(prefix + 'Photo')
