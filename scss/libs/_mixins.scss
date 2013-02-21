@@ -13,3 +13,13 @@
     -o-font-feature-settings: "liga", "dlig";
     font-feature-settings: "liga", "dlig";
 }
+
+// EXTENDS
+// --------------------------------------------------------------------
+%inblock-level {
+    display: inline-block;
+    @if $ie7-support {
+        *display: inline;
+        *zoom: 1;
+    }
+}
