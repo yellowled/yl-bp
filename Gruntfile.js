@@ -60,7 +60,7 @@ module.exports = function(grunt) {
             // parseFiles = true: crawl all *.js, *.css, *.scss files;
             // override by defining "files" array
             'parseFiles' : true,
-            // 'files' : [],
+            'files' : ['scss/**/*.scss', 'scripts/**/*.js'],
             'matchCommunityTests' : false,
             'customTests' : [],
             'excludeFiles' : ['grunt.js','package.json']
