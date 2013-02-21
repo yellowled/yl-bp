@@ -25,7 +25,12 @@
 // }
 
 // Hide visually and from screenreaders, but maintain layout
-// .invisible { visibility: hidden; }
+// (also useful for lazy-hiding items which require JS)
+.invisible {
+    visibility: hidden;
+
+    .no-js & { visibility: visible; }
+}
 
 // Hide from both screenreaders and browsers
 .hidden {
