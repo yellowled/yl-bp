@@ -57,7 +57,7 @@ $slidewidth: 480px;
 	width: $slidewidth;
 
 	li {
-        @extend %inblock_level;
+        @extend %inblock-level;
 		padding: 0 4px;
 	}
 }
