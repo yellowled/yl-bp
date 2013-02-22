@@ -7,13 +7,11 @@ select,
 textarea {
     background: $off-white;
     color: $off-black;
-    font-family: $sans;
 }
 
 body {
     font-size: 1em;
     line-height: 1.5;
-    margin: 0;
 }
 
 // These selection declarations have to be separate.
@@ -44,6 +42,7 @@ nav ol {
 }
 
 dt { font-weight: bold; }
+
 dd { margin: 0; }
 
 caption,
@@ -91,9 +90,6 @@ fieldset {
     padding: 0;
 }
 
-// Allow only vertical resizing of textareas.
-textarea { resize: vertical; }
-
 
 // QUOTES
 // http://html5doctor.com/blockquote-q-cite/
@@ -101,40 +97,6 @@ textarea { resize: vertical; }
 q { quotes: '“' '”' '‘' '’'; }
 :lang(de) q { quotes: '„' '“' '‚' '‘'; }
 //:lang(de) q { quotes: '»' '«' '›' '‹'; }
-
-blockquote p { quotes: '“' '”'; }
-blockquote p:before { content: ''; content: no-open-quote; }
-blockquote p:after  { content: ''; content: no-close-quote; }
-blockquote p:first-of-type:before { content: '“'; content: open-quote;  }
-blockquote p:last-of-type:after   { content: '”'; content: close-quote; }
-
-:lang(de) blockquote p,
-blockquote:lang(de) p { quotes: '„' '“'; }
-:lang(de) blockquote p:before,
-blockquote:lang(de)  p:before { content: ''; content: no-open-quote; }
-:lang(de) blockquote p:after,
-blockquote:lang(de)  p:after { content: ''; content: no-close-quote; }
-:lang(de) blockquote p:first-of-type:before,
-blockquote:lang(de)  p:first-of-type:before { content: '„'; content: open-quote; }
-:lang(de) blockquote p:last-of-type:after,
-blockquote:lang(de)  p:last-of-type:after  { content: '“'; content: close-quote; }
-
-// Quote source attribution
-blockquote {
-    & > small,
-    & + small,
-    & + figcaption {
-        display: block;
-        font-size: 1em;
-
-        &:before { content: "– "; }
-    }
-
-    & > small { margin: 1.5em 0; }
-
-    & + small,
-    & + figcaption { margin: 1.5em 0 1.5em 40px; }
-}
 
 
 // HYPHENATION
