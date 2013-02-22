@@ -57,11 +57,7 @@ $slidewidth: 480px;
 	width: $slidewidth;
 
 	li {
-		display: inline-block;
+        @extend %inblock_level;
 		padding: 0 4px;
-        @if $ie7-support {
-    		*display: inline;
-    		*zoom: 1;
-        }
 	}
 }
