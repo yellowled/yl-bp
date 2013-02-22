@@ -8,7 +8,8 @@ $sgs-gutter: 15px;
 
 // Mixins
 @mixin grid-row($row-limit: $sgs-row-max-width, $row-width: $sgs-row-width, $center: auto) {
-	margin: 0 $center;
+	margin-left: $center;
+    margin-right: $center;
 	@if $row-limit != 0 { max-width: $row-limit; }
 	width: $row-width;
 }
