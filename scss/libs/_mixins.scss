@@ -14,9 +14,8 @@
     font-feature-settings: "liga", "dlig";
 }
 
-// EXTENDS
-// --------------------------------------------------------------------
-%inblock-level {
+// inline-block with IE7 legacy support
+@mixin inblock-level {
     display: inline-block;
     @if $ie7-support {
         *display: inline;
