@@ -6,7 +6,7 @@ $sgs-row-max-width: 1140px;
 $sgs-columns: 12;
 $sgs-gutter: 15px;
 
-// Mixins
+// Grid row (container)
 @mixin grid-row($row-limit: $sgs-row-max-width, $row-width: $sgs-row-width, $center: auto) {
 	margin-left: $center;
     margin-right: $center;
@@ -14,6 +14,7 @@ $sgs-gutter: 15px;
 	width: $row-width;
 }
 
+// Grid box
 @mixin grid-box($span-columns, $gutter: $sgs-gutter, $total-columns: $sgs-columns, $grid-type: 100%) {
 	float: left;
 	padding: 0 $gutter;
@@ -22,6 +23,26 @@ $sgs-gutter: 15px;
     @if $ie7-support {
 	   *behavior: url('/scripts/vendor/boxsizing.htc');
     }
+}
+
+// Push/pull grid box
+@mixin grid-push($push-columns, $total-columns: $sgs-columns, $grid-type: 100%) {
+    position: relative;
+    left: $grid-type * ($push-columns / $total-columns);
+}
+
+@mixin grid-pull($pull-columns, $total-columns: $sgs-columns, $grid-type: 100%) {
+    position: relative;
+    left: -($grid-type) * ($pull-columns / $total-columns);
+}
+
+// Prefix/suffix grid box
+@mixin grid-prefix($prefix-columns, $total-columns: $sgs-columns, $grid-type: 100%){
+    margin-left: ($grid-type) * ($prefix-columns / $total-columns);
+}
+
+@mixin grid-suffix($suffix-columns, $total-columns: $sgs-columns, $grid-type: 100%){
+    margin-right: ($grid-type) * ($suffix-columns / $total-columns);
 }
 
 // For nested grids
