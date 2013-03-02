@@ -1,19 +1,5 @@
-// BASE
+// DEFAULTS
 // --------------------------------------------------------------------
-html,
-button,
-input,
-select,
-textarea {
-    background: $off-white;
-    color: $off-black;
-}
-
-body {
-    font-size: 1em;
-    line-height: 1.5;
-}
-
 // These selection declarations have to be separate.
 ::-moz-selection {
     background: #b3d4fc;
@@ -34,7 +20,7 @@ body {
     text-align: center;
 }
 
-// Not covered by normalize.css
+// Navigation lists
 nav ul,
 nav ol {
     list-style: none;

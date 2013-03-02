@@ -3,3 +3,19 @@
 .js #jshint {
 	@extend .hidden;
 }
+
+
+// BASE
+// --------------------------------------------------------------------
+html,
+button,
+input,
+select,
+textarea {
+    background: $off-white;
+    color: $off-black;
+}
+
+body {
+    line-height: 1.5;
+}
