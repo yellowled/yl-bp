@@ -67,7 +67,7 @@
 @mixin speech-bubble($box-color,$border-color: $box-color,$border-width: 2px,$border-radius: 10px) {
 	background: $box-color;
 	border: $border-width solid $border-color;
-	margin: 0 0 1.5em;
+	margin: 0 0 2em;
 	padding: 1em;
 	position: relative;
 	@include border-radius($border-radius);
