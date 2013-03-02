@@ -1,4 +1,4 @@
-// DEFAULTS
+// DEFAULTS (NOT COVERED BY NORMALIZE)
 // --------------------------------------------------------------------
 // These selection declarations have to be separate.
 ::-moz-selection {
@@ -11,7 +11,7 @@
     text-shadow: none;
 }
 
-// Chrome Frame prompt
+// Chrome frame prompt
 .chromeframe {
     margin: 0;
     background: $mid-grey;
