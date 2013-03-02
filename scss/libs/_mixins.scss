@@ -106,13 +106,13 @@
     & + small,
     & + figcaption {
         display: block;
-        font-size: 1em;
+        font-size: 100%;
 
         &:before { content: "– "; }
     }
 
-    & > small { margin: 1.5em 0; }
+    & > small { margin: 1em 0; }
 
     & + small,
-    & + figcaption { margin: 1.5em 0 1.5em 40px; }
+    & + figcaption { margin: 1em 0 1em 40px; }
 }

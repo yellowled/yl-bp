@@ -1,6 +1,8 @@
 // FIGURES
 // --------------------------------------------------------------------
-@mixin simple-figure($border: $dark-grey) {
+@mixin simple-figure($border: $dark-grey, $rhythm: 1em) {
+    margin: $rhythm 0;
+
 	img {
 		border-top: 1px solid $border;
 		border-bottom: 1px solid $border;
@@ -9,7 +11,8 @@
 	figcaption { text-align: center; }
 }
 
-@mixin fancy-figure {
+@mixin fancy-figure($rhythm: 1em) {
+    margin: $rhythm 0;
 	position: relative;
 
 	img { @include box-shadow(0 0 4px rgba($black,.7)); }
@@ -32,8 +35,9 @@
 
 // TABLES
 // --------------------------------------------------------------------
-@mixin simple-table($border: $mid-grey) {
+@mixin simple-table($border: $mid-grey, $rhythm: 1em) {
 	border-bottom: 1px solid $border;
+    margin: $rhythm 0;
 	width: 100%;
 
 	tr { border-top: 1px solid $border; }
@@ -41,9 +45,10 @@
 	caption { text-align: center; }
 }
 
-@mixin striped-table($border: $dark-grey, $odd: $lite-grey, $even: $alt-grey, $head: $mid-grey, $foot: $head) {
+@mixin striped-table($border: $dark-grey, $odd: $lite-grey, $even: $alt-grey, $head: $mid-grey, $foot: $head, $rhythm: 1em) {
 	border: 1px solid $border;
 	border-top: 0 none;
+    margin: $rhythm 0;
 	width: 100%;
 
 	thead { background-color: $head; }
