@@ -1,24 +1,6 @@
 // TABLET STYLES
 // --------------------------------------------------------------------
 // TYPOGRAPHY
-// Ideal line length: 686px
 // --------------------------------------------------------------------
-body { font-size: 1em; }
-
-h1 {
-	font-size: px-to-em(32px,16px);
-	line-height: px-to-em(48px,32px);
-	margin: px-to-em(24px,32px) 0;
-}
-
-h2 {
-	font-size: px-to-em(24px,16px);
-	line-height: px-to-em(24px,24px);
-	margin: px-to-em(24px,24px) 0;
-}
-
-pre {
-	font-size: px-to-em(14px,16px);
-	line-height: px-to-em(24px,14px);
-	margin: px-to-em(24px,14px) 0;
-}
+// Base font size: 16px → ideal line length: 686px
+body { font-size: 100%; }
