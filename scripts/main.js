@@ -1,11 +1,11 @@
 $(function() {
-	// fire AccessifyHTML5 – use actual container ids!
+	// fire AccessifyHTML5 – use actual container selectors!
 	AccessifyHTML5({
-		header: '#header',
-		main:   '#content',
-		footer: '#footer'
+		header: 'body>header',
+		footer: 'body>footer'
 	});
 });
+
 // Won't work locally without a webserver
 $.getScript = function(url, callback){
 	$.ajax({
@@ -16,15 +16,17 @@ $.getScript = function(url, callback){
 		cache: true
 	});
 };
+
 // Usage example
 // $(window).load(function(){
-	// Lazyload condition
-	// var $hasTooltips = $('#main').has('.tooltips');
-	// if($hasTooltips.size() > 0) {
-	// Relative to page, not script; can be used without function to just load
-		// $.getScript('scripts/plugins/jquery.tipsy.js', function() {
-	// Fire plugin code here
-			// $('.tooltips a[title]').tipsy({ gravity: 's' });
-		// });
-	// }
+// 	// Lazyload condition
+// 	var $hasTooltips = $('main').has('.tooltips');
+
+// 	if($hasTooltips.size() > 0) {
+//         // Relative to page, not script; can be used without function to just load
+// 		$.getScript('scripts/plugins/jquery.tipsy.js', function() {
+//             // Fire plugin code here
+// 			$('.tooltips a[title]').tipsy({ gravity: 's' });
+// 		});
+// 	}
 // });
