@@ -29,7 +29,9 @@ $tipbg: $black;
     text-align: center;
 }
 
-.tipsy-inner { @include border-radius(4px); }
+.tipsy-inner {
+    @include border-radius(4px);
+}
 
 .tipsy-arrow {
     border: 5px dashed $tipbg;
@@ -42,10 +44,21 @@ $tipbg: $black;
 
 // ARROW STYLES (only include the ones actually used)
 // --------------------------------------------------------------------
-// .tipsy-arrow-n { border-bottom-color: $tipbg; }
-.tipsy-arrow-s { border-top-color: $tipbg; }
-// .tipsy-arrow-e { border-left-color: $tipbg; }
-// .tipsy-arrow-w { border-right-color: $tipbg; }
+// .tipsy-arrow-n {
+//     border-bottom-color: $tipbg;
+// }
+
+.tipsy-arrow-s {
+    border-top-color: $tipbg;
+}
+
+// .tipsy-arrow-e {
+//     border-left-color: $tipbg;
+// }
+
+// .tipsy-arrow-w {
+//     border-right-color: $tipbg;
+// }
 
 // .tipsy-n .tipsy-arrow {
 //     top: 0;

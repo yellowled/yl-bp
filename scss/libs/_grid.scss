@@ -20,6 +20,7 @@ $sgs-gutter: 15px;
 	padding: 0 $gutter;
 	width: $grid-type * ($span-columns / $total-columns);
 	@include box-sizing(border-box);
+
     @if $ie7-support {
 	   *behavior: url('/scripts/vendor/boxsizing.htc');
     }
@@ -46,7 +47,11 @@ $sgs-gutter: 15px;
 }
 
 // For nested grids
-@mixin grid-nest { padding: 0; }
+@mixin grid-nest {
+    padding: 0;
+}
 
 // Last box of a row
-@mixin grid-end { float: right; }
+@mixin grid-end {
+    float: right;
+}

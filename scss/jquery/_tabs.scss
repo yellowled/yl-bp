@@ -16,10 +16,10 @@
 
 // CUSTOMIZE
 // --------------------------------------------------------------------
-$tabswidth: 560px;
+$tabswidth:   560px;
 $bordercolor: $dark-grey;
-$background: $white;
-$inactive: $lite-grey;
+$background:  $white;
+$inactive:    $lite-grey;
 
 
 // CORE STYLES
@@ -64,5 +64,7 @@ $inactive: $lite-grey;
 
 	.on a,
     a:hover,
-	a:focus { color: $off-black; }
+	a:focus {
+        color: $off-black;
+    }
 }

@@ -27,20 +27,31 @@ nav ol {
     padding: 0;
 }
 
-dt { font-weight: bold; }
+dt {
+    font-weight: bold;
+}
 
-dd { margin: 0; }
+dd {
+    margin: 0;
+}
 
 caption,
-th { text-align: left; }
+th {
+    text-align: left;
+}
 
 // Nested lists
 li {
-    ul, ol { margin: 0; }
+    ul,
+    ol {
+        margin: 0;
+    }
 }
 
 // Nested code
-pre code { font-size: 1em; }
+pre code {
+    font-size: 1em;
+}
 
 // A better looking default horizontal rule
 hr {
@@ -53,7 +64,9 @@ hr {
 }
 
 // Remove the gap between images and the bottom of their containers
-img { vertical-align: middle; }
+img {
+    vertical-align: middle;
+}
 
 
 // RESPONSIVE MEDIA OBJECTS
@@ -61,10 +74,14 @@ img { vertical-align: middle; }
 // --------------------------------------------------------------------
 // embed, object,
 // audio, video,
-img { max-width: 100%; }
+img {
+    max-width: 100%;
+}
 
 // video,
-img { height: auto; }
+img {
+    height: auto;
+}
 
 
 // FORMS
@@ -80,9 +97,17 @@ fieldset {
 // QUOTES
 // http://html5doctor.com/blockquote-q-cite/
 // --------------------------------------------------------------------
-q { quotes: '“' '”' '‘' '’'; }
-:lang(de) q { quotes: '„' '“' '‚' '‘'; }
-//:lang(de) q { quotes: '»' '«' '›' '‹'; }
+q {
+    quotes: '“' '”' '‘' '’';
+}
+
+:lang(de) q {
+    quotes: '„' '“' '‚' '‘';
+}
+
+// :lang(de) q {
+//     quotes: '»' '«' '›' '‹';
+// }
 
 
 // HYPHENATION

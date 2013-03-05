@@ -29,7 +29,9 @@
 .invisible {
     visibility: hidden;
 
-    .no-js & { visibility: visible; }
+    .no-js & {
+        visibility: visible;
+    }
 }
 
 // Hide from both screenreaders and browsers
@@ -47,10 +49,14 @@
     display: table;
 }
 
-.clearfix:after { clear: both; }
+.clearfix:after {
+    clear: both;
+}
 
 @if $ie7-support {
-    .clearfix { *zoom: 1; }
+    .clearfix {
+        *zoom: 1;
+    }
 }
 
 
@@ -60,6 +66,7 @@
 //     background-color: transparent;
 //     border: 0;
 //     overflow: hidden;
+
 //     @if $ie7-support {
 //         *text-indent: -9999px;
 //     }
@@ -68,6 +75,6 @@
 // .ir:before {
 //     content: "";
 //     display: block;
-//     width: 0;
 //     height: 150%;
+//     width: 0;
 // }

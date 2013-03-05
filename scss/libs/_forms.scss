@@ -7,6 +7,7 @@ input[type="checkbox"] {
     vertical-align: top;
     top: 5px;
     top: 0 \0;  // IE8-10
+
     @if $ie7-support {
         *top: -5px; // IE7
     }
@@ -24,7 +25,9 @@ input[type="file"],
 input[type="radio"],
 input[type="checkbox"] {
     &:focus,
-    &:active { @include box-shadow(none); }
+    &:active {
+        @include box-shadow(none);
+    }
 }
 
 button,
@@ -42,12 +45,17 @@ input[type="submit"] {
     padding: 3px 10px;
     text-shadow: $white 0 1px 1px;
     width: auto;
-    &:hover { @include background-image(linear-gradient($white, $lite-grey 1px, $mid-grey)); }
+
+    &:hover {
+        @include background-image(linear-gradient($white, $lite-grey 1px, $mid-grey));
+    }
+
     &:active {
         @include background-image(linear-gradient($white, $alt-grey 1px, $lite-grey));
         @include box-shadow(inset rgba($black, 0.25) 0 1px 2px 0);
         border-color: #999 #bbb $alt-grey;
     }
+
     @if $ie7-support {
         *padding-top: 2px;
         *padding-bottom: 0;
@@ -87,12 +95,16 @@ input[type="url"] {
     padding: 2px 3px;
     text-align: left;
     height: 1.8em;
+
     @if $ie7-support {
         *padding-top: 2px;
         *padding-bottom: 1px;
         *height: auto;
     }
-    &[disabled] { background-color: $lite-grey; }
+
+    &[disabled] {
+        background-color: $lite-grey;
+    }
 }
 
 button[disabled],
@@ -102,19 +114,24 @@ select[disabled] option,
 select[disabled] optgroup,
 textarea[disabled] {
     @include box-shadow(none);
-    -moz-user-select: -moz-none;
-    -webkit-user-select: none;
-    user-select: none;
     color: #888;
     cursor: default;
+    -webkit-user-select: none;
+       -moz-user-select: -moz-none;
+            user-select: none;
 }
+
 // Separate rule for Firefox.
 // Separate rule for IE, too.
 // Cannot stack with WebKit's.
-::-webkit-input-placeholder { color: #888; }
+::-webkit-input-placeholder {
+    color: #888;
+}
 
 input:-moz-placeholder,
-textarea:-moz-placeholder { color: #888; }
+textarea:-moz-placeholder {
+    color: #888;
+}
 
 :invalid {
     // Suppress red glow that Firefox adds to form fields by default, even when user is still typing.
@@ -123,7 +140,9 @@ textarea:-moz-placeholder { color: #888; }
 
 textarea,
 select[size],
-select[multiple] { height: auto; }
+select[multiple] {
+    height: auto;
+}
 
 // Tweaks for Safari + Chrome.
 @media (-webkit-min-device-pixel-ratio: 0) {

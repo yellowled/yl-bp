@@ -27,8 +27,13 @@ $slidewidth: 480px;
 		padding-left: 0;
 	}
 
-	.prev { float: left; }
-	.next { float: right; }
+	.prev {
+        float: left;
+    }
+
+	.next {
+        float: right;
+    }
 }
 
 .rslides {
