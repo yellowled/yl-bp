@@ -114,7 +114,7 @@ select[disabled] option,
 select[disabled] optgroup,
 textarea[disabled] {
     @include box-shadow(none);
-    color: #888;
+    color: $greyed-out;
     cursor: default;
     -webkit-user-select: none;
        -moz-user-select: -moz-none;
@@ -125,12 +125,12 @@ textarea[disabled] {
 // Separate rule for IE, too.
 // Cannot stack with WebKit's.
 ::-webkit-input-placeholder {
-    color: #888;
+    color: $greyed-out;
 }
 
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-    color: #888;
+    color: $greyed-out;
 }
 
 :invalid {
