@@ -181,3 +181,8 @@ $lboxbg: $white;
 	height: auto;
 	width: auto;
 }
+
+// Remove outline for focussed colorbox
+#colorbox:focus {
+    outline: 0;
+}
