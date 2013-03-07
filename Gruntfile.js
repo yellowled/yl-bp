@@ -139,7 +139,7 @@ module.exports = function(grunt) {
                         src: ['*.html',
                               '.htaccess',
                               'robots.txt',
-                              'scripts/vendor/jquery-1.8.3.min.js',
+                              'scripts/vendor/jquery-1.9.1.min.js',
                               'scripts/vendor/boxsizing.htc'],
                         dest: 'dist/'
                     }
