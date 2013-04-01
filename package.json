@@ -8,19 +8,20 @@
 		"name":		"Matthias Mees",
 		"url":		"http://yellowled.de"
 	},
-	"dependencies":	{
-        "grunt-contrib-clean":      ">=0.4.0",
-        "grunt-contrib-compass":    ">=0.1.2",
-        "grunt-contrib-concat":     ">=0.1.2",
-        "grunt-contrib-connect":    ">=0.1.2",
-        "grunt-contrib-copy":       ">=0.4.0",
-        "grunt-contrib-imagemin":   ">=0.1.1",
-        "grunt-contrib-livereload": ">=0.1.1",
-        "grunt-contrib-jshint":     ">=0.1.1",
-        "grunt-contrib-uglify":     ">=0.1.1",
-        "grunt-hashres":            ">=0.3.0",
-        "grunt-html":               ">=0.3.3",
-        "grunt-modernizr":          ">=0.2.0",
-        "grunt-regarde":            ">=0.1.1"
+	"devDependencies":	{
+        "grunt":                    "~0.4.1",
+        "grunt-contrib-clean":      "~0.4.0",
+        "grunt-contrib-compass":    "~0.1.2",
+        "grunt-contrib-concat":     "~0.1.2",
+        "grunt-contrib-connect":    "~0.1.2",
+        "grunt-contrib-copy":       "~0.4.0",
+        "grunt-contrib-imagemin":   "~0.1.1",
+        "grunt-contrib-livereload": "~0.1.1",
+        "grunt-contrib-jshint":     "~0.1.1",
+        "grunt-contrib-uglify":     "~0.1.1",
+        "grunt-hashres":            "~0.3.0",
+        "grunt-html":               "~0.3.3",
+        "grunt-modernizr":          "~0.2.0",
+        "grunt-regarde":            "~0.1.1"
 	}
 }
