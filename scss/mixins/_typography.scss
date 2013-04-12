@@ -1,0 +1,86 @@
+// TYPOGRAPHY
+// --------------------------------------------------------------------
+// CSS ligatures
+@mixin ligatures {
+    -webkit-font-feature-settings: "liga", "dlig";
+       -moz-font-feature-settings: "liga=1, dlig=1";
+        -ms-font-feature-settings: "liga", "dlig";
+         -o-font-feature-settings: "liga", "dlig";
+            font-feature-settings: "liga", "dlig";
+}
+
+// Blockquotes
+// http://html5doctor.com/blockquote-q-cite/
+@mixin smart-blockquotes {
+    & p {
+        quotes: '“' '”';
+    }
+
+    & p:before {
+        content: '';
+        content: no-open-quote;
+    }
+
+    & p:after {
+        content: '';
+        content: no-close-quote;
+    }
+
+    & p:first-of-type:before {
+        content: '“';
+        content: open-quote;
+    }
+
+    & p:last-of-type:after {
+        content: '”';
+        content: close-quote;
+    }
+
+    :lang(de) & p,
+    &:lang(de) p {
+        quotes: '„' '“';
+    }
+
+    :lang(de) & p:before,
+    &:lang(de)  p:before {
+        content: '';
+        content: no-open-quote;
+    }
+
+    :lang(de) & p:after,
+    &:lang(de)  p:after {
+        content: '';
+        content: no-close-quote;
+    }
+
+    :lang(de) & p:first-of-type:before,
+    &:lang(de)  p:first-of-type:before {
+        content: '„';
+        content: open-quote;
+    }
+
+    :lang(de) & p:last-of-type:after,
+    &:lang(de)  p:last-of-type:after {
+        content: '“';
+        content: close-quote;
+    }
+
+    // Quote source attribution
+    & > small,
+    & + small,
+    & + figcaption {
+        display: block;
+        font-size: 100%;
+
+        &:before { content: "– "; }
+    }
+
+    & > small {
+        margin: 1em 0;
+    }
+
+    & + small,
+    & + figcaption {
+        margin: 1em 0 1em 40px;
+    }
+}

@@ -1,0 +1,53 @@
+// TABLES
+// --------------------------------------------------------------------
+@mixin simple-table($border: $mid-grey, $rhythm: 1em) {
+    border-bottom: 1px solid $border;
+    margin: $rhythm 0;
+    width: 100%;
+
+    tr {
+        border-top: 1px solid $border;
+    }
+
+    caption {
+        text-align: center;
+    }
+}
+
+@mixin striped-table($border: $dark-grey, $odd: $lite-grey, $even: $alt-grey, $head: $mid-grey, $foot: $head, $rhythm: 1em) {
+    border: 1px solid $border;
+    border-top: 0 none;
+    margin: $rhythm 0;
+    width: 100%;
+
+    thead {
+        background-color: $head;
+    }
+
+    tfoot {
+        background-color: $foot;
+    }
+
+    tbody tr {
+        &:nth-child(odd) {
+            background-color: $odd;
+        }
+
+        &:nth-child(even) {
+            background-color: $even;
+        }
+    }
+
+    tr {
+        border-top: 1px solid $border;
+    }
+
+    th,
+    td {
+        padding: 0 4px;
+    }
+
+    caption {
+        text-align: center;
+    }
+}

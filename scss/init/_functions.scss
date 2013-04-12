@@ -1,0 +1,6 @@
+// FUNCTIONS
+// --------------------------------------------------------------------
+// Context-sensitive conversion of pixels to ems
+@function px-to-em($px, $context: 16px) {
+    @return ($px / $context) * 1em;
+}

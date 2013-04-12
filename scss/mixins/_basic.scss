@@ -1,0 +1,33 @@
+// BASIC MIXINS
+// --------------------------------------------------------------------
+// Courtesy of @drublic, https://github.com/drublic/Sass-Mixins/
+@mixin x-rem($property, $values, $main-font-size: 16px) {
+    // Empty list for all values in px
+    $px-values: ();
+    $rem-values: ();
+    // Iterate over entries
+    @each $value in $values {
+        // If the value is zero, return 0
+        @if $value == 0 or $value == auto {
+            $px-values: append($px-values, $value);
+            $rem-values: append($rem-values, $value);
+        // If the value is not zero, convert it from px to rem
+        } @else {
+            $px-values: append($px-values, ($value * $main-font-size) );
+            $rem-values: append($rem-values, #{$value}rem);
+        }
+    }
+    // Return the property and its list of converted values
+    #{$property}: #{$px-values};
+    #{$property}: #{$rem-values};
+}
+
+// inline-block with IE7 legacy support
+@mixin inblock-level {
+    display: inline-block;
+
+    @if $ie7-support {
+        *display: inline;
+        *zoom: 1;
+    }
+}

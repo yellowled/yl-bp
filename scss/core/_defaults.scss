@@ -92,33 +92,3 @@ fieldset {
     margin: 0;
     padding: 0;
 }
-
-
-// QUOTES
-// http://html5doctor.com/blockquote-q-cite/
-// --------------------------------------------------------------------
-q {
-    quotes: '“' '”' '‘' '’';
-}
-
-:lang(de) q {
-    quotes: '„' '“' '‚' '‘';
-}
-
-// :lang(de) q {
-//     quotes: '»' '«' '›' '‹';
-// }
-
-
-// HYPHENATION
-// --------------------------------------------------------------------
-p {
-    @include hyphens(auto);
-
-    // not for preformatted text (inline)
-    code,
-    samp,
-    kbd {
-        @include hyphens(none);
-    }
-}

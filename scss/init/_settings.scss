@@ -1,0 +1,13 @@
+// SETTINGS
+// --------------------------------------------------------------------
+$legacy-support-for-ie6: false;
+$experimental-support-for-khtml: false;
+
+// IE7
+$ie7-support: false;
+
+// IE10
+@-ms-viewport { width: device-width; }
+
+// USE COMPASS
+@import "compass";

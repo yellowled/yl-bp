@@ -1,0 +1,46 @@
+// BUTTON
+// --------------------------------------------------------------------
+@mixin gradient-button($bg: $alt-grey, $fg: $black, $rad: 4px) {
+    background: $bg;
+    @include background-clip(padding-box);
+    @include background-image(linear-gradient(lighten($bg, 13.2%), $bg));
+    border: 1px solid;
+    border-color: $bg darken($bg, 13.2%) darken($bg, 26.5%);
+    @include border-radius($rad);
+    color: $fg;
+    display: inline-block;
+    outline: 0;
+    padding: 3px 10px;
+    line-height: normal;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: invert($fg) 0 1px 1px;
+    width: auto;
+
+    @if $ie7-support {
+        *padding-top: 2px;
+        *padding-bottom: 0;
+    }
+
+    &:hover {
+        @include background-image(linear-gradient(lighten($bg, 13.2%), lighten($bg, 6.5%) 1px, darken($bg, 6.5%)));
+    }
+
+    &:active {
+        @include background-image(linear-gradient(lighten($bg, 13.2%), $bg 1px, lighten($bg, 6.5%)));
+        @include box-shadow(inset rgba($black, 0.25) 0 1px 2px 0);
+        border-color: darken($bg, 26.5%) darken($bg, 13.2%) $bg;
+    }
+
+    &:focus {
+        @include box-shadow(#06f 0 0 5px 0);
+        z-index: 1;
+    }
+
+    &:active,
+    &:visited,
+    &:hover,
+    &:focus {
+        color: $fg;
+    }
+}
