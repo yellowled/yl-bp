@@ -1,0 +1,42 @@
+// NAVIGATION
+// --------------------------------------------------------------------
+// Responsive Nav → https://github.com/viljamis/responsive-nav.js
+$nav-switch:   481px; //~30em
+
+@mixin responsive-nav {
+    .js & {
+        clip: rect(0 0 0 0);
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        zoom: 1;
+    }
+
+    &.opened {
+        max-height: 9999px;
+    }
+
+    ul {
+        margin: 0;
+    }
+
+    ul,
+    li {
+        display: block;
+        width: 100%;
+    }
+
+    @media screen and (min-width: $nav-switch) {
+        .js & {
+            position: relative;
+            max-height: none;
+        }
+    }
+}
+
+@media screen and (min-width: $nav-switch) {
+    #nav-toggle {
+        display: none;
+    }
+}
