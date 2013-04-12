@@ -1,5 +1,6 @@
-// BUTTON
+// BUTTONS
 // --------------------------------------------------------------------
+// Gradient button
 @mixin gradient-button($bg: $alt-grey, $fg: $black, $rad: 4px) {
     background: $bg;
     @include background-clip(padding-box);

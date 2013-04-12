@@ -1,5 +1,6 @@
 // TABLES
 // --------------------------------------------------------------------
+// Simple table
 @mixin simple-table($border: $mid-grey, $rhythm: 1em) {
     border-bottom: 1px solid $border;
     margin: $rhythm 0;
@@ -14,6 +15,7 @@
     }
 }
 
+// Striped table
 @mixin striped-table($border: $dark-grey, $odd: $lite-grey, $even: $alt-grey, $head: $mid-grey, $foot: $head, $rhythm: 1em) {
     border: 1px solid $border;
     border-top: 0 none;

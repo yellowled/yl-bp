@@ -1,5 +1,6 @@
 // FIGURES
 // --------------------------------------------------------------------
+// Simple figure
 @mixin simple-figure($border: $dark-grey, $rhythm: 1em) {
     margin: $rhythm 0;
 
@@ -13,6 +14,7 @@
     }
 }
 
+// Fancy figure
 @mixin fancy-figure($rhythm: 1em) {
     margin: $rhythm 0;
     position: relative;

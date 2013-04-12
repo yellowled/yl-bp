@@ -1,9 +1,14 @@
+// Initialize
 @import "init/settings";
 @import "init/variables";
 @import "init/functions";
+
+// Core
 @import "core/normalize";
 @import "core/defaults";
 @import "core/helpers";
+
+// Mixins
 @import "mixins/basic";
 @import "mixins/typography";
 @import "mixins/images";
@@ -11,13 +16,21 @@
 @import "mixins/buttons";
 @import "mixins/shapes";
 @import "mixins/grid";
+
+// Modules
 @import "modules/forms";
+
+// Plugins
 @import "plugins/lightbox";
 @import "plugins/slideshow";
 @import "plugins/tabs";
 @import "plugins/tooltips";
+
+// General
 @import "main/typography";
 @import "main/common";
+
+// Media
 @import "layout/legacy";
 @import "layout/tablet";
 @import "main/print";
