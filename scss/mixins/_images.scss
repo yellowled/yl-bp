@@ -1,3 +1,11 @@
+// RESPONSIVE MEDIA OBJECTS
+// http://unstoppablerobotninja.com/entry/fluid-images
+// --------------------------------------------------------------------
+@mixin responsive-media {
+    height: auto;
+    max-width: 100%;
+}
+
 // FIGURES
 // --------------------------------------------------------------------
 // Simple figure
