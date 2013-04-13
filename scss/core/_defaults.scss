@@ -20,13 +20,6 @@
     text-align: center;
 }
 
-// Navigation lists
-nav ul,
-nav ol {
-    list-style: none;
-    padding: 0;
-}
-
 dt {
     font-weight: bold;
 }
@@ -66,29 +59,4 @@ hr {
 // Remove the gap between images and the bottom of their containers
 img {
     vertical-align: middle;
-}
-
-
-// RESPONSIVE MEDIA OBJECTS
-// http://unstoppablerobotninja.com/entry/fluid-images
-// --------------------------------------------------------------------
-// embed, object,
-// audio, video,
-img {
-    max-width: 100%;
-}
-
-// video,
-img {
-    height: auto;
-}
-
-
-// FORMS
-// --------------------------------------------------------------------
-// Remove default fieldset styles.
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
 }

@@ -4,6 +4,11 @@
 	@extend .hidden;
 }
 
+video,
+img {
+    @include responsive-media;
+}
+
 
 // BASE
 // --------------------------------------------------------------------

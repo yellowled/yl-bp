@@ -1,5 +1,12 @@
 // NAVIGATION
 // --------------------------------------------------------------------
+// Navigation lists
+nav ul,
+nav ol {
+    list-style: none;
+    padding: 0;
+}
+
 // Responsive Nav → https://github.com/viljamis/responsive-nav.js
 $nav-switch:   481px; //~30em
 
