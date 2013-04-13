@@ -1,6 +1,6 @@
 // BASIC MIXINS
 // --------------------------------------------------------------------
-// rem unit with px fallback → https://github.com/drublic/Sass-Mixins/
+// rem unit with px fallback → github.com/drublic/Sass-Mixins/
 @mixin x-rem($property, $values, $main-font-size: 16px) {
     // Empty list for all values in px
     $px-values: ();

@@ -28,6 +28,7 @@ A (small) demo is available at [demo.netzgestaltung.net](http://demo.netzgestalt
 
 * [AccessibleTabs](https://github.com/ginader/Accessible-Tabs)
 * [Colorbox](https://github.com/jackmoore/colorbox)
+* [gMap](https://github.com/marioestrada/jQuery-gMap)
 * [Responsive Slides](https://github.com/viljamis/ResponsiveSlides.js)
 * [Tipsy](https://github.com/jaz303/tipsy)
 

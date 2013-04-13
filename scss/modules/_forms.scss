@@ -1,5 +1,5 @@
 // FORM ELEMENTS
-// Borrowed heavily from http://formalize.me
+// Borrowed heavily from formalize.me
 // --------------------------------------------------------------------
 // Remove default fieldset styles.
 fieldset {
@@ -16,7 +16,7 @@ input[type="checkbox"] {
     top: 0 \0;  // IE8-10
 
     @if $ie7-support {
-        *top: -5px; // IE7
+        *top: -5px;
     }
 }
 

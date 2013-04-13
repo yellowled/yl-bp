@@ -7,7 +7,7 @@ nav ol {
     padding: 0;
 }
 
-// Responsive Nav → https://github.com/viljamis/responsive-nav.js
+// Responsive Nav → github.com/viljamis/responsive-nav.js
 $nav-switch:   481px; //~30em
 
 @mixin responsive-nav {

@@ -1,9 +1,10 @@
 $(function() {
-	// fire AccessifyHTML5 – use actual container selectors!
+	// fire AccessifyHTML5
 	AccessifyHTML5({
 		header: 'body>header',
 		footer: 'body>footer'
 	});
+
     // fire Responsive Nav
     var navigation = responsiveNav('#primary-nav', {
         animate: true,          // Boolean: Use CSS3 transitions, true or false
@@ -18,6 +19,7 @@ $(function() {
         open: function(){},     // Function: Open callback
         close: function(){}     // Function: Close callback
     });
+
     // JS PLUGINS LAZY-LOADING
     // @media threshold
     var mqVal = '481px';

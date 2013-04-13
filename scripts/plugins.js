@@ -21,7 +21,7 @@
     }
 }());
 
-// https://github.com/yatil/accessifyhtml5.js
+// github.com/yatil/accessifyhtml5.js
 var AccessifyHTML5 = function (defaults, more_fixes) {
 
   "use strict";
@@ -123,7 +123,7 @@ var AccessifyHTML5 = function (defaults, more_fixes) {
   }
 };
 
-// https://github.com/viljamis/responsive-nav.js
+// github.com/viljamis/responsive-nav.js
 var responsiveNav = (function (window, document) {
 
   var computed = !!window.getComputedStyle;
