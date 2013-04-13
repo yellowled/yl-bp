@@ -1,0 +1,37 @@
+// JQUERY GMAP
+// --------------------------------------------------------------------
+// JS USAGE
+// $('#map').gMap({
+//     latitude: 53.58725,
+//     longitude: 9.89847,
+//     zoom: 15,
+//     controls: {
+//         panControl: false,
+//         zoomControl: true,
+//         mapTypeControl: false,
+//         scaleControl: true,
+//         streetViewControl: false,
+//         overviewMapControl: false
+//     },
+//     markers: [
+//         {
+//             latitude: 53.58725,
+//             longitude: 9.89847,
+//             html: "<b>Titel</b><br>Text",
+//             popup: open
+//         }
+//     ]
+// });
+
+@mixin googlemap {
+    @include box-sizing(border-box);
+    color: $off-black;
+    height: 400px;
+    @include x-rem(margin, 1 0);
+    max-width: 100%;
+    width: 100%;
+
+    img {
+        max-width: none;
+    }
+}
