@@ -1,0 +1,14 @@
+// GOOGLE MAP
+// --------------------------------------------------------------------
+.map {
+    @include box-sizing(border-box);
+    color: $off-black;
+    height: 400px;
+    @include x-rem(margin, 1 0);
+    max-width: 100%;
+    width: 100%;
+
+    img {
+        max-width: none;
+    }
+}
