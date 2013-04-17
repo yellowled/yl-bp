@@ -1,5 +1,8 @@
 // JQUERY GMAP → github.com/marioestrada/jQuery-gMap
 // --------------------------------------------------------------------
+// Insert before <body>:;
+// <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+//
 // JS USAGE
 // $('#map').gMap({
 //     latitude: 53.58725,
@@ -23,15 +26,24 @@
 //     ]
 // });
 
+$map-height: 400px;
+
 @mixin googlemap {
     @include box-sizing(border-box);
     color: $off-black;
-    height: 400px;
     @include x-rem(margin, 1 0);
-    max-width: 100%;
-    width: 100%;
+    @include responsive-media;
 
-    img {
-        max-width: none;
+    @if $ie7-support {
+       *behavior: url('/scripts/vendor/boxsizing.htc');
+    }
+
+    .js & {
+        height: $map-height;
+        width: 100%;
+
+        img {
+            max-width: none;
+        }
     }
 }

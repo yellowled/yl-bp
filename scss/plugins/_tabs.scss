@@ -25,13 +25,14 @@ $inactive:    $lite-grey;
 // CORE STYLES
 // --------------------------------------------------------------------
 .tabs {
+    @include x-rem(margin, 1 0);
 	max-width: 100%;
 	width: $tabswidth;
 
 	.content {
 		border: 1px solid $bordercolor;
 		border-radius: 0 4px 4px 4px;
-		padding: 0 10px;
+        @include x-rem(padding, 0 0.625);
 	}
 }
 
@@ -51,7 +52,7 @@ $inactive:    $lite-grey;
 		border-radius: 4px 4px 0 0;
 		color: $greyed-out;
 		display: block;
-		padding: 2px 10px;
+        @include x-rem(padding, 0.125 0.625);
 		position: relative;
 		top: 1px;
 		text-decoration: none;

@@ -3,11 +3,6 @@
 @import "init/variables";
 @import "init/functions";
 
-// Core
-@import "core/normalize";
-@import "core/defaults";
-@import "core/helpers";
-
 // Mixins
 @import "mixins/basic";
 @import "mixins/typography";
@@ -17,9 +12,15 @@
 @import "mixins/shapes";
 @import "mixins/grid";
 
+// Core
+@import "core/normalize";
+@import "core/helpers";
+@import "core/defaults";
+
 // Modules
 @import "modules/navigation";
 @import "modules/forms";
+@import "modules/messages";
 
 // Plugins
 @import "plugins/googlemap";

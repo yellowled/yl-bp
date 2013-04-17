@@ -9,8 +9,8 @@
 // FIGURES
 // --------------------------------------------------------------------
 // Simple figure
-@mixin simple-figure($border: $dark-grey, $rhythm: 1em) {
-    margin: $rhythm 0;
+@mixin simple-figure($border: $dark-grey, $rhythm: 1) {
+    @include x-rem(margin, $rhythm 0);
 
     img {
         border-top: 1px solid $border;
@@ -23,8 +23,8 @@
 }
 
 // Fancy figure
-@mixin fancy-figure($rhythm: 1em) {
-    margin: $rhythm 0;
+@mixin fancy-figure($rhythm: 1) {
+    @include x-rem(margin, $rhythm 0);
     position: relative;
 
     img {
@@ -38,13 +38,17 @@
     figcaption {
         background: $off-black;
         background: rgba($black,.7);
+        @include box-sizing(border-box);
         color: $white;
-        padding: 2px 10px;
+        @include x-rem(padding, 0.125 0.625);
         position: absolute;
         left: 0;
         bottom: 0;
         text-align: center;
         width: 100%;
-        @include box-sizing(border-box);
+
+        @if $ie7-support {
+           *behavior: url('/scripts/vendor/boxsizing.htc');
+        }
     }
 }

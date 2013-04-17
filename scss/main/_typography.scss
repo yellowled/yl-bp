@@ -1,5 +1,27 @@
 // TYPOGRAPHY
 // --------------------------------------------------------------------
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include x-rem(margin, 1 0);
+}
+
+h5,
+h6 {
+    @include x-rem(font-size, 1);
+}
+
+pre,
+code,
+samp,
+kbd {
+    @include x-rem(font-size, .875);
+}
+
+
 // QUOTES → html5doctor.com/blockquote-q-cite/
 // --------------------------------------------------------------------
 q {

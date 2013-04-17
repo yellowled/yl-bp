@@ -16,7 +16,7 @@
     margin: 0;
     background: $mid-grey;
     color: $off-black;
-    padding: 0.25em;
+    @include x-rem(padding, 0.25);
     text-align: center;
 }
 
@@ -48,11 +48,11 @@ pre code {
 
 // A better looking default horizontal rule
 hr {
-    display: block;
-    height: 1px;
     border: 0;
     border-top: 1px solid $mid-grey;
-    margin: 1.5em 0;
+    display: block;
+    height: 1px;
+    @include x-rem(margin, 1.5 0);
     padding: 0;
 }
 

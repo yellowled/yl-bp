@@ -1,9 +1,9 @@
 // TABLES
 // --------------------------------------------------------------------
 // Simple table
-@mixin simple-table($border: $mid-grey, $rhythm: 1em) {
+@mixin simple-table($border: $mid-grey, $rhythm: 1) {
     border-bottom: 1px solid $border;
-    margin: $rhythm 0;
+    @include x-rem(margin, $rhythm 0);
     width: 100%;
 
     tr {
@@ -16,10 +16,11 @@
 }
 
 // Striped table
-@mixin striped-table($border: $dark-grey, $odd: $lite-grey, $even: $alt-grey, $head: $mid-grey, $foot: $head, $rhythm: 1em) {
+@mixin striped-table($border: $dark-grey, $odd: $lite-grey, $even: $alt-grey,
+                     $head: $mid-grey, $foot: $head, $rhythm: 1) {
     border: 1px solid $border;
     border-top: 0 none;
-    margin: $rhythm 0;
+    @include x-rem(margin, $rhythm 0);
     width: 100%;
 
     thead {
@@ -46,7 +47,7 @@
 
     th,
     td {
-        padding: 0 4px;
+        @include x-rem(padding, 0 0.25);
     }
 
     caption {

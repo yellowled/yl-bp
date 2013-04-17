@@ -75,11 +75,11 @@
     }
 
     & > small {
-        margin: 1em 0;
+        @include x-rem(margin, 1 0);
     }
 
     & + small,
     & + figcaption {
-        margin: 1em 0 1em 40px;
+        @include x-rem(margin, 1 0 1 2.5);
     }
 }
