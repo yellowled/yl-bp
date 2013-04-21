@@ -1,0 +1,68 @@
+// HIDE ELEMENTS
+// --------------------------------------------------------------------
+// Hide only visually, but have it available for screenreaders
+%visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+// Hide visually and from screenreaders, but maintain layout
+// (also useful for lazy-hiding items which require JS)
+%invisible {
+    visibility: hidden;
+
+    .no-js & {
+        visibility: visible;
+    }
+}
+
+// Hide from both screenreaders and browsers
+%hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+
+// CLEARFIX
+// --------------------------------------------------------------------
+%clearfix:before,
+%clearfix:after {
+    content: " ";
+    display: table;
+}
+
+%clearfix:after {
+    clear: both;
+}
+
+@if $ie7-support {
+    %clearfix {
+        *zoom: 1;
+    }
+}
+
+
+// IMAGE REPLACEMENT
+// --------------------------------------------------------------------
+%ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+
+    @if $ie7-support {
+        *text-indent: -9999px;
+    }
+}
+
+%ir:before {
+    content: "";
+    display: block;
+    height: 150%;
+    width: 0;
+}

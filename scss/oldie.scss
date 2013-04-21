@@ -30,6 +30,10 @@
 @import "plugins/tabs";
 @import "plugins/tooltips";
 
+// Extends
+@import "extends/elements";
+@import "extends/classes";
+
 // General
 @import "main/typography";
 @import "main/common";
