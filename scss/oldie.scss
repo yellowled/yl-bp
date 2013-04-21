@@ -5,12 +5,12 @@
 
 // Mixins
 @import "mixins/basic";
-@import "mixins/type";
-@import "mixins/img";
-@import "mixins/tables";
 @import "mixins/buttons";
-@import "mixins/shapes";
 @import "mixins/grid";
+@import "mixins/img";
+@import "mixins/shapes";
+@import "mixins/tables";
+@import "mixins/type";
 
 // Core
 @import "core/normalize";
