@@ -1,6 +1,17 @@
 // BASIC ELEMENTS
 // --------------------------------------------------------------------
+// Unstyled list
 %plain-list {
     list-style: none;
     padding-left: 0;
+}
+
+// inline-block with IE7 legacy support
+%inblock-level {
+    display: inline-block;
+
+    @if $ie7-support {
+        *display: inline;
+        *zoom: 1;
+    }
 }
