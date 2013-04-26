@@ -1,13 +1,20 @@
 {
 	"name":			"yl-bp",
 	"title":		"yl-bp",
-	"version":		"0.1.0",
-	"description":	"grunt build script for my HTML boilerplate.",
+    "description":  "An HTML5 boilerplate.",
+	"version":		"0.1.1",
 	"homepage":		"https://github.com/yellowled/yl-bp",
 	"author": {
 		"name":		"Matthias Mees",
 		"url":		"http://yellowled.de"
 	},
+    "repository": {
+        "type":     "git",
+        "url":      "git://github.com/yellowled/yl-bp.git"
+    },
+    "engines": {
+        "node":     ">=0.6"
+    },
 	"devDependencies":	{
         "grunt":                    "~0.4.1",
         "grunt-contrib-clean":      "~0.4.0",
