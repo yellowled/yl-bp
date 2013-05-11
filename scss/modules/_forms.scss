@@ -107,6 +107,7 @@ input[type="url"] {
         *padding-top: 2px;
         *padding-bottom: 1px;
         *height: auto;
+        *behavior: url('/scripts/vendor/boxsizing.htc');
     }
 
     &[disabled] {
