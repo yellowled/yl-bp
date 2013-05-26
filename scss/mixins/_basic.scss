@@ -32,3 +32,17 @@
         *zoom: 1;
     }
 }
+
+// Horizontal centering
+@mixin center-horizontal($center-width) {
+    margin-left: auto;
+    margin-right: auto;
+    width: $center-width;
+}
+
+// Vertical centering
+@mixin center-vertical($center-height) {
+    display: table-cell;
+    min-height: $center-height;
+    vertical-align: middle;
+}
