@@ -42,6 +42,10 @@ $nav-switch:   481px; //~30em
     }
 }
 
+#nav-toggle {
+    display: inline-block;
+}
+
 @media screen and (min-width: $nav-switch) {
     #nav-toggle {
         display: none;
