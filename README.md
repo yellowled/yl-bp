@@ -27,8 +27,8 @@ Some demos (in German) are available at [lab.netzgestaltung.net](http://lab.netz
 ## jQuery plugins included
 
 * [AccessibleTabs](https://github.com/ginader/Accessible-Tabs)
-* [Colorbox](https://github.com/jackmoore/colorbox)
 * [gMap](https://github.com/marioestrada/jQuery-gMap)
+* [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup)
 * [Responsive Slides](https://github.com/viljamis/ResponsiveSlides.js)
 * [Tipsy](https://github.com/jaz303/tipsy)
 
