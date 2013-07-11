@@ -63,7 +63,7 @@ module.exports = function(grunt) {
             'files' : ['scss/**/*.scss', 'scripts/**/*.js'],
             'matchCommunityTests' : false,
             'customTests' : [],
-            'excludeFiles' : ['grunt.js','package.json']
+            'excludeFiles' : ['Gruntfile.js','package.json']
         },
 
         concat: {
