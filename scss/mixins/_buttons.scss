@@ -29,12 +29,12 @@
 
     &:active {
         @include background-image(linear-gradient(lighten($bg, 13.2%), $bg 1px, lighten($bg, 6.5%)));
-        @include box-shadow(inset rgba($black, 0.25) 0 1px 2px 0);
+        box-shadow: inset rgba($black, 0.25) 0 1px 2px 0;
         border-color: darken($bg, 26.5%) darken($bg, 13.2%) $bg;
     }
 
     &:focus {
-        @include box-shadow(#06f 0 0 5px 0);
+        box-shadow: #06f 0 0 5px 0;
         z-index: 1;
     }
 
