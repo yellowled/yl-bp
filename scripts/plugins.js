@@ -130,7 +130,7 @@ var AccessifyHTML5 = function (defaults, more_fixes) {
 };
 
 
-/*! responsive-nav.js v1.0.14
+/*! responsive-nav.js v1.0.15
  * https://github.com/viljamis/responsive-nav.js
  * http://responsive-nav.com
  *
@@ -169,8 +169,6 @@ var responsiveNav = (function (window, document) {
   var nav,
     opts,
     navToggle,
-    docEl = document.documentElement,
-    head = document.getElementsByTagName("head")[0],
     styleElement = document.createElement("style"),
     navOpen = false,
 
@@ -228,13 +226,19 @@ var responsiveNav = (function (window, document) {
       }
     },
 
-    getFirstChild = function (e) {
-      var firstChild = e.firstChild;
-      // skip TextNodes
-      while (firstChild !== null && firstChild.nodeType !== 1) {
-        firstChild = firstChild.nextSibling;
+    getChildren = function (e) {
+      if (e.children.length < 1) {
+        throw new Error("The Nav container has no containing elements");
       }
-      return firstChild;
+      // Store all children in array
+      var children = [];
+      // Loop through children and store in array if child != TextNode
+      for (var i = 0; i < e.children.length; i++) {
+        if (e.children[i].nodeType === 1) {
+          children.push(e.children[i]);
+        }
+      }
+      return children;
     },
 
     setAttributes = function (el, attrs) {
@@ -276,7 +280,7 @@ var responsiveNav = (function (window, document) {
       }
 
       // Adds "js" class for <html>
-      addClass(docEl, this.options.jsClass);
+      addClass(document.documentElement, this.options.jsClass);
 
       // Wrapper
       this.wrapperEl = el.replace("#", "");
@@ -288,7 +292,7 @@ var responsiveNav = (function (window, document) {
       }
 
       // Inner wrapper
-      this.wrapper.inner = getFirstChild(this.wrapper);
+      this.wrapper.inner = getChildren(this.wrapper);
 
       // For minification
       opts = this.options;
@@ -396,7 +400,7 @@ var responsiveNav = (function (window, document) {
 
     _createStyles: function () {
       if (!styleElement.parentNode) {
-        head.appendChild(styleElement);
+        document.getElementsByTagName("head")[0].appendChild(styleElement);
       }
     },
 
@@ -493,8 +497,12 @@ var responsiveNav = (function (window, document) {
     },
 
     _calcHeight: function () {
-      var savedHeight = nav.inner.offsetHeight,
-        innerStyles = "#" + this.wrapperEl + ".opened{max-height:" + savedHeight + "px}";
+      var savedHeight = 0;
+      for (var i = 0; i < nav.inner.length; i++) {
+        savedHeight += nav.inner[i].offsetHeight;
+      }
+
+      var innerStyles = "#" + this.wrapperEl + ".opened{max-height:" + savedHeight + "px}";
 
       // Hide from old IE
       if (computed) {
