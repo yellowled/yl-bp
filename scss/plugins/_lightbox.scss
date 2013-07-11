@@ -90,7 +90,7 @@ $lboxbg: $white;
 	margin: 12px;
 	padding: 12px;
 	overflow: hidden;
-	@include border-radius(4px);
+	border-radius: 4px;
 }
 
 .cboxIframe {

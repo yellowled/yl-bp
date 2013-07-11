@@ -41,7 +41,7 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-    @include border-radius(4px);
+    border-radius: 4px;
     @include background-clip(padding-box);
     background: $alt-grey;
     @include background-image(linear-gradient($white, $alt-grey));
@@ -92,7 +92,7 @@ input[type="text"],
 input[type="url"] {
     @include box-sizing(border-box);
     @include background-clip(padding-box);
-    @include border-radius(0);
+    border-radius: 0;
     -webkit-appearance: none;
     background-color: #fafafa;
     border: 1px solid;

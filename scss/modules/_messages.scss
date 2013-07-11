@@ -2,7 +2,7 @@
 // --------------------------------------------------------------------
 %message {
     border: 1px solid;
-    @include border-radius(4px);
+    border-radius: 4px;
     @include x-rem(font-size, .8125);
     @include x-rem(margin, 1 0);
     @include x-rem(padding, .5);

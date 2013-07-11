@@ -30,7 +30,7 @@
 	margin: 0 0 2em;
 	padding: 1em;
 	position: relative;
-	@include border-radius($border-radius);
+	border-radius: $border-radius;
 
 	&:before,
 	&:after {
