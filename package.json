@@ -2,7 +2,7 @@
 	"name":			"yl-bp",
 	"title":		"yl-bp",
     "description":  "An HTML5 boilerplate.",
-	"version":		"0.1.1",
+	"version":		"0.2.0",
 	"homepage":		"https://github.com/yellowled/yl-bp",
 	"author": {
 		"name":		"Matthias Mees",
@@ -13,7 +13,7 @@
         "url":      "git://github.com/yellowled/yl-bp.git"
     },
     "engines": {
-        "node":     ">=0.6"
+        "node":     ">=0.8.0"
     },
 	"devDependencies":	{
         "grunt":                    "~0.4.1",
