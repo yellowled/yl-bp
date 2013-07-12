@@ -17,12 +17,12 @@ Some demos (in German) are available at [lab.netzgestaltung.net](http://lab.netz
 * [grunt-contrib-copy](https://npmjs.org/package/grunt-contrib-copy)
 * [grunt-contrib-imagemin](https://npmjs.org/package/grunt-contrib-imagemin)
 * [grunt-contrib-jshint](https://npmjs.org/package/grunt-contrib-jshint)
-* [grunt-contrib-livereload](https://npmjs.org/package/grunt-contrib-livereload)
 * [grunt-contrib-uglify](https://npmjs.org/package/grunt-contrib-uglify)
+* [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch)
 * [grunt-hashres](https://npmjs.org/package/grunt-hashres)
 * [grunt-htmlhint](https://npmjs.org/package/grunt-htmlhint)
 * [grunt-modernizr](https://npmjs.org/package/grunt-modernizr)
-* [grunt-regarde](https://github.com/yeoman/grunt-regarde)
+* [connect-livereload](https://github.com/intesso/connect-livereload)
 
 ## jQuery plugins included
 

@@ -1,12 +1,3 @@
-// grunt-contrib-livereload Middleware
-'use strict';
-var path = require('path');
-var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
-
-var folderMount = function folderMount(connect, point) {
-    return connect.static(path.resolve(point));
-};
-
 // Configuration
 module.exports = function(grunt) {
     grunt.initConfig({
@@ -43,8 +34,39 @@ module.exports = function(grunt) {
                 options: {
                     port: 9001,
                     middleware: function(connect, options) {
-                        return [lrSnippet, folderMount(connect, '.')];
+                        return[
+                            require('connect-livereload')(),
+                            connect.static(options.base),
+                            connect.directory(options.base)
+                        ]
                     }
+                }
+            }
+        },
+
+        watch: {
+            options: {
+                livereload: true
+            },
+            html: {
+                files: '*.html',
+                tasks: ['htmlhint', 'concat:dev', 'compass:dev'],
+                options: {
+                    nospawn: true
+                }
+            },
+            js: {
+                files: ['scripts/plugins.js', 'scripts/main.js'],
+                tasks: ['jshint', 'concat:dev', 'compass:dev'],
+                options: {
+                    nospawn: true
+                }
+            },
+            scss: {
+                files: 'scss/**/*.scss',
+                tasks: ['concat:dev', 'compass:dev'],
+                options: {
+                    nospawn: true
                 }
             }
         },
@@ -161,21 +183,6 @@ module.exports = function(grunt) {
             }
         },
 
-        regarde: {
-            html: {
-                files: '*.html',
-                tasks: ['concat:dev', 'compass:dev', 'livereload']
-            },
-            js: {
-                files: ['scripts/plugins.js', 'scripts/main.js'],
-                tasks: ['concat:dev', 'compass:dev', 'livereload']
-            },
-            scss: {
-                files: 'scss/**/*.scss',
-                tasks: ['concat:dev', 'compass:dev', 'livereload']
-            }
-        },
-
         hashres: {
             options: {
                 encoding: 'utf-8',
@@ -200,14 +207,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-livereload');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-hashres');
     grunt.loadNpmTasks('grunt-htmlhint');
     grunt.loadNpmTasks('grunt-modernizr');
-    grunt.loadNpmTasks('grunt-regarde');
     // Default
-    grunt.registerTask('default', ['livereload-start', 'connect', 'regarde']);
+    grunt.registerTask('default', ['connect', 'watch']);
     // Testing
     grunt.registerTask('test', ['htmlhint', 'jshint']);
     // Deployment
