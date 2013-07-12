@@ -35,7 +35,7 @@ $map-height: 400px;
     @include responsive-media;
 
     @if $ie7-support {
-       *behavior: url('/scripts/vendor/boxsizing.htc');
+       *behavior: url('/scripts/helpers/boxsizing.htc');
     }
 
     .js & {

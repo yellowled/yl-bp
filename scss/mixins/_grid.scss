@@ -23,7 +23,7 @@ $sgs-gutter: 15px;
 	@include box-sizing(border-box);
 
     @if $ie7-support {
-	   *behavior: url('/scripts/vendor/boxsizing.htc');
+	   *behavior: url('/scripts/helpers/boxsizing.htc');
     }
 }
 

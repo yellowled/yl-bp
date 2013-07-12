@@ -104,7 +104,17 @@ module.exports = function(grunt) {
 
         concat: {
             dev: {
-                src: ['scripts/plugins.js', 'scripts/main.js'],
+                src: ['scripts/helpers/log.js',
+                      'scripts/helpers/main-shiv.js',
+                      'scripts/helpers/accessifyhtml5.js',
+                      'scripts/plugins/responsive-nav.js',
+                      'scripts/plugins/jquery.magnific-popup.js',
+                      'scripts/plugins/responsiveslides.js',
+                      'scripts/plugins/jquery.tipsy.js',
+                      'scripts/plugins/jquery.syncheight.js',
+                      'scripts/plugins/jquery.tabs.js',
+                      'scripts/plugins/jquery.gmap.js',
+                      'scripts/main.js'],
                 dest: 'scripts/master.js'
             }
         },
