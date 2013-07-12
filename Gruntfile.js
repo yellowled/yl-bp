@@ -13,7 +13,7 @@ module.exports = function(grunt) {
         pkg: '<json:package.json>',
 
         jshint: {
-            all: ['scripts/main.js']
+            all: ['scripts/plugins.js', 'scripts/main.js']
         },
 
         htmllint: {
