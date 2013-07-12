@@ -22,7 +22,9 @@ module.exports = function(grunt) {
         },
 
         jshint: {
-            all: ['scripts/plugins.js', 'scripts/main.js']
+            all: ['scripts/main.js',
+                  'scripts/helpers/*.js',
+                  'scripts/plugins/*.js']
         },
 
         clean: {
@@ -56,7 +58,7 @@ module.exports = function(grunt) {
                 }
             },
             js: {
-                files: ['scripts/plugins.js', 'scripts/main.js'],
+                files: ['scripts/helpers/*.js', 'scripts/main.js'],
                 tasks: ['jshint', 'concat:dev', 'compass:dev'],
                 options: {
                     nospawn: true
@@ -123,16 +125,6 @@ module.exports = function(grunt) {
             deploy: {
                 src: 'scripts/master.js',
                 dest: 'dist/scripts/master.js'
-            },
-            plugins: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: '.',
-                        src: ['scripts/plugins/*.js'],
-                        dest: 'dist/'
-                    }
-                ]
             }
         },
 
@@ -186,7 +178,7 @@ module.exports = function(grunt) {
                               '.htaccess',
                               'robots.txt',
                               'scripts/vendor/jquery-1.9.1.min.js',
-                              'scripts/vendor/boxsizing.htc'],
+                              'scripts/helpers/boxsizing.htc'],
                         dest: 'dist/'
                     }
                 ]
