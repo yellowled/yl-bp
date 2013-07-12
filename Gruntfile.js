@@ -22,9 +22,8 @@ module.exports = function(grunt) {
         },
 
         jshint: {
-            all: ['scripts/main.js',
-                  'scripts/helpers/*.js',
-                  'scripts/plugins/*.js']
+            all: ['Gruntfile.js',
+                  'scripts/main.js']
         },
 
         clean: {
@@ -40,7 +39,7 @@ module.exports = function(grunt) {
                             require('connect-livereload')(),
                             connect.static(options.base),
                             connect.directory(options.base)
-                        ]
+                        ];
                     }
                 }
             }
@@ -52,14 +51,14 @@ module.exports = function(grunt) {
             },
             html: {
                 files: '*.html',
-                tasks: ['htmlhint', 'concat:dev', 'compass:dev'],
+                tasks: ['concat:dev', 'compass:dev'],
                 options: {
                     nospawn: true
                 }
             },
             js: {
-                files: ['scripts/helpers/*.js', 'scripts/main.js'],
-                tasks: ['jshint', 'concat:dev', 'compass:dev'],
+                files: ['scripts/main.js'],
+                tasks: ['concat:dev', 'compass:dev'],
                 options: {
                     nospawn: true
                 }
