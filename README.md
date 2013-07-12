@@ -20,7 +20,7 @@ Some demos (in German) are available at [lab.netzgestaltung.net](http://lab.netz
 * [grunt-contrib-livereload](https://npmjs.org/package/grunt-contrib-livereload)
 * [grunt-contrib-uglify](https://npmjs.org/package/grunt-contrib-uglify)
 * [grunt-hashres](https://npmjs.org/package/grunt-hashres)
-* [grunt-html](https://npmjs.org/package/grunt-html)
+* [grunt-htmlhint](https://npmjs.org/package/grunt-htmlhint)
 * [grunt-modernizr](https://npmjs.org/package/grunt-modernizr)
 * [grunt-regarde](https://github.com/yeoman/grunt-regarde)
 

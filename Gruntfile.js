@@ -12,12 +12,26 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: '<json:package.json>',
 
-        jshint: {
-            all: ['scripts/plugins.js', 'scripts/main.js']
+        htmlhint: {
+            all: {
+                options: {
+                    'tagname-lowercase': true,
+                    'attr-lowercase': true,
+                    'doctype-first': true,
+                    'tag-pair': true,
+                    'spec-char-escape': true,
+                    'id-unique': true,
+                    'img-alt-require': true,
+                    'doctype-html5': true,
+                    'id-class-value': true,
+                    'style-disabled': true
+                },
+                src: ['*.html']
+            }
         },
 
-        htmllint: {
-            all: ['*.html']
+        jshint: {
+            all: ['scripts/plugins.js', 'scripts/main.js']
         },
 
         clean: {
@@ -189,13 +203,13 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-livereload');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-hashres');
-    grunt.loadNpmTasks('grunt-html');
+    grunt.loadNpmTasks('grunt-htmlhint');
     grunt.loadNpmTasks('grunt-modernizr');
     grunt.loadNpmTasks('grunt-regarde');
     // Default
     grunt.registerTask('default', ['livereload-start', 'connect', 'regarde']);
-    // Development
-    grunt.registerTask('check', ['htmllint', 'jshint']);
+    // Testing
+    grunt.registerTask('test', ['htmlhint', 'jshint']);
     // Deployment
     grunt.registerTask('deploy', ['clean:deploy', 'copy:deploy', 'concat:dev', 'compass:deploy', 'uglify', 'imagemin:deploy', 'modernizr', 'hashres:deploy']);
 };
