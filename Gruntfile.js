@@ -176,7 +176,7 @@ module.exports = function(grunt) {
                         src: ['*.html',
                               '.htaccess',
                               'robots.txt',
-                              'scripts/vendor/jquery-1.9.1.min.js',
+                              'scripts/vendor/jquery-1.10.2.min.js',
                               'scripts/helpers/boxsizing.htc'],
                         dest: 'dist/'
                     }
