@@ -106,7 +106,6 @@ module.exports = function(grunt) {
         concat: {
             dev: {
                 src: ['scripts/helpers/log.js',
-                      'scripts/helpers/main-shiv.js',
                       'scripts/helpers/accessifyhtml5.js',
                       'scripts/plugins/responsive-nav.js',
                       'scripts/plugins/jquery.magnific-popup.js',
@@ -177,6 +176,7 @@ module.exports = function(grunt) {
                               '.htaccess',
                               'robots.txt',
                               'scripts/vendor/jquery-1.10.2.min.js',
+                              'scripts/helpers/main-shiv.js',
                               'scripts/helpers/boxsizing.htc'],
                         dest: 'dist/'
                     }
