@@ -107,7 +107,6 @@ module.exports = function(grunt) {
             dev: {
                 src: ['scripts/helpers/log.js',
                       'scripts/helpers/accessifyhtml5.js',
-                      'scripts/plugins/responsive-nav.js',
                       'scripts/plugins/jquery.magnific-popup.js',
                       'scripts/plugins/responsiveslides.js',
                       'scripts/plugins/jquery.syncheight.js',

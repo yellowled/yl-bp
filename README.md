@@ -35,4 +35,3 @@ Some demos (in German) are available at [lab.netzgestaltung.net](http://lab.netz
 
 * [AccessifyHTML5](https://github.com/yatil/accessifyhtml5.js)
 * [box-sizing-Polyfill](https://github.com/Schepp/box-sizing-polyfill)
-* [Responsive Nav](https://github.com/viljamis/responsive-nav.js)
