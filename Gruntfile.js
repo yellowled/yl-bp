@@ -110,7 +110,6 @@ module.exports = function(grunt) {
                       'scripts/plugins/responsive-nav.js',
                       'scripts/plugins/jquery.magnific-popup.js',
                       'scripts/plugins/responsiveslides.js',
-                      'scripts/plugins/jquery.tipsy.js',
                       'scripts/plugins/jquery.syncheight.js',
                       'scripts/plugins/jquery.tabs.js',
                       'scripts/plugins/jquery.gmap.js',

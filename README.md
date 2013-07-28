@@ -30,7 +30,6 @@ Some demos (in German) are available at [lab.netzgestaltung.net](http://lab.netz
 * [gMap](https://github.com/marioestrada/jQuery-gMap)
 * [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup)
 * [Responsive Slides](https://github.com/viljamis/ResponsiveSlides.js)
-* [Tipsy](https://github.com/jaz303/tipsy)
 
 ## JS helpers included
 
