@@ -170,7 +170,8 @@ module.exports = function(grunt) {
             deploy: {
                 files: [
                     {
-                        src: ['*.html',
+                        src: ['font/*',
+                              '*.html',
                               '.htaccess',
                               'robots.txt',
                               'scripts/vendor/jquery-1.10.2.min.js',
