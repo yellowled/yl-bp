@@ -6,7 +6,11 @@ This is what I usually use to start HTML5 projects.
 
 Uses [Grunt](http://gruntjs.com) build script (requires **at least** Grunt 0.4.0), so do `npm install` first to install required Grunt plugins locally.
 
-Some demos (in German) are available at [lab.netzgestaltung.net](http://lab.netzgestaltung.net).
+## Bower
+
+Uses [Bower](http://bower.io/) to manage Javascript helpers and jQuery plugins (including jQuery and Modernizr), so [install Bower](http://bower.io/#installing-bower) and do `bower install` to pull in all Javascript assets.
+
+If a project doesn't require some of the JS assets, uncomment them in the `bower.json` before install and in the `Gruntfile.js` (in the `concat` section) before running `grunt`.
 
 ## Grunt plugins used
 
@@ -27,7 +31,7 @@ Some demos (in German) are available at [lab.netzgestaltung.net](http://lab.netz
 ## jQuery plugins included
 
 * [AccessibleTabs](https://github.com/ginader/Accessible-Tabs)
-* [gMap](https://github.com/marioestrada/jQuery-gMap)
+* [gmaps](https://github.com/hpneo/gmaps)
 * [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup)
 * [Responsive Slides](https://github.com/viljamis/ResponsiveSlides.js)
 

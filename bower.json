@@ -1,0 +1,16 @@
+{
+    "name":         "yl-bp",
+    "version":      "0.2.0",
+    "main":         "",
+    "ignore":       [],
+    "dependencies": {
+        "accessifyhtml5-amd":       "~2.0.1",
+        "gmaps":                    "~0.4.5",
+        "jquery":                   "~1.10.2",
+        "jquery-accessible-tabs":   "~1.9.8",
+        "magnific-popup":           "~0.9.5",
+        "modernizr":                "~2.6.2",
+        "ResponsiveSlides.js":      ""
+    },
+    "devDependencies": {}
+}

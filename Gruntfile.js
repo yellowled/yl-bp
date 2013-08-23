@@ -73,8 +73,8 @@ module.exports = function(grunt) {
         },
 
         modernizr: {
-            'devFile' : 'scripts/vendor/modernizr-2.6.2.min.js',
-            'outputFile' : 'dist/scripts/vendor/modernizr-2.6.2.min.js',
+            'devFile' : 'scripts/modernizr/modernizr.js',
+            'outputFile' : 'dist/scripts/modernizr/modernizr.js',
             'extra' : {
                 'shiv' : false,
                 'printshiv' : true,
@@ -97,7 +97,7 @@ module.exports = function(grunt) {
             // parseFiles = true: crawl all *.js, *.css, *.scss files;
             // override by defining "files" array
             'parseFiles' : true,
-            'files' : ['scss/**/*.scss', 'scripts/**/*.js'],
+            'files' : ['scss/**/*.scss', 'scripts/*.js'],
             'matchCommunityTests' : false,
             'customTests' : [],
             'excludeFiles' : ['Gruntfile.js','package.json']
@@ -106,12 +106,12 @@ module.exports = function(grunt) {
         concat: {
             dev: {
                 src: ['scripts/helpers/log.js',
-                      'scripts/helpers/accessifyhtml5.js',
-                      'scripts/plugins/jquery.magnific-popup.js',
-                      'scripts/plugins/responsiveslides.js',
-                      'scripts/plugins/jquery.syncheight.js',
-                      'scripts/plugins/jquery.tabs.js',
-                      'scripts/plugins/jquery.gmap.js',
+                      'scripts/accessifyhtml5-amd/accessifyhtml5.js',
+                      'scripts/magnific-popup/dist/jquery.magnific-popup.js',
+                      'scripts/ResponsiveSlides.js/responsiveslides.js',
+                      'scripts/jquery-accessible-tabs/js/jquery.syncheight.js',
+                      'scripts/jquery-accessible-tabs/js/jquery.tabs.js',
+                      'scripts/gmaps/gmaps.js',
                       'scripts/main.js'],
                 dest: 'scripts/master.js'
             }
@@ -174,7 +174,7 @@ module.exports = function(grunt) {
                               '*.html',
                               '.htaccess',
                               'robots.txt',
-                              'scripts/vendor/jquery-1.10.2.min.js',
+                              'scripts/jquery/jquery.min.js',
                               'scripts/helpers/main-shiv.js',
                               'scripts/helpers/boxsizing.htc'],
                         dest: 'dist/'
