@@ -2,13 +2,30 @@
 
 This is what I usually use to start HTML5 projects.
 
-## Build script
+## Requirements
 
-Uses [Grunt](http://gruntjs.com) build script (requires **at least** Grunt 0.4.0), so do `npm install` first to install required Grunt plugins locally.
+* [Sass](http://sass-lang.com)
+* [Compass](http://compass-style.org)
+* [Grunt](http://gruntjs.com)
+* [Bower](http://bower.io)
 
-## Bower
+Sass and Compass depend on [Ruby](http://www.ruby-lang.org), Grunt and Bower depend on [node.js](http://nodejs.org). Some of the Grunt plugins (see below) may depend on command line tools to be installed on your system as well.
 
-Uses [Bower](http://bower.io/) to manage Javascript helpers and jQuery plugins (including jQuery and Modernizr), so [install Bower](http://bower.io/#installing-bower) and do `bower install` to pull in all Javascript assets.
+### Installation
+
+Please refer to the documentation of your OS and/or the documentation of these requirements.
+
+## Setting up
+
+In the project directory:
+
+1. `npm install` (install Grunt plugins required for build script)
+2. `bower install` (install JS assets included in this boilerplate)
+3. `grunt watch` (start build script)
+
+Unfortunately, `grunt watch` doesn't support running tasks on startup (yet); to actually run those tasks, a HTML, SCSS or JS file needs to be saved.
+
+### “I don't need …”
 
 If a project doesn't require some of the JS assets, uncomment them in the `bower.json` before install and in the `Gruntfile.js` (in the `concat` section) before running `grunt`.
 
@@ -28,14 +45,16 @@ If a project doesn't require some of the JS assets, uncomment them in the `bower
 * [grunt-modernizr](https://npmjs.org/package/grunt-modernizr)
 * [connect-livereload](https://github.com/intesso/connect-livereload)
 
-## jQuery plugins included
+## JS assets included
+
+### jQuery plugins
 
 * [AccessibleTabs](https://github.com/ginader/Accessible-Tabs)
 * [gmaps](https://github.com/hpneo/gmaps)
 * [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup)
 * [Responsive Slides](https://github.com/viljamis/ResponsiveSlides.js)
 
-## JS helpers included
+## JS helpers
 
 * [AccessifyHTML5](https://github.com/yatil/accessifyhtml5.js)
 * [box-sizing-Polyfill](https://github.com/Schepp/box-sizing-polyfill)
