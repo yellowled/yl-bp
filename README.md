@@ -23,8 +23,6 @@ In the project directory:
 2. `bower install` (install JS assets included in this boilerplate)
 3. `grunt watch` (start build script)
 
-Unfortunately, `grunt watch` doesn't support running tasks on startup (yet); to actually run those tasks, a HTML, SCSS or JS file needs to be saved.
-
 ### “I don't need …”
 
 If a project doesn't require some of the JS assets, uncomment them in the `bower.json` before install and in the `Gruntfile.js` (in the `concat` section) before running `grunt`.
