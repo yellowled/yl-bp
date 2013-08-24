@@ -1,30 +1,10 @@
-// JQUERY GMAP → github.com/marioestrada/jQuery-gMap
+// GMAPS.JS → https://github.com/hpneo/gmaps
 // --------------------------------------------------------------------
 // Insert before <body>:;
 // <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 //
 // JS USAGE
-// $('#map').gMap({
-//     latitude: 53.58725,
-//     longitude: 9.89847,
-//     zoom: 15,
-//     controls: {
-//         panControl: false,
-//         zoomControl: true,
-//         mapTypeControl: false,
-//         scaleControl: true,
-//         streetViewControl: false,
-//         overviewMapControl: false
-//     },
-//     markers: [
-//         {
-//             latitude: 53.58725,
-//             longitude: 9.89847,
-//             html: "<b>Titel</b><br>Text",
-//             popup: open
-//         }
-//     ]
-// });
+// http://hpneo.github.io/gmaps/examples.html
 
 $map-height: 400px;
 
