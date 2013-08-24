@@ -9,7 +9,7 @@ This is what I usually use to start HTML5 projects.
 * [Grunt](http://gruntjs.com)
 * [Bower](http://bower.io)
 
-Sass and Compass depend on [Ruby](http://www.ruby-lang.org), Grunt and Bower depend on [node.js](http://nodejs.org). Some of the Grunt plugins (see below) may depend on command line tools to be installed on your system as well.
+Sass and Compass depend on [Ruby](http://www.ruby-lang.org), Grunt and Bower depend on [node.js](http://nodejs.org). Some of the [Grunt plugins](#grunt-plugins-used) may depend on command line tools to be installed on your system as well.
 
 ### Installation
 
@@ -19,13 +19,13 @@ Please refer to the documentation of your OS and/or the documentation of these r
 
 In the project directory:
 
-1. `npm install` (install Grunt plugins required for build script)
-2. `bower install` (install JS assets included in this boilerplate)
+1. `npm install` (install [Grunt plugins](#grunt-plugins-used) required for build script)
+2. `bower install` (install [JS assets](#js-assets-included) included in this boilerplate)
 3. `grunt watch` (start build script)
 
 ### “I don't need …”
 
-If a project doesn't require some of the JS assets, uncomment them in the `bower.json` before install and in the `Gruntfile.js` (in the `concat` section) before running `grunt`.
+If a project doesn't require some of the [JS assets](#js-assets-included), uncomment them in the `bower.json` before install and in the `Gruntfile.js` (in the `concat` section) before running `grunt`.
 
 ## Grunt plugins used
 
