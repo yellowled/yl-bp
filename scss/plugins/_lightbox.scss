@@ -38,6 +38,9 @@ $include-mobile-layout-for-image: true; // Removes paddings from top and bottom
 $caption-title-color:             #F3F3F3;
 $caption-subtitle-color:          #BDBDBD;
 
+// A11y
+$use-visuallyhidden:              true;
+
 
 // 2. General styles
 // Transluscent overlay
@@ -146,8 +149,22 @@ $caption-subtitle-color:          #BDBDBD;
 }
 
 // Helper class that hides stuff
-.mfp-hide {
-  display: none !important;
+@if $use-visuallyhidden {
+  // From HTML5 Boilerplate https://github.com/h5bp/html5-boilerplate/blob/v4.2.0/doc/css.md#visuallyhidden
+  .mfp-hide {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+  }
+} @else {
+  .mfp-hide {
+    display: none !important;
+  }
 }
 
 
@@ -193,6 +210,8 @@ button.mfp-arrow {
   display: block;
   padding: 0;
   z-index: $z-index-base + 6;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 button::-moz-focus-inner {
     padding: 0;
@@ -203,7 +222,7 @@ button::-moz-focus-inner {
 // Close icon
 .mfp-close {
   width: 44px;
-  height:44px;
+  height: 44px;
   line-height: 44px;
 
   position: absolute;
@@ -243,7 +262,7 @@ button::-moz-focus-inner {
 // "1 of X" counter
 .mfp-counter {
   position: absolute;
-  top:0;
+  top: 0;
   right: 0;
   color: $controls-text-color;
   font-size: 12px;
@@ -286,7 +305,7 @@ button::-moz-focus-inner {
       top: 0;
       margin-top: 35px;
       margin-left: 35px;
-      border: solid transparent;
+      border: medium inset transparent;
     }
 
     &:after,
@@ -417,7 +436,7 @@ button::-moz-focus-inner {
     text-align: left;
     line-height: 18px;
     color: $caption-title-color;
-    word-break: break-word;
+    word-wrap: break-word;
     padding-right: 36px; // leave some space for counter at right side
   }
 
@@ -506,7 +525,7 @@ button::-moz-focus-inner {
     transform-origin: 0;
   }
   .mfp-arrow-right {
-     -webkit-transform-origin: 100%;
+    -webkit-transform-origin: 100%;
     transform-origin: 100%;
   }
   .mfp-container {
