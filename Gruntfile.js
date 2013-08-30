@@ -172,7 +172,6 @@ module.exports = function(grunt) {
                 files: [
                     {
                         src: ['font/*',
-                              '*.html',
                               '.htaccess',
                               'robots.txt',
                               'scripts/jquery/jquery.min.js',
@@ -198,6 +197,16 @@ module.exports = function(grunt) {
                 dest: 'dist/*.html',
 
             }
+        },
+
+        targethtml: {
+            deploy: {
+                files: [{
+                    expand: true,
+                    src: ['*.html'],
+                    dest: 'dist/'
+                }],
+            }
         }
     });
     // Load required tasks
@@ -213,10 +222,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-hashres');
     grunt.loadNpmTasks('grunt-htmlhint');
     grunt.loadNpmTasks('grunt-modernizr');
+    grunt.loadNpmTasks('grunt-targethtml');
     // Default
     grunt.registerTask('default', ['connect', 'watch']);
     // Testing
     grunt.registerTask('test', ['htmlhint', 'jshint']);
     // Deployment
-    grunt.registerTask('deploy', ['clean:deploy', 'copy:deploy', 'concat:dev', 'compass:deploy', 'uglify', 'imagemin:deploy', 'modernizr', 'hashres:deploy']);
+    grunt.registerTask('deploy', ['clean:deploy', 'copy:deploy', 'concat:dev', 'compass:deploy', 'uglify', 'imagemin:deploy', 'modernizr', 'targethtml:deploy', 'hashres:deploy']);
 };
