@@ -5,3 +5,16 @@
 html {
     font-size: 100%;
 }
+
+
+// POSITIONING CLASSES (FOR USE WITH PROCESSWIRE → processwire.com)
+// --------------------------------------------------------------------
+.align_left {
+    float: left;
+    @include x-rem(margin, 0.25 1 0.75 0);
+}
+
+.align_right {
+    float: right;
+    @include x-rem(margin, 0.25 0 0.75 1);
+}
