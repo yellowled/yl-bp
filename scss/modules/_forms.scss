@@ -13,7 +13,6 @@ input[type="checkbox"] {
     position: relative;
     vertical-align: top;
     top: 5px;
-    top: 0 \0;  // IE8-10
 
     @if $ie7-support {
         *top: -5px;
