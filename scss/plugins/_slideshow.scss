@@ -1,2 +1,18 @@
 // JQUERY CYCLE2 → http://jquery.malsup.com/cycle2/
 // --------------------------------------------------------------------
+%cycle-gauge {
+    position: absolute;
+    z-index: 5000;
+
+    background: rgba($black, .7);
+    color: $off-white;
+}
+
+%cycle-control {
+    color: rgba($off-white, .7);
+    cursor: pointer;
+
+    &:hover {
+        color: $off-white;
+    }
+}
