@@ -1,6 +1,8 @@
-// JQUERY ACCESSIBLE TABS → github.com/ginader/Accessible-Tabs
+// JQUERY ACCESSIBLE TABS
+// → github.com/ginader/Accessible-Tabs
 // --------------------------------------------------------------------
-// JS USAGE
+// Usage:
+// → http://blog.ginader.de/dev/jquery/accessible-tabs/
 //
 // $('#tabs').accessibleTabs({
 //  currentClass: 'on',
@@ -14,16 +16,14 @@
 // });
 
 
-// CUSTOMIZE
-// --------------------------------------------------------------------
+// Defaults
 $tabswidth:   560px;
 $bordercolor: $dark-grey;
 $background:  $white;
 $inactive:    $lite-grey;
 
 
-// CORE STYLES
-// --------------------------------------------------------------------
+// Core styles
 .tabs {
     @include x-rem(margin, 1 0);
 	max-width: 100%;

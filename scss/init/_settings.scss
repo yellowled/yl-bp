@@ -1,7 +1,10 @@
-// SETTINGS
+// GENERAL SETTINGS
 // --------------------------------------------------------------------
-// CONTROL IE7 SUPPORT
-$ie7-support: false;
-
 // IE10 → mattstow.com/responsive-design-in-ie10-on-windows-phone-8.html
 @-ms-viewport { width: device-width; }
+
+
+// SETTINGS SPECIFIC TO THIS PROJECT
+// --------------------------------------------------------------------
+// set to true if IE7 should be supported
+$ie7-support: false;

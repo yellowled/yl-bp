@@ -1,5 +1,4 @@
-// FORM ELEMENTS
-// Borrowed heavily from formalize.me
+// FORM ELEMENTS (borrowed heavily from formalize.me)
 // --------------------------------------------------------------------
 // Remove default fieldset styles.
 fieldset {
@@ -74,14 +73,14 @@ input[type="submit"] {
     }
 }
 
-// input[type="date"],
-// input[type="datetime"],
-// input[type="datetime-local"],
-// input[type="month"],
-// input[type="number"],
-// input[type="password"],
-// input[type="time"],
-// input[type="week"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="time"],
+input[type="week"],
 textarea, select,
 input[type="email"],
 input[type="search"],

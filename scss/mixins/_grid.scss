@@ -1,10 +1,10 @@
-// SIMPLE GRID SYSTEM
+// FLEXIBLE GRID SYSTEM
 // --------------------------------------------------------------------
 // Defaults
-$sgs-row-width: 96%;
-$sgs-row-max-width: 1140px;
-$sgs-columns: 12;
-$sgs-gutter: 15px;
+$sgs-row-width:     96%;    // fluid container width
+$sgs-row-max-width: 1140px; // max. container width
+$sgs-columns:       12;     // no. of columns
+$sgs-gutter:        15px;   // spacing between columns
 
 
 // Grid row (container)

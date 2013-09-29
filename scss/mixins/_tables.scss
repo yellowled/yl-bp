@@ -1,27 +1,33 @@
-// TABLES
+// BASIC TABLES
 // --------------------------------------------------------------------
-// Simple table
-@mixin simple-table($border: $mid-grey, $rhythm: 1) {
-    border-bottom: 1px solid $border;
+// Defaults
+$rhythm: 1;
+
+table {
     @include x-rem(margin, $rhythm 0);
     width: 100%;
-
-    tr {
-        border-top: 1px solid $border;
-    }
 
     caption {
         text-align: center;
     }
 }
 
+
+// TYPES OF TABLES
+// --------------------------------------------------------------------
+// Simple table
+@mixin simple-table($border: $mid-grey) {
+    border-bottom: 1px solid $border;
+
+    tr {
+        border-top: 1px solid $border;
+    }
+}
+
 // Striped table
-@mixin striped-table($border: $dark-grey, $odd: $lite-grey, $even: $alt-grey,
-                     $head: $mid-grey, $foot: $head, $rhythm: 1) {
+@mixin striped-table($border: $dark-grey, $odd: $lite-grey, $even: $alt-grey, $head: $mid-grey, $foot: $head) {
     border: 1px solid $border;
     border-top: 0 none;
-    @include x-rem(margin, $rhythm 0);
-    width: 100%;
 
     thead {
         background-color: $head;
@@ -48,9 +54,5 @@
     th,
     td {
         @include x-rem(padding, 0 0.25);
-    }
-
-    caption {
-        text-align: center;
     }
 }

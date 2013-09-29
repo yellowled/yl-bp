@@ -1,8 +1,7 @@
 // SHAPES
 // --------------------------------------------------------------------
-// FOLDED CORNER
+// Box with folded corner
 // → nicolasgallagher.com/pure-css-folded-corner-effect/
-// --------------------------------------------------------------------
 @mixin folded-corner($box-color, $container-color) {
 	background: $box-color;
 	position: relative;
@@ -21,9 +20,8 @@
 	}
 }
 
-// SPEECH BUBBLE
+// Speech bubbles
 // → nicolasgallagher.com/pure-css-speech-bubbles/
-// --------------------------------------------------------------------
 @mixin speech-bubble($box-color,$border-color: $box-color,$border-width: 2px,$border-radius: 10px) {
 	background: $box-color;
 	border: $border-width solid $border-color;
@@ -60,9 +58,8 @@
 	}
 }
 
-// CSS RIBBON
+// Ribbons
 // → nicolasgallagher.com/an-introduction-to-css-pseudo-element-hacks/
-// --------------------------------------------------------------------
 @mixin ribbon-both($ribbon-color, $text-color, $container-horizontal-padding, $corner-width: 10px) {
 	background: $ribbon-color;
 	color: $text-color;

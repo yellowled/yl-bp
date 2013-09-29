@@ -1,4 +1,4 @@
-// MESSAGES
+// BASIC MESSAGE
 // --------------------------------------------------------------------
 %message {
     border: 1px solid;
@@ -12,6 +12,9 @@
     }
 }
 
+
+// TYPES OF MESSAGES
+// --------------------------------------------------------------------
 .msg-warning {
     @extend %message;
     background: #f2dede;

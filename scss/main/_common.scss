@@ -1,4 +1,4 @@
-// COMMON STYLES FOR ALL MEDIA/RESOLUTIONS
+// EXTENDS/INCLUDES
 // --------------------------------------------------------------------
 .js #jshint {
 	@extend .hidden;
@@ -10,7 +10,7 @@ img {
 }
 
 
-// BASE
+// COMMON STYLES FOR ALL MEDIA/RESOLUTIONS
 // --------------------------------------------------------------------
 html,
 button,
