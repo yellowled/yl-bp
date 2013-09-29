@@ -39,7 +39,7 @@
     figcaption {
         background: $off-black;
         background: rgba($black,.7);
-        @include box-sizing(border-box);
+        @include x-box-sizing(border-box);
         color: $white;
         @include x-rem(padding, 0.125 0.625);
         position: absolute;

@@ -2,9 +2,8 @@
 // --------------------------------------------------------------------
 // Gradient button
 @mixin gradient-button($bg: $alt-grey, $fg: $black, $rad: 4px) {
-    background: $bg;
-    @include background-clip(padding-box);
-    @include background-image(linear-gradient(lighten($bg, 13.2%), $bg));
+    @include x-linear-gradient(lighten($bg, 13.2%), $bg);
+    background-clip: padding-box;
     border: 1px solid;
     border-color: $bg darken($bg, 13.2%) darken($bg, 26.5%);
     border-radius: $rad;
@@ -24,11 +23,11 @@
     }
 
     &:hover {
-        @include background-image(linear-gradient(lighten($bg, 13.2%), lighten($bg, 6.5%) 1px, darken($bg, 6.5%)));
+        @include x-linear-gradient(lighten($bg, 13.2%), darken($bg, 6.5%));
     }
 
     &:active {
-        @include background-image(linear-gradient(lighten($bg, 13.2%), $bg 1px, lighten($bg, 6.5%)));
+        @include x-linear-gradient(lighten($bg, 13.2%), lighten($bg, 6.5%));
         box-shadow: inset rgba($black, 0.25) 0 1px 2px 0;
         border-color: darken($bg, 26.5%) darken($bg, 13.2%) $bg;
     }

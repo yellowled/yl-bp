@@ -40,13 +40,13 @@ q {
 // HYPHENATION
 // --------------------------------------------------------------------
 p {
-    @include hyphens(auto);
+    @include x-hyphens(auto);
 
     // not for preformatted text (inline)
     code,
     samp,
     kbd {
-        @include hyphens(none);
+        @include x-hyphens(none);
     }
 }
 

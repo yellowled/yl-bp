@@ -20,7 +20,7 @@ $sgs-gutter: 15px;
 	float: left;
 	padding: 0 $gutter;
 	width: $grid-type * ($span-columns / $total-columns);
-	@include box-sizing(border-box);
+	@include x-box-sizing(border-box);
 
     @if $ie7-support {
 	   *behavior: url('/scripts/helpers/boxsizing.htc');

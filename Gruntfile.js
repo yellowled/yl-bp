@@ -52,21 +52,21 @@ module.exports = function(grunt) {
             },
             html: {
                 files: '*.html',
-                tasks: ['concat:dev', 'compass:dev'],
+                tasks: ['concat:dev', 'sass:dev'],
                 options: {
                     nospawn: true
                 }
             },
             js: {
                 files: ['scripts/main.js'],
-                tasks: ['concat:dev', 'compass:dev'],
+                tasks: ['concat:dev', 'sass:dev'],
                 options: {
                     nospawn: true
                 }
             },
             scss: {
                 files: 'scss/**/*.scss',
-                tasks: ['concat:dev', 'compass:dev'],
+                tasks: ['concat:dev', 'sass:dev'],
                 options: {
                     nospawn: true
                 }
@@ -134,28 +134,34 @@ module.exports = function(grunt) {
             }
         },
 
-        compass: {
+        sass: {
             dev: {
                 options: {
-                    sassDir: 'scss',
-                    cssDir: 'styles',
-                    imagesDir: 'img',
-                    outputStyle: 'nested',
-                    noLineComments: true,
-                    force: true,
-                    debugInfo: false
-                }
+                    sourcemap: false,
+                    style: 'nested',
+                    precision: 5
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'scss',
+                    src: ['*.scss'],
+                    dest: 'styles',
+                    ext: '.css'
+                }]
             },
             deploy: {
                 options: {
-                    sassDir: 'scss',
-                    cssDir: 'dist/styles',
-                    imagesDir: 'img',
-                    outputStyle: 'compressed',
-                    noLineComments: true,
-                    force: true,
-                    debugInfo: false
-                }
+                    sourcemap: false,
+                    style: 'compressed',
+                    precision: 5
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'scss',
+                    src: ['*.scss'],
+                    dest: 'dist/styles',
+                    ext: '.css'
+                }]
             }
         },
 
@@ -223,12 +229,12 @@ module.exports = function(grunt) {
     });
     // Load required tasks
     grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-hashres');
@@ -240,5 +246,5 @@ module.exports = function(grunt) {
     // Testing
     grunt.registerTask('test', ['htmlhint', 'jshint']);
     // Deployment
-    grunt.registerTask('deploy', ['clean:deploy', 'copy:deploy', 'concat:dev', 'compass:deploy', 'uglify', 'imagemin:deploy', 'modernizr', 'targethtml:deploy', 'hashres:deploy']);
+    grunt.registerTask('deploy', ['clean:deploy', 'copy:deploy', 'concat:dev', 'sass:deploy', 'uglify', 'imagemin:deploy', 'modernizr', 'targethtml:deploy', 'hashres:deploy']);
 };
