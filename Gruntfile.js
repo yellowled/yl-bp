@@ -216,7 +216,7 @@ module.exports = function(grunt) {
 
         // To use this for target-based includes, e.g. to include Piwik snippet:
         // <!--(if target deploy)><!(endif)-->
-        // https://github.com/changer/grunt-targethtml
+        // → github.com/changer/grunt-targethtml
         targethtml: {
             deploy: {
                 files: [{
