@@ -44,3 +44,47 @@
         color: $fg;
     }
 }
+
+// Flat button
+@mixin flat-button($bg: $alt-grey, $fg: $black, $rad: 4px, $ag: complement($bg)) {
+    background: $bg;
+    background-clip: padding-box;
+    border: 0 none;
+    border-radius: $rad;
+    color: $fg;
+    display: inline-block;
+    line-height: normal;
+    outline: 0;
+    @include x-rem(padding, 0.1875 0.625);
+    text-align: center;
+    text-decoration: none;
+    text-shadow: none;
+    width: auto;
+
+    @if $ie7-support {
+        *padding-top: 2px;
+        *padding-bottom: 0;
+    }
+
+    &:hover,
+    &:focus {
+        background: $ag;
+    }
+
+    &:active {
+        @include x-linear-gradient(lighten($bg, 13.2%), lighten($bg, 6.5%));
+        box-shadow: none;
+    }
+
+    &:focus {
+        box-shadow: none;
+        z-index: auto;
+    }
+
+    &:active,
+    &:visited,
+    &:hover,
+    &:focus {
+        color: $fg;
+    }
+}
