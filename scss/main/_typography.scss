@@ -1,5 +1,11 @@
 // BASIC TYPOGRAPHY
 // --------------------------------------------------------------------
+// Base font size:     14px
+// Ideal line length: 554px
+html {
+    font-size: 87.5%;
+}
+
 h1,
 h2,
 h3,
@@ -49,10 +55,4 @@ p {
     kbd {
         @include x-hyphens(none);
     }
-}
-
-// Base font size:     14px
-// Ideal line length: 554px
-html {
-    font-size: 87.5%;
 }

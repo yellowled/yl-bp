@@ -7,6 +7,7 @@
 }
 
 // inline-block with IE7 legacy support
+// also avaible as @inblock-level, see mixins/_basic.scss
 %inblock-level {
     display: inline-block;
 

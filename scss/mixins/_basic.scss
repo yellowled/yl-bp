@@ -17,13 +17,6 @@
     width: $center-width;
 }
 
-// Vertical centering
-@mixin center-vertical($center-height) {
-    display: table-cell;
-    min-height: $center-height;
-    vertical-align: middle;
-}
-
 
 // CSS3 MIXINS
 // --------------------------------------------------------------------
