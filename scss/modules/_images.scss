@@ -1,8 +1,13 @@
-// FLOATED IMAGES (for use with → processwire.com)
+// RESPONSIVE FLOATED IMAGES
 // --------------------------------------------------------------------
 // also see layout/_tablet.scss
-.align_left,
-.align_right {
+%image-block {
     display: block;
     @include x-rem(margin, 1 0);
 }
+
+// For use with → processwire.com
+// .align_left,
+// .align_right {
+//     @extend %image-block;
+// }

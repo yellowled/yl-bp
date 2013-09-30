@@ -7,14 +7,23 @@ html {
 }
 
 
-// FLOATED IMAGES (for use with → processwire.com)
+// RESPONSIVE FLOATED IMAGES
 // --------------------------------------------------------------------
-.align_left {
+%image-left {
     float: left;
     @include x-rem(margin, 0.25 1 0.75 0);
 }
 
-.align_right {
+%image-right {
     float: right;
     @include x-rem(margin, 0.25 0 0.75 1);
 }
+
+// For use with → processwire.com
+// .align_left {
+//     @extend %image-left;
+// }
+
+// .align_right {
+//     @extend %image-right;
+// }
