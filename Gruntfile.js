@@ -124,6 +124,25 @@ module.exports = function(grunt) {
                       'scripts/gmaps/gmaps.js',
                       'scripts/main.js'],
                 dest: 'scripts/master.js'
+            },
+            deploy: {
+                src: ['scripts/accessifyhtml5-amd/accessifyhtml5.js',
+                      'scripts/magnific-popup/dist/jquery.magnific-popup.js',
+                      'scripts/jquery-cycle2/jquery.cycle2.core.js',
+                      'scripts/jquery-cycle2/jquery.cycle2.autoheight.js',
+                      'scripts/jquery-cycle2/jquery.cycle2.caption.js',
+                      'scripts/jquery-cycle2/jquery.cycle2.command.js',
+                      'scripts/jquery-cycle2/jquery.cycle2.hash.js',
+                      'scripts/jquery-cycle2/jquery.cycle2.loader.js',
+                      'scripts/jquery-cycle2/jquery.cycle2.pager.js',
+                      'scripts/jquery-cycle2/jquery.cycle2.prevnext.js',
+                      'scripts/jquery-cycle2/jquery.cycle2.progressive.js',
+                      'scripts/jquery-cycle2/jquery.cycle2.tmpl.js',
+                      'scripts/jquery-accessible-tabs/js/jquery.syncheight.js',
+                      'scripts/jquery-accessible-tabs/js/jquery.tabs.js',
+                      'scripts/gmaps/gmaps.js',
+                      'scripts/main.js'],
+                dest: 'scripts/master.js'
             }
         },
 
@@ -246,5 +265,5 @@ module.exports = function(grunt) {
     // Testing
     grunt.registerTask('test', ['htmlhint', 'jshint']);
     // Deployment
-    grunt.registerTask('deploy', ['clean:deploy', 'copy:deploy', 'concat:dev', 'sass:deploy', 'uglify', 'imagemin:deploy', 'modernizr', 'targethtml:deploy', 'hashres:deploy']);
+    grunt.registerTask('deploy', ['clean:deploy', 'copy:deploy', 'concat:deploy', 'sass:deploy', 'uglify', 'imagemin:deploy', 'modernizr', 'targethtml:deploy', 'hashres:deploy']);
 };

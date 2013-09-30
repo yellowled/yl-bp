@@ -1,6 +1,6 @@
 # My HTML boilerplate
 
-This is what I usually use to start projects.
+This is what I usually use to start projects. Derived from [H5BP](https://github.com/h5bp/html5-boilerplate) and [init](https://github.com/drublic/init).
 
 ## Requirements
 
@@ -8,7 +8,7 @@ This is what I usually use to start projects.
 * [Grunt](http://gruntjs.com)
 * [Bower](http://bower.io)
 
-Sass depends on [Ruby](http://www.ruby-lang.org), Grunt and Bower depend on [node.js](http://nodejs.org). Some of the [Grunt plugins](#grunt-plugins-used) may depend on command line tools to be installed on your system as well.
+Sass depends on [Ruby](http://www.ruby-lang.org), Grunt and Bower depend on [node.js](http://nodejs.org). Some of the [Grunt plugins](#grunt-plugins-used) depend on command line tools to be installed on your (build) system.
 
 ### Installation
 
@@ -48,11 +48,13 @@ If a project doesn't require some of the [JS assets](#js-assets-included), uncom
 ### jQuery plugins
 
 * [AccessibleTabs](https://github.com/ginader/Accessible-Tabs)
-* [Cycle 2](https://github.com/malsup/cycle2)
+* [Cycle 2](https://github.com/malsup/cycle2) ([Optional plugins](http://jquery.malsup.com/cycle2/download/#plugins))
 * [gmaps](https://github.com/hpneo/gmaps)
 * [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup)
 
-## JS helpers
+### JS helpers
 
 * [AccessifyHTML5](https://github.com/yatil/accessifyhtml5.js)
 * [box-sizing-Polyfill](https://github.com/Schepp/box-sizing-polyfill)
+* [H5BP log](https://github.com/h5bp/html5-boilerplate/blob/master/js/plugins.js)
+* [main-shiv](http://drublic.de/blog/add-main-element-modernizr/)
