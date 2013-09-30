@@ -10,19 +10,21 @@
     padding: 0;
     position: absolute;
     width: 1px;
+
+    // Extends the .visuallyhidden class to allow the element
+    // to be focusable when navigated to via the keyboard
+    // &.focusable:active,
+    // &.focusable:focus {
+    //     clip: auto;
+    //     height: auto;
+    //     margin: 0;
+    //     overflow: visible;
+    //     position: static;
+    //     width: auto;
+    // }
 }
 
-// Extends the .visuallyhidden class to allow the element
-// to be focusable when navigated to via the keyboard
-// .visuallyhidden.focusable:active,
-// .visuallyhidden.focusable:focus {
-//     clip: auto;
-//     height: auto;
-//     margin: 0;
-//     overflow: visible;
-//     position: static;
-//     width: auto;
-// }
+
 
 // Hide visually and from screenreaders, but maintain layout
 // (also useful for lazy-hiding items which require JS)
@@ -43,18 +45,18 @@
 
 // CLEARFIX
 // --------------------------------------------------------------------
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
+.clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
 
-.clearfix:after {
-    clear: both;
-}
+    &:after {
+        clear: both;
+    }
 
-@if $ie7-support {
-    .clearfix {
+    @if $ie7-support {
         *zoom: 1;
     }
 }
@@ -67,14 +69,14 @@
 //     border: 0;
 //     overflow: hidden;
 
+//     &:before {
+//         content: "";
+//         display: block;
+//         height: 150%;
+//         width: 0;
+//     }
+
 //     @if $ie7-support {
 //         *text-indent: -9999px;
 //     }
-// }
-
-// .ir:before {
-//     content: "";
-//     display: block;
-//     height: 150%;
-//     width: 0;
 // }

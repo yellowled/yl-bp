@@ -10,6 +10,16 @@
     padding: 0;
     position: absolute;
     width: 1px;
+
+    // &.focusable:active,
+    // &.focusable:focus {
+    //     clip: auto;
+    //     height: auto;
+    //     margin: 0;
+    //     overflow: visible;
+    //     position: static;
+    //     width: auto;
+    // }
 }
 
 // Hide visually and from screenreaders, but maintain layout
@@ -31,18 +41,18 @@
 
 // CLEARFIX
 // --------------------------------------------------------------------
-%clearfix:before,
-%clearfix:after {
-    content: " ";
-    display: table;
-}
+%clearfix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
 
-%clearfix:after {
-    clear: both;
-}
+    &:after {
+        clear: both;
+    }
 
-@if $ie7-support {
-    %clearfix {
+    @if $ie7-support {
         *zoom: 1;
     }
 }
@@ -55,14 +65,14 @@
     border: 0;
     overflow: hidden;
 
+    &:before {
+        content: "";
+        display: block;
+        height: 150%;
+        width: 0;
+    }
+
     @if $ie7-support {
         *text-indent: -9999px;
     }
-}
-
-%ir:before {
-    content: "";
-    display: block;
-    height: 150%;
-    width: 0;
 }
