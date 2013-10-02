@@ -26,6 +26,22 @@ module.exports = function(grunt) {
                   'scripts/main.js']
         },
 
+        favicons: {
+            options: {
+                'trueColor': false,
+                'precomposed': true,
+                'appleTouchBackgroundColor': "auto",
+                'windowsTile': true,
+                'coast': false,
+                'tileBlackWhite': true,
+                'tileColor': "auto"
+            },
+            deploy: {
+                src: 'favicon-source.png',
+                dest: 'dist/'
+            }
+        },
+
         clean: {
             deploy: ['dist']
         },
@@ -256,6 +272,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-favicons');
     grunt.loadNpmTasks('grunt-hashres');
     grunt.loadNpmTasks('grunt-htmlhint');
     grunt.loadNpmTasks('grunt-modernizr');
@@ -265,5 +282,5 @@ module.exports = function(grunt) {
     // Testing
     grunt.registerTask('test', ['htmlhint', 'jshint']);
     // Deployment
-    grunt.registerTask('deploy', ['clean:deploy', 'copy:deploy', 'concat:deploy', 'sass:deploy', 'uglify', 'imagemin:deploy', 'modernizr', 'targethtml:deploy', 'hashres:deploy']);
+    grunt.registerTask('deploy', ['clean:deploy', 'copy:deploy', 'concat:deploy', 'sass:deploy', 'uglify', 'imagemin:deploy', 'favicons:deploy', 'modernizr', 'targethtml:deploy', 'hashres:deploy']);
 };
