@@ -30,7 +30,7 @@
         "grunt-hashres":            "~0.3.2",
         "grunt-htmlhint":           "~0.4.0",
         "grunt-modernizr":          "~0.3.0",
-        "grunt-targethtml":         "~0.2.4",
+        "grunt-targethtml":         "~0.2.5",
         "connect-livereload":       "~0.3.0"
 	}
 }
