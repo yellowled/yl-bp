@@ -224,6 +224,7 @@ module.exports = function(grunt) {
                         src: ['font/*',
                               '.htaccess',
                               'robots.txt',
+                              '*.html',
                               'scripts/jquery/jquery.min.js',
                               'scripts/helpers/main-shiv.js',
                               'scripts/helpers/boxsizing.htc'],
