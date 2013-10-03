@@ -9,7 +9,7 @@
         "jquery":                   "~1.10.2",
         "jquery-accessible-tabs":   "~1.9.8",
         "jquery-cycle2":            "",
-        "magnific-popup":           "~0.9.5",
+        "magnific-popup":           "~0.9.6",
         "modernizr":                "~2.6.2"
     },
     "devDependencies": {}
