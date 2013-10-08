@@ -114,10 +114,17 @@ module.exports = function(grunt) {
             // parseFiles = true: crawl all *.js, *.css, *.scss files;
             // override by defining "files" array
             'parseFiles' : true,
-            'files' : ['scss/**/*.scss', 'scripts/*.js'],
+            'files' : ['scss/**/*.scss',
+                       'scripts/c*.js',
+                       'scripts/magnific-popup/dist/jquery.magnific-popup.js',
+                       'scripts/magnific-popup/src/css/main.scss',
+                       'scripts/jquery-cycle2/*.js',
+                       'scripts/jquery-accessible-tabs/js/jquery.syncheight.js',
+                       'scripts/jquery-accessible-tabs/js/jquery.tabs.js',
+                       'scripts/gmaps/gmaps.js'],
             'matchCommunityTests' : false,
             'customTests' : [],
-            'excludeFiles' : ['Gruntfile.js','package.json']
+            'excludeFiles' : ['Gruntfile.js', '*.json']
         },
 
         concat: {
