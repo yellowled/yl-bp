@@ -115,7 +115,7 @@ module.exports = function(grunt) {
             // override by defining "files" array
             'parseFiles' : true,
             'files' : ['scss/**/*.scss',
-                       'scripts/c*.js',
+                       'scripts/*.js',
                        'scripts/magnific-popup/dist/jquery.magnific-popup.js',
                        'scripts/magnific-popup/src/css/main.scss',
                        'scripts/jquery-cycle2/*.js',
