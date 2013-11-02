@@ -284,6 +284,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-hashres');
     grunt.loadNpmTasks('grunt-htmlhint');
     grunt.loadNpmTasks('grunt-modernizr');
+    grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-targethtml');
     // Default
     grunt.registerTask('default', ['connect', 'watch']);
