@@ -41,6 +41,7 @@ If a project doesn't require some of the [JS assets](#js-assets-included), uncom
 * [grunt-hashres](https://npmjs.org/package/grunt-hashres)
 * [grunt-htmlhint](https://npmjs.org/package/grunt-htmlhint)
 * [grunt-modernizr](https://npmjs.org/package/grunt-modernizr)
+* [grunt-notify](https://npmjs.org/package/grunt-notify)
 * [grunt-targethtml](https://npmjs.org/package/grunt-targethtml)
 * [connect-livereload](https://github.com/intesso/connect-livereload)
 
