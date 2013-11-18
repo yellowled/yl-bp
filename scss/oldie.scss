@@ -2,7 +2,6 @@
 @import "init/settings";
 @import "init/variables";
 @import "init/functions";
-
 // Mixins
 @import "mixins/basic";
 @import "mixins/buttons";
@@ -11,35 +10,10 @@
 @import "mixins/shapes";
 @import "mixins/tables";
 @import "mixins/type";
-
-// Core
-@import "core/normalize";
-@import "core/helpers";
-@import "core/defaults";
-
-// Modules
-@import "modules/forms";
-@import "modules/iconfont";
-@import "modules/images";
-@import "modules/messages";
-@import "modules/navigation";
-
-// Plugins
-@import "plugins/googlemap";
-@import "../scripts/magnific-popup/src/css/main.scss";
-@import "plugins/slideshow";
-@import "plugins/tabs";
-
 // Extends
 @import "extends/elements";
 @import "extends/classes";
 
-// General
-@import "main/typography";
-@import "main/common";
-
-// Media
 @import "layout/legacy";
 @import "layout/tablet";
 @import "layout/laptop";
-@import "main/print";
