@@ -28,6 +28,15 @@ dd {
     margin: 0;
 }
 
+table {
+    @include x-rem(margin, 1);
+    width: 100%;
+
+    caption {
+        text-align: center;
+    }
+}
+
 caption,
 th {
     text-align: left;

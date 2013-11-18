@@ -1,19 +1,4 @@
-// BASIC TABLES
-// --------------------------------------------------------------------
-// Defaults
-$rhythm: 1;
-
-table {
-    @include x-rem(margin, $rhythm 0);
-    width: 100%;
-
-    caption {
-        text-align: center;
-    }
-}
-
-
-// TYPES OF TABLES
+// TABLES
 // --------------------------------------------------------------------
 // Simple table
 @mixin simple-table($border: $mid-grey) {
