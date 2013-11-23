@@ -67,21 +67,10 @@
     }
 
     // Quote source attribution
-    & > small,
-    & + small,
-    & + figcaption {
+    & > cite,
+    & > footer {
         display: block;
-        font-size: 100%;
 
         &:before { content: "– "; }
-    }
-
-    & > small {
-        @include x-rem(margin, 1 0);
-    }
-
-    & + small,
-    & + figcaption {
-        @include x-rem(margin, 1 0 1 2.5);
     }
 }
