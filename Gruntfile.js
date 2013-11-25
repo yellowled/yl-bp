@@ -233,7 +233,6 @@ module.exports = function(grunt) {
                               'robots.txt',
                               '*.html',
                               'scripts/jquery/jquery.min.js',
-                              'scripts/helpers/main-shiv.js',
                               'scripts/helpers/boxsizing.htc'],
                         dest: 'dist/'
                     }
