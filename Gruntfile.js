@@ -68,27 +68,30 @@ module.exports = function(grunt) {
             },
             icons: {
                 files: 'fontello.json',
-                tasks: ['fontello:build','concat:dev', 'sass:dev']
+                tasks: ['fontello:build'],
+                options: {
+                    spawn: false
+                }
             },
             html: {
                 files: '*.html',
-                tasks: ['concat:dev', 'sass:dev'],
+                tasks: [],
                 options: {
-                    nospawn: true
+                    spawn: false
                 }
             },
             js: {
                 files: ['scripts/main.js'],
-                tasks: ['concat:dev', 'sass:dev'],
+                tasks: ['concat:dev'],
                 options: {
-                    nospawn: true
+                    spawn: false
                 }
             },
             scss: {
                 files: 'scss/**/*.scss',
-                tasks: ['concat:dev', 'sass:dev'],
+                tasks: ['sass:dev'],
                 options: {
-                    nospawn: true
+                    spawn: false
                 }
             }
         },
