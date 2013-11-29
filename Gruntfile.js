@@ -62,14 +62,12 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            options: {
-                atBegin: true,
-                livereload: true
-            },
             icons: {
                 files: 'fontello.json',
-                tasks: ['fontello:build'],
+                tasks: ['fontello:build', 'sass:dev'],
                 options: {
+                    atBegin: true,
+                    livereload: true,
                     spawn: false
                 }
             },
@@ -77,6 +75,8 @@ module.exports = function(grunt) {
                 files: '*.html',
                 tasks: [],
                 options: {
+                    atBegin: true,
+                    livereload: true,
                     spawn: false
                 }
             },
@@ -84,6 +84,8 @@ module.exports = function(grunt) {
                 files: ['scripts/main.js'],
                 tasks: ['concat:dev'],
                 options: {
+                    atBegin: true,
+                    livereload: true,
                     spawn: false
                 }
             },
@@ -91,6 +93,17 @@ module.exports = function(grunt) {
                 files: 'scss/**/*.scss',
                 tasks: ['sass:dev'],
                 options: {
+                    atBegin: true,
+                    livereload: false,
+                    spawn: true
+                }
+            },
+            css: {
+                files: 'styles/*.css',
+                tasks: [],
+                options: {
+                    atBegin: false,
+                    livereload: true,
                     spawn: false
                 }
             }
