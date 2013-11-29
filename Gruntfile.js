@@ -115,13 +115,13 @@ module.exports = function(grunt) {
             // override by defining "files" array
             'parseFiles' : true,
             'files' : ['scss/**/*.scss',
-                       'scripts/*.js',
                        'scripts/magnific-popup/dist/jquery.magnific-popup.js',
                        'scripts/magnific-popup/src/css/main.scss',
                        'scripts/jquery-cycle2/*.js',
                        'scripts/jquery-accessible-tabs/js/jquery.syncheight.js',
                        'scripts/jquery-accessible-tabs/js/jquery.tabs.js',
-                       'scripts/gmaps/gmaps.js'],
+                       'scripts/gmaps/gmaps.js',
+                       'scripts/*.js'],
             'matchCommunityTests' : false,
             'customTests' : [],
             'excludeFiles' : ['Gruntfile.js', '*.json']
@@ -228,12 +228,12 @@ module.exports = function(grunt) {
             deploy: {
                 files: [
                     {
-                        src: ['font/*',
-                              '.htaccess',
+                        src: ['.htaccess',
                               'robots.txt',
-                              '*.html',
                               'scripts/jquery/jquery.min.js',
-                              'scripts/helpers/boxsizing.htc'],
+                              'scripts/helpers/boxsizing.htc',
+                              'font/*',
+                              '*.html'],
                         dest: 'dist/'
                     }
                 ]
@@ -247,10 +247,9 @@ module.exports = function(grunt) {
                 renameFiles: true
             },
             deploy: {
-                src: [
-                    'dist/scripts/master.js',
-                    'dist/styles/master.css',
-                    'dist/styles/oldie.css'],
+                src: ['dist/styles/master.css',
+                      'dist/styles/oldie.css',
+                      'dist/scripts/master.js'],
                 dest: 'dist/*.html',
 
             }
