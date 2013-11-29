@@ -66,6 +66,10 @@ module.exports = function(grunt) {
                 atBegin: true,
                 livereload: true
             },
+            icons: {
+                files: 'fontello.json',
+                tasks: ['fontello:build','concat:dev', 'sass:dev']
+            },
             html: {
                 files: '*.html',
                 tasks: ['concat:dev', 'sass:dev'],
@@ -266,6 +270,22 @@ module.exports = function(grunt) {
                     dest: 'dist/'
                 }],
             }
+        },
+
+        fontello: {
+            options: {
+                config: 'fontello.json',
+                zip: 'scripts/',
+                fonts: 'font/',
+                styles: 'scss/fontello/',
+                sass: true,
+                force: true
+            },
+            build: {
+                config: 'fontello.json',
+                fonts: 'font/',
+                styles: 'scss/fontello/'
+            }
         }
     });
     // Load required tasks
@@ -279,6 +299,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-favicons');
+    grunt.loadNpmTasks('grunt-fontello');
     grunt.loadNpmTasks('grunt-hashres');
     grunt.loadNpmTasks('grunt-htmlhint');
     grunt.loadNpmTasks('grunt-modernizr');
@@ -288,5 +309,5 @@ module.exports = function(grunt) {
     // Testing
     grunt.registerTask('test', ['htmlhint', 'jshint']);
     // Deployment
-    grunt.registerTask('deploy', ['clean:deploy', 'copy:deploy', 'concat:deploy', 'sass:deploy', 'uglify', 'imagemin:deploy', 'favicons:deploy', 'modernizr', 'targethtml:deploy', 'hashres:deploy']);
+    grunt.registerTask('deploy', ['clean:deploy', 'fontello:build', 'copy:deploy', 'concat:deploy', 'sass:deploy', 'uglify', 'imagemin:deploy', 'favicons:deploy', 'modernizr', 'targethtml:deploy', 'hashres:deploy']);
 };

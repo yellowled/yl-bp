@@ -17,9 +17,12 @@
 @import "core/helpers";
 @import "core/defaults";
 
+// Fontello
+@import "fontello/fontello";
+// @import "fontello/fontello-ie7";
+
 // Modules
 @import "modules/forms";
-@import "modules/iconfont";
 @import "modules/images";
 @import "modules/messages";
 @import "modules/navigation";
