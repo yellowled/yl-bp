@@ -24,7 +24,7 @@ In the project directory:
 
 ### “I don't need …”
 
-If a project doesn't require some of the [JS assets](#js-assets-included), uncomment them in the `bower.json` before install and in the `Gruntfile.js` (in the `concat` section) before running `grunt`.
+If a project doesn't require some of the [JS assets](#js-assets-included), uncomment them in the `bower.json` before install and in `grunt/contrib-concat.js` (in the `dev` and `deploy` sections) before running `grunt`.
 
 ## Grunt plugins used
 
