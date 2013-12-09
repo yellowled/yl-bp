@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         pkg: '<json:package.json>',
     });
 
-    // Load required tasks
+    // Load required tasks from submodules
     grunt.loadTasks('grunt');
 
     // Default
@@ -13,11 +13,13 @@ module.exports = function(grunt) {
         'connect',
         'watch'
     ]);
+
     // Testing
     grunt.registerTask('test', [
         'htmlhint',
         'jshint'
     ]);
+
     // Deployment
     grunt.registerTask('deploy', [
         'clean:deploy',

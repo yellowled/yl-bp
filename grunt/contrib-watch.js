@@ -1,3 +1,6 @@
+// Watch project files for and spawn associated tasks upon changes
+// Run some tasks at grunt start, trigger live reload on some
+
 module.exports = function(grunt) {
     grunt.config('watch', {
         icons: {
@@ -13,7 +16,7 @@ module.exports = function(grunt) {
             files: '*.html',
             tasks: [],
             options: {
-                atBegin: true,
+                atBegin: false,
                 livereload: true,
                 spawn: false
             },

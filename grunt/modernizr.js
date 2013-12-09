@@ -1,3 +1,5 @@
+// Generate Modernizr custom build from references in SCSS + JS assets
+
 module.exports = function(grunt) {
     grunt.config('modernizr', {
         'devFile' : 'scripts/modernizr/modernizr.js',

@@ -1,3 +1,5 @@
+// Compile SCSS files to CSS
+
 module.exports = function(grunt) {
     grunt.config('sass', {
         dev: {

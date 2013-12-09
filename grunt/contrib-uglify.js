@@ -1,3 +1,5 @@
+// Minify JS
+
 module.exports = function(grunt) {
     grunt.config('uglify', {
         deploy: {

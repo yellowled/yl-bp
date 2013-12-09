@@ -1,3 +1,5 @@
+// Concatenate JS assets into one file
+
 module.exports = function(grunt) {
     grunt.config('concat', {
         dev: {

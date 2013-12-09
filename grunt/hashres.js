@@ -1,3 +1,5 @@
+// Hash CSS and JS assets, change filenames and references in markup
+
 module.exports = function(grunt) {
     grunt.config('hashres', {
         options: {

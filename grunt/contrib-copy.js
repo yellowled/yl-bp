@@ -1,3 +1,5 @@
+// Copy files not affected by other tasks to deployment directory
+
 module.exports = function(grunt) {
     grunt.config('copy', {
         deploy: {

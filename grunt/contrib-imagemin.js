@@ -1,3 +1,5 @@
+// Optimize image assets (JPG and PNG files)
+
 module.exports = function(grunt) {
     grunt.config('imagemin', {
         deploy: {
