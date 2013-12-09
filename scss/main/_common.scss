@@ -12,16 +12,7 @@ img {
 
 // COMMON STYLES FOR ALL MEDIA/RESOLUTIONS
 // --------------------------------------------------------------------
-html,
-button,
-input,
-select,
-optgroup,
-textarea {
+html {
     background-color: $off-white;
     color: $off-black;
-}
-
-body {
-    line-height: 1.5;
 }
