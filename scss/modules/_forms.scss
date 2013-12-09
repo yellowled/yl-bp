@@ -1,29 +1,31 @@
-// FORM ELEMENTS (borrowed heavily from formalize.me)
+// DEFAULTS
 // --------------------------------------------------------------------
-// Remove default fieldset styles.
+$input-bg:              $off-white;
+$input-fg:              $off-black;
+$input-focus:           #06f;
+$input-placeholder:     $greyed-out;
+
+$input-border-radius:   0;
+$input-border-type:     1px solid;
+$input-border-color:    #c1c1c1 #c1c1c1 #e1e1e1;
+
+
+// NORMALIZE FORM ELEMENTS (borrowed heavily from formalize.me)
+// --------------------------------------------------------------------
 fieldset {
     border: 0;
     margin: 0;
     padding: 0;
 }
 
-input[type="radio"],
-input[type="checkbox"] {
-    position: relative;
-    vertical-align: top;
-    top: 5px;
-
-    @if $ie7-support {
-        *top: -5px;
+button,
+input,
+select,
+textarea, {
+    &:focus {
+        box-shadow: 0 0 5px 0 $input-focus;
+        z-index: 1; // Opera
     }
-}
-
-button:focus,
-input:focus,
-select:focus,
-textarea:focus, {
-    box-shadow: #06f 0 0 5px 0;
-    z-index: 1; // Opera
 }
 
 input[type="file"],
@@ -35,44 +37,49 @@ input[type="checkbox"] {
     }
 }
 
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    @include x-linear-gradient($white, $alt-grey);
-    background-clip: padding-box;
-    border: 1px solid;
-    border-color: $alt-grey #bbb #999;
-    border-radius: 4px;
-    color: $black;
-    outline: 0;
-    padding: 3px 10px;
-    text-shadow: $white 0 1px 1px;
-    width: auto;
-
-    &:hover {
-        @include x-linear-gradient($white, $mid-grey);
-    }
-
-    &:active {
-        @include x-linear-gradient($white, $lite-grey);
-        box-shadow: inset rgba($black, 0.25) 0 1px 2px 0;
-        border-color: #999 #bbb $alt-grey;
-    }
-
-    @if $ie7-support {
-        *padding-top: 2px;
-        *padding-bottom: 0;
-    }
+::-webkit-input-placeholder {
+    color: $input-placeholder;
 }
 
-@if $ie7-support {
-    button {
-        *padding-top: 1px;
-        *padding-bottom: 1px;
-    }
+// Separate rule for Firefox. Cannot stack with WebKit's.
+:-moz-placeholder,
+::-moz-placeholder {
+    color: $input-placeholder;
 }
 
+// Separate rule for IE, too. Cannot stack with WebKit's.
+:-ms-input-placeholder {
+    color: $input-placeholder;
+}
+
+:invalid {
+    // Suppress red glow that Firefox adds to form fields
+    // by default, even when user is still typing.
+    box-shadow: none;
+}
+
+optgroup {
+    background: $input-bg;
+    color: $input-fg;
+    font-family: $sans;
+    font-style: normal;
+}
+
+// Not sure if this is still needed
+// input[type="radio"],
+// input[type="checkbox"] {
+//     position: relative;
+//     vertical-align: top;
+//     top: 5px;
+
+//     @if $ie7-support {
+//         *top: -5px;
+//     }
+// }
+
+
+// STYLE FORM ELEMENTS (borrowed heavily from formalize.me)
+// --------------------------------------------------------------------
 input[type="date"],
 input[type="datetime"],
 input[type="datetime-local"],
@@ -87,23 +94,25 @@ input[type="search"],
 input[type="tel"],
 input[type="text"],
 input[type="url"] {
-    @include x-box-sizing(border-box);
-    background-clip: padding-box;
-    border-radius: 0;
     -webkit-appearance: none;
-    background-color: #fafafa;
-    border: 1px solid;
-    border-color: #c1c1c1 #c1c1c1 #e1e1e1;
-    color: $off-black;
+
+    @include x-box-sizing(border-box);
+
+    background-clip: padding-box;
+    background-color: $input-bg;
+    border-radius: $input-border-radius;
+    border: $input-border-type;
+    border-color: $input-border-color;
+    color: $input-fg;
+    height: 1.8em;
     outline: 0;
     padding: 2px 3px;
     text-align: left;
-    height: 1.8em;
 
     @if $ie7-support {
+        *height: auto;
         *padding-top: 2px;
         *padding-bottom: 1px;
-        *height: auto;
         *behavior: url('/scripts/helpers/boxsizing.htc');
     }
 
@@ -112,44 +121,14 @@ input[type="url"] {
     }
 }
 
-button[disabled],
-input[disabled],
-select[disabled],
-select[disabled] option,
-select[disabled] optgroup,
-textarea[disabled] {
-    box-shadow: none;
-    color: $greyed-out;
-    cursor: default;
-    -webkit-user-select: none;
-       -moz-user-select: -moz-none;
-            user-select: none;
-}
-
-// Separate rule for Firefox.
-// Separate rule for IE, too.
-// Cannot stack with WebKit's.
-::-webkit-input-placeholder {
-    color: $greyed-out;
-}
-
-input:-moz-placeholder,
-textarea:-moz-placeholder {
-    color: $greyed-out;
-}
-
-:invalid {
-    // Suppress red glow that Firefox adds to form fields by default, even when user is still typing.
-    box-shadow: none;
-}
-
+// Override these
 textarea,
 select[size],
 select[multiple] {
     height: auto;
 }
 
-// Tweaks for Safari + Chrome.
+// WebKit select appearance
 @media (-webkit-min-device-pixel-ratio: 0) {
     select {
         background-image: url('data:image/gif;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==');
@@ -165,6 +144,7 @@ select[multiple] {
     }
 }
 
+// Textareas
 textarea {
     min-height: 40px;
     overflow: auto;
@@ -172,8 +152,36 @@ textarea {
     width: 100%;
 }
 
-optgroup {
-    color: $off-black;
-    font-style: normal;
-    font-weight: normal;
+
+// FORM BUTTONS
+// --------------------------------------------------------------------
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    @include gradient-button();
+}
+
+@if $ie7-support {
+    button {
+        *padding-top: 1px;
+        *padding-bottom: 1px;
+    }
+}
+
+
+// DISABLED FORM ELEMENTS
+// --------------------------------------------------------------------
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled] {
+    box-shadow: none;
+    color: $greyed-out;
+    cursor: default;
+    -webkit-user-select: none;
+       -moz-user-select: -moz-none;
+            user-select: none;
 }
