@@ -6,6 +6,15 @@ html {
     font-size: 87.5%;
 }
 
+html,
+button,
+input,
+select,
+optgroup,
+textarea {
+    font-family: $sans;
+}
+
 body {
     line-height: 1.5;
 }

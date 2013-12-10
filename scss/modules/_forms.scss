@@ -21,7 +21,7 @@ fieldset {
 button,
 input,
 select,
-textarea, {
+textarea {
     &:focus {
         box-shadow: 0 0 5px 0 $input-focus;
         z-index: 1; // Opera
@@ -61,7 +61,6 @@ input[type="checkbox"] {
 optgroup {
     background: $input-bg;
     color: $input-fg;
-    font-family: $sans;
     font-style: normal;
 }
 
