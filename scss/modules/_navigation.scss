@@ -3,6 +3,5 @@
 // Navigation lists
 nav ul,
 nav ol {
-    list-style: none;
-    padding: 0;
+    @extend %plain-list;
 }
