@@ -26,15 +26,15 @@
 
 // Modules
 @import "modules/forms";
-@import "modules/images";
 @import "modules/messages";
+@import "modules/images";
 @import "modules/navigation";
 
 // Plugins
-@import "plugins/googlemap";
-@import "../scripts/magnific-popup/src/css/main.scss";
 @import "plugins/slideshow";
+@import "../scripts/magnific-popup/src/css/main.scss";
 @import "plugins/tabs";
+@import "plugins/googlemap";
 
 // General
 @import "main/typography";
