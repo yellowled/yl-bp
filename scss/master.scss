@@ -12,6 +12,10 @@
 @import "mixins/tables";
 @import "mixins/type";
 
+// Extends
+@import "extends/elements";
+@import "extends/classes";
+
 // Core
 @import "core/normalize";
 @import "core/helpers";
@@ -31,10 +35,6 @@
 @import "../scripts/magnific-popup/src/css/main.scss";
 @import "plugins/slideshow";
 @import "plugins/tabs";
-
-// Extends
-@import "extends/elements";
-@import "extends/classes";
 
 // General
 @import "main/typography";
