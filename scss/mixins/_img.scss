@@ -10,7 +10,7 @@
 // FIGURES
 // --------------------------------------------------------------------
 // Simple figure
-@mixin simple-figure($border: $dark-grey, $rhythm: 1) {
+@mixin simple-figure($border: $grey, $rhythm: 1) {
     @include x-rem(margin, $rhythm 0);
 
     img {
@@ -33,7 +33,7 @@
     }
 
     .no-boxshadow & img {
-        border: 1px solid $dark-grey;
+        border: 1px solid $grey;
     }
 
     figcaption {

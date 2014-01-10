@@ -14,7 +14,7 @@
 // Chrome frame prompt
 .chromeframe {
     margin: 0;
-    background: $mid-grey;
+    background: $silver;
     color: $off-black;
     @include x-rem(padding, 0.25);
     text-align: center;
@@ -58,7 +58,7 @@ pre code {
 // A better looking default horizontal rule
 hr {
     border: 0;
-    border-top: 1px solid $mid-grey;
+    border-top: 1px solid $silver;
     display: block;
     height: 1px;
     @include x-rem(margin, 1.5 0);

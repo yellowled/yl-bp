@@ -1,7 +1,7 @@
 // TABLES
 // --------------------------------------------------------------------
 // Simple table
-@mixin simple-table($border: $mid-grey) {
+@mixin simple-table($border: $grey) {
     border-bottom: 1px solid $border;
 
     tr {
@@ -10,7 +10,7 @@
 }
 
 // Striped table
-@mixin striped-table($border: $dark-grey, $odd: $lite-grey, $even: $alt-grey, $head: $mid-grey, $foot: $head) {
+@mixin striped-table($border: $grey, $odd: $lite-grey, $even: $silver, $head: $silver, $foot: $head) {
     border: 1px solid $border;
     border-top: 0 none;
 

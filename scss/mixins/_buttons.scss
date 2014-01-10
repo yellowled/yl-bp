@@ -1,7 +1,7 @@
 // BUTTON TYPES
 // --------------------------------------------------------------------
 // Gradient button
-@mixin gradient-button($bg: $alt-grey, $fg: $black, $rad: 4px) {
+@mixin gradient-button($bg: $silver, $fg: $black, $rad: 4px) {
     @include x-linear-gradient(lighten($bg, 13.2%), $bg);
     background-clip: padding-box;
     border: 1px solid;
@@ -46,7 +46,7 @@
 }
 
 // Flat button
-@mixin flat-button($bg: $alt-grey, $fg: $black, $rad: 4px, $ag: complement($bg)) {
+@mixin flat-button($bg: $silver, $fg: $black, $rad: 4px, $ag: complement($bg)) {
     background: $bg;
     background-clip: padding-box;
     border: 0 none;

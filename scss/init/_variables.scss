@@ -7,16 +7,34 @@ $sans:  'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 // COLORS
 // --------------------------------------------------------------------
-// Predefined colors
-$white:      #fff;
-$black:      #000;
-$off-white:  #fcfcfc;
-$off-black:  #222;
+// → clrs.cc
+// Cool
+$aqua:  #7fdbff;
+$blue:  #0074d9;
+$navy:  #001f3f;
+$teal:  #39cccc;
+$green: #2ecc40;
+$olive: #3d9970;
+$lime:  #01ff70;
 
-$greyed-out: #888;
-$dark-grey:  #aaa;
-$mid-grey:   #ccc;
-$alt-grey:   #ddd;
+// Warm
+$yellow:  #ffdc00;
+$orange:  #ff851b;
+$red:     #ff4136;
+$fuchsia: #f012be;
+$purple:  #b10dc9;
+$maroon:  #85144b;
+
+// Gray Scale
+$white:  #fff;
+$silver: #ddd;
+$grey:   #aaa;
+$black:  #111;
+
+// Variations
+$off-white:  #fcfcfc;
 $lite-grey:  #eee;
+$greyed-out: #888;
+$off-black:  #222;
 
 // CI colors
