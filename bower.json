@@ -1,6 +1,6 @@
 {
     "name":         "yl-bp",
-    "version":      "0.5.7",
+    "version":      "0.5.8",
     "main":         "",
     "ignore":       [],
     "dependencies": {
