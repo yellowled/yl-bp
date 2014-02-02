@@ -1,8 +1,5 @@
 // RESPONSIVE FLOATED IMAGES
 // --------------------------------------------------------------------
-// Defaults
-$img-breakpoint: 768px;
-
 %image-block {
     display: block;
     @include x-rem(margin, 1 0);
@@ -13,24 +10,3 @@ $img-breakpoint: 768px;
 // .align_right {
 //     @extend %image-block;
 // }
-
-@media only screen and (min-width: $img-breakpoint) {
-    %image-left {
-        float: left;
-        @include x-rem(margin, 0.25 1 0.75 0);
-    }
-
-    %image-right {
-        float: right;
-        @include x-rem(margin, 0.25 0 0.75 1);
-    }
-
-    // For use with → processwire.com
-    // .align_left {
-    //     @extend %image-left;
-    // }
-
-    // .align_right {
-    //     @extend %image-right;
-    // }
-}
