@@ -5,8 +5,8 @@ module.exports = function(grunt) {
         'devFile' : 'scripts/modernizr/modernizr.js',
         'outputFile' : 'dist/scripts/modernizr/modernizr.js',
         'extra' : {
-            'shiv' : false,
-            'printshiv' : true,
+            'shiv' : true,
+            'printshiv' : false,
             'load' : false,
             'mq' : true,
             'cssclasses' : true
