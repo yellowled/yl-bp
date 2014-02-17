@@ -28,7 +28,7 @@
         "grunt-contrib-watch":      "~0.5.3",
         "grunt-favicons":           "~0.6.0",
         "grunt-fontello":           "~0.1.2",
-        "grunt-hashres":            "~0.4.0",
+        "grunt-hashres":            "~0.4.1",
         "grunt-htmlhint":           "~0.4.0",
         "grunt-modernizr":          "~0.5.1",
         "grunt-targethtml":         "~0.2.6",
