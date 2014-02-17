@@ -6,7 +6,8 @@ module.exports = function(grunt) {
             files: [{
                 src: ['.htaccess',
                       'robots.txt',
-                      'scripts/jquery/jquery.min.js',
+                      'scripts/jquery/dist/jquery.min.js',
+                      'scripts/jquery/dist/jquery.min.map',
                       'scripts/helpers/boxsizing.htc',
                       'font/*',
                       '*.html'],
