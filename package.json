@@ -1,13 +1,13 @@
 {
-	"name":			"yl-bp",
-	"title":		"yl-bp",
+    "name":         "yl-bp",
+    "title":        "yl-bp",
     "description":  "An HTML5 boilerplate.",
-	"version":		"0.5.9",
-	"homepage":		"https://github.com/yellowled/yl-bp",
-	"author": {
-		"name":		"Matthias Mees",
-		"url":		"http://yellowled.de"
-	},
+    "version":      "0.5.9",
+    "homepage":     "https://github.com/yellowled/yl-bp",
+    "author": {
+        "name":     "Matthias Mees",
+        "url":      "http://yellowled.de"
+    },
     "repository": {
         "type":     "git",
         "url":      "git://github.com/yellowled/yl-bp.git"
@@ -15,8 +15,8 @@
     "engines": {
         "node":     ">=0.10.0"
     },
-	"devDependencies":	{
-        "grunt":                    "~0.4.2",
+    "devDependencies":  {
+        "grunt":                    "~0.4.3",
         "grunt-contrib-clean":      "~0.5.0",
         "grunt-contrib-concat":     "~0.3.0",
         "grunt-contrib-connect":    "~0.7.0",
@@ -33,5 +33,5 @@
         "grunt-modernizr":          "~0.5.1",
         "grunt-targethtml":         "~0.2.6",
         "connect-livereload":       "~0.3.2"
-	}
+    }
 }
