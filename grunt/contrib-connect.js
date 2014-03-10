@@ -1,5 +1,4 @@
 // Local web server running on port 9001 with livereload functionality
-
 module.exports = function(grunt) {
     grunt.config('connect', {
         livereload: {
@@ -8,7 +7,7 @@ module.exports = function(grunt) {
                 middleware: function(connect, options) {
                     return[
                         require('connect-livereload')(),
-                        connect.static(options.base),
+                        connect.static(options.base[0]),
                         connect.directory(options.base)
                     ];
                 }
