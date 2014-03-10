@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     grunt.config('sass', {
         dev: {
             options: {
-                sourcemap: false,
+                sourcemap: true,
                 style: 'nested',
                 precision: 5
             },
@@ -18,7 +18,7 @@ module.exports = function(grunt) {
         },
         deploy: {
             options: {
-                sourcemap: false,
+                sourcemap: true,
                 style: 'compressed',
                 precision: 5
             },
