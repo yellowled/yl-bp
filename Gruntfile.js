@@ -31,7 +31,7 @@ module.exports = function(grunt) {
         'uglify',
         'imagemin:deploy',
         'favicons:deploy',
-        'modernizr:deploy',
+        'modernizr',
         'hashres:deploy'
     ]);
 };
