@@ -1,18 +1,2 @@
-// EXTENDS/INCLUDES
-// --------------------------------------------------------------------
-.js #enable-js {
-	@extend %hidden;
-}
-
-video,
-img {
-    @include responsive-media;
-}
-
-
 // COMMON STYLES FOR ALL MEDIA/RESOLUTIONS
 // --------------------------------------------------------------------
-html {
-    background-color: $off-white;
-    color: $off-black;
-}
