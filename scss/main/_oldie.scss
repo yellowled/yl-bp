@@ -1,0 +1,34 @@
+// EXTENDS FOR OLDIE
+// --------------------------------------------------------------------
+%oldie-image-left {
+    float: left;
+    margin: 4px 16px 8px 0;
+}
+
+%oldie-image-right {
+    float: right;
+    margin: 4px 0 8px 16px
+}
+
+
+// FIXES FOR IE8
+// --------------------------------------------------------------------
+@if $ie8-support {
+    .lt-ie9 {
+        // For use with → processwire.com
+        .align_left {
+            @extend %oldie-image-left;
+        }
+
+        .align_right {
+            @extend %oldie-image-right;
+        }
+    }
+}
+
+
+// FIXES FOR IE7
+// --------------------------------------------------------------------
+@if $ie7-support {
+    .lt-ie8 {}
+}
