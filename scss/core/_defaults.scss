@@ -69,3 +69,15 @@ hr {
 img {
     vertical-align: middle;
 }
+
+
+// EXTENDS/INCLUDES
+// --------------------------------------------------------------------
+.js #enable-js {
+    @extend %hidden;
+}
+
+video,
+img {
+    @include responsive-media;
+}
