@@ -7,7 +7,7 @@ module.exports = function(grunt) {
             zip: 'scripts/',
             fonts: 'font/',
             styles: 'scss/fontello/',
-            sass: true,
+            scss: true,
             force: true
         },
         build: {
