@@ -12,15 +12,6 @@ module.exports = function(grunt) {
                 spawn: false
             },
         },
-        assemble: {
-            files: ['*.hbs', 'inc/*.hbs', 'tpl/*.hbs'],
-            tasks: ['assemble:build'],
-            options: {
-                atBegin: true,
-                livereload: false,
-                spawn: true
-            }
-        },
         html: {
             files: ['*.html'],
             tasks: [],
