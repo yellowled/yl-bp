@@ -17,6 +17,7 @@
 // --------------------------------------------------------------------
 .msg-warning {
     @extend %message;
+
     background: #f2dede;
     border-color: #eed3d7;
     color: #b94a2b;
@@ -24,6 +25,7 @@
 
 .msg-success {
     @extend %message;
+
     background: #dff0d8;
     border-color: #d6e9c6;
     color: #468847;
@@ -31,6 +33,7 @@
 
 .msg-notice {
     @extend %message;
+
     background: #d9edf7;
     border-color: #bce8f1;
     color: #3a87ad;
@@ -38,6 +41,7 @@
 
 .msg-question {
     @extend %message;
+
     background: #fcf8e3;
     border-color: #fbeed5;
     color: #c09853;
