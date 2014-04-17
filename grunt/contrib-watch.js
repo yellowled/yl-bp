@@ -1,5 +1,4 @@
 // Watch project files for and spawn associated tasks upon changes
-// Run some tasks at grunt start, trigger live reload on some
 
 module.exports = function(grunt) {
     grunt.config('watch', {
