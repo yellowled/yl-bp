@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     grunt.config('hashres', {
         options: {
             encoding: 'utf-8',
-            fileNameFormat: '${hash}.${ext}',
+            fileNameFormat: '${name}-${hash}.${ext}',
             renameFiles: true
         },
         deploy: {
