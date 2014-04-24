@@ -5,11 +5,7 @@ module.exports = function(grunt) {
         options: {
             'trueColor': false,
             'precomposed': true,
-            'appleTouchBackgroundColor': "auto",
-            'windowsTile': true,
-            'coast': false,
-            'tileBlackWhite': true,
-            'tileColor': "auto"
+            'windowsTile': false
         },
         deploy: {
             src: 'favicon-source.png',
