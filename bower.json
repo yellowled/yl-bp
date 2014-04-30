@@ -5,7 +5,7 @@
     "ignore":       [],
     "dependencies": {
         "accessifyhtml5-amd":       "~2.0.2",
-        "modernizr":                "~2.7.2",
+        "modernizr":                "~2.8.0",
         "jquery":                   "~1.11.0",
         "magnific-popup":           "~0.9.9",
         "jquery-cycle2":            "~2.1.0",
