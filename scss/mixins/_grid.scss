@@ -17,10 +17,10 @@ $sgs-gutter:        15px;   // spacing between columns
 
 // Grid box
 @mixin grid-box($span-columns, $gutter: $sgs-gutter, $total-columns: $sgs-columns, $grid-type: 100%) {
+    @include x-box-sizing(border-box);
 	float: left;
 	padding: 0 $gutter;
 	width: $grid-type * ($span-columns / $total-columns);
-	@include x-box-sizing(border-box);
 
     @if $ie7-support {
 	   *behavior: url('/scripts/helpers/boxsizing.htc');
@@ -30,13 +30,13 @@ $sgs-gutter:        15px;   // spacing between columns
 
 // Push/pull grid box
 @mixin grid-push($push-columns, $total-columns: $sgs-columns, $grid-type: 100%) {
-    position: relative;
     left: $grid-type * ($push-columns / $total-columns);
+    position: relative;
 }
 
 @mixin grid-pull($pull-columns, $total-columns: $sgs-columns, $grid-type: 100%) {
-    position: relative;
     left: -($grid-type) * ($pull-columns / $total-columns);
+    position: relative;
 }
 
 

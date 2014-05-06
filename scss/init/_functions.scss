@@ -8,8 +8,7 @@
 
 // HELPERS
 // --------------------------------------------------------------------
-// Helper for old syntax in linear-gradients
-// → github.com/drublic/Sass-Mixins/blob/master/partials/_helper-gradient-angle.scss
+// github.com/drublic/Sass-Mixins/blob/master/partials/_helper-gradient-angle.scss
 @function angle ($deg) {
     @if type-of($deg) == 'number' {
         @return mod(abs($deg - 450), 360deg);

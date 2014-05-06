@@ -1,5 +1,5 @@
 // RESPONSIVE MEDIA OBJECTS
-// → unstoppablerobotninja.com/entry/fluid-images
+// unstoppablerobotninja.com/entry/fluid-images
 // --------------------------------------------------------------------
 @mixin responsive-media {
     height: auto;
@@ -26,7 +26,6 @@
 // Fancy figure
 @mixin fancy-figure($rhythm: 1) {
     @include x-rem(margin, $rhythm 0);
-
     position: relative;
 
     img {
@@ -38,14 +37,13 @@
     }
 
     figcaption {
-        @include x-box-sizing(border-box);
-        @include x-rem(padding, .125 .625);
-
         background: $off-black;
         background: rgba($black, .7);
+        @include x-box-sizing(border-box);
         bottom: 0;
         color: $white;
         left: 0;
+        @include x-rem(padding, .125 .625);
         position: absolute;
         text-align: center;
         width: 100%;

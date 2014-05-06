@@ -95,14 +95,12 @@ input[type="tel"],
 input[type="text"],
 input[type="url"] {
     -webkit-appearance: none;
-
-    @include x-box-sizing(border-box);
-
     background-clip: padding-box;
     background-color: $input-bg;
     border: $input-border-type;
     border-color: $input-border-color;
     border-radius: $input-border-radius;
+    @include x-box-sizing(border-box);
     color: $input-fg;
     height: 1.8em;
     outline: 0;
@@ -181,7 +179,7 @@ textarea[disabled] {
     box-shadow: none;
     color: $greyed-out;
     cursor: default;
-    -moz-user-select: -moz-none;
     -webkit-user-select: none;
+    -moz-user-select: -moz-none;
     user-select: none;
 }

@@ -1,17 +1,15 @@
 // TYPOGRAPHY
 // --------------------------------------------------------------------
-// CSS ligatures
-// → blog.fontdeck.com/post/15777165734/opentype-1
+// blog.fontdeck.com/post/15777165734/opentype-1
 @mixin ligatures {
     -webkit-font-feature-settings: 'liga', 'dlig';
-       -moz-font-feature-settings: 'liga=1, dlig=1';
-        -ms-font-feature-settings: 'liga', 'dlig';
-         -o-font-feature-settings: 'liga', 'dlig';
-            font-feature-settings: 'liga', 'dlig';
+    -moz-font-feature-settings: 'liga=1, dlig=1';
+    -ms-font-feature-settings: 'liga', 'dlig';
+    -o-font-feature-settings: 'liga', 'dlig';
+    font-feature-settings: 'liga', 'dlig';
 }
 
-// Blockquotes
-// → html5doctor.com/blockquote-q-cite/
+// html5doctor.com/blockquote-q-cite/
 @mixin smart-blockquotes {
     & p {
         quotes: '“' '”';

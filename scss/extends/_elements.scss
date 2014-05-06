@@ -6,8 +6,7 @@
     padding-left: 0;
 }
 
-// inline-block with IE7 legacy support
-// also avaible as @inblock-level, see mixins/_basic.scss
+// inline-block with IE7 legacy support, also see mixins/_basic.scss
 %inblock-level {
     display: inline-block;
 

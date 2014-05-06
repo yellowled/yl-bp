@@ -20,16 +20,14 @@
 
 // CSS3 MIXINS
 // --------------------------------------------------------------------
-// Box model
-// → github.com/drublic/Sass-Mixins/blob/master/partials/_box-sizing.scss
+// github.com/drublic/Sass-Mixins/blob/master/partials/_box-sizing.scss
 @mixin x-box-sizing($property: border-box) {
     -webkit-box-sizing: $property;
     -moz-box-sizing: $property;
     box-sizing: $property;
 }
 
-// Hyphens
-// → developer.mozilla.org/en-US/docs/Web/CSS/hyphens
+// developer.mozilla.org/en-US/docs/Web/CSS/hyphens
 @mixin x-hyphens($property) {
     -webkit-hyphens: $property;
     -moz-hyphens: $property;
@@ -37,8 +35,7 @@
     hyphens: $property;
 }
 
-// Linear gradients
-// → github.com/drublic/Sass-Mixins/blob/master/partials/_linear-gradient.scss
+// github.com/drublic/Sass-Mixins/blob/master/partials/_linear-gradient.scss
 @mixin x-linear-gradient ($from: #ccc, $to: #aaa, $direction: "to bottom", $fallback: $from) {
     $directions: helper-gradient-angle($direction);
     // Provide a fallback-color
@@ -49,8 +46,7 @@
     background-image: linear-gradient(unquote($direction), $from, $to);
 }
 
-// rem unit
-// → github.com/drublic/Sass-Mixins/blob/master/partials/_rem.scss
+// github.com/drublic/Sass-Mixins/blob/master/partials/_rem.scss
 @mixin x-rem($property, $values, $main-font-size: 16px) {
     // Empty list for all values in px
     $px-values: ();
@@ -72,16 +68,14 @@
     #{$property}: #{$rem-values};
 }
 
-// Transforms
-// → github.com/drublic/Sass-Mixins/blob/master/partials/_transform.scss
+// github.com/drublic/Sass-Mixins/blob/master/partials/_transform.scss
 @mixin x-transform ($values) {
     -webkit-transform: $values; // Chrome, Safari, iOS Safari, Android Stock
     -ms-transform: $values; // IE9
     transform: $values;
 }
 
-// Transitions
-// → github.com/drublic/Sass-Mixins/blob/master/partials/_transition.scss
+// github.com/drublic/Sass-Mixins/blob/master/partials/_transition.scss
 @mixin x-transition ($values) {
     -webkit-transition: $values;
     transition: $values;

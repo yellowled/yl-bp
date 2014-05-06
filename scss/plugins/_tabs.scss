@@ -26,15 +26,13 @@ $inactive:    $lite-grey;
 // Core styles
 .tabs {
     @include x-rem(margin, 1 0);
-
 	max-width: 100%;
 	width: $tabswidth;
 
 	.content {
-        @include x-rem(padding, 0 .625);
-
 		border: 1px solid $bordercolor;
 		border-radius: 0 4px 4px;
+        @include x-rem(padding, 0 .625);
 	}
 }
 
@@ -49,13 +47,12 @@ $inactive:    $lite-grey;
 	}
 
 	a {
-        @include x-rem(padding, .125 .625);
-
 		background: $inactive;
 		border: 1px solid $bordercolor;
 		border-radius: 4px 4px 0 0;
 		color: $greyed-out;
 		display: block;
+        @include x-rem(padding, .125 .625);
 		position: relative;
         text-decoration: none;
 		top: 1px;
