@@ -42,7 +42,7 @@ $inactive:    $lite-grey;
 	padding-left: 0;
 
 	li {
-        @include inblock-level;
+        @extend %inblock-level;
 		margin: 0 4px 0 0;
 	}
 
