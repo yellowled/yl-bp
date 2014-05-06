@@ -17,6 +17,7 @@ module.exports = function(grunt) {
     // Testing
     grunt.registerTask('test', [
         'htmlhint',
+        'scsslint',
         'jshint'
     ]);
 
