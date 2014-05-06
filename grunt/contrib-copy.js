@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                       'robots.txt',
                       'scripts/jquery/dist/jquery.min.js',
                       'scripts/jquery/dist/jquery.min.map',
-                      'scripts/helpers/boxsizing.htc',
+                      // 'scripts/helpers/boxsizing.htc',
                       'font/*',
                       '*.html'],
                 dest: 'dist/'

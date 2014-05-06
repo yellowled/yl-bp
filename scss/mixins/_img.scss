@@ -47,9 +47,5 @@
         position: absolute;
         text-align: center;
         width: 100%;
-
-        @if $ie7-support {
-           *behavior: url('/scripts/helpers/boxsizing.htc');
-        }
     }
 }

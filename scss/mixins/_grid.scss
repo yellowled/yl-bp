@@ -21,10 +21,6 @@ $sgs-gutter:        15px;   // spacing between columns
 	float: left;
 	padding: 0 $gutter;
 	width: $grid-type * ($span-columns / $total-columns);
-
-    @if $ie7-support {
-	   *behavior: url('/scripts/helpers/boxsizing.htc');
-    }
 }
 
 

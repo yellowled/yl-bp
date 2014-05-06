@@ -15,10 +15,6 @@ $map-height: 400px;
     @include x-rem(margin, 1 0);
     @include responsive-media;
 
-    @if $ie7-support {
-       *behavior: url('/scripts/helpers/boxsizing.htc');
-    }
-
     .js & {
         height: $map-height;
         width: 100%;
