@@ -9,6 +9,7 @@ module.exports = function(grunt) {
             bundleExec: false,
             colorizeOutput: true,
             config: '.scss-lint.yml',
+            exclude: 'scss/core/_normalize.scss',
             reporterOutput: null
         },
     });
