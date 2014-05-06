@@ -14,12 +14,12 @@
 @media only screen and (min-width: 768px) {
     %image-left {
         float: left;
-        @include x-rem(margin, 0.25 1 0.75 0);
+        @include x-rem(margin, .25 1 .75 0);
     }
 
     %image-right {
         float: right;
-        @include x-rem(margin, 0.25 0 0.75 1);
+        @include x-rem(margin, .25 0 .75 1);
     }
 
     // For use with → processwire.com

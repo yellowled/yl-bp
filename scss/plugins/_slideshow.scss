@@ -4,11 +4,10 @@
 // Usage:
 // → jquery.malsup.com/cycle2/demo/
 %cycle-gauge {
-    position: absolute;
-    z-index: 5000;
-
     background: rgba($black, .7);
     color: $off-white;
+    position: absolute;
+    z-index: 5000;
 }
 
 %cycle-control {

@@ -38,6 +38,6 @@
 
     th,
     td {
-        @include x-rem(padding, 0 0.25);
+        @include x-rem(padding, 0 .25);
     }
 }

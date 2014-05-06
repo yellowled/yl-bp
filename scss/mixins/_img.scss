@@ -14,8 +14,8 @@
     @include x-rem(margin, $rhythm 0);
 
     img {
-        border-top: 1px solid $border;
         border-bottom: 1px solid $border;
+        border-top: 1px solid $border;
     }
 
     figcaption {
@@ -26,10 +26,11 @@
 // Fancy figure
 @mixin fancy-figure($rhythm: 1) {
     @include x-rem(margin, $rhythm 0);
+
     position: relative;
 
     img {
-        box-shadow: 0 0 4px rgba($black,.7);
+        box-shadow: 0 0 4px rgba($black, .7);
     }
 
     .no-boxshadow & img {
@@ -37,14 +38,15 @@
     }
 
     figcaption {
-        background: $off-black;
-        background: rgba($black,.7);
         @include x-box-sizing(border-box);
-        color: $white;
-        @include x-rem(padding, 0.125 0.625);
-        position: absolute;
-        left: 0;
+        @include x-rem(padding, .125 .625);
+
+        background: $off-black;
+        background: rgba($black, .7);
         bottom: 0;
+        color: $white;
+        left: 0;
+        position: absolute;
         text-align: center;
         width: 100%;
 

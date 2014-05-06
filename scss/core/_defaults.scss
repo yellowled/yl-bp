@@ -13,10 +13,10 @@
 
 // Chrome frame prompt
 .chromeframe {
-    margin: 0;
     background: $silver;
     color: $off-black;
-    @include x-rem(padding, 0.25);
+    margin: 0;
+    @include x-rem(padding, .25);
     text-align: center;
 }
 

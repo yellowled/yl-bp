@@ -41,11 +41,11 @@ $sgs-gutter:        15px;   // spacing between columns
 
 
 // Prefix/suffix grid box
-@mixin grid-prefix($prefix-columns, $total-columns: $sgs-columns, $grid-type: 100%){
+@mixin grid-prefix($prefix-columns, $total-columns: $sgs-columns, $grid-type: 100%) {
     margin-left: ($grid-type) * ($prefix-columns / $total-columns);
 }
 
-@mixin grid-suffix($suffix-columns, $total-columns: $sgs-columns, $grid-type: 100%){
+@mixin grid-suffix($suffix-columns, $total-columns: $sgs-columns, $grid-type: 100%) {
     margin-right: ($grid-type) * ($suffix-columns / $total-columns);
 }
 

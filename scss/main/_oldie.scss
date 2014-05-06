@@ -7,11 +7,11 @@
 
 %oldie-image-right {
     float: right;
-    margin: 4px 0 8px 16px
+    margin: 4px 0 8px 16px;
 }
 
 
-// FIXES FOR IE8
+// FIXES FOR IE8 (.lt-ie9)
 // --------------------------------------------------------------------
 @if $ie8-support {
     .lt-ie9 {
@@ -27,8 +27,6 @@
 }
 
 
-// FIXES FOR IE7
+// FIXES FOR IE7 (.lt-ie8)
 // --------------------------------------------------------------------
-@if $ie7-support {
-    .lt-ie8 {}
-}
+@if $ie7-support {}

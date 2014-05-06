@@ -87,7 +87,8 @@ input[type="number"],
 input[type="password"],
 input[type="time"],
 input[type="week"],
-textarea, select,
+textarea,
+select,
 input[type="email"],
 input[type="search"],
 input[type="tel"],
@@ -99,9 +100,9 @@ input[type="url"] {
 
     background-clip: padding-box;
     background-color: $input-bg;
-    border-radius: $input-border-radius;
     border: $input-border-type;
     border-color: $input-border-color;
+    border-radius: $input-border-radius;
     color: $input-fg;
     height: 1.8em;
     outline: 0;
@@ -131,8 +132,8 @@ select[multiple] {
 @media (-webkit-min-device-pixel-ratio: 0) {
     select {
         background-image: url('data:image/gif;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==');
-        background-repeat: no-repeat;
         background-position: right center;
+        background-repeat: no-repeat;
         padding-right: 20px;
     }
 
@@ -163,8 +164,8 @@ input[type="submit"] {
 
 @if $ie7-support {
     button {
-        *padding-top: 1px;
         *padding-bottom: 1px;
+        *padding-top: 1px;
     }
 }
 
@@ -180,7 +181,7 @@ textarea[disabled] {
     box-shadow: none;
     color: $greyed-out;
     cursor: default;
+    -moz-user-select: -moz-none;
     -webkit-user-select: none;
-       -moz-user-select: -moz-none;
-            user-select: none;
+    user-select: none;
 }

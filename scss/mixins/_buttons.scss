@@ -11,7 +11,7 @@
     display: inline-block;
     line-height: normal;
     outline: 0;
-    @include x-rem(padding, 0.1875 0.625);
+    @include x-rem(padding, .1875 .625);
     text-align: center;
     text-decoration: none;
     text-shadow: invert($fg) 0 1px 1px;
@@ -28,8 +28,8 @@
 
     &:active {
         @include x-linear-gradient(lighten($bg, 13.2%), lighten($bg, 6.5%));
-        box-shadow: inset rgba($black, 0.25) 0 1px 2px 0;
         border-color: darken($bg, 26.5%) darken($bg, 13.2%) $bg;
+        box-shadow: inset rgba($black, .25) 0 1px 2px 0;
     }
 
     &:focus {
@@ -55,7 +55,7 @@
     display: inline-block;
     line-height: normal;
     outline: 0;
-    @include x-rem(padding, 0.1875 0.625);
+    @include x-rem(padding, .1875 .625);
     text-align: center;
     text-decoration: none;
     text-shadow: none;

@@ -63,7 +63,7 @@
             $rem-values: append($rem-values, $value);
         // If the value is not zero, convert it from px to rem
         } @else {
-            $px-values: append($px-values, ($value * $main-font-size) );
+            $px-values: append($px-values, ($value * $main-font-size));
             $rem-values: append($rem-values, #{$value}rem);
         }
     }

@@ -8,7 +8,7 @@ $desktop: 1400px;
 
 // MEDIA QUERIES
 // --------------------------------------------------------------------
-@media only screen and (min-width: $legacy)  { @import "../layout/legacy";  }
-@media only screen and (min-width: $tablet)  { @import "../layout/tablet";  }
-@media only screen and (min-width: $laptop)  { @import "../layout/laptop";  }
-@media only screen and (min-width: $desktop) { @import "../layout/desktop"; }
+@media only screen and (min-width: $legacy)  { @import '../layout/legacy';  }
+@media only screen and (min-width: $tablet)  { @import '../layout/tablet';  }
+@media only screen and (min-width: $laptop)  { @import '../layout/laptop';  }
+@media only screen and (min-width: $desktop) { @import '../layout/desktop'; }
