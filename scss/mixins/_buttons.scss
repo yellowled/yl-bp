@@ -17,11 +17,6 @@
     text-shadow: invert($fg) 0 1px 1px;
     width: auto;
 
-    @if $ie7-support {
-        *padding-top: 2px;
-        *padding-bottom: 0;
-    }
-
     &:hover {
         @include x-linear-gradient(lighten($bg, 13.2%), darken($bg, 6.5%));
     }
@@ -60,11 +55,6 @@
     text-decoration: none;
     text-shadow: none;
     width: auto;
-
-    @if $ie7-support {
-        *padding-top: 2px;
-        *padding-bottom: 0;
-    }
 
     &:hover,
     &:focus {
