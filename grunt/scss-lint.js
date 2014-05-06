@@ -9,7 +9,11 @@ module.exports = function(grunt) {
             bundleExec: false,
             colorizeOutput: true,
             config: '.scss-lint.yml',
-            exclude: 'scss/core/_normalize.scss',
+            exclude: [
+                'scss/core/_normalize.scss',
+                'scss/main/_oldie.scss',
+                'scss/fontello/*'
+            ],
             reporterOutput: null
         },
     });
