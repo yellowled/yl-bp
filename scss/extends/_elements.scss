@@ -11,7 +11,9 @@
     display: inline-block;
 
     @if $ie7-support {
-        *display: inline;
-        *zoom: 1;
+        .lt-ie8 & {
+            display: inline;
+            zoom: 1;
+        }
     }
 }
