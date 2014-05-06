@@ -35,6 +35,16 @@
 // --------------------------------------------------------------------
 @if $ie7-support {
     .lt-ie8 {
+        // Helpers
+        .clearfix {
+            zoom: 1;
+        }
+
+        .ir {
+            text-indent: -9999px;
+        }
+
+        // Forms
         input[type="radio"],
         input[type="checkbox"] {
             top: -5px;

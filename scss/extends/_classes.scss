@@ -51,10 +51,6 @@
     &:after {
         clear: both;
     }
-
-    @if $ie7-support {
-        *zoom: 1;
-    }
 }
 
 
@@ -70,9 +66,5 @@
         display: block;
         height: 150%;
         width: 0;
-    }
-
-    @if $ie7-support {
-        *text-indent: -9999px;
     }
 }
