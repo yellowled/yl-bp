@@ -5,6 +5,7 @@ module.exports = function(grunt) {
         options: {
             'trueColor': false,
             'precomposed': true,
+            'appleTouchPadding': 0,
             'windowsTile': false
         },
         deploy: {
