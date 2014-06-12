@@ -32,7 +32,12 @@
     // }
 }
 
-// Images in MagnificPopup
+// Figures
+figure {
+    @include x-rem(margin, 1 0);
+}
+
+// Figures/images in MagnificPopup
 .mfp-content figure {
     margin: 0;
 }
