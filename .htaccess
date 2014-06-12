@@ -1,237 +1,338 @@
-# Force the latest IE version
+# Apache Server Configs v2.4.1 | MIT License
+# https://github.com/h5bp/server-configs-apache
+
+# ##############################################################################
+# # CROSS-ORIGIN RESOURCE SHARING (CORS)                                       #
+# ##############################################################################
+
+# http://code.google.com/p/html5security/wiki/CrossOriginRequestSecurity
+# <IfModule mod_headers.c>
+#     Header set Access-Control-Allow-Origin "*"
+# </IfModule>
+
+# By default allow cross-origin access to web fonts.
 <IfModule mod_headers.c>
-  Header set X-UA-Compatible "IE=Edge,chrome=1"
-  <FilesMatch "\.(js|css|gif|png|jpe?g|pdf|xml|oga|ogg|m4a|ogv|mp4|m4v|webm|svg|svgz|eot|ttf|otf|woff|ico|webp|appcache|manifest|htc|crx|oex|xpi|safariextz|vcf)$" >
-    Header unset X-UA-Compatible
-  </FilesMatch>
-</IfModule>
-
-# Serve cross-domain Ajax requests, disabled by default.
-#  <IfModule mod_headers.c>
-#    Header set Access-Control-Allow-Origin "*"
-#  </IfModule>
-
-# developer.mozilla.org/en/CORS_Enabled_Image
-<IfModule mod_setenvif.c>
-  <IfModule mod_headers.c>
-    <FilesMatch "\.(gif|png|jpe?g|svg|svgz|ico|webp)$">
-      SetEnvIf Origin ":" IS_CORS
-      Header set Access-Control-Allow-Origin "*" env=IS_CORS
+    <FilesMatch "\.(eot|otf|tt[cf]|woff)$">
+        Header set Access-Control-Allow-Origin "*"
     </FilesMatch>
-  </IfModule>
 </IfModule>
 
-# Allow access from all domains for webfonts.
-<IfModule mod_headers.c>
-  <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css)$">
-    Header set Access-Control-Allow-Origin "*"
-  </FilesMatch>
-</IfModule>
-
-# Proper MIME type for all files
-# JavaScript
-AddType application/javascript         js jsonp
-AddType application/json               json
-# Audio
-AddType audio/ogg                      oga ogg
-AddType audio/mp4                      m4a f4a f4b
-# Video
-AddType video/ogg                      ogv
-AddType video/mp4                      mp4 m4v f4v f4p
-AddType video/webm                     webm
-AddType video/x-flv                    flv
-# SVG
-AddType     image/svg+xml              svg svgz
-AddEncoding gzip                       svgz
-# Webfonts
-AddType application/vnd.ms-fontobject  eot
-AddType application/x-font-ttf         ttf ttc
-AddType font/opentype                  otf
-AddType application/x-font-woff        woff
-# Assorted types
-AddType image/x-icon                        ico
-AddType image/webp                          webp
-AddType text/cache-manifest                 appcache manifest
-AddType text/x-component                    htc
-AddType application/xml                     rss atom xml rdf
-AddType application/x-chrome-extension      crx
-AddType application/x-opera-extension       oex
-AddType application/x-xpinstall             xpi
-AddType application/octet-stream            safariextz
-AddType application/x-web-app-manifest+json webapp
-AddType text/x-vcard                        vcf
-AddType application/x-shockwave-flash       swf
-AddType text/vtt                            vtt
-
-# Gzip compression
-<IfModule mod_deflate.c>
-  <IfModule mod_setenvif.c>
+# https://developer.mozilla.org/en-US/docs/Web/HTML/CORS_enabled_image
+<IfModule mod_setenvif.c>
     <IfModule mod_headers.c>
-      SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
-      RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+        <FilesMatch "\.(cur|gif|ico|jpe?g|png|svgz?|webp)$">
+            SetEnvIf Origin ":" IS_CORS
+            Header set Access-Control-Allow-Origin "*" env=IS_CORS
+        </FilesMatch>
     </IfModule>
-  </IfModule>
-  <IfModule mod_filter.c>
-    AddOutputFilterByType DEFLATE application/atom+xml \
-                                  application/javascript \
-                                  application/json \
-                                  application/rss+xml \
-                                  application/vnd.ms-fontobject \
-                                  application/x-font-ttf \
-                                  application/xhtml+xml \
-                                  application/xml \
-                                  font/opentype \
-                                  image/svg+xml \
-                                  image/x-icon \
-                                  text/css \
-                                  text/html \
-                                  text/plain \
-                                  text/x-component \
-                                  text/xml
-  </IfModule>
 </IfModule>
 
-# Expires headers (for better cache control); if you don't use filenames to
-# version, lower the CSS and JS to something like "access plus 1 week".
 
-<IfModule mod_expires.c>
-  ExpiresActive on
-  ExpiresDefault                          "access plus 1 month"
-  ExpiresByType text/cache-manifest       "access plus 0 seconds"
-# Your document html
-  ExpiresByType text/html                 "access plus 0 seconds"
-# Data
-  ExpiresByType text/xml                  "access plus 0 seconds"
-  ExpiresByType application/xml           "access plus 0 seconds"
-  ExpiresByType application/json          "access plus 0 seconds"
-# Feed
-  ExpiresByType application/rss+xml       "access plus 1 hour"
-  ExpiresByType application/atom+xml      "access plus 1 hour"
-# Favicon (cannot be renamed)
-  ExpiresByType image/x-icon              "access plus 1 week"
-# Media: images, video, audio
-  ExpiresByType image/gif                 "access plus 1 month"
-  ExpiresByType image/png                 "access plus 1 month"
-  ExpiresByType image/jpeg                "access plus 1 month"
-  ExpiresByType video/ogg                 "access plus 1 month"
-  ExpiresByType audio/ogg                 "access plus 1 month"
-  ExpiresByType video/mp4                 "access plus 1 month"
-  ExpiresByType video/webm                "access plus 1 month"
-# HTC files  (css3pie)
-  ExpiresByType text/x-component          "access plus 1 month"
-# Webfonts
-  ExpiresByType application/x-font-ttf    "access plus 1 month"
-  ExpiresByType font/opentype             "access plus 1 month"
-  ExpiresByType application/x-font-woff   "access plus 1 month"
-  ExpiresByType image/svg+xml             "access plus 1 month"
-  ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
-# CSS and JavaScript
-  ExpiresByType text/css                  "access plus 1 year"
-  ExpiresByType application/javascript    "access plus 1 year"
-  # ExpiresByType text/css                  "access plus 1 week"
-  # ExpiresByType application/javascript    "access plus 1 week"
-</IfModule>
+# ##############################################################################
+# # ERRORS                                                                     #
+# ##############################################################################
 
-# Prevent mobile network providers from modifying your site
-# <IfModule mod_headers.c>
-# Header set Cache-Control "no-transform"
-# </IfModule>
-
-# FileETag None is not enough for every server.
-<IfModule mod_headers.c>
-  Header unset ETag
-</IfModule>
-
-# Since we're sending far-future expires, we don't need ETags for static content.
-FileETag None
-
-# Allow cookies to be set from iframes (for IE only)
-# <IfModule mod_headers.c>
-#   Header set P3P "policyref=\"/w3c/p3p.xml\", CP=\"IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT\""
-# </IfModule>
-
-# Start rewrite engine
-<IfModule mod_rewrite.c>
-  Options +FollowSymlinks
-# Options +SymLinksIfOwnerMatch
-  RewriteEngine On
-  RewriteBase /
-</IfModule>
-
-# Suppress or force the "www." at the beginning of URLs
-# Option 1: Rewrite "www.example.com -> example.com".
-<IfModule mod_rewrite.c>
-  RewriteCond %{HTTPS} !=on
-  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
-</IfModule>
-# Option 2: Rewrite "example.com -> www.example.com".
-# <IfModule mod_rewrite.c>
-#   RewriteCond %{HTTPS} !=on
-#   RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
-#   RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-# </IfModule>
-
-# Route requests for /css/style.20110203.css to /css/style.css
-# <IfModule mod_rewrite.c>
-#   RewriteCond %{REQUEST_FILENAME} !-f
-#   RewriteCond %{REQUEST_FILENAME} !-d
-#   RewriteRule ^(.+)\.(\d+)\.(js|css|png|jpg|gif)$ $1.$3 [L]
-# </IfModule>
-
-# Prevent 404 errors for non-existing redirected folders
+# http://httpd.apache.org/docs/current/content-negotiation.html#multiviews
 Options -MultiViews
-# Custom 404 page
-ErrorDocument 404 /404.html
 
-# Use UTF-8 encoding for anything served text/plain or text/html
+# http://httpd.apache.org/docs/current/mod/core.html#errordocument
+# ErrorDocument 404 /404.html
+
+
+# ##############################################################################
+# # INTERNET EXPLORER                                                          #
+# ##############################################################################
+
+# https://hsivonen.fi/doctype/#ie8
+<IfModule mod_headers.c>
+    Header set X-UA-Compatible "IE=edge"
+    # `mod_headers` cannot match based on the content-type, however, this header
+    # should be send only for HTML documents and not for the other resources
+    <FilesMatch "\.(appcache|atom|crx|css|cur|eot|f4[abpv]|flv|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|tt[cf]|txt|vcf|vtt|webapp|web[mp]|woff|xml|xpi)$">
+        Header unset X-UA-Compatible
+    </FilesMatch>
+</IfModule>
+
+# http://msdn.microsoft.com/en-us/library/ms537343.aspx
+# <IfModule mod_headers.c>
+#     Header set P3P "policyref=\"/w3c/p3p.xml\", CP=\"IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT\""
+# </IfModule>
+
+
+# ##############################################################################
+# # MEDIA TYPES AND CHARACTER ENCODINGS                                        #
+# ##############################################################################
+
+# http://www.iana.org/assignments/media-types/media-types.xhtml
+<IfModule mod_mime.c>
+  # Audio
+    AddType audio/mp4                                   m4a f4a f4b
+    AddType audio/ogg                                   oga ogg opus
+  # Data interchange
+    AddType application/json                            json map
+    AddType application/ld+json                         jsonld
+  # JavaScript
+    # http://tools.ietf.org/html/rfc4329#section-7.2
+    AddType application/javascript                      js
+  # Manifest files
+    AddType application/x-web-app-manifest+json         webapp
+    AddType text/cache-manifest                         appcache manifest
+  # Video
+    AddType video/mp4                                   f4v f4p m4v mp4
+    AddType video/ogg                                   ogv
+    AddType video/webm                                  webm
+    AddType video/x-flv                                 flv
+  # Web fonts
+    AddType application/font-woff                       woff
+    AddType application/vnd.ms-fontobject               eot
+    # http://mimesniff.spec.whatwg.org/#matching-a-font-type-pattern
+    AddType application/x-font-ttf                      ttc ttf
+    AddType font/opentype                               otf
+    # https://twitter.com/FontSquirrel/status/14855840545
+    AddType image/svg+xml                               svg svgz
+    AddEncoding gzip                                    svgz
+  # Other
+    AddType application/octet-stream                    safariextz
+    AddType application/x-chrome-extension              crx
+    AddType application/x-opera-extension               oex
+    AddType application/x-xpinstall                     xpi
+    AddType application/xml                             atom rdf rss xml
+    AddType image/webp                                  webp
+    AddType image/x-icon                                cur ico
+    AddType text/vtt                                    vtt
+    AddType text/x-component                            htc
+    AddType text/x-vcard                                vcf
+</IfModule>
+
+# Set `UTF-8` as the character encoding for all resources served with
+# the media type of `text/html` or `text/plain`.
 AddDefaultCharset utf-8
-# Force UTF-8 for a number of file formats
-AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
+# Set `UTF-8` as the character encoding for other certain resources.
+<IfModule mod_mime.c>
+    AddCharset utf-8 .atom .css .js .json .jsonld .rss .vtt .webapp .xml
+</IfModule>
 
-# Block users from browsing folders without a default document
-<IfModule mod_autoindex.c>
-  Options -Indexes
-</IfModule>
-# Block access to "hidden" directories or files whose names begin with a period.
+
+# ##############################################################################
+# # URL REWRITES                                                               #
+# ##############################################################################
+# http://httpd.apache.org/docs/current/misc/perf-tuning.html#symlinks
+# http://www.rackspace.com/knowledge_center/frequently-asked-question/why-is-modrewrite-not-working-on-my-site
 <IfModule mod_rewrite.c>
-  RewriteCond %{SCRIPT_FILENAME} -d [OR]
-  RewriteCond %{SCRIPT_FILENAME} -f
-  RewriteRule "(^|/)\." - [F]
+    Options +FollowSymlinks
+  # Options +SymLinksIfOwnerMatch
+    RewriteEngine On
+  # RewriteBase /
 </IfModule>
-# Block access to backup and source files.
-<FilesMatch "(\.(bak|config|sql|fla|psd|ini|log|sh|inc|swp|dist)|~)$">
-  Order allow,deny
-  Deny from all
-  Satisfy All
+
+# http://no-www.org/faq.php?q=class_b
+# Option 1: rewrite www.example.com → example.com
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+# Option 2: rewrite example.com → www.example.com
+# <IfModule mod_rewrite.c>
+#     RewriteCond %{HTTPS} !=on
+#     RewriteCond %{HTTP_HOST} !^www\. [NC]
+#     RewriteCond %{SERVER_ADDR} !=127.0.0.1
+#     RewriteCond %{SERVER_ADDR} !=::1
+#     RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+# </IfModule>
+
+
+# ##############################################################################
+# # SECURITY                                                                   #
+# ##############################################################################
+
+# http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx
+# <IfModule mod_headers.c>
+#     Header set X-Frame-Options "DENY"
+#     <FilesMatch "\.(appcache|atom|crx|css|cur|eot|f4[abpv]|flv|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|tt[cf]|txt|vcf|vtt|webapp|web[mp]|woff|xml|xpi)$">
+#         Header unset X-Frame-Options
+#     </FilesMatch>
+# </IfModule>
+
+# http://www.html5rocks.com/en/tutorials/security/content-security-policy/
+# <IfModule mod_headers.c>
+#     Header set Content-Security-Policy "script-src 'self'; object-src 'self'"
+#     <FilesMatch "\.(appcache|atom|crx|css|cur|eot|f4[abpv]|flv|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|tt[cf]|txt|vcf|vtt|webapp|web[mp]|woff|xml|xpi)$">
+#         Header unset Content-Security-Policy
+#     </FilesMatch>
+# </IfModule>
+
+# ------------------------------------------------------------------------------
+# | File access                                                                |
+# ------------------------------------------------------------------------------
+
+# Block access to directories without a default document.
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
+# Block access to all hidden files and directories with the exception of the
+# visible content from within the `/.well-known/` hidden directory.
+# https://www.mnot.net/blog/2010/04/07/well-known
+<IfModule mod_rewrite.c>
+    RewriteCond %{REQUEST_URI} "!(^|/)\.well-known/([^./]+./?)+$" [NC]
+    RewriteCond %{SCRIPT_FILENAME} -d [OR]
+    RewriteCond %{SCRIPT_FILENAME} -f
+    RewriteRule "(^|/)\." - [F]
+</IfModule>
+
+# Block access to files that can expose sensitive information.
+# http://feross.org/cmsploit/
+<FilesMatch "(^#.*#|\.(bak|conf|dist|fla|in[ci]|log|psd|sh|sql|sw[op])|~)$">
+    # Apache < 2.3
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+        Satisfy All
+    </IfModule>
+    # Apache ≥ 2.3
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
 </FilesMatch>
 
-# php_flag register_globals Off
-# Rename session cookie to something else, than PHPSESSID
-# php_value session.name sid
-# Disable magic quotes (This feature has been DEPRECATED as of PHP 5.3.0 and REMOVED as of PHP 5.4.0.)
-# php_flag magic_quotes_gpc Off
-# Level of log detail - log all errors
-# php_value error_reporting -1
-# Write errors to log file
-# php_flag log_errors On
-# Do not display errors in browser (production - Off, development - On)
-# php_flag display_errors Off
-# Do not display startup errors (production - Off, development - On)
-# php_flag display_startup_errors Off
-# Format errors in plain text
-# php_flag html_errors Off
-# Show multiple occurrence of error
-# php_flag ignore_repeated_errors Off
-# Show same errors from different sources
-# php_flag ignore_repeated_source Off
-# Size limit for error messages
-# php_value log_errors_max_len 1024
-# Don't precede error with string (doesn't accept empty string, use whitespace if you need)
-# php_value error_prepend_string " "
-# Don't prepend to error (doesn't accept empty string, use whitespace if you need)
-# php_value error_append_string " "
-# Increase cookie security
-<IfModule php5_module>
-  php_value session.cookie_httponly true
+# http://blogs.msdn.com/b/ie/archive/2008/07/02/ie8-security-part-v-comprehensive-protection.aspx
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
 </IfModule>
+
+# https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29
+# <IfModule mod_headers.c>
+#     #                           (1)    (2)
+#     Header set X-XSS-Protection "1; mode=block"
+#     <FilesMatch "\.(appcache|atom|crx|css|cur|eot|f4[abpv]|flv|gif|htc|ico|jpe?g|js|json(ld)?|m4[av]|manifest|map|mp4|oex|og[agv]|opus|otf|pdf|png|rdf|rss|safariextz|svgz?|swf|tt[cf]|txt|vcf|vtt|webapp|web[mp]|woff|xml|xpi)$">
+#         Header unset X-XSS-Protection
+#     </FilesMatch>
+# </IfModule>
+
+# Rewrite secure requests properly in order to prevent SSL certificate warnings.
+# <IfModule mod_rewrite.c>
+#     RewriteCond %{SERVER_PORT} !^443
+#     RewriteRule ^ https://example-domain-please-change-me.com%{REQUEST_URI} [R=301,L]
+# </IfModule>
+
+# http://www.html5rocks.com/en/tutorials/security/transport-layer-security/
+# <IfModule mod_headers.c>
+#     Header set Strict-Transport-Security "max-age=16070400; includeSubDomains"
+# </IfModule>
+
+
+# ##############################################################################
+# # WEB PERFORMANCE                                                            #
+# ##############################################################################
+
+<IfModule mod_deflate.c>
+    # https://developer.yahoo.com/blogs/ydn/pushing-beyond-gzipping-25601.html
+    <IfModule mod_setenvif.c>
+        <IfModule mod_headers.c>
+            SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+            RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+        </IfModule>
+    </IfModule>
+    # Compress all output labeled with one of the following media types
+    <IfModule mod_filter.c>
+        AddOutputFilterByType DEFLATE application/atom+xml \
+                                      application/javascript \
+                                      application/json \
+                                      application/ld+json \
+                                      application/manifest+json \
+                                      application/rss+xml \
+                                      application/vnd.ms-fontobject \
+                                      application/x-font-ttf \
+                                      application/x-web-app-manifest+json \
+                                      application/xhtml+xml \
+                                      application/xml \
+                                      font/opentype \
+                                      image/svg+xml \
+                                      image/x-icon \
+                                      text/css \
+                                      text/html \
+                                      text/plain \
+                                      text/vtt \
+                                      text/x-component \
+                                      text/xml
+    </IfModule>
+</IfModule>
+
+# http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9.5.
+# <IfModule mod_headers.c>
+#     Header merge Cache-Control "no-transform"
+# </IfModule>
+
+# https://developer.yahoo.com/performance/rules.html#etags
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+
+FileETag None
+
+# Serve resources with far-future expires headers.
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresDefault                                      "access plus 1 month"
+  # CSS
+    ExpiresByType text/css                              "access plus 1 year"
+  # Data interchange
+    ExpiresByType application/json                      "access plus 0 seconds"
+    ExpiresByType application/ld+json                   "access plus 0 seconds"
+    ExpiresByType application/xml                       "access plus 0 seconds"
+    ExpiresByType text/xml                              "access plus 0 seconds"
+  # Favicon (cannot be renamed!) and cursor images
+    ExpiresByType image/x-icon                          "access plus 1 week"
+  # HTML components (HTCs)
+    ExpiresByType text/x-component                      "access plus 1 month"
+  # HTML
+    ExpiresByType text/html                             "access plus 0 seconds"
+  # JavaScript
+    ExpiresByType application/javascript                "access plus 1 year"
+  # Manifest files
+    ExpiresByType application/manifest+json             "access plus 1 year"
+    ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
+    ExpiresByType text/cache-manifest                   "access plus 0 seconds"
+  # Media
+    ExpiresByType audio/ogg                             "access plus 1 month"
+    ExpiresByType image/gif                             "access plus 1 month"
+    ExpiresByType image/jpeg                            "access plus 1 month"
+    ExpiresByType image/png                             "access plus 1 month"
+    ExpiresByType video/mp4                             "access plus 1 month"
+    ExpiresByType video/ogg                             "access plus 1 month"
+    ExpiresByType video/webm                            "access plus 1 month"
+  # Web feeds
+    ExpiresByType application/atom+xml                  "access plus 1 hour"
+    ExpiresByType application/rss+xml                   "access plus 1 hour"
+  # Web fonts
+    ExpiresByType application/font-woff                 "access plus 1 month"
+    ExpiresByType application/vnd.ms-fontobject         "access plus 1 month"
+    ExpiresByType application/x-font-ttf                "access plus 1 month"
+    ExpiresByType font/opentype                         "access plus 1 month"
+    ExpiresByType image/svg+xml                         "access plus 1 month"
+</IfModule>
+
+# Route all requests such as `/css/style.12345.css` to `/css/style.css`.
+# <IfModule mod_rewrite.c>
+#     RewriteCond %{REQUEST_FILENAME} !-f
+#     RewriteRule ^(.+)\.(\d+)\.(css|cur|gif|ico|jpe?g|js|png|svgz?|webp)$ $1.$3 [L]
+# </IfModule>
+
+# Allow concatenation from within specific files.
+# <IfModule mod_include.c>
+#
+#     <FilesMatch "\.combined\.js$">
+#         Options +Includes
+#         AddOutputFilterByType INCLUDES application/javascript
+#         SetOutputFilter INCLUDES
+#     </FilesMatch>
+#
+#     <FilesMatch "\.combined\.css$">
+#         Options +Includes
+#         AddOutputFilterByType INCLUDES text/css
+#         SetOutputFilter INCLUDES
+#     </FilesMatch>
+#
+# </IfModule>
