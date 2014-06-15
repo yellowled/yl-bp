@@ -6,10 +6,13 @@
 }
 
 // For use with → processwire.com
-// .align_left,
-// .align_right {
-//     @extend %image-block;
-// }
+@if $pw-img-classes {
+    .align_left,
+    .align_right {
+        @extend %image-block;
+    }
+}
+
 
 @media only screen and (min-width: 768px) {
     %image-left {
@@ -22,14 +25,16 @@
         @include x-rem(margin, .25 0 .75 1);
     }
 
-    // For use with → processwire.com
-    // .align_left {
-    //     @extend %image-left;
-    // }
+    @if $pw-img-classes {
+        // For use with → processwire.com
+        .align_left {
+            @extend %image-left;
+        }
 
-    // .align_right {
-    //     @extend %image-right;
-    // }
+        .align_right {
+            @extend %image-right;
+        }
+    }
 }
 
 // Figures

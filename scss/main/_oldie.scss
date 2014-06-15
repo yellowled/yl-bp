@@ -19,13 +19,15 @@
 // --------------------------------------------------------------------
 @if $ie8-support {
     .lt-ie9 {
-        // For use with → processwire.com
-        .align_left {
-            @extend %oldie-image-left;
-        }
+        @if $pw-img-classes {
+            // For use with → processwire.com
+            .align_left {
+                @extend %oldie-image-left;
+            }
 
-        .align_right {
-            @extend %oldie-image-right;
+            .align_right {
+                @extend %oldie-image-right;
+            }
         }
     }
 }
@@ -35,13 +37,18 @@
 // --------------------------------------------------------------------
 @if $ie7-support {
     .lt-ie8 {
-        // Helpers
-        .clearfix {
-            zoom: 1;
+        // Include clearfix class
+        @if $clearfix-class {
+            .clearfix {
+                zoom: 1;
+            }
         }
 
-        .ir {
-            text-indent: -9999px;
+        // Include image replacement class
+        @if $ir-class {
+            .ir {
+                text-indent: -9999px;
+            }
         }
 
         // Forms

@@ -1,12 +1,27 @@
 // GENERAL SETTINGS
 // --------------------------------------------------------------------
 // mattstow.com/responsive-design-in-ie10-on-windows-phone-8.html
-@-ms-viewport { width: device-width; }
+@-ms-viewport {
+    width: device-width;
+}
 
 
 // SETTINGS SPECIFIC TO THIS PROJECT
 // --------------------------------------------------------------------
-// set to true if IE7 should be supported
+// Support IE7
 $ie7-support: false;
-// set to false if IE8 can be ignored
+// Support IE8
 $ie8-support: true;
+
+// Include helper classes
+$helper-classes: false;
+// Include clearfix class
+$clearfix-class: false;
+// Include image replacement class
+$ir-class: false;
+
+// Include message classes
+$msg-classes: false;
+
+// Include ProcessWire image classes
+$pw-img-classes: false;
