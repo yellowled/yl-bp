@@ -18,7 +18,6 @@ module.exports = function(grunt) {
                   'scripts/jquery-cycle2/jquery.cycle2.tmpl.js',
                   'scripts/jquery-accessible-tabs/js/jquery.syncheight.js',
                   'scripts/jquery-accessible-tabs/js/jquery.tabs.js',
-                  'scripts/gmaps/gmaps.js',
                   'scripts/main.js'],
             dest: 'scripts/master.js'
         },
@@ -37,7 +36,6 @@ module.exports = function(grunt) {
                   'scripts/jquery-cycle2/jquery.cycle2.tmpl.js',
                   'scripts/jquery-accessible-tabs/js/jquery.syncheight.js',
                   'scripts/jquery-accessible-tabs/js/jquery.tabs.js',
-                  'scripts/gmaps/gmaps.js',
                   'scripts/main.js'],
             dest: 'scripts/master.js'
         },
