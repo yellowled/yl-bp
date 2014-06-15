@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     grunt.config('favicons', {
         options: {
             'trueColor': false,
-            'precomposed': true,
+            'appleTouchBackgroundColor': "auto",
             'appleTouchPadding': 0,
             'windowsTile': false
         },
