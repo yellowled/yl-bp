@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         'clean:deploy',
         'fontello:build',
         'copy:deploy',
-        'concat:deploy',
+        'concat',
         'sass:deploy',
         'uglify',
         'imagemin:deploy',
