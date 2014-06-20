@@ -18,7 +18,7 @@ Please refer to the documentation of your OS and/or the documentation of these r
 
 In the project directory:
 
-1. `npm i` (install [Grunt plugins](#grunt-plugins-used) required for build script; also executes `bower install` to install [JS assets](#js-assets-included) included in this boilerplate automagically)
+1. `npm install` (install [Grunt plugins](#grunt-plugins-used) required for build script; also executes `bower install` to install [JS assets](#js-assets-included) included in this boilerplate automagically)
 2. `grunt` (start build script with default task; use `grunt deploy` to build for deployment)
 
 ### “I don't need …”
