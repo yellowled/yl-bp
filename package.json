@@ -15,6 +15,9 @@
     "bugs": {
         "url":      "https://github.com/yellowled/yl-bp/issues"
     },
+    "scripts": {
+        "postinstall":  "bower install"
+    },
     "engines": {
         "node":     ">=0.10.0"
     },

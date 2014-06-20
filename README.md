@@ -18,8 +18,7 @@ Please refer to the documentation of your OS and/or the documentation of these r
 
 In the project directory:
 
-1. `npm install` (install [Grunt plugins](#grunt-plugins-used) required for build script)
-2. `bower install` (install [JS assets](#js-assets-included) included in this boilerplate)
+1. `npm i` (install [Grunt plugins](#grunt-plugins-used) required for build script; also executes `bower install` to install [JS assets](#js-assets-included) included in this boilerplate automagically)
 3. `grunt watch` (start build script)
 
 ### “I don't need …”
