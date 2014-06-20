@@ -73,10 +73,6 @@ img {
 
 // EXTENDS/INCLUDES
 // --------------------------------------------------------------------
-.js #enable-js {
-    @extend %hidden;
-}
-
 video,
 img {
     @include responsive-media;
