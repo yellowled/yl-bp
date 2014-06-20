@@ -44,6 +44,7 @@ If a project doesn't require some of the [JS assets](#js-assets-included), uncom
 * [grunt-modernizr](https://npmjs.org/package/grunt-modernizr)
 * [grunt-scss-lint](https://www.npmjs.org/package/grunt-scss-lint)
 * [connect-livereload](https://www.npmjs.org/package/connect-livereload)
+* [time-grunt](https://www.npmjs.org/package/time-grunt)
 
 ## JS assets included
 

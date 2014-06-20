@@ -1,5 +1,8 @@
 // Configuration
 module.exports = function(grunt) {
+    // include time-grunt
+    require('time-grunt')(grunt);
+
     // Initialize config
     grunt.initConfig({
         pkg: '<json:package.json>',
