@@ -38,6 +38,7 @@
         "grunt-htmlhint":           "~0.4.0",
         "grunt-modernizr":          "~0.5.2",
         "grunt-scss-lint":          "~0.1.11",
+        "assemble":                 "~0.4.39",
         "connect-livereload":       "~0.4.0",
         "time-grunt":               "~0.3.2"
     }
