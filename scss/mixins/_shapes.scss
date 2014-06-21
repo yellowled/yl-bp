@@ -44,9 +44,9 @@
 	&:before {
         border-color: $border-color transparent;
         border-style: solid;
-        border-width: (16px+$border-width) (16px+$border-width) 0;
-		bottom: -(16px+$border-width);
-		left: (42px-$border-width);
+        border-width: (16px + $border-width) (16px + $border-width) 0;
+		bottom: -(16px + $border-width);
+		left: (42px - $border-width);
 	}
 
 	&:after {

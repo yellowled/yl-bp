@@ -1,5 +1,8 @@
 // RESPONSIVE FLOATED IMAGES
 // --------------------------------------------------------------------
+// Breakpoint for floated images
+$img-breakpoint:    768px;
+
 %image-block {
     display: block;
     @include x-rem(margin, 1 0);
@@ -13,8 +16,7 @@
     }
 }
 
-
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: $img-breakpoint) {
     %image-left {
         float: left;
         @include x-rem(margin, .25 1 .75 0);

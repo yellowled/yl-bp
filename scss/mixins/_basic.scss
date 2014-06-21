@@ -60,8 +60,8 @@
 
 // github.com/drublic/Sass-Mixins/blob/master/partials/_transform.scss
 @mixin x-transform ($values) {
-    -webkit-transform: $values; // Chrome, Safari, iOS Safari, Android Stock
-    -ms-transform: $values; // IE9
+    -webkit-transform: $values;
+    -ms-transform: $values;
     transform: $values;
 }
 

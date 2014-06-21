@@ -12,6 +12,16 @@
     width: 1px;
 }
 
+// 'Undo' visuallyhidden
+%not-visuallyhidden {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
 // Hide visually and from screenreaders, but maintain layout
 // (also useful for lazy-hiding items which require JS)
 %invisible {
