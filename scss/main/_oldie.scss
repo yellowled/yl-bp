@@ -85,3 +85,23 @@
         }
     }
 }
+
+
+// OLDIE HINT
+// --------------------------------------------------------------------
+html {
+    padding-top: 24px;
+}
+
+// Chrome frame prompt
+.chromeframe {
+    background: $silver;
+    color: $off-black;
+    margin: 0;
+    padding: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    width: 100%;
+}

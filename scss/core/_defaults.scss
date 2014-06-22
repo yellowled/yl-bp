@@ -11,15 +11,6 @@
     text-shadow: none;
 }
 
-// Chrome frame prompt
-.chromeframe {
-    background: $silver;
-    color: $off-black;
-    margin: 0;
-    @include x-rem(padding, .25);
-    text-align: center;
-}
-
 dt {
     font-weight: bold;
 }
