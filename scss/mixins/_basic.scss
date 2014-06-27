@@ -7,6 +7,15 @@
     width: $center-width;
 }
 
+// Vertical centering
+// zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
+// parent element needs a defined height; use w/ .csstransforms
+@mixin center-vertical() {
+    position: relative;
+    top: 50%;
+    @include x-transform(translateY(-50%));
+}
+
 
 // CSS3 MIXINS
 // --------------------------------------------------------------------
