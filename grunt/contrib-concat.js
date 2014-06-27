@@ -5,6 +5,7 @@ module.exports = function(grunt) {
         master: {
             src: ['scripts/helpers/log.js',
                   'scripts/accessifyhtml5-amd/accessifyhtml5.js',
+                  'scripts/fitvids/jquery.fitvids.js',
                   'scripts/magnific-popup/dist/jquery.magnific-popup.js',
                   'scripts/jquery-cycle2/src/jquery.cycle2.core.js',
                   'scripts/jquery-cycle2/src/jquery.cycle2.autoheight.js',

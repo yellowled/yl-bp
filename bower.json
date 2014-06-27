@@ -5,6 +5,7 @@
     "ignore":       [],
     "dependencies": {
         "accessifyhtml5-amd":       "~2.0.2",
+        "fitvids":                  "~1.1.0",
         "modernizr":                "~2.8.2",
         "jquery":                   "~1.11.1",
         "magnific-popup":           "~0.9.9",
