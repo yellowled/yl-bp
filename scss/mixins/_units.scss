@@ -29,3 +29,9 @@
     #{$property}: #{$px-values};
     #{$property}: #{$rem-values};
 }
+
+// github.com/drublic/Sass-Mixins/blob/master/partials/_calc.scss
+@mixin x-calc ($property, $values) {
+    #{$property}: -webkit-calc(#{$values});
+    #{$property}: calc(#{$values});
+}
