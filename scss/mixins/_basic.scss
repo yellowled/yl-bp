@@ -45,28 +45,6 @@
     background-image: linear-gradient(unquote($direction), $from, $to);
 }
 
-// github.com/drublic/Sass-Mixins/blob/master/partials/_rem.scss
-@mixin x-rem($property, $values, $main-font-size: 16px) {
-    // Empty list for all values in px
-    $px-values: ();
-    $rem-values: ();
-    // Iterate over entries
-    @each $value in $values {
-        // If the value is zero, return 0
-        @if $value == 0 or $value == auto {
-            $px-values: append($px-values, $value);
-            $rem-values: append($rem-values, $value);
-        // If the value is not zero, convert it from px to rem
-        } @else {
-            $px-values: append($px-values, ($value * $main-font-size));
-            $rem-values: append($rem-values, #{$value}rem);
-        }
-    }
-    // Return the property and its list of converted values
-    #{$property}: #{$px-values};
-    #{$property}: #{$rem-values};
-}
-
 // github.com/drublic/Sass-Mixins/blob/master/partials/_transform.scss
 @mixin x-transform ($values) {
     -webkit-transform: $values;
