@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         deploy: {
             options: {
                 optimizationLevel: 1,
-                progressive: false
+                progressive: true
             },
             files: [{
                 expand: true,
