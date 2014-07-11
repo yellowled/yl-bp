@@ -27,6 +27,10 @@ If a project doesn't require some of the [JS assets](#js-assets-included), uncom
 
 ## Grunt plugins used
 
+[![Dependency Status](https://david-dm.org/yellowled/yl-bp.svg)](https://david-dm.org/yellowled/yl-bp)
+[![devDependency Status](https://david-dm.org/yellowled/yl-bp/dev-status.svg)](https://david-dm.org/yellowled/yl-bp#info=devDependencies)
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+
 * [grunt-contrib-clean](https://npmjs.org/package/grunt-contrib-clean)
 * [grunt-contrib-concat](https://npmjs.org/package/grunt-contrib-concat)
 * [grunt-contrib-connect](https://npmjs.org/package/grunt-contrib-connect)
