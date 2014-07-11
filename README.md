@@ -1,6 +1,10 @@
 # A boilerplate for HTML5 projects
 
-This is what I usually use to start projects. Derived from [H5BP](https://github.com/h5bp/html5-boilerplate) and [init](https://github.com/drublic/init).
+This is what I usually use to start projects. Derived from [H5BP](https://github.com/h5bp/html5-boilerplate), inspired by [init](https://github.com/drublic/init).
+
+[![Dependency Status](https://david-dm.org/yellowled/yl-bp.svg)](https://david-dm.org/yellowled/yl-bp)
+[![devDependency Status](https://david-dm.org/yellowled/yl-bp/dev-status.svg)](https://david-dm.org/yellowled/yl-bp#info=devDependencies)
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 ## Requirements
 
@@ -26,10 +30,6 @@ In the project directory:
 If a project doesn't require some of the [JS assets](#js-assets-included), uncomment them in `grunt/contrib-concat.js` before running `grunt`. Optionally, also remove them from `bower.json` before install.
 
 ## Grunt plugins used
-
-[![Dependency Status](https://david-dm.org/yellowled/yl-bp.svg)](https://david-dm.org/yellowled/yl-bp)
-[![devDependency Status](https://david-dm.org/yellowled/yl-bp/dev-status.svg)](https://david-dm.org/yellowled/yl-bp#info=devDependencies)
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 * [grunt-contrib-clean](https://npmjs.org/package/grunt-contrib-clean)
 * [grunt-contrib-concat](https://npmjs.org/package/grunt-contrib-concat)
