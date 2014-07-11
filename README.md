@@ -1,4 +1,4 @@
-# My HTML boilerplate
+# A boilerplate for HTML5 projects
 
 This is what I usually use to start projects. Derived from [H5BP](https://github.com/h5bp/html5-boilerplate) and [init](https://github.com/drublic/init).
 
