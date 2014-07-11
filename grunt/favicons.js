@@ -3,8 +3,6 @@
 module.exports = function(grunt) {
     grunt.config('favicons', {
         options: {
-            'trueColor': false,
-            'appleTouchBackgroundColor': "auto",
             'appleTouchPadding': 0,
             'windowsTile': false
         },
