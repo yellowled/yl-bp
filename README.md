@@ -13,7 +13,10 @@ This is what I usually use to start projects. Derived from [H5BP](https://github
 * [Grunt](http://gruntjs.com)
 * [Bower](http://bower.io)
 
-Sass depends on [Ruby](http://www.ruby-lang.org), Grunt and Bower depend on [node.js](http://nodejs.org). Some of the [Grunt plugins](#grunt-plugins-used) depend on command line tools to be installed on your (build) system.
+Sass depends on [Ruby](http://www.ruby-lang.org), Grunt and Bower depend on [node.js](http://nodejs.org). Some of the [Grunt plugins](#grunt-plugins-used) depend on command line tools to be installed on your (build) system:
+
+* grunt-favicons requires [ImageMagick](http://www.imagemagick.org)
+* grunt-scss-lint requires [scss-lint](https://github.com/causes/scss-lint)
 
 ### Installation
 
