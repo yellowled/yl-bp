@@ -19,6 +19,8 @@ module.exports = function(grunt) {
                   'scripts/jquery-cycle2/src/jquery.cycle2.tmpl.js',
                   'scripts/jquery-accessible-tabs/js/jquery.syncheight.js',
                   'scripts/jquery-accessible-tabs/js/jquery.tabs.js',
+                  'scripts/jQuery-Collapse/src/jquery.collapse.js',
+                  'scripts/jQuery-Collapse/src/jquery.collapse_storage.js',
                   'scripts/main.js'],
             dest: 'scripts/master.js'
         },

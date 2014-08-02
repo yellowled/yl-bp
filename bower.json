@@ -9,6 +9,7 @@
         "gmaps":                    "~0.4.13",
         "jquery":                   "~1.11.1",
         "jquery-accessible-tabs":   "~1.9.8",
+        "jQuery-Collapse":          "~1.1.1",
         "jquery-cycle2":            "~2.1.5",
         "magnific-popup":           "~0.9.9",
         "modernizr":                "~2.8.3"
