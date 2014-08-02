@@ -14,5 +14,9 @@
         "magnific-popup":           "~0.9.9",
         "modernizr":                "~2.8.3"
     },
-    "devDependencies": {}
+    "devDependencies": {
+        "resolutions": {
+            "jquery":               "1.11.1"
+        }
+    }
 }
