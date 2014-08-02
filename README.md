@@ -61,7 +61,9 @@ If a project doesn't require some of the [JS assets](#js-assets-included), uncom
 * [Cycle 2](https://github.com/malsup/cycle2) ([Optional plugins](http://jquery.malsup.com/cycle2/download/#plugins))
 * [FitVids](https://github.com/davatron5000/FitVids.js)
 * [gmaps](https://github.com/hpneo/gmaps)
+* [jQuery-Collapse](https://github.com/danielstocks/jQuery-Collapse/)
 * [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup)
+* [tablesaw](https://github.com/filamentgroup/tablesaw)
 
 ### JS helpers
 
