@@ -15,9 +15,8 @@
         "modernizr":                "~2.8.3",
         "tablesaw":                 "~0.1.6"
     },
-    "devDependencies": {
-        "resolutions": {
-            "jquery":               "1.11.1"
-        }
+    "devDependencies": {},
+    "resolutions": {
+        "jquery":                   "~1.11.1"
     }
 }
