@@ -60,6 +60,7 @@ If a project doesn't require some of the [JS assets](#js-assets-included), uncom
 * [AccessibleTabs](https://github.com/ginader/Accessible-Tabs)
 * [Cycle 2](https://github.com/malsup/cycle2) ([Optional plugins](http://jquery.malsup.com/cycle2/download/#plugins))
 * [FitVids](https://github.com/davatron5000/FitVids.js)
+* [flexnav](https://github.com/indyplanets/flexnav)
 * [gmaps](https://github.com/hpneo/gmaps)
 * [jQuery-Collapse](https://github.com/danielstocks/jQuery-Collapse/)
 * [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup)
