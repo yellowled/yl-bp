@@ -5,7 +5,6 @@ This is what I usually use to start projects. Derived from [H5BP](https://github
 [![Build Status](https://travis-ci.org/yellowled/yl-bp.svg?branch=master)](https://travis-ci.org/yellowled/yl-bp)
 [![Dependency Status](https://david-dm.org/yellowled/yl-bp.svg)](https://david-dm.org/yellowled/yl-bp)
 [![devDependency Status](https://david-dm.org/yellowled/yl-bp/dev-status.svg)](https://david-dm.org/yellowled/yl-bp#info=devDependencies)
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 ## Requirements
 
