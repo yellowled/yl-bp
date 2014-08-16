@@ -1,11 +1,11 @@
 // ADDITIONAL STYLES FOR MAGNIFIC POPUP
 // → github.com/dimsemenov/Magnific-Popup
 // --------------------------------------------------------------------
-@mixin modal-overlay($bg: $off-white, $maxw: 40em, $rempad: 1 2) {
-    background: $bg;
+@mixin modal-overlay($background-color: $off-white, $max-width: 40em, $rem-padding: 1 2) {
+    background: $background-color;
     margin: 0 auto;
-    max-width: $maxw;
-    @include x-rem(padding, $rempad);
+    max-width: $max-width;
+    @include x-rem(padding, $rem-padding);
     position: relative;
     width: auto;
 }
