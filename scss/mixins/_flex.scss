@@ -4,34 +4,96 @@
 
 // CONTAINER
 @mixin x-display-flex {
-    display: -webkit-box;   // Chrome 20-, iOS 6-, Safari 3.1  -6
-    display: -moz-box;      // FF 19-
-    display: -webkit-flex;  // Chrome 21 - 28
-    display: -ms-flexbox;   // IE 10
-    display: flex;          // FF 20+, Chrome 29+, Opera 12.1, 17+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
 }
 
-@mixin x-flex-direction() {}
+@mixin x-inline-flex {
+    display: -webkit-inline-box;
+    display: -moz-inline-flex;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+@mixin x-flex-direction($value: row) {
+    @if $value == row-reverse {
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: horizontal;
+    } @else if $value == column {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+    } @else if $value == column-reverse {
+        -webkit-box-direction: reverse;
+        -webkit-box-orient: vertical;
+    } @else {
+        -webkit-box-direction: normal;
+        -webkit-box-orient: horizontal;
+    }
+    -moz-flex-direction: $value;
+    -webkit-flex-direction: $value;
+    -ms-flex-direction: $value;
+    flex-direction: $value;
+}
 
 @mixin x-flex-wrap($value) {
-    // IE 10
     @if $value == nowrap {
         -ms-flex-wrap: none;
     } @else {
         -ms-flex-wrap: $value;
     }
-    -webkit-flex-wrap: $value;  // Chrome 20-, iOS 6-, Safari 3.1 - 6
-    flex-wrap: $value;          // FF 28+, Chrome 21+, Opera 12.1, 17+, IE 11
+    -webkit-flex-wrap: $value;
+    flex-wrap: $value;
 }
 
-@mixin x-flex-flow() {}
+@mixin x-flex-flow($values) {
+    -webkit-flex-flow: $values;
+    -moz-flex-flow: $values;
+    -ms-flex-flow: $values;
+    flex-flow: $values;
+}
 
-@mixin x-justify-content() {}
+@mixin x-justify-content($value: flex-start) {
+    @if $value == flex-start {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+    } @else if $value == flex-end {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+    } @else if $value == space-between {
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+    } @else if $value == space-around {
+        -ms-flex-pack: distribute;
+    } @else {
+        -webkit-box-pack: $value;
+        -ms-flex-pack: $value;
+    }
+    -moz-justify-content: $value;
+    -webkit-justify-content: $value;
+    justify-content: $value;
+}
 
-@mixin x-align-items() {}
+@mixin x-align-items($value: stretch) {
+    @if $value == flex-start {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+    } @else if $value == flex-end {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+    } @else {
+        -webkit-box-align: $value;
+        -ms-flex-align: $value;
+    }
+    -moz-align-items: $value;
+    -webkit-align-items: $value;
+    align-items: $value;
+}
 
 @mixin x-align-content ($value) {
-    // IE 10
     @if $value == flex-start {
         -ms-flex-line-pack: start;
     } @else if $value == flex-end {
@@ -43,32 +105,59 @@
     } @else {
         -ms-flex-line-pack: $value;
     }
-    -webkit-align-content: $value;  // Chrome 20-, iOS 6-, Safari 3.1 - 6
-    -moz-align-content: $value;     // FF 19-
-    align-content: $value;          // FF 20+, Chrome 21+, Opera 12.1, 17+, IE 11
+    -moz-align-content: $value;
+    -webkit-align-content: $value;
+    align-content: $value;
  }
 
 // ITEM
 @mixin x-order($value) {
-    -webkit-box-ordinal-group: $value;  // Chrome 20-, iOS 6-, Safari 3.1 - 6
-    -moz-box-ordinal-group: $value;     // FF 19-
-    -ms-flex-order: $value;             // IE 10
-    -webkit-order: $value;              // Chrome 21 - 28
-    order: $value;                      // FF 20+, Chrome 29+, Opera 12.1, 17+
+    -webkit-box-ordinal-group: $value;
+    -moz-box-ordinal-group: $value;
+    -ms-flex-order: $value;
+    -webkit-order: $value;
+    order: $value;
 }
 
-@mixin x-flex-grow() {}
+@mixin x-flex-grow($value: 0) {
+    -webkit-box-flex: $value;
+    -moz-flex-grow: $value;
+    -webkit-flex-grow: $value;
+    -ms-flex-positive: $value;
+    flex-grow: $value;
+}
 
-@mixin x-flex-shrink() {}
+@mixin x-flex-shrink($value: 1) {
+    -moz-flex-shrink: $int;
+    -webkit-flex-shrink: $int;
+    -ms-flex-negative: $int;
+    flex-shrink: $int;
+}
 
-@mixin x-flex-basis() {}
+@mixin x-flex-basis($value: auto) {
+    -moz-flex-basis: $value;
+    -webkit-flex-basis: $value;
+    -ms-flex-preferred-size: $value;
+    flex-basis: $value;
+}
 
 @mixin x-flex($values) {
-    -webkit-box-flex: $values;  // Chrome 20-, iOS 6-, Safari 3.1 - 6
-    -moz-box-flex: $values;     // FF 19-
-    -webkit-flex: $values;      // Chrome 21 - 28
-    -ms-flex: $values;          // IE 10
-    flex: $values;              // FF 20+, Chrome 29+, Opera 12.1, 17+
+    -webkit-box-flex: $values;
+    -moz-box-flex: $values;
+    -webkit-flex: $values;
+    -ms-flex: $values;
+    flex: $values;
 }
 
-@mixin x-align-self() {}
+@mixin x-align-self($value: auto) {
+    -moz-align-self: $value;
+    -webkit-align-self: $value;
+    @if $value == flex-start {
+        -ms-flex-item-align: start;
+    } @else if $value == flex-end {
+        -ms-flex-item-align: end;
+    } @else {
+        -ms-flex-item-align: $value;
+    }
+    align-self: $value;
+}
