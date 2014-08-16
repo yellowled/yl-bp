@@ -8,7 +8,7 @@ $img-breakpoint:    768px;
     @include x-rem(margin, 1 0);
 }
 
-// For use with → processwire.com
+// For use with ProcessWire
 @if $pw-img-classes {
     .align_left,
     .align_right {
@@ -28,7 +28,7 @@ $img-breakpoint:    768px;
     }
 
     @if $pw-img-classes {
-        // For use with → processwire.com
+        // For use with ProcessWire
         .align_left {
             @extend %image-left;
         }

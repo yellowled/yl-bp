@@ -20,7 +20,7 @@
 @if $ie8-support {
     .lt-ie9 {
         @if $pw-img-classes {
-            // For use with → processwire.com
+            // For use with ProcessWire
             .align_left {
                 @extend %oldie-image-left;
             }
