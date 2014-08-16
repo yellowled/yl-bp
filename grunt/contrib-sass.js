@@ -5,6 +5,7 @@ module.exports = function(grunt) {
         dev: {
             options: {
                 sourcemap: true,
+                trace: false,
                 style: 'nested',
                 precision: 5
             },
@@ -19,6 +20,7 @@ module.exports = function(grunt) {
         deploy: {
             options: {
                 sourcemap: true,
+                trace: false,
                 style: 'compressed',
                 precision: 5
             },
