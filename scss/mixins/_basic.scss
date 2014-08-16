@@ -20,18 +20,18 @@
 // CSS3 MIXINS
 // --------------------------------------------------------------------
 // github.com/drublic/Sass-Mixins/blob/master/partials/_box-sizing.scss
-@mixin x-box-sizing($property: border-box) {
-    -webkit-box-sizing: $property;
-    -moz-box-sizing: $property;
-    box-sizing: $property;
+@mixin x-box-sizing($value: border-box) {
+    -webkit-box-sizing: $value;
+    -moz-box-sizing: $value;
+    box-sizing: $value;
 }
 
 // developer.mozilla.org/en-US/docs/Web/CSS/hyphens
-@mixin x-hyphens($property) {
-    -webkit-hyphens: $property;
-    -moz-hyphens: $property;
-    -ms-hyphens: $property;
-    hyphens: $property;
+@mixin x-hyphens($value) {
+    -webkit-hyphens: $value;
+    -moz-hyphens: $value;
+    -ms-hyphens: $value;
+    hyphens: $value;
 }
 
 // github.com/drublic/Sass-Mixins/blob/master/partials/_linear-gradient.scss
