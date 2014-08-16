@@ -1,10 +1,10 @@
 // BASIC MIXINS
 // --------------------------------------------------------------------
 // Horizontal centering
-@mixin center-horizontal($center-width) {
+@mixin center-horizontal($width) {
     margin-left: auto;
     margin-right: auto;
-    width: $center-width;
+    width: $width;
 }
 
 // Vertical centering

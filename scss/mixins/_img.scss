@@ -10,12 +10,12 @@
 // FIGURES
 // --------------------------------------------------------------------
 // Simple figure
-@mixin simple-figure($border: $grey, $rhythm: 1) {
+@mixin simple-figure($border-color: $grey, $rhythm: 1) {
     @include x-rem(margin, $rhythm 0);
 
     img {
-        border-bottom: 1px solid $border;
-        border-top: 1px solid $border;
+        border-bottom: 1px solid $border-color;
+        border-top: 1px solid $border-color;
     }
 
     figcaption {

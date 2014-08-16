@@ -1,29 +1,29 @@
 // BUTTON TYPES
 // --------------------------------------------------------------------
 // Gradient button
-@mixin gradient-button($bg: $silver, $fg: $black, $rad: 4px) {
-    @include x-linear-gradient(lighten($bg, 13.2%), $bg);
+@mixin gradient-button($bg-color: $silver, $fg-color: $black, $radius: 4px) {
+    @include x-linear-gradient(lighten($bg-color, 13.2%), $bg-color);
     background-clip: padding-box;
     border: 1px solid;
-    border-color: $bg darken($bg, 13.2%) darken($bg, 26.5%);
-    border-radius: $rad;
-    color: $fg;
+    border-color: $bg-color darken($bg-color, 13.2%) darken($bg-color, 26.5%);
+    border-radius: $radius;
+    color: $fg-color;
     display: inline-block;
     line-height: normal;
     outline: 0;
     @include x-rem(padding, .1875 .625);
     text-align: center;
     text-decoration: none;
-    text-shadow: invert($fg) 0 1px 1px;
+    text-shadow: invert($fg-color) 0 1px 1px;
     width: auto;
 
     &:hover {
-        @include x-linear-gradient(lighten($bg, 13.2%), darken($bg, 6.5%));
+        @include x-linear-gradient(lighten($bg-color, 13.2%), darken($bg-color, 6.5%));
     }
 
     &:active {
-        @include x-linear-gradient(lighten($bg, 13.2%), lighten($bg, 6.5%));
-        border-color: darken($bg, 26.5%) darken($bg, 13.2%) $bg;
+        @include x-linear-gradient(lighten($bg-color, 13.2%), lighten($bg-color, 6.5%));
+        border-color: darken($bg-color, 26.5%) darken($bg-color, 13.2%) $bg-color;
         box-shadow: inset rgba($black, .25) 0 1px 2px 0;
     }
 
@@ -36,17 +36,17 @@
     &:visited,
     &:hover,
     &:focus {
-        color: $fg;
+        color: $fg-color;
     }
 }
 
 // Flat button
-@mixin flat-button($bg: $silver, $fg: $black, $rad: 4px, $ag: complement($bg)) {
-    background: $bg;
+@mixin flat-button($bg-color: $silver, $fg-color: $black, $radius: 4px, $alt-color: complement($bg-color)) {
+    background: $bg-color;
     background-clip: padding-box;
     border: 0 none;
-    border-radius: $rad;
-    color: $fg;
+    border-radius: $radius;
+    color: $fg-color;
     display: inline-block;
     line-height: normal;
     outline: 0;
@@ -58,11 +58,11 @@
 
     &:hover,
     &:focus {
-        background: $ag;
+        background: $alt-color;
     }
 
     &:active {
-        @include x-linear-gradient(lighten($bg, 13.2%), lighten($bg, 6.5%));
+        @include x-linear-gradient(lighten($bg-color, 13.2%), lighten($bg-color, 6.5%));
         box-shadow: none;
     }
 
@@ -75,6 +75,6 @@
     &:visited,
     &:hover,
     &:focus {
-        color: $fg;
+        color: $fg-color;
     }
 }
