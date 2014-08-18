@@ -28,12 +28,6 @@
 @import 'fontello/fontello';
 // @import 'fontello/fontello-ie7';
 
-// Modules
-@import 'modules/forms';
-@import 'modules/messages';
-@import 'modules/images';
-@import 'modules/navigation';
-
 // Plugins
 @import 'plugins/slideshow';
 @import '../scripts/magnific-popup/src/css/main.scss';
@@ -42,6 +36,12 @@
 @import 'plugins/googlemap';
 @import '../scripts/tablesaw/src/tables.stack-mixin.scss';
 @import '../scripts/flexnav/sass/flexnav.scss';
+
+// Modules
+@import 'modules/forms';
+@import 'modules/messages';
+@import 'modules/images';
+@import 'modules/navigation';
 
 // General
 @import 'main/typography';
