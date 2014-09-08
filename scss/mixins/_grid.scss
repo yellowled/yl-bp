@@ -17,7 +17,7 @@ $sgs-gutter:        15px;   // spacing between columns
 
 // Grid box
 @mixin grid-box($span-columns, $gutter: $sgs-gutter, $total-columns: $sgs-columns, $grid-type: 100%) {
-    @include x-box-sizing(border-box);
+    box-sizing: border-box;
 	float: left;
 	padding: 0 $gutter;
 	width: $grid-type * ($span-columns / $total-columns);

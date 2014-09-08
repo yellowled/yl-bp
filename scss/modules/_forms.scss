@@ -64,14 +64,6 @@ optgroup {
     font-style: normal;
 }
 
-// Not sure if this is still needed
-// input[type="radio"],
-// input[type="checkbox"] {
-//     position: relative;
-//     vertical-align: top;
-//     top: 5px;
-// }
-
 
 // STYLE FORM ELEMENTS (borrowed heavily from formalize.me)
 // --------------------------------------------------------------------
@@ -96,7 +88,7 @@ input[type="url"] {
     border: $input-border-type;
     border-color: $input-border-color;
     border-radius: $input-border-radius;
-    @include x-box-sizing(border-box);
+    box-sizing: border-box;
     color: $input-fg;
     height: 1.8em;
     outline: 0;
@@ -161,7 +153,5 @@ textarea[disabled] {
     box-shadow: none;
     color: $greyed-out;
     cursor: default;
-    -moz-user-select: -moz-none;
-    -webkit-user-select: none;
     user-select: none;
 }

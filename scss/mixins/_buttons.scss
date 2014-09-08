@@ -2,7 +2,8 @@
 // --------------------------------------------------------------------
 // Gradient button
 @mixin gradient-button($bg-color: $silver, $fg-color: $black, $radius: 4px) {
-    @include x-linear-gradient(lighten($bg-color, 13.2%), $bg-color);
+    background-color: lighten($bg-color, 13.2%);
+    background-image: linear-gradient(to bottom, lighten($bg-color, 13.2%), $bg-color);
     background-clip: padding-box;
     border: 1px solid;
     border-color: $bg-color darken($bg-color, 13.2%) darken($bg-color, 26.5%);
@@ -18,11 +19,13 @@
     width: auto;
 
     &:hover {
-        @include x-linear-gradient(lighten($bg-color, 13.2%), darken($bg-color, 6.5%));
+        background-color: lighten($bg-color, 13.2%);
+        background-image: linear-gradient(to bottom, lighten($bg-color, 13.2%), darken($bg-color, 6.5%));
     }
 
     &:active {
-        @include x-linear-gradient(lighten($bg-color, 13.2%), lighten($bg-color, 6.5%));
+        background-color: lighten($bg-color, 13.2%);
+        background-image: linear-gradient(to bottom, lighten($bg-color, 13.2%), darken($bg-color, 6.5%));
         border-color: darken($bg-color, 26.5%) darken($bg-color, 13.2%) $bg-color;
         box-shadow: inset rgba($black, .25) 0 1px 2px 0;
     }
@@ -62,7 +65,8 @@
     }
 
     &:active {
-        @include x-linear-gradient(lighten($bg-color, 13.2%), lighten($bg-color, 6.5%));
+        background-color: lighten($bg-color, 13.2%);
+        background-image: linear-gradient(to bottom, lighten($bg-color, 13.2%), darken($bg-color, 6.5%));
         box-shadow: none;
     }
 

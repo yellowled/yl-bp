@@ -58,12 +58,12 @@ q {
 // HYPHENATION
 // --------------------------------------------------------------------
 p {
-    @include x-hyphens(auto);
+    hyphens: auto;
 
     // not for preformatted text (inline)
     code,
     samp,
     kbd {
-        @include x-hyphens(none);
+        hyphens: none;
     }
 }

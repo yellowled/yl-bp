@@ -39,7 +39,7 @@
     figcaption {
         background: $off-black;
         background: rgba($black, .7);
-        @include x-box-sizing(border-box);
+        box-sizing: border-box;
         bottom: 0;
         color: $white;
         left: 0;
