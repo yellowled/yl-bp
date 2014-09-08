@@ -43,6 +43,7 @@ If a project doesn't require some of the [JS assets](#js-assets-included), uncom
 * [grunt-contrib-sass](https://npmjs.org/package/grunt-contrib-sass)
 * [grunt-contrib-uglify](https://npmjs.org/package/grunt-contrib-uglify)
 * [grunt-contrib-watch](https://npmjs.org/package/grunt-contrib-watch)
+* [grunt-autoprefixer](https://npmjs.org/package/grunt-autoprefixer)
 * [grunt-favicons](https://npmjs.org/package/grunt-favicons)
 * [grunt-fontello](https://npmjs.org/package/grunt-fontello)
 * [grunt-hashres](https://npmjs.org/package/grunt-hashres)
