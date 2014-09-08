@@ -29,6 +29,7 @@ module.exports = function(grunt) {
         'copy:deploy',
         'concat',
         'sass:deploy',
+        'autoprefixer:deploy',
         'uglify',
         'imagemin:deploy',
         'favicons:deploy',

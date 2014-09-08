@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     grunt.config('watch', {
         icons: {
             files: 'fontello.json',
-            tasks: ['fontello:build', 'sass:dev'],
+            tasks: ['fontello:build', 'sass:dev', 'autoprefixer:dev'],
             options: {
                 atBegin: true,
                 livereload: true,
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
         },
         scss: {
             files: 'scss/**/*.scss',
-            tasks: ['sass:dev'],
+            tasks: ['sass:dev', 'autoprefixer:dev'],
             options: {
                 atBegin: true,
                 livereload: false,
