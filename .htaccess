@@ -119,8 +119,8 @@ AddDefaultCharset utf-8
 # http://httpd.apache.org/docs/current/misc/perf-tuning.html#symlinks
 # http://www.rackspace.com/knowledge_center/frequently-asked-question/why-is-modrewrite-not-working-on-my-site
 <IfModule mod_rewrite.c>
-    Options +FollowSymlinks
-  # Options +SymLinksIfOwnerMatch
+  # Options +FollowSymlinks
+    Options +SymLinksIfOwnerMatch
     RewriteEngine On
   # RewriteBase /
 </IfModule>
