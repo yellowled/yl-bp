@@ -6,14 +6,14 @@ module.exports = function(grunt) {
             config: 'fontello.json',
             zip: 'scripts/',
             fonts: 'font/',
-            styles: 'scss/fontello/',
+            styles: 'scss/iconfont/',
             scss: true,
             force: true
         },
         build: {
             config: 'fontello.json',
             fonts: 'font/',
-            styles: 'scss/fontello/'
+            styles: 'scss/iconfont/'
         },
     });
 

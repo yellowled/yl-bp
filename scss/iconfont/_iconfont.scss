@@ -1,0 +1,12 @@
+// Hide fallback text if iconfonts are supported
+.fontface .fallback-text {
+    @extend %visuallyhidden;
+}
+
+// Hide iconfont icons if fontface is not supported
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    .no-fontface & {
+        @extend %hidden;
+    }
+}
