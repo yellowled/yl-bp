@@ -1,4 +1,4 @@
-// Hide fallback text if iconfonts are supported
+// Hide fallback text if fontface is supported
 .fontface .fallback-text {
     @extend %visuallyhidden;
 }
