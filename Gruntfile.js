@@ -21,6 +21,22 @@ module.exports = function(grunt) {
         'scsslint'
     ]);
 
+    // Staging
+    grunt.registerTask('stage', [
+        'clean:deploy',
+        'fontello:build',
+        'assemble:dev',
+        'copy:deploy',
+        'concat',
+        'sass:deploy',
+        'autoprefixer:deploy',
+        'uglify',
+        'imagemin:deploy',
+        'favicons:deploy',
+        'modernizr',
+        'hashres:deploy'
+    ]);
+
     // Deployment
     grunt.registerTask('deploy', [
         'clean:deploy',
