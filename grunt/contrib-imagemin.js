@@ -1,4 +1,4 @@
-// Optimize image assets (GIF/JPG/PNG/SVG)
+// Optimize bitmap images (GIF/JPG/PNG)
 
 module.exports = function(grunt) {
     grunt.config('imagemin', {
@@ -11,7 +11,7 @@ module.exports = function(grunt) {
             files: [{
                 expand: true,
                 cwd: '.',
-                src: ['img/**/*.{gif,jpg,png,svg}'],
+                src: ['img/**/*.{gif,jpg,png}'],
                 dest: 'dist/'
             }],
         },
