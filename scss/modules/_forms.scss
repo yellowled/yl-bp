@@ -18,7 +18,7 @@ fieldset {
     padding: 0;
 }
 
-button,
+form button,
 input,
 select,
 textarea {
@@ -134,7 +134,7 @@ textarea {
 
 // FORM BUTTONS
 // --------------------------------------------------------------------
-button,
+form button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
@@ -144,7 +144,7 @@ input[type="submit"] {
 
 // DISABLED FORM ELEMENTS
 // --------------------------------------------------------------------
-button[disabled],
+form button[disabled],
 input[disabled],
 select[disabled],
 select[disabled] option,
