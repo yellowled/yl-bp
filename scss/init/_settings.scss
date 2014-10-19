@@ -13,6 +13,10 @@ $ie7-support: false;
 // Support IE8
 $ie8-support: true;
 
+@if $ie7-support {
+    $ie8-support: true;
+}
+
 // Include helper classes
 $helper-classes: false;
 // Include clearfix class
