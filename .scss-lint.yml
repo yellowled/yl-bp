@@ -1,9 +1,11 @@
 # Default application configuration that all configurations inherit from.
 linters:
-  BorderZero:
-    enabled: true
+  BangFormat:
+  enabled: true
+  space_before_bang: true
+  space_after_bang: false
 
-  CapitalizationInSelector:
+  BorderZero:
     enabled: true
 
   ColorKeyword:
@@ -21,6 +23,10 @@ linters:
   DuplicateProperty:
     enabled: true
 
+  ElsePlacement:
+    enabled: true
+    style: same_line
+
   EmptyLineBetweenBlocks:
     enabled: true
     ignore_single_line_blocks: true
@@ -32,19 +38,28 @@ linters:
     enabled: true
     present: true
 
-  HexFormat:
+  HexLength:
+    enabled: true
+    style: short
+
+  HexNotation:
+    enabled: true
+    style: lowercase
+
+  HexValidation:
     enabled: true
 
   IdWithExtraneousSelector:
     enabled: true
 
   Indentation:
-    enabled: false
-    width: 1
+    enabled: true
+    character: space
+    width: 4
 
   LeadingZero:
     enabled: true
-    style: exclude_zero # or 'include_zero'
+    style: exclude_zero
 
   MergeableSelector:
     enabled: true
@@ -52,7 +67,11 @@ linters:
 
   NameFormat:
     enabled: true
-    convention: hyphenated_lowercase # or 'BEM', or a regex pattern
+    convention: hyphenated_lowercase
+
+  NestingDepth:
+    enabled: true
+    max_depth: 3
 
   PlaceholderInExtend:
     enabled: true
@@ -68,8 +87,17 @@ linters:
     enabled: true
     max_depth: 3
 
+  SelectorFormat:
+    enabled: true
+    convention: hyphenated_lowercase
+    ignored_names: []
+
   Shorthand:
     enabled: true
+
+  SingleLinePerProperty:
+    enabled: true
+    allow_single_line_rule_sets: false
 
   SingleLinePerSelector:
     enabled: true
@@ -79,6 +107,7 @@ linters:
 
   SpaceAfterPropertyColon:
     enabled: true
+    style: one_space
 
   SpaceAfterPropertyName:
     enabled: true
@@ -86,6 +115,7 @@ linters:
   SpaceBeforeBrace:
     enabled: true
     allow_single_line_padding: false
+    style: space
 
   SpaceBetweenParens:
     enabled: true
@@ -93,12 +123,18 @@ linters:
 
   StringQuotes:
     enabled: true
-    style: single_quotes # or double_quotes
+    style: single_quotes
 
-  TrailingSemicolonAfterPropertyValue:
+  TrailingSemicolon:
     enabled: true
 
+  TrailingZero:
+    enabled: false
+
   UnnecessaryMantissa:
+    enabled: true
+
+  UnnecessaryParentReference:
     enabled: true
 
   UrlFormat:
@@ -106,6 +142,12 @@ linters:
 
   UrlQuotes:
     enabled: true
+
+  VendorPrefixes:
+    enabled: true
+    identifier_list: base
+    include: []
+    exclude: []
 
   ZeroUnit:
     enabled: true
