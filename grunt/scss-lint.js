@@ -11,8 +11,9 @@ module.exports = function(grunt) {
             config: '.scss-lint.yml',
             exclude: [
                 'scss/core/_normalize.scss',
+                'scss/iconfont/*',
                 'scss/main/_oldie.scss',
-                'scss/fontello/*'
+                'scss/modules/_images.scss'
             ],
             reporterOutput: null
         },
