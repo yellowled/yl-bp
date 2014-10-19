@@ -9,7 +9,7 @@
 	&:before {
 		border-color: darken($box-color, 25%) $container-color;
         border-style: solid;
-        border-width: 0 1em 1em 0;
+        @include x-rem(border-width, 0 1 1 0);
         box-shadow: 0 1px 1px rgba(0, 0, 0, .3), -1px 1px 1px rgba(0, 0, 0, .2);
 		content: '';
 		display: block;

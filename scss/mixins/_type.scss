@@ -11,26 +11,26 @@
 
 // html5doctor.com/blockquote-q-cite/
 @mixin smart-blockquotes {
-    & p {
+    p {
         quotes: '“' '”';
     }
 
-    & p:before {
+    p:before {
         content: '';
         content: no-open-quote;
     }
 
-    & p:after {
+    p:after {
         content: '';
         content: no-close-quote;
     }
 
-    & p:first-of-type:before {
+    p:first-of-type:before {
         content: '“';
         content: open-quote;
     }
 
-    & p:last-of-type:after {
+    p:last-of-type:after {
         content: '”';
         content: close-quote;
     }
@@ -65,8 +65,8 @@
     }
 
     // Quote source attribution
-    & > cite,
-    & > footer {
+    > cite,
+    > footer {
         display: block;
 
         &:before { content: '– '; }
