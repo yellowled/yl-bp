@@ -6,13 +6,13 @@
 }
 
 
-// SETTINGS SPECIFIC TO THIS PROJECT
+// SETTINGS SPECIFIC FOR THIS PROJECT
 // --------------------------------------------------------------------
 // Support IE7
 $ie7-support: false;
 // Support IE8
 $ie8-support: true;
-
+// IE7-Support means IE8-Support
 @if $ie7-support {
     $ie8-support: true;
 }
