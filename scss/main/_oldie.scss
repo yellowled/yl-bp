@@ -1,13 +1,21 @@
 // EXTENDS FOR OLDIE
 // --------------------------------------------------------------------
+// Margins for images
+$ie-left-margin:   4px 16px 8px 0 !default;
+$ie-right-margin:  4px 0 8px 16px !default;
+// Chromeframe
+$cf-bg:             $silver !default;
+$cf-fg:             $off-black !default;
+
+
 %oldie-image-left {
     float: left;
-    margin: 4px 16px 8px 0;
+    margin: $ie-left-margin;
 }
 
 %oldie-image-right {
     float: right;
-    margin: 4px 0 8px 16px;
+    margin: $ie-right-margin;
 }
 
 %box-sizing-polyfill {
@@ -95,8 +103,8 @@ html {
 
 // Chrome frame prompt
 .chromeframe {
-    background: $silver;
-    color: $off-black;
+    background: $cf-bg;
+    color: $cf-fg;
     margin: 0;
     padding: 4px;
     position: absolute;
