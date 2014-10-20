@@ -3,18 +3,24 @@
 // --------------------------------------------------------------------
 // Usage:
 // jquery.malsup.com/cycle2/demo/
+
+$gauge-bg: rgba($black, .7) !default;
+$gauge-fg: $off-white !default;
+$control-fg: rgba($off-white, .7) !default;
+
+
 %cycle-gauge {
-    background: rgba($black, .7);
-    color: $off-white;
+    background: $gauge-bg;
+    color: $gauge-fg;
     position: absolute;
     z-index: 5000;
 }
 
 %cycle-control {
-    color: rgba($off-white, .7);
+    color: $control-fg;
     cursor: pointer;
 
     &:hover {
-        color: $off-white;
+        color: $gauge-fg;
     }
 }
