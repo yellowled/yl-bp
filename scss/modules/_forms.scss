@@ -1,13 +1,13 @@
 // DEFAULTS
 // --------------------------------------------------------------------
-$input-bg:              $off-white;
-$input-fg:              $off-black;
-$input-focus:           #06f;
-$input-placeholder:     $greyed-out;
+$input-bg:              $off-white !default;
+$input-fg:              $off-black !default;
+$input-focus:           #06f !default;
+$input-placeholder:     $greyed-out !default;
 
-$input-border-radius:   0;
-$input-border-type:     1px solid;
-$input-border-color:    #c1c1c1 #c1c1c1 #e1e1e1;
+$input-border-radius:   0 !default;
+$input-border-type:     1px solid !default;
+$input-border-color:    #c1c1c1 #c1c1c1 #e1e1e1 !default;
 
 
 // NORMALIZE FORM ELEMENTS (borrowed heavily from formalize.me)
