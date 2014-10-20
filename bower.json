@@ -11,7 +11,7 @@
         "jquery":                   "~1.11.1",
         "jquery-accessible-tabs":   "~1.9.8",
         "jQuery-Collapse":          "~1.1.1",
-        "jquery-cycle2":            "~2.1.5",
+        "jquery-cycle2":            "~2.1.6",
         "magnific-popup":           "~0.9.9",
         "modernizr":                "~2.8.3",
         "tablesaw":                 "~0.1.6"
