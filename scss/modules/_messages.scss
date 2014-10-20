@@ -1,3 +1,19 @@
+// DEFAULTS
+// --------------------------------------------------------------------
+$warning-bg:    #f2dede !default;
+$warning-bc:    #eed3d7 !default;
+$warning-fg:    #b94a2b !default;
+$success-bg:    #dff0d8 !default;
+$success-bc:    #d6e9c6 !default;
+$success-fg:    #468847 !default;
+$notice-bg:     #d9edf7 !default;
+$notice-bc:     #bce8f1 !default;
+$notice-fg:     #3a87ad !default;
+$question-bg:   #fcf8e3 !default;
+$question-bc:   #fbeed5 !default;
+$question-fg:   #c09853 !default;
+
+
 // BASIC MESSAGE
 // --------------------------------------------------------------------
 %message {
@@ -19,32 +35,32 @@
     .msg-warning {
         @extend %message;
 
-        background: #f2dede;
-        border-color: #eed3d7;
-        color: #b94a2b;
+        background: $warning-bg;
+        border-color: $warning-bc;
+        color: $warning-fg;
     }
 
     .msg-success {
         @extend %message;
 
-        background: #dff0d8;
-        border-color: #d6e9c6;
-        color: #468847;
+        background: $success-bg;
+        border-color: $success-bc;
+        color: $success-fg;
     }
 
     .msg-notice {
         @extend %message;
 
-        background: #d9edf7;
-        border-color: #bce8f1;
-        color: #3a87ad;
+        background: $notice-bg;
+        border-color: $notice-bc;
+        color: $notice-fg;
     }
 
     .msg-question {
         @extend %message;
 
-        background: #fcf8e3;
-        border-color: #fbeed5;
-        color: #c09853;
+        background: $question-bg;
+        border-color: $question-bc;
+        color: $question-fg;
     }
 }
