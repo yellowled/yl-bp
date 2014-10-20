@@ -1,11 +1,15 @@
 // RESPONSIVE FLOATED IMAGES
 // --------------------------------------------------------------------
 // Breakpoint for floated images
-$img-breakpoint:    768px;
+$img-breakpoint:    768px !default;
+// Margins for images
+$img-margin:        1 0 !default;
+$img-left-margin:   .25 1 .75 0 !default;
+$img-right-margin:  .25 0 .75 1 !default;
 
 %image-block {
     display: block;
-    @include x-rem(margin, 1 0);
+    @include x-rem(margin, $img-margin);
 }
 
 // For use with ProcessWire
@@ -19,12 +23,12 @@ $img-breakpoint:    768px;
 @media only screen and (min-width: $img-breakpoint) {
     %image-left {
         float: left;
-        @include x-rem(margin, .25 1 .75 0);
+        @include x-rem(margin, $img-left-margin);
     }
 
     %image-right {
         float: right;
-        @include x-rem(margin, .25 0 .75 1);
+        @include x-rem(margin, $img-right-margin);
     }
 
     @if $pw-img-classes {
@@ -41,7 +45,7 @@ $img-breakpoint:    768px;
 
 // Figures
 figure {
-    @include x-rem(margin, 1 0);
+    @extend %image-block;
 }
 
 // Figures/images in MagnificPopup
