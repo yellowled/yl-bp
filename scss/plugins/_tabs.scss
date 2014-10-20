@@ -14,22 +14,20 @@
 //     currentInfoClass: 'tabs-info',
 //     syncheights: true
 // });
+$tabswidth:         480px !default;
 
+$bordercolor:       $grey !default;
+$background:        $white !default;
+$current-color:     $off-black !default;
+$inactive:          $lite-grey !default;
+$inactive-color:    $greyed-out !default;
 
-$tabswidth:   480px;
+$tabs-margin:       1 !default;
+$tabs-padding:      .625 !default;
+$tabs-gap:          4px !default;
 
-$bordercolor:       $grey;
-$background:        $white;
-$current-color:     $off-black;
-$inactive:          $lite-grey;
-$inactive-color:    $greyed-out;
-
-$tabs-margin:       1;
-$tabs-padding:      .625;
-$tabs-gap:          4px;
-
-$tab-border:        1px solid $bordercolor;
-$inverse-border:    1px solid $background;
+$tab-border:        1px solid $bordercolor !default;
+$inverse-border:    1px solid $background !default;
 $content-border:    0 $tabs-gap $tabs-gap;
 $list-border:       $tabs-gap $tabs-gap 0 0;
 
