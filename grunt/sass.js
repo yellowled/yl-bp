@@ -4,9 +4,9 @@ module.exports = function(grunt) {
     grunt.config('sass', {
         dev: {
             options: {
-                sourcemap: 'auto',
-                trace: false,
-                style: 'nested',
+                outputStyle: 'nested',
+                imagePath: 'img',
+                sourceMap: true,
                 precision: 5
             },
             files: [{
@@ -19,9 +19,9 @@ module.exports = function(grunt) {
         },
         deploy: {
             options: {
-                sourcemap: 'auto',
-                trace: false,
-                style: 'compressed',
+                outputStyle: 'compressed',
+                imagePath: 'img',
+                sourceMap: true,
                 precision: 5
             },
             files: [{
@@ -34,5 +34,5 @@ module.exports = function(grunt) {
         },
     });
 
-    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-sass');
 };
