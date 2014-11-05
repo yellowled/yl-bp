@@ -68,3 +68,57 @@ video,
 img {
     @include responsive-media;
 }
+
+
+// HINT
+// --------------------------------------------------------------------
+// Chrome frame prompt
+// Chromeframe
+$cf-bg:             $silver !default;
+$cf-fg:             $off-black !default;
+
+%chromeframe {
+    background: $cf-bg;
+    color: $cf-fg;
+    left: 0;
+    margin: 0;
+    padding: 4px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+@if $browse-happy-msg {
+    #browse-happy {
+        @extend %chromeframe;
+
+        .no-js & {
+            top: 32px;
+        }
+    }
+
+    html.lt-ie9 {
+        padding-top: 32px;
+    }
+
+    @if $enable-js-msg {
+        html.lt-ie9.no-js {
+            padding-top: 64px;
+        }
+    }
+}
+
+@if $enable-js-msg {
+    #enable-js {
+        @extend %chromeframe;
+
+        .js & {
+            @extend %hidden;
+        }
+    }
+
+    html.no-js {
+        padding-top: 32px;
+    }
+}

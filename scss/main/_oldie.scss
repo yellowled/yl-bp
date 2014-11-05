@@ -3,9 +3,6 @@
 // Margins for images
 $ie-left-margin:   4px 16px 8px 0 !default;
 $ie-right-margin:  4px 0 8px 16px !default;
-// Chromeframe
-$cf-bg:             $silver !default;
-$cf-fg:             $off-black !default;
 
 
 %oldie-image-left {
@@ -92,24 +89,4 @@ $cf-fg:             $off-black !default;
             padding-top: 1px;
         }
     }
-}
-
-
-// OLDIE HINT
-// --------------------------------------------------------------------
-html {
-    padding-top: 24px;
-}
-
-// Chrome frame prompt
-.chromeframe {
-    background: $cf-bg;
-    color: $cf-fg;
-    margin: 0;
-    padding: 4px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    text-align: center;
-    width: 100%;
 }
