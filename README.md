@@ -82,8 +82,9 @@ If a project doesn't require some of the [JS assets](#js-assets-included), uncom
 * [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup)
 * [tablesaw](https://github.com/filamentgroup/tablesaw)
 
-### JS helpers
+### JS plugins
 
 * [AccessifyHTML5](https://github.com/yatil/accessifyhtml5.js)
 * [box-sizing-Polyfill](https://github.com/Schepp/box-sizing-polyfill)
 * [H5BP log](https://github.com/h5bp/html5-boilerplate/blob/master/src/js/plugins.js)
+* [lazysizes](https://github.com/aFarkas/lazysizes)
