@@ -20,7 +20,7 @@ dd {
 }
 
 table {
-    @include x-rem(margin, 1);
+    @include x-rem(margin, $type-rhythm 0);
     width: 100%;
 
     caption {

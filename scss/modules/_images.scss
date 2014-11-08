@@ -2,9 +2,9 @@
 // --------------------------------------------------------------------
 // Defaults
 $img-breakpoint:    768px !default; // Breakpoint for floated images
-$img-margin:        1 0 !default;   // Margins for images
-$img-left-margin:   .25 1 .75 0 !default;
-$img-right-margin:  .25 0 .75 1 !default;
+$img-margin:        $type-rhythm 0 !default;   // Margins for images
+$img-left-margin:   .25 $type-rhythm .75 0 !default;
+$img-right-margin:  .25 0 .75 $type-rhythm !default;
 
 
 %image-block {

@@ -23,7 +23,7 @@ h3,
 h4,
 h5,
 h6 {
-    @include x-rem(margin, 1 0);
+    @include x-rem(margin, $type-rhythm 0);
 }
 
 h5,

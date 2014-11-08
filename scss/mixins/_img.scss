@@ -28,7 +28,7 @@
 // FIGURES
 // --------------------------------------------------------------------
 // Simple figure
-@mixin simple-figure($border-color: $grey, $rhythm: 1) {
+@mixin simple-figure($border-color: $grey, $rhythm: $type-rhythm) {
     @include x-rem(margin, $rhythm 0);
 
     img {
@@ -42,7 +42,7 @@
 }
 
 // Fancy figure
-@mixin fancy-figure($rhythm: 1) {
+@mixin fancy-figure($rhythm: $type-rhythm) {
     @include x-rem(margin, $rhythm 0);
     position: relative;
 

@@ -23,7 +23,6 @@ $current-color:     $off-black !default;
 $inactive:          $lite-grey !default;
 $inactive-color:    $greyed-out !default;
 
-$tabs-margin:       1 !default;
 $tabs-padding:      .625 !default;
 $tabs-gap:          4px !default;
 
@@ -33,6 +32,7 @@ $inverse-border:    1px solid $background !default;
 // Settings
 $content-border:    0 $tabs-gap $tabs-gap;
 $list-border:       $tabs-gap $tabs-gap 0 0;
+$tabs-margin:       $type-rhythm;
 
 
 @mixin tabs-hidden-info {

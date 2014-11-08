@@ -23,7 +23,7 @@ $msg-padding:   .5 !default;
     border: 1px solid;
     border-radius: 4px;
     @include x-rem(font-size, $msg-font-size);
-    @include x-rem(margin, 1 0);
+    @include x-rem(margin, $type-rhythm 0);
     @include x-rem(padding, $msg-padding);
 
     p {
