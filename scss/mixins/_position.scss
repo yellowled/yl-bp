@@ -1,0 +1,8 @@
+// POSITIONING MIXINS
+// --------------------------------------------------------------------
+// Horizontal centering
+@mixin center-horizontal($width: 100%) {
+    margin-left: auto;
+    margin-right: auto;
+    width: $width;
+}

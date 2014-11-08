@@ -1,11 +1,11 @@
 // RESPONSIVE FLOATED IMAGES
 // --------------------------------------------------------------------
-// Breakpoint for floated images
-$img-breakpoint:    768px !default;
-// Margins for images
-$img-margin:        1 0 !default;
+// Defaults
+$img-breakpoint:    768px !default; // Breakpoint for floated images
+$img-margin:        1 0 !default;   // Margins for images
 $img-left-margin:   .25 1 .75 0 !default;
 $img-right-margin:  .25 0 .75 1 !default;
+
 
 %image-block {
     display: block;

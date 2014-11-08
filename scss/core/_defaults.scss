@@ -70,12 +70,12 @@ img {
 }
 
 
-// HINT
+// HINT MSG (CHROMEFRAME + ENABLE JS)
 // --------------------------------------------------------------------
-// Chrome frame prompt
-// Chromeframe
-$cf-bg:             $silver !default;
-$cf-fg:             $off-black !default;
+// Defaults
+$cf-bg:     $silver !default;
+$cf-fg:     $off-black !default;
+
 
 %chromeframe {
     background: $cf-bg;

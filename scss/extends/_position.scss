@@ -1,16 +1,9 @@
-// BASIC MIXINS
+// POSITIONING
 // --------------------------------------------------------------------
-// Horizontal centering
-@mixin center-horizontal($width: 100%) {
-    margin-left: auto;
-    margin-right: auto;
-    width: $width;
-}
-
 // Vertical centering
 // zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
 // parent element needs a defined height; use w/ .csstransforms
-@mixin center-vertical() {
+%center-vertical {
     position: relative;
     top: 50%;
     transform: translateY(-50%);

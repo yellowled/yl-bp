@@ -5,23 +5,24 @@
 @import 'init/variables';
 
 // Mixins
-@import 'mixins/basic';
 @import 'mixins/buttons';
 @import 'mixins/grid';
 @import 'mixins/img';
+@import 'mixins/position';
 @import 'mixins/shapes';
 @import 'mixins/tables';
 @import 'mixins/type';
 @import 'mixins/units';
 
-// Extends
-@import 'extends/elements';
-@import 'extends/classes';
-
 // Core
 @import 'core/normalize';
 @import 'core/helpers';
 @import 'core/defaults';
+
+// Extends
+@import 'extends/elements';
+@import 'extends/classes';
+@import 'extends/position';
 
 // Fontello
 @import 'iconfont/fontello';

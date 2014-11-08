@@ -1,5 +1,6 @@
-// DEFAULTS
+// MESSAGES
 // --------------------------------------------------------------------
+// Defaults
 $warning-bg:    #f2dede !default;
 $warning-bc:    #eed3d7 !default;
 $warning-fg:    #b94a2b !default;
@@ -12,6 +13,8 @@ $notice-fg:     #3a87ad !default;
 $question-bg:   #fcf8e3 !default;
 $question-bc:   #fbeed5 !default;
 $question-fg:   #c09853 !default;
+$msg-font-size: .8125 !default;
+$msg-padding:   .5 !default;
 
 
 // BASIC MESSAGE
@@ -19,9 +22,9 @@ $question-fg:   #c09853 !default;
 %message {
     border: 1px solid;
     border-radius: 4px;
-    @include x-rem(font-size, .8125);
+    @include x-rem(font-size, $msg-font-size);
     @include x-rem(margin, 1 0);
-    @include x-rem(padding, .5);
+    @include x-rem(padding, $msg-padding);
 
     p {
         margin: 0;

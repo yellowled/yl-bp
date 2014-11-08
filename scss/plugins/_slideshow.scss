@@ -1,9 +1,10 @@
 // JQUERY CYCLE2
 // jquery.malsup.com/cycle2/
 // --------------------------------------------------------------------
-$gauge-bg: rgba($black, .7) !default;
-$gauge-fg: $off-white !default;
-$control-fg: rgba($off-white, .7) !default;
+// Defaults
+$gauge-bg:      rgba($black, .7) !default;
+$gauge-fg:      $off-white !default;
+$control-fg:    rgba($off-white, .7) !default;
 
 
 %cycle-gauge {

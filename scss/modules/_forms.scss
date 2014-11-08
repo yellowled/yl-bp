@@ -1,5 +1,6 @@
-// DEFAULTS
+// NORMALIZE FORM ELEMENTS (borrowed heavily from formalize.me)
 // --------------------------------------------------------------------
+// Defaults
 $input-bg:              $off-white !default;
 $input-fg:              $off-black !default;
 $input-focus:           #06f !default;
@@ -10,8 +11,6 @@ $input-border-type:     1px solid !default;
 $input-border-color:    #c1c1c1 #c1c1c1 #e1e1e1 !default;
 
 
-// NORMALIZE FORM ELEMENTS (borrowed heavily from formalize.me)
-// --------------------------------------------------------------------
 fieldset {
     border: 0;
     margin: 0;
@@ -19,9 +18,9 @@ fieldset {
 }
 
 form button,
-input,
 select,
-textarea {
+textarea,
+input {
     &:focus {
         box-shadow: 0 0 5px 0 $input-focus;
         z-index: 1; // Opera
@@ -75,13 +74,13 @@ input[type="number"],
 input[type="password"],
 input[type="time"],
 input[type="week"],
-textarea,
-select,
 input[type="email"],
 input[type="search"],
 input[type="tel"],
-input[type="text"],
-input[type="url"] {
+input[type="url"],
+select,
+textarea,
+input[type="text"] {
     -webkit-appearance: none;
     background-clip: padding-box;
     background-color: $input-bg;
@@ -101,9 +100,9 @@ input[type="url"] {
 }
 
 // Override these
-textarea,
 select[size],
-select[multiple] {
+select[multiple],
+textarea {
     height: auto;
 }
 
@@ -145,11 +144,11 @@ input[type="submit"] {
 // DISABLED FORM ELEMENTS
 // --------------------------------------------------------------------
 form button[disabled],
-input[disabled],
 select[disabled],
 select[disabled] option,
 select[disabled] optgroup,
-textarea[disabled] {
+textarea[disabled],
+input[disabled] {
     box-shadow: none;
     color: $greyed-out;
     cursor: default;
