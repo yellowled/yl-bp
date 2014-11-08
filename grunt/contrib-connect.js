@@ -2,16 +2,9 @@
 
 module.exports = function(grunt) {
     grunt.config('connect', {
-        livereload: {
+        server: {
             options: {
                 port: 9001,
-                middleware: function(connect, options) {
-                    return[
-                        require('connect-livereload')(),
-                        connect.static(options.base[0]),
-                        connect.directory(options.base)
-                    ];
-                }
             },
         },
     });

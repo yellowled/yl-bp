@@ -68,7 +68,6 @@ If a project doesn't require some of the [JS assets](#js-assets-included), uncom
 * [grunt-scss-lint](https://www.npmjs.org/package/grunt-scss-lint)
 * [grunt-svgmin](https://www.npmjs.org/package/grunt-svgmin)
 * [assemble](https://www.npmjs.org/package/assemble)
-* [connect-livereload](https://www.npmjs.org/package/connect-livereload)
 
 ## JS assets included
 

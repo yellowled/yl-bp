@@ -25,7 +25,7 @@ module.exports = function(grunt) {
     grunt.registerTask('stage', [
         'clean:deploy',
         'fontello:build',
-        'assemble:dev',
+        'assemble:stage',
         'copy:deploy',
         'concat',
         'sass:deploy',

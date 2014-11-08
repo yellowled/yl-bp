@@ -40,7 +40,6 @@
         "grunt-sass":               "~0.16.0",
         "grunt-scss-lint":          "~0.3.0",
         "grunt-svgmin":             "~1.0.0",
-        "assemble":                 "~0.4.41",
-        "connect-livereload":       "~0.5.0"
+        "assemble":                 "~0.4.41"
     }
 }

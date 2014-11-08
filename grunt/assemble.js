@@ -10,17 +10,27 @@ module.exports = function(grunt) {
         },
         dev: {
             options: {
-                production: false
+                production: false,
+                remote: false
             },
             src: ['*.hbs'],
             dest: './'
         },
-        deploy: {
+        stage: {
             options: {
-                production: true
+                production: false,
+                remote: true
             },
             src: ['*.hbs'],
-            dest: './'
+            dest: 'dist/'
+        },
+        deploy: {
+            options: {
+                production: true,
+                remote: true
+            },
+            src: ['*.hbs'],
+            dest: 'dist/'
         }
     });
 
