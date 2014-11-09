@@ -25,7 +25,7 @@ Please refer to the documentation of your OS and/or the documentation of these r
 ### Basic concepts
 
 * HTML is compiled from [Handlebars](http://handlebarsjs.com) templates using [assemble](http://assemble.io). Layouts are in `src/tpl/`, partials in `src/inc/`; pages should be kept in `/`. Markup files (`.html`) are explicitly excluded from the repository in the `.gitignore`.
-* CSS is compiled from [Sass](http://sass-lang.com) using [libsass](http://libsass.org) and [autoprefixer](https://github.com/nDmitry/grunt-autoprefixer) (no need to write vendor prefixes). The main SCSS files are `scss/master.scss` and `scss/oldie.scss` (for IE < 9), which `@import` partials from the subdirectories of `scss/`. `@media` queries should be written [mobile first](http://bradfrostweb.com/blog/web/mobile-first-responsive-web-design/).
+* CSS is compiled from [Sass](http://sass-lang.com) using [libsass](http://libsass.org) and [autoprefixer](https://github.com/nDmitry/grunt-autoprefixer) (no need to write vendor prefixes). The main SCSS files `@import` partials from the subdirectories of `scss/`. `@media` queries should be written [mobile first](http://bradfrostweb.com/blog/web/mobile-first-responsive-web-design/). (Also see [(S)CSS structure](#css).)
 * JS and [jQuery](http://jquery.com) packages are (mostly) managed by Bower, which is configured to import them to the `scripts/` directory. Most of the JS assets are concatenated into a single file (`scripts/master.js`) by the build script. Any JS specific to the project should go into the `scripts/main.js` file.
 * To avoid CSS hacks, [conditional classes](http://www.paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/) are available; also, [Modernizr](http://modernizr.com) is included for feature detection. A customized build of Modernizr will be created by the build script.
 
@@ -36,9 +36,11 @@ In the project directory:
 1. `npm install` (install [Grunt plugins](#grunt-plugins-used) required for build script; also executes `bower install` to install [JS assets](#js-assets-included) included in this boilerplate automagically)
 2. `grunt` (start build script with default task, which is starting a simple local webserver and running the `watch` task)
 
+[Additional Grunt tasks](#additional-grunt-tasks) are available for testing and deploying code to staging and live servers.
+
 ### “I don't need …”
 
-If a project doesn't require some of the [JS assets](#js-assets-included), uncomment them in `grunt/contrib-concat.js` before running `grunt`. Optionally, also remove them from `bower.json` before install.
+If a project doesn't require some of the [JS assets](#js), uncomment them in `grunt/contrib-concat.js` before running `grunt`. Optionally, also remove them from `bower.json` before install.
 
 ## Grunt
 
