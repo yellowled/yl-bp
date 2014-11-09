@@ -36,6 +36,12 @@ In the project directory:
 1. `npm install` (install [Grunt plugins](#grunt-plugins-used) required for build script; also executes `bower install` to install [JS assets](#js-assets-included) included in this boilerplate automagically)
 2. `grunt` (start build script with default task, which is starting a simple local webserver and running the `watch` task)
 
+### “I don't need …”
+
+If a project doesn't require some of the [JS assets](#js-assets-included), uncomment them in `grunt/contrib-concat.js` before running `grunt`. Optionally, also remove them from `bower.json` before install.
+
+## Grunt
+
 ### Additional Grunt tasks
 
 * `grunt stage` – build to `dist` directory for staging
@@ -44,11 +50,7 @@ In the project directory:
 
 The only difference between `grunt stage` and `grunt deploy` is that the first one uses the `stage` target of the `assemble` task. In the `stage` target, the variable `production` is set to `false`, which makes it possible to use e.g. `{{#unless production}}{{/unless}}` in Handlebars templates (`.hbs`) to alter the generated HTML for staging or production environments. As an example, this can be used to exclude Google Analytics or Piwik snippets on staging servers.
 
-### “I don't need …”
-
-If a project doesn't require some of the [JS assets](#js-assets-included), uncomment them in `grunt/contrib-concat.js` before running `grunt`. Optionally, also remove them from `bower.json` before install.
-
-## Grunt plugins used
+### Plugins used
 
 * [grunt-contrib-clean](https://npmjs.org/package/grunt-contrib-clean)
 * [grunt-contrib-concat](https://npmjs.org/package/grunt-contrib-concat)
@@ -69,9 +71,24 @@ If a project doesn't require some of the [JS assets](#js-assets-included), uncom
 * [grunt-svgmin](https://www.npmjs.org/package/grunt-svgmin)
 * [assemble](https://www.npmjs.org/package/assemble)
 
-## JS assets included
+## CSS
 
-### jQuery plugins
+This boilerplate uses Sass, more specifically its dialect SCSS, to generate two CSS files. `styles/master.css` is the main stylesheet, `styles/oldie.css` is a fallback stylesheet for IE < 9. `oldie.css` is necessary because the (S)CSS is supposed to be written mobile-first, which means IE < 9 needs this workaround because it doesn't support media queries for responsive web design.
+
+Most of the partials in `scss` and its subdirectories are **not** meant to be edited (in order to make it easier to update projects). You should not need to edit files in `scss` other than:
+
+* the main SCSS files `master.scss` and `oldie.scss` – to exclude partials the project doesn't need, preferably by commenting them out
+* partials in `scss/init` – these are for project-bases settings and variables
+* partials in `scss/main` – common styles for all resolutions, specific styles for IE < 9, print styles
+* partials in `scss/layout` – styles for the resolutions corresponding to the breakpoints set in `scss/core/_media.scss`
+
+### Overriding defaults
+
+Some of the variables defined in partials use Sass's `!default` flag. These variables can be easily overridden by setting them in `scss/init/_variables.scss`. If a given variable with the `!default` flag is **not** set in the settings partials, it will fall back to the default value.
+
+## JS
+
+### jQuery plugins included
 
 * [AccessibleTabs](https://github.com/ginader/Accessible-Tabs)
 * [Cycle 2](https://github.com/malsup/cycle2) ([Optional plugins](http://jquery.malsup.com/cycle2/download/#plugins))
@@ -81,7 +98,7 @@ If a project doesn't require some of the [JS assets](#js-assets-included), uncom
 * [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup)
 * [tablesaw](https://github.com/filamentgroup/tablesaw)
 
-### JS plugins
+### JS plugins included
 
 * [AccessifyHTML5](https://github.com/yatil/accessifyhtml5.js)
 * [box-sizing-Polyfill](https://github.com/Schepp/box-sizing-polyfill)
