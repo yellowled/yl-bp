@@ -11,9 +11,9 @@ This is what I usually use to start projects. Derived from [H5BP](https://github
 * [Grunt](http://gruntjs.com)
 * [Bower](http://bower.io)
 
-Grunt and Bower depend on [node.js](http://nodejs.org). Some of the [Grunt plugins](#grunt-plugins-used) depend on command line tools to be installed on your (build) system:
+Grunt and Bower depend on [node.js](http://nodejs.org). Some of the [Grunt plugins](#plugins-used) depend on command line tools to be installed on your (build) system:
 
-* grunt-favicons requires [ImageMagick](http://www.imagemagick.org)
+* grunt-favicons requires [ImageMagick](http://imagemagick.org)
 * grunt-scss-lint requires [scss-lint](https://github.com/causes/scss-lint)
 
 scss-lint depends on [Ruby](http://www.ruby-lang.org).
@@ -33,7 +33,7 @@ Please refer to the documentation of your OS and/or the documentation of these r
 
 In the project directory:
 
-1. `npm install` (install [Grunt plugins](#grunt-plugins-used) required for build script; also executes `bower install` to install [JS assets](#js-assets-included) included in this boilerplate automagically)
+1. `npm install` (install [Grunt plugins](#plugins-used) required for build script; also executes `bower install` to install [JS assets](#js) included in this boilerplate automagically)
 2. `grunt` (start build script with default task, which is starting a simple local webserver and running the `watch` task)
 
 [Additional Grunt tasks](#additional-grunt-tasks) are available for testing and deploying code to staging and live servers.
