@@ -35,35 +35,37 @@ $msg-padding:   .5 !default;
 // TYPES OF MESSAGES
 // --------------------------------------------------------------------
 @if $msg-classes {
-    .msg-warning {
-        @extend %message;
+    .msg {
+        &-warning {
+            @extend %message;
 
-        background: $warning-bg;
-        border-color: $warning-bc;
-        color: $warning-fg;
-    }
+            background: $warning-bg;
+            border-color: $warning-bc;
+            color: $warning-fg;
+        }
 
-    .msg-success {
-        @extend %message;
+        &-success {
+            @extend %message;
 
-        background: $success-bg;
-        border-color: $success-bc;
-        color: $success-fg;
-    }
+            background: $success-bg;
+            border-color: $success-bc;
+            color: $success-fg;
+        }
 
-    .msg-notice {
-        @extend %message;
+        &-notice {
+            @extend %message;
 
-        background: $notice-bg;
-        border-color: $notice-bc;
-        color: $notice-fg;
-    }
+            background: $notice-bg;
+            border-color: $notice-bc;
+            color: $notice-fg;
+        }
 
-    .msg-question {
-        @extend %message;
+        &-question {
+            @extend %message;
 
-        background: $question-bg;
-        border-color: $question-bc;
-        color: $question-fg;
+            background: $question-bg;
+            border-color: $question-bc;
+            color: $question-fg;
+        }
     }
 }

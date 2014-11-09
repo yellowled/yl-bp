@@ -1,13 +1,19 @@
-// DEFAULTS NOT COVERED BY NORMALIZE
+// STYLES NOT COVERED BY NORMALIZE
 // --------------------------------------------------------------------
+// Defaults
+$selection-bg:  #b3d4fc !default;
+$hint-bg:       $silver !default;
+$hint-fg:       $off-black !default;
+
+
 // These selection declarations have to be separate.
 ::-moz-selection {
-    background: #b3d4fc;
+    background: $selection-bg;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: $selection-bg;
     text-shadow: none;
 }
 
@@ -77,14 +83,9 @@ img {
 
 // HINT MSG (CHROMEFRAME + ENABLE JS)
 // --------------------------------------------------------------------
-// Defaults
-$cf-bg:     $silver !default;
-$cf-fg:     $off-black !default;
-
-
 %chromeframe {
-    background: $cf-bg;
-    color: $cf-fg;
+    background: $hint-bg;
+    color: $hint-fg;
     left: 0;
     margin: 0;
     padding: 4px;

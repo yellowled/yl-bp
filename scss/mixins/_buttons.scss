@@ -1,7 +1,11 @@
-// BUTTON TYPES
+// BUTTONS
 // --------------------------------------------------------------------
+// Defaults
+$button-radius:     4px !default;
+
+
 // Gradient button
-@mixin gradient-button($bg-color: $silver, $fg-color: $black, $radius: 4px) {
+@mixin gradient-button($bg-color: $silver, $fg-color: $black, $radius: $button-radius) {
     background-color: lighten($bg-color, 13.2%);
     background-image: linear-gradient(to bottom, lighten($bg-color, 13.2%), $bg-color);
     background-clip: padding-box;
@@ -44,7 +48,7 @@
 }
 
 // Flat button
-@mixin flat-button($bg-color: $silver, $fg-color: $black, $radius: 4px, $alt-color: complement($bg-color)) {
+@mixin flat-button($bg-color: $silver, $fg-color: $black, $radius: $button-radius, $alt-color: complement($bg-color)) {
     background: $bg-color;
     background-clip: padding-box;
     border: 0 none;
