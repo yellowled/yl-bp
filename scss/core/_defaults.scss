@@ -108,7 +108,7 @@ img {
         padding-top: 32px;
     }
 
-    @if $enable-js-msg {
+    @if $use-enable-js {
         html.lt-ie9.no-js {
             padding-top: 64px;
         }
