@@ -9,9 +9,11 @@
 
 // Vertical centering
 // zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
-// parent element needs a defined height; use w/ .csstransforms
+// parent element needs a defined height
 %center-vertical {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    .csstransforms & {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }

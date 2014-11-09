@@ -13,14 +13,14 @@ $img-right-margin:  .25 0 .75 $type-rhythm !default;
 }
 
 // For use with ProcessWire
-@if $pw-img-classes {
+@if $use-pw-classes {
     .align_left,
     .align_right {
         @extend %image-block;
     }
 }
 
-@if $pw-img-classes {
+@if $use-pw-classes {
     @media only screen and (min-width: $img-breakpoint) {
         %image-left {
             float: left;

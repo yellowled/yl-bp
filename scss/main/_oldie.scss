@@ -24,7 +24,7 @@ $ie-right-margin:  4px 0 8px 16px !default;
 // --------------------------------------------------------------------
 @if $ie8-support {
     .lt-ie9 {
-        @if $pw-img-classes {
+        @if $use-pw-classes {
             // For use with ProcessWire
             .align_left {
                 @extend %oldie-image-left;
@@ -42,20 +42,6 @@ $ie-right-margin:  4px 0 8px 16px !default;
 // --------------------------------------------------------------------
 @if $ie7-support {
     .lt-ie8 {
-        // Include clearfix class
-        @if $clearfix-class {
-            .clearfix {
-                zoom: 1;
-            }
-        }
-
-        // Include image replacement class
-        @if $ir-class {
-            .ir {
-                text-indent: -9999px;
-            }
-        }
-
         // Forms
         input[type="radio"],
         input[type="checkbox"] {

@@ -95,7 +95,7 @@ img {
     width: 100%;
 }
 
-@if $browse-happy-msg {
+@if $use-browse-happy {
     #browse-happy {
         @extend %chromeframe;
 
@@ -115,7 +115,7 @@ img {
     }
 }
 
-@if $enable-js-msg {
+@if $use-enable-js {
     #enable-js {
         @extend %chromeframe;
 

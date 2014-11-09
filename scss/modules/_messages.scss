@@ -34,7 +34,7 @@ $msg-padding:   .5 !default;
 
 // TYPES OF MESSAGES
 // --------------------------------------------------------------------
-@if $msg-classes {
+@if $use-msg-classes {
     .msg {
         &-warning {
             @extend %message;

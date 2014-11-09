@@ -9,19 +9,11 @@ $ie8-support: true;
     $ie8-support: true;
 }
 
-// Include helper classes
-$helper-classes: false;
-// Include clearfix class
-$clearfix-class: false;
-// Include image replacement class
-$ir-class: false;
-
 // Include message classes
-$msg-classes: false;
+$use-msg-classes: false;
 // Include browse happy classes
-$browse-happy-msg: true;
+$use-browse-happy: true;
 // Incude enable JS classes
-$enable-js-msg: false;
-
+$use-enable-js: false;
 // Include ProcessWire image classes
-$pw-img-classes: false;
+$use-pw-classes: false;
