@@ -61,6 +61,11 @@ img {
     vertical-align: middle;
 }
 
+// mattstow.com/responsive-design-in-ie10-on-windows-phone-8.html
+@-ms-viewport {
+    width: device-width;
+}
+
 
 // EXTENDS/INCLUDES
 // --------------------------------------------------------------------

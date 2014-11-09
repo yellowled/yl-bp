@@ -1,28 +1,29 @@
+// Presets
+@import 'presets/constants';
+@import 'presets/functions';
+
 // Initialize
 @import 'init/settings';
-@import 'init/functions';
-@import 'init/constants';
 @import 'init/variables';
 
 // Mixins
 @import 'mixins/buttons';
 @import 'mixins/grid';
 @import 'mixins/img';
-@import 'mixins/position';
 @import 'mixins/shapes';
 @import 'mixins/tables';
 @import 'mixins/type';
 @import 'mixins/units';
 
-// Core
-@import 'core/normalize';
-@import 'core/helpers';
-@import 'core/defaults';
-
 // Extends
 @import 'extends/elements';
-@import 'extends/classes';
+@import 'extends/helpers';
 @import 'extends/position';
+
+// Core
+@import 'core/normalize';
+@import 'core/defaults';
+@import 'core/typography';
 
 // Fontello
 @import 'iconfont/fontello';
@@ -42,10 +43,7 @@
 @import 'modules/images';
 @import 'modules/navigation';
 
-// General
-@import 'main/typography';
+// Layout
 @import 'main/common';
-
-// Media
-@import 'main/media';
+@import 'core/media';
 @import 'main/print';

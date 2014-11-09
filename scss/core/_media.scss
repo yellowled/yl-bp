@@ -1,13 +1,13 @@
-// DEFAULTS
+// MEDIA QUERIES
 // --------------------------------------------------------------------
+// Defaults
 $legacy:   481px !default;
 $tablet:   768px !default;
 $laptop:  1024px !default;
 $desktop: 1400px !default;
 
 
-// MEDIA QUERIES
-// --------------------------------------------------------------------
+// Media query imports
 @media only screen and (min-width: $legacy)  { @import '../layout/legacy';  }
 @media only screen and (min-width: $tablet)  { @import '../layout/tablet';  }
 @media only screen and (min-width: $laptop)  { @import '../layout/laptop';  }
