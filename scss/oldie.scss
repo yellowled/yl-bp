@@ -15,15 +15,15 @@
 @import 'mixins/type';
 @import 'mixins/units';
 
-// Extends
-@import 'extends/elements';
-@import 'extends/helpers';
-@import 'extends/position';
-
 // Core
 @import 'core/normalize';
 @import 'core/defaults';
 @import 'core/typography';
+
+// Extends
+@import 'extends/elements';
+@import 'extends/helpers';
+@import 'extends/position';
 
 // Fontello
 @import 'iconfont/fontello';
