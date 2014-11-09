@@ -1,5 +1,7 @@
     <nav>
-        <ul>
+        <a class="toggle-nav" href="#site-nav"><span class="icon-menu" aria-hidden="true"><span class="fallback-text">Menü</span></a>
+
+        <ul id="site-nav" class="collapsed" aria-hidden="true">
             {{#each pages}}<li><a href="{{ this.dest }}">{{ data.title }}</a></li>
             {{/each}}
         </ul>

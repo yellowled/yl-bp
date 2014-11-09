@@ -1,7 +1,31 @@
 // NAVIGATION STYLES
 // --------------------------------------------------------------------
-// Navigation lists
+// Defaults
+$nav-breakpoint:    768px !default; // Breakpoint for smallscreen nav
+
+
 nav ul,
 nav ol {
     @extend %plain-list;
+
+    margin: 0;
+}
+
+@if $use-nav-classes {
+    .js .collapsed,
+    .no-js .toggle-nav {
+        @extend %hidden;
+    }
+
+    @media only screen and(min-width: $nav-breakpoint) {
+        .js .collapsed {
+            display: block !important;
+            visibility: visible;
+        }
+
+        .toggle-nav {
+            display: none !important;
+            visibility: hidden;
+        }
+    }
 }
