@@ -3,7 +3,7 @@
 // Defaults
 $nav-breakpoint:    768px !default; // Breakpoint for smallscreen nav
 
-
+// GENERAL NAV STYLES
 nav ul,
 nav ol {
     @extend %plain-list;
@@ -11,19 +11,29 @@ nav ol {
     margin: 0;
 }
 
+
+// SMALLSCREEN NAV
 @if $use-nav-classes {
-    .js .collapsed,
-    .no-js .toggle-nav {
+    .js .nav-collapsed,
+    .no-js .nav-toggle {
         @extend %hidden;
     }
 
+    .nav-toggle {
+        [class^="icon-"]:before,
+        [class*=" icon-"]:before {
+            margin: 0;
+            text-align: left;
+        }
+    }
+
     @media only screen and(min-width: $nav-breakpoint) {
-        .js .collapsed {
+        .js .nav-collapsed {
             display: block !important;
             visibility: visible;
         }
 
-        .toggle-nav {
+        .nav-toggle {
             display: none !important;
             visibility: hidden;
         }
