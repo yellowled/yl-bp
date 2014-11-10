@@ -39,7 +39,7 @@
         "grunt-modernizr":          "~0.6.0",
         "grunt-sass":               "~0.16.0",
         "grunt-scss-lint":          "~0.3.0",
-        "grunt-svgmin":             "~1.0.0",
+        "grunt-svgmin":             "~2.0.0",
         "assemble":                 "~0.4.41"
     }
 }
