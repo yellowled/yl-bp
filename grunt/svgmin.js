@@ -1,5 +1,4 @@
 // Optimize vector images (SVG)
-
 module.exports = function(grunt) {
     grunt.config('svgmin', {
         options: {

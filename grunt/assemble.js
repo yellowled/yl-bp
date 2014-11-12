@@ -1,5 +1,4 @@
-// assemble.io – Build static HTML from Handlebars templates
-
+// Build static HTML from Handlebars templates using assemble.io
 module.exports = function(grunt) {
     grunt.config('assemble', {
         options: {

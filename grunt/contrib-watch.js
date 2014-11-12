@@ -1,5 +1,4 @@
 // Watch project files for and spawn associated tasks upon changes
-
 module.exports = function(grunt) {
     grunt.config('watch', {
         icons: {

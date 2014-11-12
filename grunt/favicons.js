@@ -1,5 +1,4 @@
 // Generate favicons from source file
-
 module.exports = function(grunt) {
     grunt.config('favicons', {
         options: {

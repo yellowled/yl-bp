@@ -1,5 +1,4 @@
 // Check markup for code quality
-
 module.exports = function(grunt) {
     grunt.config('htmlhint', {
         all: {

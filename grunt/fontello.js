@@ -1,5 +1,4 @@
 // Generate iconfont build from JSON config
-
 module.exports = function(grunt) {
     grunt.config('fontello', {
         options: {

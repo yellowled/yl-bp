@@ -9,7 +9,7 @@ $(function() {
     if ($('.nav-toggle').length > 0) {
         $('.nav-toggle').click(function(e) {
             var $el = $(this);
-            var navTarget = $el.attr('href')
+            var navTarget = $el.attr('href');
             var navState = $(navTarget).attr('aria-hidden');
 
             $(navTarget).toggleClass('nav-collapsed');
