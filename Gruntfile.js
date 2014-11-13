@@ -26,7 +26,7 @@ module.exports = function(grunt) {
         'clean:deploy',
         'fontello:build',
         'assemble:stage',
-        'copy:deploy',
+        'copy:stage',
         'concat',
         'sass:deploy',
         'autoprefixer:deploy',
