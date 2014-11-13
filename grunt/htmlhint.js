@@ -9,6 +9,7 @@ module.exports = function(grunt) {
                 'tag-pair': true,
                 'spec-char-escape': true,
                 'id-unique': true,
+                'src-not-empty': true,
                 'img-alt-require': true,
                 'doctype-html5': true,
                 'id-class-value': true,
