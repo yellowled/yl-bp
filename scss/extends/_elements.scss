@@ -6,13 +6,6 @@
     padding-left: 0;
 }
 
-// Responsive media objects
-// unstoppablerobotninja.com/entry/fluid-images
-%responsive-media {
-    height: auto;
-    max-width: 100%;
-}
-
 // inline-block with IE7 legacy support, also see mixins/_basic.scss
 %inblock-level {
     display: inline-block;
@@ -23,4 +16,13 @@
             zoom: 1;
         }
     }
+}
+
+
+// RESPONSIVE MEDIA OBJECTS
+// --------------------------------------------------------------------
+// unstoppablerobotninja.com/entry/fluid-images
+%responsive-media {
+    height: auto;
+    max-width: 100%;
 }

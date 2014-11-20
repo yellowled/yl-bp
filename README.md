@@ -77,7 +77,7 @@ The only difference between `grunt stage` and `grunt deploy` is that the first o
 
 This boilerplate uses Sass, more specifically its dialect SCSS, to generate two CSS files. `styles/master.css` is the main stylesheet, `styles/oldie.css` is a fallback stylesheet for IE < 9. `oldie.css` is necessary because the (S)CSS is supposed to be written mobile-first, which means IE < 9 needs this workaround because it doesn't support media queries for responsive web design.
 
-Most of the partials in `scss` and its subdirectories are **not** meant to be edited (in order to make it easier to update projects). You should not need to edit files in `scss` other than:
+Most of the partials in `scss` and its subdirectories are **not** meant to be edited (in order to make it easier to update projects). You should not (need to) edit files in `scss` other than:
 
 * `master.scss` and `oldie.scss` – exclude unused partials (by commenting them out)
 * partials in `scss/init` – for project-based settings and variables
