@@ -17,7 +17,7 @@ $msg-font-size: .8125 !default;
 $msg-padding:   .5 !default;
 
 
-// BASIC MESSAGE
+// Basic message
 // --------------------------------------------------------------------
 %message {
     border: 1px solid;
@@ -32,7 +32,7 @@ $msg-padding:   .5 !default;
 }
 
 
-// TYPES OF MESSAGES
+// Types of messages
 // --------------------------------------------------------------------
 @if $use-msg-classes {
     .msg {

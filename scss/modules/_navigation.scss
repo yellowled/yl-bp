@@ -3,7 +3,7 @@
 // Defaults
 $nav-breakpoint:    768px !default; // Breakpoint for smallscreen nav
 
-// GENERAL NAV STYLES
+// General nav styles
 nav ul,
 nav ol {
     @extend %plain-list;
@@ -12,7 +12,7 @@ nav ol {
 }
 
 
-// SMALLSCREEN NAV
+// Smallscreen nav
 @if $use-nav-classes {
     .js .nav-collapsed,
     .no-js .nav-toggle {

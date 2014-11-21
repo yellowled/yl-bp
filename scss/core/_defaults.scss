@@ -39,7 +39,6 @@ th {
     text-align: left;
 }
 
-// Nested lists
 li {
     ul,
     ol {
@@ -47,12 +46,10 @@ li {
     }
 }
 
-// Nested code
 pre code {
     font-size: 1em;
 }
 
-// A better looking default horizontal rule
 hr {
     border: 0;
     border-top: 1px solid $silver;

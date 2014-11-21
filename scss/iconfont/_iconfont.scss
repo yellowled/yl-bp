@@ -1,11 +1,11 @@
 // RESPONSIBLE ICONFONTS
 // --------------------------------------------------------------------
-// Hide fallback text if fontface is supported
+// fontface supported: hide fallback text
 .fontface .fallback-text {
     @extend %visuallyhidden;
 }
 
-// Hide iconfont icons if fontface is not supported
+// fontface not supported: hide iconfont icons
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
     .no-fontface & {
