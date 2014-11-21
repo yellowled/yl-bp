@@ -1,6 +1,6 @@
 // RESPONSIVE INLINE SVG IMAGES
-// tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/
 // --------------------------------------------------------------------
+// tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/
 // apply to container element; remove width/height from svg
 @mixin responsive-svg($svg-width, $svg-height, $container-width: 100%) {
     height: 0;

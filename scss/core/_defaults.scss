@@ -104,12 +104,12 @@ img {
         }
     }
 
-    html.lt-ie9 {
+    .lt-ie9 {
         padding-top: 32px;
     }
 
     @if $use-enable-js {
-        html.lt-ie9.no-js {
+        .lt-ie9.no-js {
             padding-top: 64px;
         }
     }
@@ -124,7 +124,7 @@ img {
         }
     }
 
-    html.no-js {
+    .no-js {
         padding-top: 32px;
     }
 }
