@@ -11,12 +11,7 @@ This is what I usually use to start projects. Derived from [H5BP](https://github
 * [Grunt](http://gruntjs.com)
 * [Bower](http://bower.io)
 
-Grunt and Bower depend on [node.js](http://nodejs.org). Some of the [Grunt plugins](#plugins-used) depend on command line tools to be installed on your (build) system:
-
-* grunt-favicons requires [ImageMagick](http://imagemagick.org)
-* grunt-scss-lint requires [scss-lint](https://github.com/causes/scss-lint)
-
-scss-lint depends on [Ruby](http://www.ruby-lang.org).
+Grunt and Bower depend on [node.js](http://nodejs.org). `grunt-scss-lint` requires [scss-lint](https://github.com/causes/scss-lint), scss-lint depends on [Ruby](http://www.ruby-lang.org).
 
 ### Installation
 
@@ -63,7 +58,6 @@ The only difference between `grunt stage` and `grunt deploy` is that the first o
 * [grunt-contrib-uglify](https://npmjs.org/package/grunt-contrib-uglify)
 * [grunt-contrib-watch](https://npmjs.org/package/grunt-contrib-watch)
 * [grunt-autoprefixer](https://npmjs.org/package/grunt-autoprefixer)
-* [grunt-favicons](https://npmjs.org/package/grunt-favicons)
 * [grunt-fontello](https://npmjs.org/package/grunt-fontello)
 * [grunt-hashres](https://npmjs.org/package/grunt-hashres)
 * [grunt-htmlhint](https://npmjs.org/package/grunt-htmlhint)

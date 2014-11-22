@@ -33,7 +33,6 @@ module.exports = function(grunt) {
         'uglify',
         'imagemin:deploy',
         'svgmin:deploy',
-        'favicons:deploy',
         'modernizr',
         'hashres:deploy'
     ]);
@@ -50,7 +49,6 @@ module.exports = function(grunt) {
         'uglify',
         'imagemin:deploy',
         'svgmin:deploy',
-        'favicons:deploy',
         'modernizr',
         'hashres:deploy'
     ]);

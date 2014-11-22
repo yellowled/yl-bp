@@ -5,6 +5,8 @@ module.exports = function(grunt) {
             files: [{
                 src: ['.htaccess',
                       'robots.txt',
+                      'apple-touch-icon.png',
+                      'favicon.ico',
                       'font/*',
                       // 'scripts/helpers/boxsizing.htc',
                       'scripts/jquery/dist/jquery.min.js',
@@ -16,6 +18,8 @@ module.exports = function(grunt) {
             files: [{
                 src: ['.htaccess',
                       'robots.txt',
+                      'apple-touch-icon.png',
+                      'favicon.ico',
                       'font/*',
                       // 'scripts/helpers/boxsizing.htc',
                       'scripts/jquery/dist/jquery.min.js',
