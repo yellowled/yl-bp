@@ -1,14 +1,14 @@
 // MEDIA QUERIES
 // --------------------------------------------------------------------
 // Defaults
-$legacy:   481px !default;
+$legacy:   480px !default;
 $tablet:   768px !default;
 $laptop:  1024px !default;
 $desktop: 1400px !default;
 
 
 // Media query imports
-@media only screen and (min-width: $legacy)  { @import '../layout/legacy';  }
-@media only screen and (min-width: $tablet)  { @import '../layout/tablet';  }
-@media only screen and (min-width: $laptop)  { @import '../layout/laptop';  }
-@media only screen and (min-width: $desktop) { @import '../layout/desktop'; }
+@media screen and (min-width: $legacy)  { @import '../layout/legacy';  }
+@media screen and (min-width: $tablet)  { @import '../layout/tablet';  }
+@media screen and (min-width: $laptop)  { @import '../layout/laptop';  }
+@media screen and (min-width: $desktop) { @import '../layout/desktop'; }
