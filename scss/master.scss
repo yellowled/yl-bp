@@ -10,6 +10,7 @@
 @import 'mixins/buttons';
 @import 'mixins/grid';
 @import 'mixins/img';
+@import 'mixins/position';
 @import 'mixins/shapes';
 @import 'mixins/tables';
 @import 'mixins/type';
@@ -23,7 +24,6 @@
 // Extends
 @import 'extends/elements';
 @import 'extends/helpers';
-@import 'extends/position';
 
 // Fontello
 @import 'iconfont/fontello';
