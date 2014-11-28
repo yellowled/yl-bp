@@ -6,9 +6,9 @@ $nav-breakpoint:    768px !default; // Breakpoint for smallscreen nav
 // General nav styles
 nav ul,
 nav ol {
-    @extend %plain-list;
-
+    list-style: none;
     margin: 0;
+    padding: 0;
 }
 
 

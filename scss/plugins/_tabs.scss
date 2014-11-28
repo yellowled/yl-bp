@@ -52,12 +52,12 @@ $tabs-margin:       $type-rhythm;
 }
 
 @mixin tabs-list($padding: $tabs-padding) {
-    @extend %plain-list;
-
+    list-style: none;
     margin: 0;
+    padding: 0;
 
     li {
-        @extend %inblock-level;
+        display: inline-block;
         margin: 0 $tabs-gap 0 0;
     }
 
