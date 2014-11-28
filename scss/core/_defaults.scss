@@ -74,7 +74,7 @@ img {
 // --------------------------------------------------------------------
 video,
 img {
-    @extend %responsive-media;
+    @include responsive-media;
 }
 
 
