@@ -10,3 +10,52 @@ nav ol {
     margin: 0;
     padding: 0;
 }
+
+
+// RESPONSIVE NAV
+// github.com/viljamis/responsive-nav.js
+.nav-collapse {
+    ul,
+    li {
+        display: block;
+        width: 100%;
+    }
+
+    .js & {
+        clip: rect(0 0 0 0);
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        position: absolute;
+        zoom: 1;
+    }
+
+    &.opened {
+        max-height: 9999px;
+    }
+}
+
+.disable-pointer-events {
+    pointer-events: none !important;
+}
+
+.nav-toggle {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+
+@media screen and (min-width: $nav-breakpoint) {
+    .js .nav-collapse {
+        position: relative;
+
+        &.closed {
+            max-height: none;
+        }
+    }
+
+    .nav-toggle {
+        display: none !important;
+        visibility: hidden;
+    }
+}
