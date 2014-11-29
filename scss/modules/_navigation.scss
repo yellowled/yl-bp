@@ -10,32 +10,3 @@ nav ol {
     margin: 0;
     padding: 0;
 }
-
-
-// Smallscreen nav
-@if $use-nav-classes {
-    .js .nav-collapsed,
-    .no-js .nav-toggle {
-        @extend %hidden;
-    }
-
-    .nav-toggle {
-        [class^="icon-"]:before,
-        [class*=" icon-"]:before {
-            margin: 0;
-            text-align: left;
-        }
-    }
-
-    @media only screen and(min-width: $nav-breakpoint) {
-        .js .nav-collapsed {
-            display: block !important;
-            visibility: visible;
-        }
-
-        .nav-toggle {
-            display: none !important;
-            visibility: hidden;
-        }
-    }
-}
