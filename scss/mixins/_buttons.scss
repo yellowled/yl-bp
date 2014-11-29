@@ -86,3 +86,32 @@ $button-radius:     4px !default;
         color: $fg-color;
     }
 }
+
+
+// Clean button
+@mixin no-button($fg-color: $black, $alt-fg: #06f, $bg-color: transparent, $alt-bg: transparent) {
+    background: $bg-color;
+    background-clip: padding-box;
+    border: 0 none;
+    color: $fg-color;
+    display: inline-block;
+    line-height: normal;
+    outline: 0;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+    text-shadow: none;
+    width: auto;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: $alt-bg;
+        color: $alt-fg;
+    }
+
+    &:focus {
+        box-shadow: #06f 0 0 5px 0;
+        z-index: 1;
+    }
+}
