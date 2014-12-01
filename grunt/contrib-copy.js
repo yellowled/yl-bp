@@ -10,7 +10,8 @@ module.exports = function(grunt) {
                       'font/*',
                       // 'scripts/helpers/boxsizing.htc',
                       'scripts/jquery/dist/jquery.min.js',
-                      'scripts/jquery/dist/jquery.min.map'],
+                      'scripts/jquery/dist/jquery.min.map',
+                      'styles/*.map'],
                 dest: 'dist/'
             }],
         },
@@ -23,7 +24,8 @@ module.exports = function(grunt) {
                       'font/*',
                       // 'scripts/helpers/boxsizing.htc',
                       'scripts/jquery/dist/jquery.min.js',
-                      'scripts/jquery/dist/jquery.min.map'],
+                      'scripts/jquery/dist/jquery.min.map',
+                      'styles/*.map'],
                 dest: 'dist/'
             }],
         },
