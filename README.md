@@ -53,7 +53,6 @@ The only difference between `grunt stage` and `grunt deploy` is that the first o
 * [grunt-contrib-concat](https://npmjs.org/package/grunt-contrib-concat)
 * [grunt-contrib-connect](https://npmjs.org/package/grunt-contrib-connect)
 * [grunt-contrib-copy](https://npmjs.org/package/grunt-contrib-copy)
-* [grunt-contrib-cssmin](https://www.npmjs.org/package/grunt-contrib-cssmin)
 * [grunt-contrib-imagemin](https://npmjs.org/package/grunt-contrib-imagemin)
 * [grunt-contrib-jshint](https://npmjs.org/package/grunt-contrib-jshint)
 * [grunt-contrib-uglify](https://npmjs.org/package/grunt-contrib-uglify)
