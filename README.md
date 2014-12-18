@@ -100,3 +100,4 @@ Some of the variables defined in partials use Sass's `!default` flag. These vari
 * [box-sizing-Polyfill](https://github.com/Schepp/box-sizing-polyfill)
 * [H5BP log](https://github.com/h5bp/html5-boilerplate/blob/master/src/js/plugins.js)
 * [lazysizes](https://github.com/aFarkas/lazysizes)
+* [Responsive Nav](https://github.com/viljamis/responsive-nav.js)
