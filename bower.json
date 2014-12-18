@@ -8,7 +8,7 @@
         "fitvids":                  "~1.1.0",
         "gmaps":                    "~0.4.16",
         "lazysizes":                "~0.5.3",
-        "jquery":                   "~1.11.1",
+        "jquery":                   "~1.11.2",
         "jquery-accessible-tabs":   "~1.9.8",
         "jQuery-Collapse":          "~1.1.1",
         "jquery-cycle2":            "~2.1.6",
@@ -19,6 +19,6 @@
     },
     "devDependencies": {},
     "resolutions": {
-        "jquery":                   "~1.11.1"
+        "jquery":                   "~1.11.2"
     }
 }
