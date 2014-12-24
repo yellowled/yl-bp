@@ -5,6 +5,7 @@ module.exports = function(grunt) {
             src: ['scripts/helpers/log.js',
                   'scripts/accessifyhtml5-amd/accessifyhtml5.js',
                   'scripts/lazysizes/lazysizes.js',
+                  'scripts/respimage/respimage.js',
                   'scripts/responsive-nav/responsive-nav.js',
                   'scripts/fitvids/jquery.fitvids.js',
                   'scripts/magnific-popup/dist/jquery.magnific-popup.js',
