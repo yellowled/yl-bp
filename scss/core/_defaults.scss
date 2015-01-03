@@ -6,12 +6,6 @@ $hint-bg:       $silver !default;
 $hint-fg:       $off-black !default;
 
 
-// These selection declarations have to be separate.
-::-moz-selection {
-    background: $selection-bg;
-    text-shadow: none;
-}
-
 ::selection {
     background: $selection-bg;
     text-shadow: none;
@@ -27,6 +21,7 @@ dd {
 
 table {
     @include x-rem(margin, $type-rhythm 0);
+
     width: 100%;
 
     caption {
@@ -51,11 +46,12 @@ pre code {
 }
 
 hr {
+    @include x-rem(margin, 1.5 0);
+
     border: 0;
     border-top: 1px solid $silver;
     display: block;
     height: 1px;
-    @include x-rem(margin, 1.5 0);
     padding: 0;
 }
 

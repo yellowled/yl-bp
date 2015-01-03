@@ -20,11 +20,12 @@ $msg-padding:   .5 !default;
 // Basic message
 // --------------------------------------------------------------------
 %message {
-    border: 1px solid;
-    border-radius: 4px;
     @include x-rem(font-size, $msg-font-size);
     @include x-rem(margin, $type-rhythm 0);
     @include x-rem(padding, $msg-padding);
+
+    border: 1px solid;
+    border-radius: 4px;
 
     p {
         margin: 0;

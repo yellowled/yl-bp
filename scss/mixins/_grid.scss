@@ -9,18 +9,18 @@ $sgs-gutter:        15px !default;   // spacing between columns
 
 // Grid row (container)
 @mixin grid-row($row-limit: $sgs-row-max-width, $row-width: $sgs-row-width, $center: auto) {
-	margin-left: $center;
+    margin-left: $center;
     margin-right: $center;
-	@if $row-limit != 0 { max-width: $row-limit; }
-	width: $row-width;
+    @if $row-limit != 0 { max-width: $row-limit; }
+    width: $row-width;
 }
 
 // Grid box
 @mixin grid-box($span-columns, $gutter: $sgs-gutter, $total-columns: $sgs-columns, $grid-type: 100%) {
     box-sizing: border-box;
-	float: left;
-	padding: 0 $gutter;
-	width: $grid-type * ($span-columns / $total-columns);
+    float: left;
+    padding: 0 $gutter;
+    width: $grid-type * ($span-columns / $total-columns);
 }
 
 

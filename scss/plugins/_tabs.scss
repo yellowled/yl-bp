@@ -45,9 +45,10 @@ $tabs-margin:       $type-rhythm;
     width: $tabswidth;
 
     .content {
+        @include x-rem(padding, 0 $padding);
+
         border: $tab-border;
         border-radius: $content-border;
-        @include x-rem(padding, 0 $padding);
     }
 }
 
@@ -62,12 +63,13 @@ $tabs-margin:       $type-rhythm;
     }
 
     a {
+        @include x-rem(padding, ($padding/4) $padding);
+
         background: $inactive;
         border: $tab-border;
         border-radius: $list-border;
         color: $inactive-color;
         display: block;
-        @include x-rem(padding, ($padding/4) $padding);
         position: relative;
         text-decoration: none;
         top: 1px;

@@ -11,7 +11,10 @@ module.exports = function(grunt) {
             exclude: [
                 'scss/core/_normalize.scss',
                 'scss/iconfont/*',
-                'scss/main/_oldie.scss'
+                'scss/main/_oldie.scss',
+                'scss/mixins/_type.scss',
+                'scss/mixins/_units.scss',
+                'scss/modules/_images.scss'
             ],
             reporterOutput: null
         },

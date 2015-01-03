@@ -42,7 +42,6 @@ input[type="checkbox"] {
 }
 
 // Separate rule for Firefox. Cannot stack with WebKit's.
-:-moz-placeholder,
 ::-moz-placeholder {
     color: $input-placeholder;
 }

@@ -55,15 +55,19 @@
     }
 
     figcaption {
-        background: $off-black;
+        @include x-rem(padding, .125 .625);
+
         background: rgba($black, .7);
-        box-sizing: border-box;
         bottom: 0;
+        box-sizing: border-box;
         color: $white;
         left: 0;
-        @include x-rem(padding, .125 .625);
         position: absolute;
         text-align: center;
         width: 100%;
+
+        .no-rgba & {
+            background: $off-black;
+        }
     }
 }

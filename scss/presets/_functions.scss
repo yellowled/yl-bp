@@ -3,8 +3,8 @@
 // Returns a number without unit
 // github.com/drublic/Sass-Mixins/blob/master/partials/_rem.scss
 @function strip-unit($value) {
-     @return $value / ($value * 0 + 1);
- }
+    @return $value / ($value * 0 + 1);
+}
 
 
 // HELPERS

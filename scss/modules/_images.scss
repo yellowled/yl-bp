@@ -8,8 +8,9 @@ $img-right-margin:  .25 0 .75 $type-rhythm !default;
 
 
 %image-block {
-    display: block;
     @include x-rem(margin, $img-margin);
+
+    display: block;
 }
 
 // For use with ProcessWire
@@ -23,13 +24,15 @@ $img-right-margin:  .25 0 .75 $type-rhythm !default;
 @if $use-pw-classes {
     @media only screen and (min-width: $img-breakpoint) {
         %image-left {
-            float: left;
             @include x-rem(margin, $img-left-margin);
+
+            float: left;
         }
 
         %image-right {
-            float: right;
             @include x-rem(margin, $img-right-margin);
+
+            float: right;
         }
 
         // For use with ProcessWire
