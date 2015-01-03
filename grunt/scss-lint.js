@@ -14,6 +14,7 @@ module.exports = function(grunt) {
                 'scss/main/_oldie.scss',
                 'scss/mixins/_type.scss',
                 'scss/mixins/_units.scss',
+                'scss/modules/_forms.scss',
                 'scss/modules/_images.scss'
             ],
             reporterOutput: null
