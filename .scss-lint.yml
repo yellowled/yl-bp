@@ -49,8 +49,13 @@ linters:
   HexValidation:
     enabled: true
 
-  IdWithExtraneousSelector:
+  IdSelector:
+    enabled: false
+
+  ImportPath:
     enabled: true
+    leading_underscore: false
+    filename_extension: false
 
   Indentation:
     enabled: true
@@ -82,6 +87,12 @@ linters:
   PropertySpelling:
     enabled: true
     extra_properties: []
+
+  QualifyingElement:
+    enabled: true
+    allow_element_with_attribute: false
+    allow_element_with_class: false
+    allow_element_with_id: false
 
   SelectorDepth:
     enabled: true
