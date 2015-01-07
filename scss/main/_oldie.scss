@@ -35,6 +35,16 @@ $ie-right-margin:  4px 0 8px 16px !default;
             }
         }
     }
+
+    .js .nav-collapse {
+        max-height: none;
+        position: relative;
+    }
+
+    .nav-toggle {
+        display: none !important;
+        visibility: hidden;
+    }
 }
 
 
