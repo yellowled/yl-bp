@@ -97,12 +97,12 @@ img {
         }
     }
 
-    .lt-ie9 {
+    .lt-ie8 {
         padding-top: 32px;
     }
 
     @if $use-enable-js {
-        .lt-ie9.no-js {
+        .lt-ie8.no-js {
             padding-top: 64px;
         }
     }
