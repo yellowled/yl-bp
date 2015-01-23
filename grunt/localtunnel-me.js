@@ -4,7 +4,7 @@ module.exports = function(grunt) {
         tunnel: {
             options: {
                 port: 9001,
-                subdomain: 'ylbp'
+                subdomain: '<%= pkg.name %>'
             }
         },
     });

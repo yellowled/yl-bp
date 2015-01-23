@@ -2,7 +2,7 @@
 module.exports = function(grunt) {
     // Initialize config
     grunt.initConfig({
-        pkg: '<json:package.json>',
+        pkg: grunt.file.readJSON('package.json'),
     });
 
     // Load required tasks from submodules
