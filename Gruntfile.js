@@ -11,6 +11,7 @@ module.exports = function(grunt) {
     // Default
     grunt.registerTask('default', [
         'connect',
+        'localtunnel',
         'watch'
     ]);
 
