@@ -8,8 +8,11 @@ module.exports = function(grunt) {
     // Load required tasks from submodules
     grunt.loadTasks('grunt');
 
-    // Default
-    grunt.registerTask('default', [
+    // Default task
+    grunt.registerTask('default', ['dev']);
+
+    // Development
+    grunt.registerTask('dev', [
         'connect',
         'localtunnel',
         'watch'
