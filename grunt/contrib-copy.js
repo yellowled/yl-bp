@@ -12,7 +12,7 @@ module.exports = function(grunt) {
                       'scripts/jquery/dist/jquery.min.js',
                       'scripts/jquery/dist/jquery.min.map'],
                 dest: 'dist/'
-            }],
+            }]
         },
         deploy: {
             files: [{
@@ -25,8 +25,8 @@ module.exports = function(grunt) {
                       'scripts/jquery/dist/jquery.min.js',
                       'scripts/jquery/dist/jquery.min.map'],
                 dest: 'dist/'
-            }],
-        },
+            }]
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-copy');

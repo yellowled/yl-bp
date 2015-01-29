@@ -10,8 +10,8 @@ module.exports = function(grunt) {
             src: ['dist/styles/master.css',
                   'dist/styles/oldie.css',
                   'dist/scripts/master.js'],
-            dest: 'dist/*.html',
-        },
+            dest: 'dist/*.html'
+        }
     });
 
     grunt.loadNpmTasks('grunt-hashres');

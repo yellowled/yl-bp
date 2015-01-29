@@ -6,7 +6,7 @@ module.exports = function(grunt) {
                 port: 9001,
                 subdomain: '<%= pkg.name %>'
             }
-        },
+        }
     });
 
     grunt.loadNpmTasks('grunt-localtunnel-me');

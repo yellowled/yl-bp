@@ -1,9 +1,6 @@
 // Check SCSS for code quality
 module.exports = function(grunt) {
     grunt.config('scsslint', {
-        allFiles: [
-            'scss/**/*.scss',
-        ],
         options: {
             bundleExec: false,
             colorizeOutput: true,
@@ -19,6 +16,9 @@ module.exports = function(grunt) {
             ],
             reporterOutput: null
         },
+        all: [
+            'scss/**/*.scss'
+        ]
     });
 
     grunt.loadNpmTasks('grunt-scss-lint');

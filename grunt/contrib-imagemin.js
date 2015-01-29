@@ -12,8 +12,8 @@ module.exports = function(grunt) {
                 cwd: '.',
                 src: ['img/**/*.{gif,jpg,png}'],
                 dest: 'dist/'
-            }],
-        },
+            }]
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-imagemin');

@@ -26,7 +26,7 @@ module.exports = function(grunt) {
                   'scripts/tablesaw/dist/tablesaw.js',
                   'scripts/main.js'],
             dest: 'scripts/master.js'
-        },
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-concat');

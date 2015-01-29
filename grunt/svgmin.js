@@ -12,7 +12,7 @@ module.exports = function(grunt) {
                 cwd: '.',
                 src: ['img/**/*.svg'],
                 dest: 'dist/'
-            }],
+            }]
         }
     });
 

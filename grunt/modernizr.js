@@ -23,8 +23,6 @@ module.exports = function(grunt) {
             },
             'uglify' : true,
             'tests' : [],
-            // parseFiles = true: crawl all *.js, *.css, *.scss files;
-            // override by defining "files" array
             'parseFiles' : true,
             'files' : {
                 src: ['scss/**/*.scss',
@@ -42,7 +40,7 @@ module.exports = function(grunt) {
             },
             'matchCommunityTests' : false,
             'customTests' : [],
-            'excludeFiles' : ['Gruntfile.js', '*.json'],
+            'excludeFiles' : ['Gruntfile.js', '*.json']
         }
     });
 

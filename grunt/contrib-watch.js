@@ -8,7 +8,7 @@ module.exports = function(grunt) {
                 atBegin: true,
                 livereload: true,
                 spawn: false
-            },
+            }
         },
         assemble: {
             files: ['*.hbs', 'src/inc/*.hbs', 'src/tpl/*.hbs'],
@@ -26,7 +26,7 @@ module.exports = function(grunt) {
                 atBegin: false,
                 livereload: true,
                 spawn: false
-            },
+            }
         },
         js: {
             files: ['scripts/main.js'],
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
                 atBegin: true,
                 livereload: true,
                 spawn: false
-            },
+            }
         },
         scss: {
             files: 'scss/**/*.scss',
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
                 atBegin: true,
                 livereload: false,
                 spawn: true
-            },
+            }
         },
         css: {
             files: 'styles/*.css',
@@ -53,8 +53,8 @@ module.exports = function(grunt) {
                 atBegin: false,
                 livereload: true,
                 spawn: false
-            },
-        },
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');

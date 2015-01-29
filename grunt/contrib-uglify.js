@@ -4,7 +4,7 @@ module.exports = function(grunt) {
         deploy: {
             src: 'scripts/master.js',
             dest: 'dist/scripts/master.js'
-        },
+        }
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');

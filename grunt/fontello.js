@@ -13,7 +13,7 @@ module.exports = function(grunt) {
             config: 'fontello.json',
             fonts: 'font/',
             styles: 'scss/iconfont/'
-        },
+        }
     });
 
     grunt.loadNpmTasks('grunt-fontello');

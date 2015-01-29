@@ -14,7 +14,7 @@ module.exports = function(grunt) {
                 src: ['*.scss'],
                 dest: 'styles',
                 ext: '.css'
-            }],
+            }]
         },
         deploy: {
             options: {
@@ -29,8 +29,8 @@ module.exports = function(grunt) {
                 src: ['*.scss'],
                 dest: 'dist/styles',
                 ext: '.css'
-            }],
-        },
+            }]
+        }
     });
 
     grunt.loadNpmTasks('grunt-sass');
