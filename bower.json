@@ -16,7 +16,7 @@
         "modernizr":                "~2.8.3",
         "respimage":                "~1.3.0",
         "responsive-nav":           "~1.0.34",
-        "tablesaw":                 "~1.0.1"
+        "tablesaw":                 "~1.0.3"
     },
     "devDependencies": {},
     "resolutions": {
