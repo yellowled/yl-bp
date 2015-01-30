@@ -35,7 +35,7 @@ $msg-padding:   .5 !default;
 
 // Types of messages
 // --------------------------------------------------------------------
-@if $use-msg-classes {
+@if $use-msg-basic {
     .msg {
         &-warning {
             @extend %message;
@@ -52,7 +52,11 @@ $msg-padding:   .5 !default;
             border-color: $success-bc;
             color: $success-fg;
         }
+    }
+}
 
+@if $use-msg-extra {
+    .msg {
         &-notice {
             @extend %message;
 
