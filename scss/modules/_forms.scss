@@ -12,143 +12,145 @@ $input-border-type:     1px solid !default;
 $input-border-color:    #c1c1c1 #c1c1c1 #e1e1e1 !default;
 
 
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-form button,
-select,
-textarea,
-input {
-    &:focus {
-        box-shadow: 0 0 5px 0 $input-focus;
-        z-index: 1; // Opera
+@if $use-form-styles {
+    fieldset {
+        border: 0;
+        margin: 0;
+        padding: 0;
     }
-}
 
-input[type="file"],
-input[type="radio"],
-input[type="checkbox"] {
-    &:focus,
-    &:active {
+    form button,
+    select,
+    textarea,
+    input {
+        &:focus {
+            box-shadow: 0 0 5px 0 $input-focus;
+            z-index: 1; // Opera
+        }
+    }
+
+    input[type="file"],
+    input[type="radio"],
+    input[type="checkbox"] {
+        &:focus,
+        &:active {
+            box-shadow: none;
+        }
+    }
+
+    ::-webkit-input-placeholder {
+        color: $input-placeholder;
+    }
+
+    // Separate rule for Firefox. Cannot stack with WebKit's.
+    ::-moz-placeholder {
+        color: $input-placeholder;
+    }
+
+    // Separate rule for IE, too. Cannot stack with WebKit's.
+    :-ms-input-placeholder {
+        color: $input-placeholder;
+    }
+
+    :invalid {
+        // Suppress red glow that Firefox adds to form fields
+        // by default, even when user is still typing.
         box-shadow: none;
     }
-}
 
-::-webkit-input-placeholder {
-    color: $input-placeholder;
-}
-
-// Separate rule for Firefox. Cannot stack with WebKit's.
-::-moz-placeholder {
-    color: $input-placeholder;
-}
-
-// Separate rule for IE, too. Cannot stack with WebKit's.
-:-ms-input-placeholder {
-    color: $input-placeholder;
-}
-
-:invalid {
-    // Suppress red glow that Firefox adds to form fields
-    // by default, even when user is still typing.
-    box-shadow: none;
-}
-
-optgroup {
-    background: $input-bg;
-    color: $input-fg;
-    font-style: normal;
-}
-
-
-// STYLE FORM ELEMENTS (borrowed heavily from formalize.me)
-// --------------------------------------------------------------------
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="number"],
-input[type="password"],
-input[type="time"],
-input[type="week"],
-input[type="email"],
-input[type="search"],
-input[type="tel"],
-input[type="url"],
-select,
-textarea,
-input[type="text"] {
-    -webkit-appearance: none;
-    background-clip: padding-box;
-    background-color: $input-bg;
-    border: $input-border-type;
-    border-color: $input-border-color;
-    border-radius: $input-border-radius;
-    box-sizing: border-box;
-    color: $input-fg;
-    height: 1.8em;
-    outline: 0;
-    padding: 2px 3px;
-    text-align: left;
-
-    &[disabled] {
-        background-color: $lite-grey;
+    optgroup {
+        background: $input-bg;
+        color: $input-fg;
+        font-style: normal;
     }
-}
 
-select[size],
-select[multiple],
-textarea {
-    height: auto;
-}
 
-// WebKit select appearance
-@media (-webkit-min-device-pixel-ratio: 0) {
-    select {
-        background-image: url('data:image/gif;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==');
-        background-position: right center;
-        background-repeat: no-repeat;
-        padding-right: 20px;
+    // STYLE FORM ELEMENTS (borrowed heavily from formalize.me)
+    // --------------------------------------------------------------------
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="month"],
+    input[type="number"],
+    input[type="password"],
+    input[type="time"],
+    input[type="week"],
+    input[type="email"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="url"],
+    select,
+    textarea,
+    input[type="text"] {
+        -webkit-appearance: none;
+        background-clip: padding-box;
+        background-color: $input-bg;
+        border: $input-border-type;
+        border-color: $input-border-color;
+        border-radius: $input-border-radius;
+        box-sizing: border-box;
+        color: $input-fg;
+        height: 1.8em;
+        outline: 0;
+        padding: 2px 3px;
+        text-align: left;
+
+        &[disabled] {
+            background-color: $lite-grey;
+        }
     }
 
     select[size],
-    select[multiple] {
-        background-image: none;
-        padding: 0;
+    select[multiple],
+    textarea {
+        height: auto;
     }
-}
 
-textarea {
-    min-height: 40px;
-    overflow: auto;
-    resize: vertical;
-    width: 100%;
-}
+    // WebKit select appearance
+    @media (-webkit-min-device-pixel-ratio: 0) {
+        select {
+            background-image: url('data:image/gif;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==');
+            background-position: right center;
+            background-repeat: no-repeat;
+            padding-right: 20px;
+        }
+
+        select[size],
+        select[multiple] {
+            background-image: none;
+            padding: 0;
+        }
+    }
+
+    textarea {
+        min-height: 40px;
+        overflow: auto;
+        resize: vertical;
+        width: 100%;
+    }
 
 
-// Form buttons
-// --------------------------------------------------------------------
-form button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-    @include gradient-button();
-}
+    // Form buttons
+    // --------------------------------------------------------------------
+    form button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        @include gradient-button();
+    }
 
 
-// Disabled form elements
-// --------------------------------------------------------------------
-form button[disabled],
-select[disabled],
-select[disabled] option,
-select[disabled] optgroup,
-textarea[disabled],
-input[disabled] {
-    box-shadow: none;
-    color: $greyed-out;
-    cursor: default;
-    user-select: none;
+    // Disabled form elements
+    // --------------------------------------------------------------------
+    form button[disabled],
+    select[disabled],
+    select[disabled] option,
+    select[disabled] optgroup,
+    textarea[disabled],
+    input[disabled] {
+        box-shadow: none;
+        color: $greyed-out;
+        cursor: default;
+        user-select: none;
+    }
 }

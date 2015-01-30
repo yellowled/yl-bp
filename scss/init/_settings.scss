@@ -9,13 +9,21 @@ $ie8-support: true;
     $ie8-support: true;
 }
 
-// Include classes for responsive-nav
+
+// Include classes/styles based on components used
+// --------------------------------------------------------------------
+// responsive-nav
 $use-rnav-classes: true;
-// Include message classes
+
+// Forms
+$use-form-styles: false;
+// Messages
 $use-msg-classes: false;
-// Include browse happy classes
+
+// Browse happy
 $use-browse-happy: true;
-// Incude enable JS classes
+// Enable JS
 $use-enable-js: false;
-// Include ProcessWire image classes
+
+// ProcessWire images
 $use-pw-classes: false;
