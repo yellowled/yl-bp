@@ -11,6 +11,8 @@ $input-border-radius:   0 !default;
 $input-border-type:     1px solid !default;
 $input-border-color:    #c1c1c1 #c1c1c1 #e1e1e1 !default;
 
+$standard-buttons:      true !default;
+
 
 @if $use-form-styles {
     fieldset {
@@ -132,11 +134,13 @@ $input-border-color:    #c1c1c1 #c1c1c1 #e1e1e1 !default;
 
     // Form buttons
     // --------------------------------------------------------------------
-    form button,
-    input[type="button"],
-    input[type="reset"],
-    input[type="submit"] {
-        @include gradient-button();
+    @if $standard-buttons {
+        form button,
+        input[type="button"],
+        input[type="reset"],
+        input[type="submit"] {
+            @include gradient-button();
+        }
     }
 
 
