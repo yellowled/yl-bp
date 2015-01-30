@@ -1,5 +1,5 @@
 // Avoid `console` errors in browsers that lack a console.
-// → github.com/h5bp/html5-boilerplate/blob/master/js/plugins.js
+// github.com/h5bp/html5-boilerplate/blob/master/src/js/plugins.js
 (function() {
     var method;
     var noop = function () {};
