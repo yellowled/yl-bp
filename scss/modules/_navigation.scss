@@ -3,7 +3,9 @@
 // Defaults
 $nav-breakpoint:    768px !default; // Breakpoint for smallscreen nav
 
+
 // General nav styles
+// --------------------------------------------------------------------
 nav ul,
 nav ol {
     list-style: none;
@@ -13,6 +15,7 @@ nav ol {
 
 
 // RESPONSIVE NAV
+// --------------------------------------------------------------------
 // github.com/viljamis/responsive-nav.js
 @if $use-rnav-classes {
     .nav-collapse {
