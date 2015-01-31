@@ -51,10 +51,21 @@ nav ol {
 
     @media screen and (min-width: $nav-breakpoint) {
         .js .nav-collapse {
+            clip: auto;
+            height: auto;
+            margin: 0;
+            overflow: visible;
             position: relative;
+            width: auto;
 
             &.closed {
                 max-height: none;
+            }
+        }
+
+        .nav-collapse {
+            li {
+                width: auto;
             }
         }
 
