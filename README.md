@@ -31,8 +31,6 @@ In the project directory:
 1. `npm install` (install [Grunt plugins](#plugins-used) required for build script; also executes `bower install` to install [JS assets](#js) included in this boilerplate automagically)
 2. `grunt` (start build script with default task, which is starting a simple local webserver and running the `watch` task)
 
-The local webserver is also exposed through [localtunnel.me](https://localtunnel.me), using the `name`defined in `package.json` as a subdomain (if available).
-
 [Additional Grunt tasks](#additional-grunt-tasks) are available for testing and deploying code to staging and live servers.
 
 ### “I don't need …”
@@ -63,7 +61,6 @@ The only difference between `grunt stage` and `grunt deploy` is that the first o
 * [grunt-fontello](https://npmjs.org/package/grunt-fontello)
 * [grunt-hashres](https://npmjs.org/package/grunt-hashres)
 * [grunt-htmlhint](https://npmjs.org/package/grunt-htmlhint)
-* [grunt-localtunnel-me](https://www.npmjs.com/package/grunt-localtunnel-me)
 * [grunt-modernizr](https://npmjs.org/package/grunt-modernizr)
 * [grunt-sass](https://npmjs.org/package/grunt-sass)
 * [grunt-scss-lint](https://www.npmjs.org/package/grunt-scss-lint)

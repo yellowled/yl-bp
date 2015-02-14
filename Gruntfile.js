@@ -14,7 +14,6 @@ module.exports = function(grunt) {
     // Development
     grunt.registerTask('dev', [
         'connect',
-        'localtunnel',
         'watch'
     ]);
 

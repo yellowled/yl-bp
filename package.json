@@ -35,7 +35,6 @@
         "grunt-fontello":           "~0.1.3",
         "grunt-hashres":            "~0.4.1",
         "grunt-htmlhint":           "~0.4.1",
-        "grunt-localtunnel-me":     "~0.1.6",
         "grunt-modernizr":          "~0.6.0",
         "grunt-sass":               "~0.18.0",
         "grunt-scss-lint":          "~0.3.4",
