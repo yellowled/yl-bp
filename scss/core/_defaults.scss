@@ -55,6 +55,10 @@ hr {
     padding: 0;
 }
 
+summary {
+    cursor: pointer;
+}
+
 // Remove the gap between images and the bottom of their containers
 img {
     vertical-align: middle;
