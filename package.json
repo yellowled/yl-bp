@@ -29,7 +29,7 @@
         "grunt-contrib-copy":       "~0.8.0",
         "grunt-contrib-imagemin":   "~0.9.2",
         "grunt-contrib-jshint":     "~0.11.0",
-        "grunt-contrib-uglify":     "~0.7.0",
+        "grunt-contrib-uglify":     "~0.8.0",
         "grunt-contrib-watch":      "~0.6.1",
         "grunt-autoprefixer":       "~2.2.0",
         "grunt-fontello":           "~0.1.3",
