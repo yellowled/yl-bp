@@ -6,7 +6,7 @@
     "dependencies": {
         "accessifyhtml5-amd":       "~2.0.2",
         "fitvids":                  "~1.1.0",
-        "gmaps":                    "~0.4.16",
+        "gmaps":                    "~0.4.17",
         "lazysizes":                "~0.9.0",
         "jquery":                   "~1.11.2",
         "jquery-accessible-tabs":   "~1.9.8",
