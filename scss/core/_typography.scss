@@ -1,16 +1,28 @@
 // BASIC TYPOGRAPHY
 // --------------------------------------------------------------------
+%primary-font {
+    font-family: $primary-font;
+}
+
 html {
+    @extend %primary-font;
+
     font-size: 100%;
 }
 
-html,
-button,
-input,
-select,
-optgroup,
-textarea {
-    font-family: $primary-font;
+@if $use-form-styles {
+    button,
+    input,
+    select,
+    textarea {
+        @extend %primary-font;
+    }
+}
+
+@if $use-form-advanced {
+    optgroup {
+        @extend %primary-font;
+    }
 }
 
 body {

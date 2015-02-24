@@ -4,7 +4,7 @@
 $ie7-support: false;
 // Support IE8
 $ie8-support: true;
-// IE7-Support means IE8-Support
+// IE7-Support requires IE8-Support
 @if $ie7-support {
     $ie8-support: true;
 }
@@ -21,6 +21,10 @@ $use-icon-fonts: true;
 // Forms
 $use-form-styles: false;
 $use-form-advanced: false;
+// Advanced form support requires basic form support
+@if $use-form-advanced {
+    $use-form-styles: true;
+}
 
 // Messages
 $use-msg-basic: false;
