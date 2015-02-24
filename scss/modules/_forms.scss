@@ -60,30 +60,18 @@ $standard-buttons:      true !default;
         box-shadow: none;
     }
 
-    optgroup {
-        background: $input-bg;
-        color: $input-fg;
-        font-style: normal;
+    @if $use-form-advanced {
+        optgroup {
+            background: $input-bg;
+            color: $input-fg;
+            font-style: normal;
+        }
     }
 
 
     // STYLE FORM ELEMENTS (borrowed heavily from formalize.me)
     // --------------------------------------------------------------------
-    input[type="date"],
-    input[type="datetime"],
-    input[type="datetime-local"],
-    input[type="month"],
-    input[type="number"],
-    input[type="password"],
-    input[type="time"],
-    input[type="week"],
-    input[type="email"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="url"],
-    select,
-    textarea,
-    input[type="text"] {
+    %input-elements {
         -webkit-appearance: none;
         background-clip: padding-box;
         background-color: $input-bg;
@@ -100,6 +88,29 @@ $standard-buttons:      true !default;
         &[disabled] {
             background-color: $lite-grey;
         }
+    }
+
+    @if $use-form-advanced {
+        input[type="date"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="month"],
+        input[type="number"],
+        input[type="password"],
+        input[type="time"],
+        input[type="week"],
+        input[type="email"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="url"] {
+            @extend %input-elements;
+        }
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+        @extend %input-elements;
     }
 
     select[size],
@@ -146,15 +157,17 @@ $standard-buttons:      true !default;
 
     // Disabled form elements
     // --------------------------------------------------------------------
-    form button[disabled],
-    select[disabled],
-    select[disabled] option,
-    select[disabled] optgroup,
-    textarea[disabled],
-    input[disabled] {
-        box-shadow: none;
-        color: $greyed-out;
-        cursor: default;
-        user-select: none;
+    @if $use-form-advanced {
+        form button[disabled],
+        select[disabled],
+        select[disabled] option,
+        select[disabled] optgroup,
+        textarea[disabled],
+        input[disabled] {
+            box-shadow: none;
+            color: $greyed-out;
+            cursor: default;
+            user-select: none;
+        }
     }
 }
