@@ -3,6 +3,8 @@ module.exports = function(grunt) {
     grunt.config('copy', {
         stage: {
             files: [{
+                expand: true,
+                cwd: '.',
                 src: ['.htaccess',
                       'robots.txt',
                       'apple-touch-icon.png',
@@ -16,6 +18,8 @@ module.exports = function(grunt) {
         },
         deploy: {
             files: [{
+                expand: true,
+                cwd: '.',
                 src: ['.htaccess',
                       'robots.txt',
                       'apple-touch-icon.png',
