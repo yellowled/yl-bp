@@ -99,14 +99,14 @@ $standard-buttons:      true !default;
         input[type="password"],
         input[type="time"],
         input[type="week"],
-        input[type="email"],
-        input[type="search"],
         input[type="tel"],
         input[type="url"] {
             @extend %input-elements;
         }
     }
 
+    input[type="email"],
+    input[type="search"],
     input[type="text"],
     select,
     textarea {
