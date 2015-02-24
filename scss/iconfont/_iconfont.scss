@@ -1,14 +1,16 @@
 // RESPONSIBLE ICONFONTS
 // --------------------------------------------------------------------
-// fontface supported: hide fallback text
-.fontface .fallback-text {
-    @extend %visuallyhidden;
-}
+@if $use-icon-fonts {
+    // fontface supported: hide fallback text
+    .fontface .fallback-text {
+        @extend %visuallyhidden;
+    }
 
-// fontface not supported: hide iconfont icons
-[class^="icon-"]:before,
-[class*=" icon-"]:before {
-    .no-fontface & {
-        @extend %hidden;
+    // fontface not supported: hide iconfont icons
+    [class^="icon-"]:before,
+    [class*=" icon-"]:before {
+        .no-fontface & {
+            @extend %hidden;
+        }
     }
 }
