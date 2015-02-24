@@ -37,8 +37,23 @@ $ie-right-margin:  4px 0 8px 16px !default;
     }
 
     .js .nav-collapse {
+        clip: auto;
+        height: auto;
+        margin: 0;
         max-height: none;
+        overflow: visible;
         position: relative;
+        width: auto;
+
+        &.closed {
+            max-height: none;
+        }
+    }
+
+    .nav-collapse {
+        li {
+            width: auto;
+        }
     }
 
     .nav-toggle {
