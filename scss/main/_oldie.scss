@@ -23,8 +23,8 @@ $ie-right-margin:  4px 0 8px 16px !default;
 // FIXES FOR IE8
 // --------------------------------------------------------------------
 @if $ie8-support {
-    .lt-ie9 {
-        @if $use-pw-classes {
+    @if $use-pw-classes {
+        .lt-ie9 {
             // For use with ProcessWire
             .align_left {
                 @extend %oldie-image-left;
@@ -36,29 +36,31 @@ $ie-right-margin:  4px 0 8px 16px !default;
         }
     }
 
-    .js .nav-collapse {
-        clip: auto;
-        height: auto;
-        margin: 0;
-        max-height: none;
-        overflow: visible;
-        position: relative;
-        width: auto;
-
-        &.closed {
+    @if $use-rnav-classes {
+        .js .nav-collapse {
+            clip: auto;
+            height: auto;
+            margin: 0;
             max-height: none;
-        }
-    }
-
-    .nav-collapse {
-        li {
+            overflow: visible;
+            position: relative;
             width: auto;
-        }
-    }
 
-    .nav-toggle {
-        display: none !important;
-        visibility: hidden;
+            &.closed {
+                max-height: none;
+            }
+        }
+
+        .nav-collapse {
+            li {
+                width: auto;
+            }
+        }
+
+        .nav-toggle {
+            display: none !important;
+            visibility: hidden;
+        }
     }
 }
 
@@ -66,38 +68,49 @@ $ie-right-margin:  4px 0 8px 16px !default;
 // FIXES FOR IE7
 // --------------------------------------------------------------------
 @if $ie7-support {
-    .lt-ie8 {
-        // Forms
-        input[type="radio"],
-        input[type="checkbox"] {
-            top: -5px;
-        }
+    @if $use-form-styles {
+        .lt-ie8 {
+            // Forms
+            input[type="radio"],
+            input[type="checkbox"] {
+                top: -5px;
+            }
 
-        input[type="date"],
-        input[type="datetime"],
-        input[type="datetime-local"],
-        input[type="month"],
-        input[type="number"],
-        input[type="password"],
-        input[type="time"],
-        input[type="week"],
-        textarea,
-        select,
-        input[type="email"],
-        input[type="search"],
-        input[type="tel"],
-        input[type="text"],
-        input[type="url"] {
-            @extend %box-sizing-polyfill;
+            %input-elements-oldie {
+                @extend %box-sizing-polyfill;
 
-            height: auto;
-            padding-bottom: 1px;
-            padding-top: 2px;
-        }
+                height: auto;
+                padding-bottom: 1px;
+                padding-top: 2px;
+            }
 
-        button {
-            padding-bottom: 1px;
-            padding-top: 1px;
+            @if $use-form-advanced {
+                input[type="date"],
+                input[type="datetime"],
+                input[type="datetime-local"],
+                input[type="month"],
+                input[type="number"],
+                input[type="password"],
+                input[type="time"],
+                input[type="week"],
+                input[type="tel"],
+                input[type="url"] {
+                    @extend %input-elements-oldie;
+                }
+            }
+
+            input[type="email"],
+            input[type="search"],
+            input[type="text"],
+            select,
+            textarea {
+                @extend %input-elements-oldie;
+            }
+
+            button {
+                padding-bottom: 1px;
+                padding-top: 1px;
+            }
         }
     }
 }
