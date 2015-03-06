@@ -7,8 +7,12 @@ linters:
 
   BorderZero:
     enabled: true
+    convention: zero
 
   ColorKeyword:
+    enabled: true
+
+  ColorVariable:
     enabled: true
 
   Comment:
@@ -52,6 +56,9 @@ linters:
   IdSelector:
     enabled: false
 
+  ImportantRule:
+    enabled: false
+
   ImportPath:
     enabled: true
     leading_underscore: false
@@ -80,6 +87,11 @@ linters:
 
   PlaceholderInExtend:
     enabled: true
+
+  PropertyCount:
+    enabled: false
+    include_nested: false
+    max_properties: 10
 
   PropertySortOrder:
     enabled: true
@@ -154,7 +166,7 @@ linters:
   UrlQuotes:
     enabled: true
 
-  VendorPrefixes:
+  VendorPrefix:
     enabled: true
     identifier_list: base
     include: []
