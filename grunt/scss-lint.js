@@ -4,6 +4,7 @@ module.exports = function(grunt) {
         options: {
             bundleExec: false,
             colorizeOutput: true,
+            compact: true,
             config: '.scss-lint.yml',
             exclude: [
                 'scss/core/_normalize.scss',
