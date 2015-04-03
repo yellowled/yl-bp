@@ -2,6 +2,7 @@
 // --------------------------------------------------------------------
 // Defaults
 $button-radius:     4px !default;
+$button-focus:      #06f !default;
 
 
 // Gradient button
@@ -35,7 +36,7 @@ $button-radius:     4px !default;
     }
 
     &:focus {
-        box-shadow: #06f 0 0 5px 0;
+        box-shadow: $button-focus 0 0 5px 0;
         z-index: 1;
     }
 
@@ -89,7 +90,7 @@ $button-radius:     4px !default;
 
 
 // Clean button
-@mixin no-button($fg-color: $black, $alt-fg: #06f, $bg-color: transparent, $alt-bg: transparent) {
+@mixin no-button($fg-color: $black, $alt-fg: $button-focus, $bg-color: transparent, $alt-bg: transparent) {
     background: $bg-color;
     background-clip: padding-box;
     border: 0 none;
@@ -111,7 +112,7 @@ $button-radius:     4px !default;
     }
 
     &:focus {
-        box-shadow: #06f 0 0 5px 0;
+        box-shadow: $button-focus 0 0 5px 0;
         z-index: 1;
     }
 }
