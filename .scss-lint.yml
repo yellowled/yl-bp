@@ -166,11 +166,16 @@ linters:
   UrlQuotes:
     enabled: true
 
+  VariableForProperty:
+    enabled: true
+    properties:
+      - font
+
   VendorPrefix:
     enabled: true
     identifier_list: base
-    include: []
-    exclude: []
+    additional_identifiers: []
+    excluded_identifiers: []
 
   ZeroUnit:
     enabled: true
