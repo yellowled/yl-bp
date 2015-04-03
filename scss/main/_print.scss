@@ -1,10 +1,14 @@
 // PRINT STYLES
 // --------------------------------------------------------------------
+// Defaults
+$print-color:       #000 !default;
+
+
 @media print {
     * {
         background: transparent !important;
         box-shadow: none !important;
-        color: #000 !important;
+        color: $print-color !important;
         text-shadow: none !important;
     }
 
