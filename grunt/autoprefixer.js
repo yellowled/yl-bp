@@ -4,8 +4,11 @@ module.exports = function(grunt) {
         options: {
             browsers: ['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1'],
             cascade: false,
+            remove: true,
+            diff: false,
             map: true,
-            silent: false
+            silent: false,
+            safe: false
         },
         dev: {
             expand: true,
