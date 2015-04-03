@@ -2,17 +2,7 @@
 module.exports = function(grunt) {
     grunt.config('htmlhint', {
         options: {
-            'tagname-lowercase': true,
-            'attr-lowercase': true,
-            'doctype-first': true,
-            'tag-pair': true,
-            'spec-char-escape': true,
-            'id-unique': true,
-            'src-not-empty': true,
-            'img-alt-require': true,
-            'doctype-html5': true,
-            'id-class-value': true,
-            'style-disabled': true
+            htmlhintrc: '.htmlhintrc'
         },
         all: {
             src: ['*.html']
