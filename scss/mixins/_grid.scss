@@ -1,17 +1,19 @@
 // FLEXIBLE GRID SYSTEM
 // --------------------------------------------------------------------
 // Defaults
-$sgs-row-width:     96% !default;    // fluid container width
-$sgs-row-max-width: 1140px !default; // max. container width
-$sgs-columns:       12 !default;     // no. of columns
-$sgs-gutter:        15px !default;   // spacing between columns
+$sgs-row-width:     100% !default;  // fluid container width
+$sgs-row-max-width: 71.25 !default; // max. container width
+$sgs-columns:       12 !default;    // no. of columns
+$sgs-gutter:        .9375 !default; // spacing between columns
 
 
 // Grid row (container)
 @mixin grid-row($row-limit: $sgs-row-max-width, $row-width: $sgs-row-width, $center: auto) {
     margin-left: $center;
     margin-right: $center;
-    @if $row-limit != 0 { max-width: $row-limit; }
+    @if $row-limit != 0 {
+        @include x-rem(max-width, $row-limit);
+    }
     width: $row-width;
 }
 
@@ -19,7 +21,8 @@ $sgs-gutter:        15px !default;   // spacing between columns
 @mixin grid-box($span-columns, $gutter: $sgs-gutter, $total-columns: $sgs-columns, $grid-type: 100%) {
     box-sizing: border-box;
     float: left;
-    padding: 0 $gutter;
+    @include x-rem(padding-left, $gutter);
+    @include x-rem(padding-right, $gutter);
     width: $grid-type * ($span-columns / $total-columns);
 }
 
