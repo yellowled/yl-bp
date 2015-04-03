@@ -4,9 +4,8 @@ module.exports = function(grunt) {
         dev: {
             options: {
                 outputStyle: 'nested',
-                imagePath: 'img',
-                sourceMap: true,
-                precision: 5
+                precision: 5,
+                sourceMap: true
             },
             files: [{
                 expand: true,
@@ -19,9 +18,8 @@ module.exports = function(grunt) {
         deploy: {
             options: {
                 outputStyle: 'compressed',
-                imagePath: 'img',
-                sourceMap: true,
-                precision: 5
+                precision: 5,
+                sourceMap: true
             },
             files: [{
                 expand: true,
