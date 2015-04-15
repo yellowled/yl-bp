@@ -96,7 +96,6 @@ Some of the variables defined in partials use Sass's `!default` flag. These vari
 
 ### JS plugins included
 
-* [AccessifyHTML5](https://github.com/yatil/accessifyhtml5.js)
 * [H5BP log](https://github.com/h5bp/html5-boilerplate/blob/master/src/js/plugins.js)
 * [lazysizes](https://github.com/aFarkas/lazysizes)
 * [respimage](https://github.com/aFarkas/respimage)

@@ -4,7 +4,6 @@
     "main":         "",
     "ignore":       [],
     "dependencies": {
-        "accessifyhtml5-amd":       "~2.0.3",
         "fitvids":                  "~1.1.0",
         "gmaps":                    "~0.4.17",
         "lazysizes":                "~1.0.1",
