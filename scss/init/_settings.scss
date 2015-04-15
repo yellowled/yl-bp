@@ -1,17 +1,8 @@
 // GENERAL SETTINGS FOR THIS PROJECT
 // --------------------------------------------------------------------
-// Support IE7
-$ie7-support: false;
 // Support IE8
 $ie8-support: true;
-// IE7-Support requires IE8-Support
-@if $ie7-support {
-    $ie8-support: true;
-}
 
-
-// Include classes/styles based on components used
-// --------------------------------------------------------------------
 // responsive-nav
 $use-rnav-classes: true;
 
