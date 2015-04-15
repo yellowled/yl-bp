@@ -15,10 +15,6 @@ $ie-right-margin:  4px 0 8px 16px !default;
     margin: $ie-right-margin;
 }
 
-%box-sizing-polyfill {
-    behavior: url('/scripts/helpers/boxsizing.htc');
-}
-
 
 // FIXES FOR IE8
 // --------------------------------------------------------------------
@@ -77,8 +73,6 @@ $ie-right-margin:  4px 0 8px 16px !default;
             }
 
             %input-elements-oldie {
-                @extend %box-sizing-polyfill;
-
                 height: auto;
                 padding-bottom: 1px;
                 padding-top: 2px;

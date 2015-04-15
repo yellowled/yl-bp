@@ -10,7 +10,6 @@ module.exports = function(grunt) {
                       'apple-touch-icon.png',
                       'favicon.ico',
                       'font/*',
-                      // 'scripts/helpers/boxsizing.htc',
                       'scripts/jquery/dist/jquery.min.js',
                       'scripts/jquery/dist/jquery.min.map'],
                 dest: 'dist/'
@@ -25,7 +24,6 @@ module.exports = function(grunt) {
                       'apple-touch-icon.png',
                       'favicon.ico',
                       'font/*',
-                      // 'scripts/helpers/boxsizing.htc',
                       'scripts/jquery/dist/jquery.min.js',
                       'scripts/jquery/dist/jquery.min.map'],
                 dest: 'dist/'
