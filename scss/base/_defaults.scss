@@ -70,11 +70,108 @@ img {
 }
 
 
+// BASIC TYPOGRAPHY
+// --------------------------------------------------------------------
+%primary-font {
+    font-family: $primary-font;
+}
+
+html {
+    @extend %primary-font;
+
+    font-size: 100%;
+}
+
+@if $use-form-styles {
+    button,
+    input,
+    select,
+    textarea {
+        @extend %primary-font;
+    }
+}
+
+@if $use-form-advanced {
+    optgroup {
+        @extend %primary-font;
+    }
+}
+
+body {
+    line-height: $type-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include x-rem(margin, $type-rhythm 0);
+}
+
+h5,
+h6 {
+    @include x-rem(font-size, 1);
+}
+
+pre,
+code,
+samp,
+kbd {
+    @include x-rem(font-size, .875);
+}
+
+
+// QUOTES
+// html5doctor.com/blockquote-q-cite/
+// --------------------------------------------------------------------
+q {
+    quotes: '“' '”' '‘' '’';
+}
+
+:lang(de) q {
+    quotes: '„' '“' '‚' '‘';
+}
+
+
+// HYPHENATION
+// --------------------------------------------------------------------
+p {
+    hyphens: auto;
+
+    // not for preformatted text (inline)
+    code,
+    samp,
+    kbd {
+        hyphens: none;
+    }
+}
+
+
 // EXTENDS/INCLUDES
 // --------------------------------------------------------------------
 video,
 img {
     @include responsive-media;
+}
+
+
+// RESPONSIBLE ICONFONTS
+// --------------------------------------------------------------------
+@if $use-icon-fonts {
+    // fontface supported: hide fallback text
+    .fontface .fallback-text {
+        @extend %visuallyhidden;
+    }
+
+    // fontface not supported: hide iconfont icons
+    [class^="icon-"]:before,
+    [class*=" icon-"]:before {
+        .no-fontface & {
+            @extend %hidden;
+        }
+    }
 }
 
 

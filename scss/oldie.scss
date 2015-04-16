@@ -1,51 +1,40 @@
-// Presets
-@import 'presets/constants';
-@import 'presets/functions';
-
 // Initialize
-@import 'init/settings';
-@import 'init/variables';
+@import 'ext/colors';
+@import 'lib/functions';
+@import 'main/init/settings';
+@import 'main/init/variables';
 
 // Mixins
-@import 'mixins/buttons';
-@import 'mixins/grid';
-@import 'mixins/img';
-@import 'mixins/position';
-@import 'mixins/shapes';
-@import 'mixins/tables';
-@import 'mixins/type';
-@import 'mixins/units';
+@import 'lib/mixins/buttons';
+@import 'lib/mixins/grid';
+@import 'lib/mixins/img';
+@import 'lib/mixins/position';
+@import 'lib/mixins/shapes';
+@import 'lib/mixins/tables';
+@import 'lib/mixins/type';
+@import 'lib/mixins/units';
 
-// Core
-@import 'core/normalize';
-@import 'core/defaults';
-@import 'core/typography';
-
-// Extends
-@import 'extends/helpers';
-
-// Fontello
-@import 'iconfont/fontello';
-@import 'iconfont/iconfont';
+// Base
+@import 'base/normalize';
+@import 'base/defaults';
+@import 'lib/extends';
+@import 'ext/fontello';
 
 // Plugins
-@import 'plugins/slideshow';
 @import '../scripts/magnific-popup/src/css/main';
-@import 'plugins/lightbox';
-@import 'plugins/tabs';
-@import 'plugins/googlemap';
+@import 'ext/plugins/cycle';
+@import 'ext/plugins/gmaps';
+@import 'ext/plugins/modal';
+@import 'ext/plugins/tabs';
 @import '../scripts/tablesaw/src/tables.stack-mixin';
 
 // Modules
-@import 'modules/forms';
-@import 'modules/messages';
-@import 'modules/images';
-@import 'modules/navigation';
+@import 'lib/modules/forms';
+@import 'lib/modules/messages';
+@import 'lib/modules/images';
+@import 'lib/modules/navigation';
 
 // Layout
 @import 'main/common';
-@import 'main/oldie';
-@import 'layout/legacy';
-@import 'layout/tablet';
-@import 'layout/laptop';
-@import 'main/print';
+@import 'main/addon/ie';
+@import 'main/addon/print';

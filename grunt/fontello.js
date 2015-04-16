@@ -5,14 +5,14 @@ module.exports = function(grunt) {
             config: 'fontello.json',
             zip: 'scripts/',
             fonts: 'font/',
-            styles: 'scss/iconfont/',
+            styles: 'scss/ext/',
             scss: true,
             force: true
         },
         build: {
             config: 'fontello.json',
             fonts: 'font/',
-            styles: 'scss/iconfont/'
+            styles: 'scss/ext/'
         }
     });
 
