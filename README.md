@@ -74,13 +74,13 @@ This boilerplate uses Sass, more specifically its dialect SCSS, to generate two 
 Most of the partials in `scss` and its subdirectories are **not** meant to be edited (in order to make it easier to update projects). You should not (need to) edit files in `scss` other than:
 
 * `master.scss` and `oldie.scss` – exclude unused partials (by commenting them out)
-* partials in `scss/init` – for project-based settings and variables
-* partials in `scss/main` – common styles for all resolutions, specific styles for IE < 9, print styles
-* partials in `scss/layout` – styles for resolutions corresponding to breakpoints set in `scss/core/_media.scss`
+* partials in `scss/main/init` – for project-based settings and variables
+* partials in `scss/main/addon` – specific styles for IE < 9 and print styles
+* partials in `scss/main` – common (base) styles and styles for resolutions corresponding to breakpoints set in `scss/core/_media.scss`
 
 ### Overriding defaults
 
-Some of the variables defined in partials use Sass's `!default` flag. These variables can be easily overridden by setting them in `scss/init/_variables.scss`. If a given variable with the `!default` flag is **not** set in the settings partial, it will fall back to the default value.
+Some of the variables defined in partials use Sass's `!default` flag. These variables can be easily overridden by setting them in `scss/main/init/_variables.scss`. If a given variable with the `!default` flag is **not** set in the settings partial, it will fall back to the default value.
 
 ## JS
 
