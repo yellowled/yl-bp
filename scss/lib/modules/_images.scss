@@ -50,8 +50,3 @@ $img-right-margin:  .25 0 .75 $type-rhythm !default;
 figure {
     @extend %image-block;
 }
-
-// Figures/images in MagnificPopup
-.mfp-content figure {
-    margin: 0;
-}
