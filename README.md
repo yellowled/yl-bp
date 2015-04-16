@@ -73,7 +73,7 @@ This boilerplate uses Sass, more specifically its dialect SCSS, to generate two 
 
 Most of the partials in `scss` and its subdirectories are **not** meant to be edited (in order to make it easier to update projects). You should not (need to) edit files in `scss` other than:
 
-* `master.scss` and `oldie.scss` – exclude `ext/fontello` and/or the partial for MagnificPopup by commenting them out if you don't use them; everything else is either in mixins or can be excluded through `main/init/settings`
+* `master.scss` and `oldie.scss` – see [Generated CSS](#generated-css)
 * partials in `scss/main/init` – for project-based settings and variables
 * partials in `scss/main/addon` – specific styles for IE < 9 and print styles
 * partials in `scss/main` – common (base) styles and styles for resolutions corresponding to breakpoints set in `scss/core/_media.scss`
@@ -81,6 +81,15 @@ Most of the partials in `scss` and its subdirectories are **not** meant to be ed
 ### Overriding defaults
 
 Some of the variables defined in partials use Sass's `!default` flag. These variables can be easily overridden by setting them in `scss/main/init/_variables.scss`. If a given variable with the `!default` flag is **not** set in the settings partial, it will fall back to the default value.
+
+### Generated CSS
+
+The only SCSS partials you might want to exclude if you don't use them (by commenting them out in `scss/master.scss` and `scss/oldie.scss`) are
+
+* `ext/fontello`
+* `../scripts/magnific-popup/src/css/main`
+
+All other CSS any given project might not require is either encapsulated in mixins or placeholder selectors or can be excluded in `scss/main/init/_settings.scss`.
 
 ## JS
 
