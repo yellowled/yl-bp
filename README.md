@@ -20,8 +20,8 @@ Please refer to the documentation of your OS and/or the documentation of these r
 ### Basic concepts
 
 * HTML is compiled from [Handlebars](http://handlebarsjs.com) templates using [assemble](http://assemble.io). Layouts are in `src/tpl/`, partials in `src/inc/`; pages should be kept in `/`. Markup files (`.html`) are explicitly excluded from the repository in the `.gitignore`.
-* CSS is compiled from [Sass](http://sass-lang.com) using [libsass](http://libsass.org) and [autoprefixer](https://github.com/nDmitry/grunt-autoprefixer) (no need to write vendor prefixes). The main SCSS files `@import` partials from the subdirectories of `scss/`. `@media` queries should be written [mobile first](http://bradfrostweb.com/blog/web/mobile-first-responsive-web-design/). (Also see [(S)CSS structure](#css).)
-* JS and [jQuery](http://jquery.com) packages are (mostly) managed by Bower, which is configured to import them to the `scripts/` directory. Most of the JS assets are concatenated into a single file (`scripts/master.js`) by the build script. Any JS specific to the project should go into the `scripts/main.js` file.
+* CSS is compiled from [Sass](http://sass-lang.com) using [libsass](http://libsass.org) and [autoprefixer](https://github.com/nDmitry/grunt-autoprefixer) (no need to write vendor prefixes). The main SCSS files `@import` partials from the subdirectories of `scss/`. `@media` queries should be written [mobile first](http://bradfrostweb.com/blog/web/mobile-first-responsive-web-design/). See [(S)CSS structure](#css).
+* JS and [jQuery](http://jquery.com) packages are (mostly) managed by Bower, which is configured to import them to the `scripts/` directory. See [JS structure](#js)
 * To avoid CSS hacks, [conditional classes](http://www.paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/) are available; also, [Modernizr](http://modernizr.com) is included for feature detection. A customized build of Modernizr will be created by the build script.
 
 ## Setting up
@@ -83,6 +83,8 @@ Most of the partials in `scss` and its subdirectories are **not** meant to be ed
 Some of the variables defined in partials use Sass's `!default` flag. These variables can be easily overridden by setting them in `scss/main/init/_variables.scss`. If a given variable with the `!default` flag is **not** set in the settings partial, it will fall back to the default value.
 
 ## JS
+
+Most of the JS assets are concatenated into a single file (`scripts/master.js`) by the build script. Any JS specific to the project should go into the `scripts/main.js` file.
 
 ### jQuery plugins included
 
