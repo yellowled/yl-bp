@@ -13,19 +13,19 @@
 @import 'lib/mixins/tables';
 @import 'lib/mixins/type';
 @import 'lib/mixins/units';
+@import 'ext/plugins/cycle';
+@import 'ext/plugins/gmaps';
+@import 'ext/plugins/modal';
+@import 'ext/plugins/tabs';
 
 // Base
 @import 'base/normalize';
 @import 'base/defaults';
 @import 'lib/extends';
-@import 'ext/fontello';
 
-// Plugins
+// Vendor
+@import 'ext/fontello';
 @import '../scripts/magnific-popup/src/css/main';
-@import 'ext/plugins/cycle';
-@import 'ext/plugins/gmaps';
-@import 'ext/plugins/modal';
-@import 'ext/plugins/tabs';
 @import '../scripts/tablesaw/src/tables.stack-mixin';
 
 // Modules
