@@ -5,6 +5,11 @@ $ie-left-margin:   4px 16px 8px 0 !default;
 $ie-right-margin:  4px 0 8px 16px !default;
 
 
+@import '../legacy';
+@import '../tablet';
+@import '../laptop';
+
+
 %oldie-image-left {
     float: left;
     margin: $ie-left-margin;
