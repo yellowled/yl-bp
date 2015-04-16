@@ -7,13 +7,18 @@ module.exports = function(grunt) {
             compact: true,
             config: '.scss-lint.yml',
             exclude: [
-                'scss/core/_normalize.scss',
-                'scss/iconfont/*',
-                'scss/main/_oldie.scss',
-                'scss/mixins/_type.scss',
-                'scss/mixins/_units.scss',
-                'scss/modules/_forms.scss',
-                'scss/modules/_images.scss'
+                'scss/base/_normalize.scss',
+                'scss/ext/_animation.scss',
+                'scss/ext/_fontello-codes.scss',
+                'scss/ext/_fontello-embedded.scss',
+                'scss/ext/_fontello-ie7-codes.scss',
+                'scss/ext/_fontello-ie7.scss',
+                'scss/ext/_fontello.scss',
+                'scss/lib/mixins/_typography.scss',
+                'scss/lib/mixins/_units.scss',
+                'scss/lib/modules/_forms.scss',
+                'scss/lib/modules/_images.scss',
+                'scss/main/addon/_ie.scss'
             ],
             reporterOutput: null
         },
