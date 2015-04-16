@@ -73,7 +73,7 @@ This boilerplate uses Sass, more specifically its dialect SCSS, to generate two 
 
 Most of the partials in `scss` and its subdirectories are **not** meant to be edited (in order to make it easier to update projects). You should not (need to) edit files in `scss` other than:
 
-* `master.scss` and `oldie.scss` – exclude `ext/fontello` and/or the partial for MagnificPopup, if you don't use them – everything else is either in mixins or can be excluded through `main/init/settings`
+* `master.scss` and `oldie.scss` – exclude `ext/fontello` and/or the partial for MagnificPopup by commenting them out if you don't use them; everything else is either in mixins or can be excluded through `main/init/settings`
 * partials in `scss/main/init` – for project-based settings and variables
 * partials in `scss/main/addon` – specific styles for IE < 9 and print styles
 * partials in `scss/main` – common (base) styles and styles for resolutions corresponding to breakpoints set in `scss/core/_media.scss`
