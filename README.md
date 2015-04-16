@@ -69,27 +69,27 @@ The only difference between `grunt stage` and `grunt deploy` is that the first o
 
 ## CSS
 
-This boilerplate uses Sass, more specifically its dialect SCSS, to generate two CSS files. `styles/master.css` is the main stylesheet, `styles/oldie.css` is a fallback stylesheet for IE < 9. `oldie.css` is necessary because the (S)CSS is supposed to be written mobile-first, which means IE < 9 needs this workaround because it doesn't support media queries for responsive web design.
+This boilerplate uses Sass, more specifically its dialect SCSS, to generate two CSS files. `styles/master.css` is the main stylesheet, `styles/oldie.css` is a fallback stylesheet for IE < 9 which is necessary because the (S)CSS is supposed to be written mobile-first. IE < 9 needs this workaround because it doesn't support media queries.
 
 Most of the partials in `scss` and its subdirectories are **not** meant to be edited (in order to make it easier to update projects). You should not (need to) edit files in `scss` other than:
 
-* `master.scss` and `oldie.scss` – see [Generated CSS](#generated-css)
-* partials in `scss/main/init` – for project-based settings and variables
-* partials in `scss/main/addon` – specific styles for IE < 9 and print styles
-* partials in `scss/main` – common (base) styles and styles for resolutions corresponding to breakpoints set in `scss/core/_media.scss`
+* `scss/master.scss` and `scss/oldie.scss` – see [Generated CSS](#compiled-css)
+* partials in `scss/main/init` – project-based settings and variables
+* partials in `scss/main/addon` – styles for IE < 9 and print styles
+* partials in `scss/main` – common styles and styles for resolutions corresponding to breakpoints set in `scss/base/_media.scss`
 
 ### Overriding defaults
 
 Some of the variables defined in partials use Sass's `!default` flag. These variables can be easily overridden by setting them in `scss/main/init/_variables.scss`. If a given variable with the `!default` flag is **not** set in the settings partial, it will fall back to the default value.
 
-### Generated CSS
+### Compiled CSS
 
-The only SCSS partials you might want to exclude if you don't use them (by commenting them out in `scss/master.scss` and `scss/oldie.scss`) are
+The only SCSS partials you might want to exclude if you don't use them (by commenting them out in `scss/master.scss` and `scss/oldie.scss`) are the following lines in the Vendor section:
 
 * `ext/fontello`
 * `../scripts/magnific-popup/src/css/main`
 
-All other CSS any given project might not require is either encapsulated in mixins or placeholder selectors or can be excluded in `scss/main/init/_settings.scss`.
+All other SCSS any given project might not require is either encapsulated in mixins or placeholder selectors or can be excluded in `scss/main/init/_settings.scss`.
 
 ## JS
 
