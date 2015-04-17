@@ -8,12 +8,7 @@ module.exports = function(grunt) {
             config: '.scss-lint.yml',
             exclude: [
                 'scss/base/_normalize.scss',
-                'scss/ext/_animation.scss',
-                'scss/ext/_fontello-codes.scss',
-                'scss/ext/_fontello-embedded.scss',
-                'scss/ext/_fontello-ie7-codes.scss',
-                'scss/ext/_fontello-ie7.scss',
-                'scss/ext/_fontello.scss',
+                'scss/ext/iconfont/*.scss',
                 'scss/lib/mixins/_typography.scss',
                 'scss/lib/mixins/_units.scss',
                 'scss/lib/modules/_forms.scss',
