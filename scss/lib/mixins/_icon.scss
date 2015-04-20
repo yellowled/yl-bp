@@ -1,0 +1,83 @@
+// CSS ONLY HAMBURGER ICON
+// --------------------------------------------------------------------
+// Defaults
+$hicon-fg-color:            $off-black !default;
+$hicon-bg-color:            transparent !default;
+
+$hicon-dims:                32px !default;
+$hicon-line-height:         4px !default;
+$hicon-line-width:          24px !default;
+
+$hicon-transition-speed:    .2s !default;
+$hicon-transition-type:     ease-in !default;
+
+$hicon-class:               icon-menu !default;
+$hicon-sr-class:            fallback-text !default;
+$hicon-active-class:        js-nav-active !default;
+
+
+@mixin icon-hamburger {
+    background-color: $hicon-bg-color;
+    display: inline-block;
+    height: $hicon-dims;
+    position: relative;
+    width: $hicon-dims;
+
+    .#{$hicon-class} {
+        left: (($hicon-dims - $hicon-line-width) / 2);
+        top: (($hicon-dims - $hicon-line-height) / 2);
+        transition: background-color $hicon-transition-speed $hicon-transition-type;
+
+        &,
+        &:before,
+        &:after {
+            background-color: $hicon-fg-color;
+            display: block;
+            height: $hicon-line-height;
+            position: absolute;
+            width: $hicon-line-width;
+        }
+
+        &:before,
+        &:after {
+            content: '';
+        }
+
+        &:before {
+            top: -($hicon-line-width / 3);
+            transition: top  $hicon-transition-speed $hicon-transition-type $hicon-transition-speed,
+                        transform $hicon-transition-speed $hicon-transition-type;
+        }
+
+        &:after {
+            bottom: -($hicon-line-width / 3);
+            transition: bottom  $hicon-transition-speed $hicon-transition-type $hicon-transition-speed,
+                        transform $hicon-transition-speed $hicon-transition-type;
+        }
+    }
+
+    .#{$hicon-active-class} & .#{$hicon-class} {
+        & {
+            background-color: transparent;
+            transition: background-color $hicon-transition-speed $hicon-transition-type;
+        }
+
+        &:before {
+            top: 0;
+            transform: rotate(-45deg);
+            transition: top $hicon-transition-speed $hicon-transition-type,
+                        transform $hicon-transition-speed $hicon-transition-type $hicon-transition-speed;
+        }
+
+        &:after {
+            bottom: 0;
+            transform: rotate(45deg);
+            transition: bottom $hicon-transition-speed $hicon-transition-type,
+                        transform $hicon-transition-speed $hicon-transition-type $hicon-transition-speed;
+        }
+    }
+
+    .#{$hicon-sr-class} {
+        @extend %visuallyhidden;
+    }
+}
