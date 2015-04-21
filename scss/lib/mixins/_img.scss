@@ -71,3 +71,118 @@
         }
     }
 }
+
+// Animated caption
+@mixin animated-figure($position: bottom, $push: true, $rhythm: $type-rhythm) {
+    @include x-rem(margin, $rhythm 0);
+
+    box-shadow: 0 0 4px rgba($black, .7);
+    position: relative;
+    overflow: hidden;
+
+    .no-boxshadow & {
+        border: 1px solid $grey;
+    }
+
+    img {
+
+        display: block;
+        position: relative;
+
+        .no-touch & {
+            transition: transform .4s;
+        }
+    }
+
+    figcaption {
+        @include x-rem(padding, 1);
+
+        @if $push {
+            background-color: $off-black;
+        } @else {
+            background-color: rgba($off-black, .7);
+        }
+        box-sizing: border-box;
+        color: $off-white;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+
+        .no-touch & {
+            transition: transform .4s,
+                        opacity .1s .3s;
+            @if $position == bottom {
+                bottom: 0;
+                top: auto;
+                transform: translateY(100%);
+            } @else if $position == left {
+                height: 100%;
+                left: 0;
+                top: 0;
+                transform: translateX(-100%);
+                width: 25%;
+            } @else if $position == right {
+                height: 100%;
+                left: auto;
+                right: 0;
+                top: 0;
+                transform: translateX(100%);
+                width: 25%;
+            } @else {
+                bottom: auto;
+                top: 0;
+                transform: translateY(-100%);
+            }
+        }
+    }
+
+    .no-touch &:hover {
+        img {
+            @if $push {
+                @if $position == bottom {
+                    transform: translateY(-50px);
+                } @else if $position == left {
+                    transform: translateX(50px);
+                } @else if $position == right {
+                    transform: translateX(-50px);
+                } @else {
+                    transform: translateY(50px);
+                }
+            }
+        }
+
+        figcaption {
+            opacity: 1;
+            transform: translateY(0px);
+            transition: transform .4s,
+                        opacity .1s;
+        }
+    }
+
+    .touch & {
+        figcaption {
+            opacity: 1;
+            transform: translateY(0px);
+
+            @if $position == bottom {
+                bottom: 0;
+                top: auto;
+            } @else if $position == left {
+                height: 100%;
+                left: 0;
+                top: 0;
+                width: 25%;
+            } @else if $position == right {
+                height: 100%;
+                left: auto;
+                right: 0;
+                top: 0;
+                width: 25%;
+            } @else {
+                bottom: auto;
+                top: 0;
+            }
+        }
+    }
+}
