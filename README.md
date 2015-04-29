@@ -1,9 +1,8 @@
-# A boilerplate for HTML5 projects
+# HTML project boilerplate
 
-This is what I usually use to start projects. Derived from [H5BP](https://github.com/h5bp/html5-boilerplate), inspired by [init](https://github.com/drublic/init).
+Derived from [H5BP](https://github.com/h5bp/html5-boilerplate), inspired by [init](https://github.com/drublic/init).
 
 [![Build Status](https://travis-ci.org/yellowled/yl-bp.svg?branch=master)](https://travis-ci.org/yellowled/yl-bp)
-[![Dependency Status](https://david-dm.org/yellowled/yl-bp.svg)](https://david-dm.org/yellowled/yl-bp)
 [![devDependency Status](https://david-dm.org/yellowled/yl-bp/dev-status.svg)](https://david-dm.org/yellowled/yl-bp#info=devDependencies)
 
 ## Requirements
@@ -11,7 +10,7 @@ This is what I usually use to start projects. Derived from [H5BP](https://github
 * [Grunt](http://gruntjs.com)
 * [Bower](http://bower.io)
 
-Grunt and Bower depend on [node.js](http://nodejs.org). `grunt-scss-lint` requires [scss-lint](https://github.com/causes/scss-lint), scss-lint depends on [Ruby](http://www.ruby-lang.org).
+Grunt and Bower depend on [node.js](http://nodejs.org). grunt-scss-lint requires [scss-lint](https://github.com/causes/scss-lint), scss-lint depends on [Ruby](http://www.ruby-lang.org).
 
 ### Installation
 
@@ -69,14 +68,14 @@ The only difference between `grunt stage` and `grunt deploy` is that the first o
 
 ## CSS
 
-This boilerplate uses Sass, more specifically its dialect SCSS, to generate two CSS files. `styles/master.css` is the main stylesheet, `styles/oldie.css` is a fallback stylesheet for IE < 9 which is necessary because the (S)CSS is supposed to be written mobile-first. IE < 9 needs this workaround because it doesn't support media queries.
+This boilerplate uses Sass (SCSS) to generate two CSS files. `styles/master.css` is the main stylesheet, `styles/oldie.css` is a fallback stylesheet for IE < 9 which is necessary because the (S)CSS is supposed to be written mobile-first. IE < 9 needs this workaround because it doesn't support media queries.
 
 Most of the partials in `scss` and its subdirectories are **not** meant to be edited (in order to make it easier to update projects). You should not (need to) edit files in `scss` other than:
 
 * `scss/master.scss` and `scss/oldie.scss` – see [Generated CSS](#compiled-css)
 * partials in `scss/main/init` – project-based settings and variables
 * partials in `scss/main/addon` – styles for IE < 9 and print styles
-* partials in `scss/main` – common styles and styles for resolutions corresponding to breakpoints set in `scss/base/_media.scss`
+* partials in `scss/main` – common styles and styles for resolutions corresponding to breakpoints
 
 ### Overriding defaults
 
