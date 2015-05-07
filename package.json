@@ -36,7 +36,7 @@
         "grunt-hashres":            "~0.4.1",
         "grunt-htmlhint":           "~0.4.1",
         "grunt-modernizr":          "~0.6.0",
-        "grunt-sass":               "~0.18.1",
+        "grunt-sass":               "~1.0.0",
         "grunt-scss-lint":          "~0.3.6",
         "grunt-svgmin":             "~2.0.1",
         "assemble":                 "~0.4.42"
