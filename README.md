@@ -113,4 +113,4 @@ Most of the JS assets are concatenated into a single file (`scripts/master.js`) 
 
 ## License
 
-Please note that this project includes components which have their own licenses, which may differ from the license of this project. Everything that was developed specifically for this project is under [MIT license]().
+Please note that this project includes components which have their own licenses, which may differ from the license of this project. Everything that was developed specifically for this project is under [MIT license](https://github.com/yellowled/yl-bp/blob/master/LICENSE).
