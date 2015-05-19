@@ -8,6 +8,7 @@
         "name":     "Matthias Mees",
         "url":      "http://yellowled.de"
     },
+    "license":      "MIT",
     "repository": {
         "type":     "git",
         "url":      "git://github.com/yellowled/yl-bp.git"

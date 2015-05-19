@@ -110,3 +110,7 @@ Most of the JS assets are concatenated into a single file (`scripts/master.js`) 
 * [lazysizes](https://github.com/aFarkas/lazysizes)
 * [respimage](https://github.com/aFarkas/respimage)
 * [Responsive Nav](https://github.com/viljamis/responsive-nav.js)
+
+## License
+
+Please note that this project includes components which have their own licenses, which may differ from the license of this project. Everything that was developed specifically for this project is under [MIT license]().
