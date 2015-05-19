@@ -1,4 +1,4 @@
-[Back to TOC](TOC.md)
+[← Back to TOC](TOC.md)
 
 # Additional Grunt tasks
 
