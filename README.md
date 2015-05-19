@@ -9,7 +9,7 @@ An HTML project boilerplate. Derived from [H5BP](https://github.com/h5bp/html5-b
 
 You'll need [node.js](http://nodejs.org), [Ruby](http://www.ruby-lang.org), [Grunt](http://gruntjs.com), [Bower](http://bower.io) and [scss-lint](https://github.com/causes/scss-lint). Clone the repository, do `npm i` in the project directory and run `grunt` to start the build script. See [Documentation](#documentation) for details.
 
-## Documentation
+## [Documentation](docs/TOC.md)
 
 ### Get started
 
