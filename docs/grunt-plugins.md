@@ -1,0 +1,21 @@
+[Back to TOC](TOC.md)
+
+# Grunt plugins used
+
+* [grunt-contrib-clean](https://npmjs.org/package/grunt-contrib-clean)
+* [grunt-contrib-concat](https://npmjs.org/package/grunt-contrib-concat)
+* [grunt-contrib-connect](https://npmjs.org/package/grunt-contrib-connect)
+* [grunt-contrib-copy](https://npmjs.org/package/grunt-contrib-copy)
+* [grunt-contrib-imagemin](https://npmjs.org/package/grunt-contrib-imagemin)
+* [grunt-contrib-jshint](https://npmjs.org/package/grunt-contrib-jshint)
+* [grunt-contrib-uglify](https://npmjs.org/package/grunt-contrib-uglify)
+* [grunt-contrib-watch](https://npmjs.org/package/grunt-contrib-watch)
+* [grunt-autoprefixer](https://npmjs.org/package/grunt-autoprefixer)
+* [grunt-fontello](https://npmjs.org/package/grunt-fontello)
+* [grunt-hashres](https://npmjs.org/package/grunt-hashres)
+* [grunt-htmlhint](https://npmjs.org/package/grunt-htmlhint)
+* [grunt-modernizr](https://npmjs.org/package/grunt-modernizr)
+* [grunt-sass](https://npmjs.org/package/grunt-sass)
+* [grunt-scss-lint](https://www.npmjs.org/package/grunt-scss-lint)
+* [grunt-svgmin](https://www.npmjs.org/package/grunt-svgmin)
+* [assemble](https://www.npmjs.org/package/assemble)
