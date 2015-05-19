@@ -4,7 +4,7 @@
 
 In the project directory:
 
-1. `npm install` (install [Grunt plugins](#plugins-used) required for build script; also executes `bower install` to install [JS assets](#js) included in this boilerplate automagically)
+1. `npm install` (install [Grunt plugins](grunt-plugins.md) required for build script; also executes `bower install` to install [JS assets](javascript.md) included in this boilerplate automagically)
 2. `grunt` (start build script with default task, which is starting a simple local webserver and running the `watch` task)
 
 [Additional Grunt tasks](additional-tasks.md) are available for testing and deploying code to staging and live servers.
