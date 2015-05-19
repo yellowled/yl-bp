@@ -19,7 +19,7 @@
         "postinstall":  "bower install"
     },
     "engines": {
-        "node":     ">=0.10.0"
+        "node":     ">=0.12.0"
     },
     "devDependencies":  {
         "grunt":                    "~0.4.5",
