@@ -27,4 +27,4 @@ You'll need [node.js](http://nodejs.org), [Ruby](http://www.ruby-lang.org), [Gru
 
 ## License
 
-Please note that this project includes components which have their own licenses, which may differ from the license of this project. Everything that was developed specifically for this project is under [MIT license](https://github.com/yellowled/yl-bp/blob/master/LICENSE).
+Please note that this project includes components which have their own licenses, which may differ from the license of this project. Everything that was developed specifically for this project is under [MIT license](https://github.com/yellowled/yl-bp/blob/master/LICENSE.md).
