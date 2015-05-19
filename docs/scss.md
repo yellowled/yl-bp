@@ -6,7 +6,7 @@ This boilerplate uses Sass (SCSS) to generate two CSS files. `styles/master.css`
 
 Most of the partials in `scss` and its subdirectories are **not** meant to be edited (in order to make it easier to update projects). You should not (need to) edit files in `scss` other than:
 
-* `scss/master.scss` and `scss/oldie.scss` – see [Generated CSS](#compiled-css)
+* `scss/master.scss` and `scss/oldie.scss` – see [Compiled CSS](#compiled-css)
 * partials in `scss/main/init` – project-based settings and variables
 * partials in `scss/main/addon` – styles for IE < 9 and print styles
 * partials in `scss/main` – common styles and styles for resolutions corresponding to breakpoints
