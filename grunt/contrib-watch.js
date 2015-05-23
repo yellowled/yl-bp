@@ -3,29 +3,10 @@ module.exports = function(grunt) {
     grunt.config('watch', {
         icons: {
             files: 'fontello.json',
-            tasks: ['fontello:build', 'sass:dev', 'autoprefixer:dev'],
+            tasks: ['fontello:build'],
             options: {
                 atBegin: true,
-                livereload: true,
-                spawn: false
-            }
-        },
-        assemble: {
-            files: ['*.hbs', 'src/inc/*.hbs', 'src/tpl/*.hbs'],
-            tasks: ['assemble:dev'],
-            options: {
-                atBegin: true,
-                livereload: false,
-                spawn: true
-            }
-        },
-        html: {
-            files: ['*.html'],
-            tasks: [],
-            options: {
-                atBegin: false,
-                livereload: true,
-                spawn: false
+                livereload: false
             }
         },
         js: {
@@ -33,8 +14,23 @@ module.exports = function(grunt) {
             tasks: ['concat'],
             options: {
                 atBegin: true,
-                livereload: true,
-                spawn: false
+                livereload: true
+            }
+        },
+        assemble: {
+            files: ['*.hbs', 'src/inc/*.hbs', 'src/tpl/*.hbs'],
+            tasks: ['assemble:dev'],
+            options: {
+                atBegin: true,
+                livereload: false
+            }
+        },
+        html: {
+            files: ['*.html'],
+            tasks: [],
+            options: {
+                atBegin: false,
+                livereload: true
             }
         },
         scss: {
@@ -42,8 +38,7 @@ module.exports = function(grunt) {
             tasks: ['sass:dev', 'autoprefixer:dev'],
             options: {
                 atBegin: true,
-                livereload: false,
-                spawn: true
+                livereload: false
             }
         },
         css: {
@@ -51,8 +46,7 @@ module.exports = function(grunt) {
             tasks: [],
             options: {
                 atBegin: false,
-                livereload: true,
-                spawn: false
+                livereload: true
             }
         }
     });
