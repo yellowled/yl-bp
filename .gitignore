@@ -1,1 +1,27 @@
+# File types
 .DS_Store
+*.html
+
+# Grunt
+node_modules/
+
+# Generated assets
+font/
+scripts/master.js
+scss/ext/iconfont/
+styles/
+
+# Bower assets
+scripts/fitvids/
+scripts/gmaps/
+scripts/jQuery-Collapse/
+scripts/jquery-accessible-tabs/
+scripts/jquery-cycle2/
+scripts/jquery/
+scripts/lazysizes/
+scripts/magnific-popup/
+scripts/modernizr/
+scripts/respimage/
+scripts/respond/
+scripts/responsive-nav/
+scripts/tablesaw/
