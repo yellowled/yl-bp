@@ -21,7 +21,7 @@ You'll need [node.js](http://nodejs.org), [Ruby](http://www.ruby-lang.org), [Gru
 
 * [Grunt plugins](docs/grunt-plugins.md)
 * [Additional tasks](docs/additional-tasks.md)
-* [(S)CSS](docs/scss.md)
+* [(S)CSS concepts](docs/scss-concepts.md)
 * [JavaScript](docs/javascript.md)
 
 
