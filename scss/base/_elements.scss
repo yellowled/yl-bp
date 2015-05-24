@@ -1,4 +1,4 @@
-// STYLES NOT COVERED BY NORMALIZE
+// ELEMENT STYLES NOT COVERED BY NORMALIZE
 // --------------------------------------------------------------------
 // Defaults
 $selection-bg:  #b3d4fc !default;
@@ -154,71 +154,4 @@ p {
 video,
 img {
     @include responsive-media;
-}
-
-
-// RESPONSIBLE ICONFONTS
-// --------------------------------------------------------------------
-@if $use-icon-fonts {
-    // fontface supported: hide fallback text
-    .fontface .fallback-text {
-        @extend %visuallyhidden;
-    }
-
-    // fontface not supported: hide iconfont icons
-    [class^="icon-"]:before,
-    [class*=" icon-"]:before {
-        .no-fontface & {
-            @extend %hidden;
-        }
-    }
-}
-
-
-// HINT MSG (CHROMEFRAME + ENABLE JS)
-// --------------------------------------------------------------------
-%chromeframe {
-    background: $hint-bg;
-    color: $hint-fg;
-    left: 0;
-    margin: 0;
-    padding: 4px;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 100%;
-}
-
-@if $use-browse-happy {
-    #browse-happy {
-        @extend %chromeframe;
-
-        .no-js & {
-            top: 32px;
-        }
-    }
-
-    .lt-ie8 {
-        padding-top: 32px;
-    }
-
-    @if $use-enable-js {
-        .lt-ie8.no-js {
-            padding-top: 64px;
-        }
-    }
-}
-
-@if $use-enable-js {
-    #enable-js {
-        @extend %chromeframe;
-
-        .js & {
-            @extend %hidden;
-        }
-    }
-
-    .no-js {
-        padding-top: 32px;
-    }
 }
