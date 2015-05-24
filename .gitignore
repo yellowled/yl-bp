@@ -3,6 +3,7 @@
 *.html
 
 # Grunt
+dist/
 node_modules/
 
 # Generated assets
