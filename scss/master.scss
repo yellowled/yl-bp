@@ -30,11 +30,11 @@
 @import '../scripts/magnific-popup/src/css/main';
 @import '../scripts/tablesaw/src/tables.stack-mixin';
 
-// Modules
-@import 'lib/modules/forms';
-@import 'lib/modules/messages';
-@import 'lib/modules/images';
-@import 'lib/modules/navigation';
+// Parts
+@import 'lib/parts/forms';
+@import 'lib/parts/messages';
+@import 'lib/parts/images';
+@import 'lib/parts/navigation';
 
 // Layout
 @import 'main/common';
