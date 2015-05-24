@@ -10,5 +10,6 @@
 
 * [Grunt plugins](grunt-plugins.md)
 * [Additional tasks](additional-tasks.md)
-* [(S)CSS concepts](scss-concepts.md)
+* [SCSS concepts](scss-concepts.md)
+* [SCSS partials](scss-partials.md)
 * [JavaScript](javascript.md)
