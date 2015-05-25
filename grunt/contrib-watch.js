@@ -22,7 +22,7 @@ module.exports = function(grunt) {
             tasks: ['assemble:dev'],
             options: {
                 atBegin: true,
-                livereload: false
+                livereload: true
             }
         },
         html: {
