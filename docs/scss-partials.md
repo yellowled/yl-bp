@@ -22,7 +22,7 @@ All partials in `ext` should *always* be included in `master.scss` and `oldie.sc
 
 `parts` contains styles and classes for common parts of web sites – forms, images, messages and navigation. The form (base) styles are heavily inspired by [Formalize](http://formalize.me/), images mainly contains image classes used with [ProcessWire](http://processwire.com), and the navigation styles are required by [reponsive-nav.js](http://responsive-nav.com/).
 
-`mixins` is a collection of mixins for various purposes to be documented later in a seperate docs page. `:-)`
+`mixins` is a collection of mixins for various purposes to be documented later in a seperate docs page. **TODO**
 
 All partials in `lib` should *always* be included in `master.scss` and `oldie.scss`. Most of them contain SCSS that does not emit CSS unless explicity used (extends, mixins and functions). The content emitted by partials in `lib/parts` can be tweaked in `main/init/_settings.scss`.
 
@@ -41,5 +41,4 @@ This is the part of the SCSS where “actual work is done”, meaning it's where
 Please also see
 
 * [SCSS concepts](scss-concepts.md)
-* Overriding variables (ToDo)
-* Mixins documentation (ToDo)
+* **TODO:** Mixins documentation
