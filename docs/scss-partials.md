@@ -40,6 +40,6 @@ This is the part of the SCSS where “actual work is done”, meaning it's where
 
 Please also see
 
-* [SCSS concepts](scss-concepts)
+* [SCSS concepts](scss-concepts.md)
 * Overriding variables (ToDo)
 * Mixins documentation (ToDo)
