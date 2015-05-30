@@ -19,3 +19,4 @@
 * [grunt-scss-lint](https://www.npmjs.org/package/grunt-scss-lint)
 * [grunt-svgmin](https://www.npmjs.org/package/grunt-svgmin)
 * [assemble](https://www.npmjs.org/package/assemble)
+* [time-grunt](https://www.npmjs.com/package/time-grunt)
