@@ -9,10 +9,11 @@
 
 // RETINA BACKGROUND IMAGES
 // --------------------------------------------------------------------
-@mixin retina-img($file-1x, $file-2x, $width-1x, $height-1x) {
-    background-image: url('../img/#{$file-1x}');
-    height: $height-1x;
-    width: $width-1x;
+@mixin retina-img($imgname, $imgwidth, $imgheight, $imgtype: 'png', $imgsize: contain) {
+    background: url('../img/#{$imgname}.#{$imgtype}') 0 0 no-repeat;
+    background-size: $imgsize;
+    height: $imgheight;
+    width: $imgwidth;
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
            only screen and (   min--moz-device-pixel-ratio: 2),
@@ -20,9 +21,29 @@
            only screen and (        min-device-pixel-ratio: 2),
            only screen and (                min-resolution: 192dpi),
            only screen and (                min-resolution: 2dppx) {
-        background-image: url('../img/#{$file-2x}');
-        background-size: contain;
+        background-image: url('../img/#{$imgname}-2x.#{$imgtype}');
+
   }
+}
+
+@mixin retina-svg($imgname, $imgwidth, $imgheight, $imgtype: 'png', $imgsize: contain) {
+    background: url('../img/#{$imgname}.svg') 0 0 no-repeat;
+    background-size: $imgsize;
+    height: $imgheight;
+    width: $imgwidth;
+
+    .no-svg & {
+        background-image: url('../img/#{$imgname}.#{$imgtype}');
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2),
+               only screen and (   min--moz-device-pixel-ratio: 2),
+               only screen and (     -o-min-device-pixel-ratio: 2/1),
+               only screen and (        min-device-pixel-ratio: 2),
+               only screen and (                min-resolution: 192dpi),
+               only screen and (                min-resolution: 2dppx) {
+            background-image: url('../img/#{$imgname}-2x.#{$imgtype}');
+        }
+    }
 }
 
 
