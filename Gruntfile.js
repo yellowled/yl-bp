@@ -16,7 +16,7 @@ module.exports = function(grunt) {
 
     // Development
     grunt.registerTask('dev', [
-        'connect',
+        'browserSync',
         'watch'
     ]);
 
