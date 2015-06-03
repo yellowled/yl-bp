@@ -50,3 +50,37 @@ $img-right-margin:  .25 0 .75 $type-rhythm !default;
 figure {
     @extend %image-block;
 }
+
+
+// SVG SPRITES
+// --------------------------------------------------------------------
+// Defaults
+$svg-fallback-class:    svg-fallback !default;
+
+
+@if $use-svg-sprites {
+    // 1. Hide SVG fallback text for browsers supporting SVG
+    // 2. Hide SVG icons if JS is deactivated
+    .svg .#{$svg-fallback-class},
+    .no-js svg {
+        @extend %hidden;
+    }
+
+    // 1. Show fallback text on IE < 9
+    // 2. Show fallback text if JS is deactivated
+    .lt-ie9 .#{$svg-fallback-class},
+    .no-js .#{$svg-fallback-class} {
+        display: inline-block !important;
+        visibility: visible;
+    }
+
+    // 1. Set fill color for SVG icons
+    // 2. Set dimensions of SVG icons
+    [class^="icon-"],
+    [class*="icon-"] {
+        fill: $off-black;
+
+        @include x-rem(width, 1);
+        @include x-rem(height, 1);
+    }
+}

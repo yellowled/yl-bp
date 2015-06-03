@@ -9,6 +9,14 @@ module.exports = function(grunt) {
                 livereload: false
             }
         },
+        // svg: {
+        //     files: 'src/svg/*.svg',
+        //     tasks: ['svgstore:build'],
+        //     options: {
+        //         atBegin: true,
+        //         livereload: false
+        //     }
+        // },
         js: {
             files: ['scripts/main.js'],
             tasks: ['concat'],
