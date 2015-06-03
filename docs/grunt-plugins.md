@@ -18,5 +18,6 @@
 * [grunt-sass](https://npmjs.org/package/grunt-sass)
 * [grunt-scss-lint](https://www.npmjs.org/package/grunt-scss-lint)
 * [grunt-svgmin](https://www.npmjs.org/package/grunt-svgmin)
+* [grunt-svgstore](https://www.npmjs.com/package/grunt-svgstore)
 * [assemble](https://www.npmjs.org/package/assemble)
 * [time-grunt](https://www.npmjs.com/package/time-grunt)
