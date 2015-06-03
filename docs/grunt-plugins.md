@@ -20,4 +20,5 @@
 * [grunt-svgmin](https://www.npmjs.org/package/grunt-svgmin)
 * [grunt-svgstore](https://www.npmjs.com/package/grunt-svgstore)
 * [assemble](https://www.npmjs.org/package/assemble)
+* [jit-grunt](https://www.npmjs.com/package/jit-grunt)
 * [time-grunt](https://www.npmjs.com/package/time-grunt)

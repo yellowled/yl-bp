@@ -23,6 +23,4 @@ module.exports = function(grunt) {
             dest: 'dist/styles/'
         }
     });
-
-    grunt.loadNpmTasks('grunt-autoprefixer');
 };

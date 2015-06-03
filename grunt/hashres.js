@@ -13,6 +13,4 @@ module.exports = function(grunt) {
             dest: 'dist/*.html'
         }
     });
-
-    grunt.loadNpmTasks('grunt-hashres');
 };

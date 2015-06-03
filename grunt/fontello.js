@@ -15,6 +15,4 @@ module.exports = function(grunt) {
             styles: 'scss/ext/iconfont/'
         }
     });
-
-    grunt.loadNpmTasks('grunt-fontello');
 };

@@ -28,6 +28,4 @@ module.exports = function(grunt) {
             dest: 'scripts/master.js'
         }
     });
-
-    grunt.loadNpmTasks('grunt-contrib-concat');
 };
