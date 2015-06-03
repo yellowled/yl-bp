@@ -1,25 +1,17 @@
 // Watch project files for and spawn associated tasks upon changes
 module.exports = function(grunt) {
     grunt.config('watch', {
-        icons: {
-            files: 'fontello.json',
-            tasks: ['fontello:build'],
-            options: {
-                atBegin: true,
-                livereload: false
-            }
-        },
         // svg: {
         //     files: 'src/svg/*.svg',
         //     tasks: ['svgstore:build'],
         //     options: {
         //         atBegin: true,
-        //         livereload: false
+        //         livereload: true
         //     }
         // },
-        js: {
-            files: ['scripts/main.js'],
-            tasks: ['concat'],
+        icons: {
+            files: 'fontello.json',
+            tasks: ['fontello:build'],
             options: {
                 atBegin: true,
                 livereload: true
@@ -33,27 +25,19 @@ module.exports = function(grunt) {
                 livereload: true
             }
         },
-        html: {
-            files: ['*.html'],
-            tasks: [],
-            options: {
-                atBegin: false,
-                livereload: true
-            }
-        },
         scss: {
             files: 'scss/**/*.scss',
             tasks: ['sass:dev', 'autoprefixer:dev'],
             options: {
                 atBegin: true,
-                livereload: false
+                livereload: true
             }
         },
-        css: {
-            files: 'styles/*.css',
-            tasks: [],
+        js: {
+            files: ['scripts/main.js'],
+            tasks: ['concat'],
             options: {
-                atBegin: false,
+                atBegin: true,
                 livereload: true
             }
         }
