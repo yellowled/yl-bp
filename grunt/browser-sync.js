@@ -3,7 +3,6 @@ module.exports = function(grunt) {
     grunt.config('browserSync', {
         options: {
             watchTask: true,
-            tunnel: '<%= pkg.name %>',
             server: {
                 baseDir: './'
             }
