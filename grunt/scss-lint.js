@@ -11,9 +11,9 @@ module.exports = function(grunt) {
                 'scss/ext/iconfont/*.scss',
                 'scss/lib/mixins/_typography.scss',
                 'scss/lib/mixins/_units.scss',
-                'scss/lib/modules/_forms.scss',
-                'scss/lib/modules/_images.scss',
-                'scss/main/addon/_ie.scss'
+                'scss/lib/parts/_forms.scss',
+                'scss/lib/parts/_images.scss',
+                'scss/main/scaffold/_ie.scss'
             ],
             reporterOutput: null
         },
