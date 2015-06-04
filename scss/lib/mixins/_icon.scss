@@ -57,10 +57,8 @@ $hicon-active-class:        js-nav-active !default;
     }
 
     .#{$hicon-active-class} & .#{$hicon-class} {
-        & {
-            background-color: transparent;
-            transition: background-color $hicon-transition-speed $hicon-transition-type;
-        }
+        background-color: transparent;
+        transition: background-color $hicon-transition-speed $hicon-transition-type;
 
         &:before {
             top: 0;

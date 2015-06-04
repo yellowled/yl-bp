@@ -16,11 +16,11 @@
     width: $imgwidth;
 
     @media only screen and (-webkit-min-device-pixel-ratio: 2),
-           only screen and (   min--moz-device-pixel-ratio: 2),
-           only screen and (     -o-min-device-pixel-ratio: 2/1),
-           only screen and (        min-device-pixel-ratio: 2),
-           only screen and (                min-resolution: 192dpi),
-           only screen and (                min-resolution: 2dppx) {
+           only screen and (min--moz-device-pixel-ratio: 2),
+           only screen and (-o-min-device-pixel-ratio: 2/1),
+           only screen and (min-device-pixel-ratio: 2),
+           only screen and (min-resolution: 192dpi),
+           only screen and (min-resolution: 2dppx) {
         background-image: url('../img/#{$imgname}-2x.#{$imgtype}');
 
   }
@@ -36,11 +36,11 @@
         background-image: url('../img/#{$imgname}.#{$imgtype}');
 
         @media only screen and (-webkit-min-device-pixel-ratio: 2),
-               only screen and (   min--moz-device-pixel-ratio: 2),
-               only screen and (     -o-min-device-pixel-ratio: 2/1),
-               only screen and (        min-device-pixel-ratio: 2),
-               only screen and (                min-resolution: 192dpi),
-               only screen and (                min-resolution: 2dppx) {
+               only screen and (min--moz-device-pixel-ratio: 2),
+               only screen and (-o-min-device-pixel-ratio: 2/1),
+               only screen and (min-device-pixel-ratio: 2),
+               only screen and (min-resolution: 192dpi),
+               only screen and (min-resolution: 2dppx) {
             background-image: url('../img/#{$imgname}-2x.#{$imgtype}');
         }
     }
@@ -194,7 +194,7 @@
 
         figcaption {
             opacity: 1;
-            transform: translateY(0px);
+            transform: translateY(0);
             transition: transform .4s,
                         opacity .1s;
         }
@@ -203,7 +203,7 @@
     .touch & {
         figcaption {
             opacity: 1;
-            transform: translateY(0px);
+            transform: translateY(0);
 
             @if $position == bottom {
                 bottom: 0;
