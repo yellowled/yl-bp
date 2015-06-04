@@ -6,4 +6,6 @@ module.exports = function(grunt) {
             dest: 'dist/scripts/master.js'
         }
     });
+
+    grunt.loadNpmTasks('grunt-contrib-unglify');
 };

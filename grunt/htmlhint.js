@@ -8,4 +8,6 @@ module.exports = function(grunt) {
             src: ['*.html']
         }
     });
+
+    grunt.loadNpmTasks('grunt-htmlhint');
 };

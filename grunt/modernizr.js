@@ -43,4 +43,6 @@ module.exports = function(grunt) {
             'excludeFiles' : ['Gruntfile.js', '*.json']
         }
     });
+
+    grunt.loadNpmTasks('grunt-modernizr');
 };

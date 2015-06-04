@@ -3,9 +3,6 @@ module.exports = function(grunt) {
     // Use time-grunt
     require('time-grunt')(grunt);
 
-    // Use jit-grunt
-    require('jit-grunt')(grunt);
-
     // Initialize config
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
