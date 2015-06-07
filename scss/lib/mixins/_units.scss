@@ -1,6 +1,10 @@
 // UNITS MIXINS
 // --------------------------------------------------------------------
 // github.com/drublic/Sass-Mixins/blob/master/partials/_rem.scss
+@function strip-unit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
 @mixin x-rem ($property, $values, $main-font-size: 16px) {
     // Empty list for all values in px
     $px-values: ();

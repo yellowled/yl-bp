@@ -23,7 +23,7 @@ All partials in `ext` should *always* be included in `master.scss` and `oldie.sc
 
 ## `lib`
 
-`_extends.scss` contains [placeholder selectors](http://thesassway.com/intermediate/understanding-placeholder-selectors) for use with `@extend` to replace helper classes adopted from [H5BP](https://html5boilerplate.com). `_functions.scss` contains helper functions that some of the mixins (see below) depend upon.
+`_extends.scss` contains [placeholder selectors](http://thesassway.com/intermediate/understanding-placeholder-selectors) for use with `@extend` to replace helper classes adopted from [H5BP](https://html5boilerplate.com).
 
 `parts` contains styles and classes for common parts of web sites – forms, images, messages and navigation. The form (base) styles are heavily inspired by [Formalize](http://formalize.me/), images mainly contains image classes used with [ProcessWire](http://processwire.com), and the navigation styles are required by [reponsive-nav.js](http://responsive-nav.com/).
 
