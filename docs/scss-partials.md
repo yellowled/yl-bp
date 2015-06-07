@@ -29,7 +29,8 @@ All partials in `ext` should *always* be included in `master.scss` and `oldie.sc
 
 `mixins` is a collection of mixins for various purposes:
 
-* `_buttons.scss` – buttons (gradient, flat, bordered)
+* `_buttons.scss` – buttons (gradient, flat, bordered)mixins
+* `_figure.scss` – `<figure> (fancy, simple, w/ animated caption)
 * `_grid.scss` – flexible grid system
 * `_icon.scss` – CSS-only animated hamburger icon
 * `_img.scss` – responsive images + SVGs, figures (simple, fancy, animated caption)
