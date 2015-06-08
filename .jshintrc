@@ -1,0 +1,21 @@
+// jshint.com/docs/options/
+{
+    // jshint.com/docs/options/#enforcing-options
+    "bitwise":      true,
+    "curly":        true,
+    "eqeqeq":       true,
+    "latedef":      true,
+    "noarg":        true,
+    "strict":       false,
+    "undef":        false,
+    "unused":       false,
+
+  // jshint.com/docs/options/#relaxing-options
+    "eqnull":       true,
+    "esnext":       true,
+
+  // jshint.com/docs/options/#environments
+    "browser":      true,
+    "jquery":       true,
+    "node":         true
+}
