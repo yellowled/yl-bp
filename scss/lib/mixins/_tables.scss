@@ -1,5 +1,9 @@
 // TABLES
 // --------------------------------------------------------------------
+// Defaults
+$tables-breakpoint: 768px !default; // Breakpoint for responsive tables
+
+
 // Simple table
 @mixin simple-table($border-color: $grey) {
     border-bottom: 1px solid $border-color;
@@ -39,5 +43,43 @@
     th,
     td {
         @include x-rem(padding, 0 .25);
+    }
+}
+
+// Responsive table
+@mixin responsive-table() {
+    min-height: 0.01%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    table {
+        > thead,
+        > tbody,
+        > tfoot {
+            > tr {
+                > th,
+                > td {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: $tables-breakpoint) {
+        overflow-y: auto;
+
+        table {
+            > thead,
+            > tbody,
+            > tfoot {
+                > tr {
+                    > th,
+                    > td {
+                        white-space: normal;
+                    }
+                }
+            }
+        }
     }
 }

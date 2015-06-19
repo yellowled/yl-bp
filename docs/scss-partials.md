@@ -36,7 +36,7 @@ All partials in `ext` should *always* be included in `master.scss` and `oldie.sc
 * `_img.scss` – responsive images + SVGs, figures (simple, fancy, animated caption)
 * `_position.scss` – horizontal/vertical centering
 * `_shapes.scss` – CSS-only folded corner, speech bubble, ribbon, triangle
-* `_tables.scss` – tables (simple, striped)
+* `_tables.scss` – tables (simple, striped, responsive)
 * `_typography.scss` – ligatures, smart blockquotes
 * `_unit.scss` – `rem` and `calc`
 

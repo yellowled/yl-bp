@@ -12,7 +12,6 @@ Most of the JS assets are concatenated into a single file (`scripts/master.js`) 
 * [gmaps](https://github.com/hpneo/gmaps)
 * [jQuery-Collapse](https://github.com/danielstocks/jQuery-Collapse/)
 * [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup)
-* [tablesaw](https://github.com/filamentgroup/tablesaw)
 
 ## JS plugins included
 

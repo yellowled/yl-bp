@@ -33,8 +33,6 @@ module.exports = function(grunt) {
                       'scripts/jquery-accessible-tabs/js/jquery.tabs.js',
                       'scripts/jQuery-Collapse/src/jquery.collapse.js',
                       'scripts/jQuery-Collapse/src/jquery.collapse_storage.js',
-                      'scripts/tablesaw/dist/tablesaw.js',
-                      'scripts/tablesaw/src/tables.stack-mixin.scss',
                       'scripts/gmaps/gmaps.js',
                       'scripts/*.js']
             },
