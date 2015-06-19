@@ -16,43 +16,19 @@
 }
 
 
-// HINT MSG (CHROMEFRAME + ENABLE JS)
+// ENABLE JS HINT
 // --------------------------------------------------------------------
-%chromeframe {
-    background: $hint-bg;
-    color: $hint-fg;
-    left: 0;
-    margin: 0;
-    padding: 4px;
-    position: absolute;
-    text-align: center;
-    top: 0;
-    width: 100%;
-}
-
-@if $use-browse-happy {
-    #browse-happy {
-        @extend %chromeframe;
-
-        .no-js & {
-            top: 32px;
-        }
-    }
-
-    .lt-ie8 {
-        padding-top: 32px;
-    }
-
-    @if $use-enable-js {
-        .lt-ie8.no-js {
-            padding-top: 64px;
-        }
-    }
-}
-
 @if $use-enable-js {
     #enable-js {
-        @extend %chromeframe;
+        background: $hint-bg;
+        color: $hint-fg;
+        left: 0;
+        margin: 0;
+        padding: 4px;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 100%;
 
         .js & {
             @extend %hidden;
