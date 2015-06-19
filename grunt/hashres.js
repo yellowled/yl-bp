@@ -8,7 +8,6 @@ module.exports = function(grunt) {
         },
         deploy: {
             src: ['dist/styles/master.css',
-                  'dist/styles/oldie.css',
                   'dist/scripts/master.js'],
             dest: 'dist/*.html'
         }

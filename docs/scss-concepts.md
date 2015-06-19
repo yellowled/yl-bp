@@ -2,11 +2,11 @@
 
 # SCSS concepts
 
-This boilerplate uses Sass/SCSS to generate two CSS files. `styles/master.css` is the main stylesheet, `styles/oldie.css` is a fallback stylesheet for IE < 9 which is necessary because the SCSS is supposed to be written mobile-first. IE < 9 needs this workaround because it doesn't support media queries.
+This boilerplate uses Sass/SCSS to generate the CSS file, `styles/master.css`. SCSS is supposed to be written mobile-first. As a workaround for IE < 9 which do not support media queries, `respond.js` is included in the `<head>` (from a CDN).
 
 Most of the partials in `scss` and its subdirectories are **not** meant to be edited (in order to make it easier to update projects). You should not (need to) edit files in `scss` other than:
 
-* `scss/master.scss` and `scss/oldie.scss` – see [Compiled CSS](#compiled-css)
+* `scss/master.scss` – see [Compiled CSS](#compiled-css)
 * partials in `scss/main/init` – project-based settings and variables
 * partials in `scss/main/scaffold` – styles for IE < 9, `@media` queries and print styles
 * partials in `scss/main` – common styles and styles for resolutions corresponding to breakpoints

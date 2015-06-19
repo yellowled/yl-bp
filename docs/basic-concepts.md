@@ -8,7 +8,7 @@ HTML is compiled from [Handlebars](http://handlebarsjs.com) templates using [ass
 
 ## SCSS
 
-CSS is compiled from [Sass](http://sass-lang.com) using [libsass](http://libsass.org) and [autoprefixer](https://github.com/nDmitry/grunt-autoprefixer) (no need to write vendor prefixes). The main SCSS files `@import` partials from the subdirectories of `scss/`. `@media` queries should be written [mobile first](http://bradfrostweb.com/blog/web/mobile-first-responsive-web-design/). See [SCSS concepts](scss-concepts.md).
+CSS is compiled from [Sass](http://sass-lang.com) using [libsass](http://libsass.org) and [autoprefixer](https://github.com/nDmitry/grunt-autoprefixer) (no need to write vendor prefixes). The main SCSS file `@import`s partials from the subdirectories of `scss/`. `@media` queries should be written [mobile first](http://bradfrostweb.com/blog/web/mobile-first-responsive-web-design/). See [SCSS concepts](scss-concepts.md).
 
 ## JavaScript
 
