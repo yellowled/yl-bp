@@ -47,6 +47,8 @@ $tables-breakpoint: 768px !default; // Breakpoint for responsive tables
 }
 
 // Responsive table
+//
+// Note: mixin needs to be applied to a div containing the table
 @mixin responsive-table() {
     min-height: 0.01%;
     overflow-x: auto;
