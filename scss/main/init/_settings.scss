@@ -6,11 +6,8 @@ $ie8-support:       true;
 // responsive-nav.js
 $use-rnav-classes:  true;
 
-// Fontello iconfonts
-$use-icon-fonts:    true;
-
 // SVG sprites
-$use-svg-sprites:   false;
+$use-svg-sprites:   true;
 
 // Forms
 $use-form-styles:   false;
@@ -21,7 +18,7 @@ $use-msg-basic:     false;
 $use-msg-extra:     false;
 
 // Enable JS
-$use-enable-js:     false;
+$use-enable-js:     true;
 
 // ProcessWire images
 $use-pw-classes:    false;
