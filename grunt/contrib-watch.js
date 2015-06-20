@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     grunt.config('watch', {
         svg: {
             files: 'src/svg/*.svg',
-            tasks: ['svgstore:build'],
+            tasks: ['svgstore'],
             options: {
                 atBegin: true,
                 livereload: true

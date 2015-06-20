@@ -29,33 +29,33 @@ module.exports = function(grunt) {
 
     // Staging
     grunt.registerTask('stage', [
-        'clean:deploy',
+        'clean',
         'assemble:stage',
         'copy:stage',
         'concat',
         'sass:deploy',
         'autoprefixer:deploy',
         'uglify',
-        'svgstore:build',
-        'imagemin:deploy',
-        'svgmin:deploy',
+        'svgstore',
+        'imagemin',
+        'svgmin',
         'modernizr',
-        'hashres:deploy'
+        'hashres'
     ]);
 
     // Deployment
     grunt.registerTask('deploy', [
-        'clean:deploy',
+        'clean',
         'assemble:deploy',
         'copy:deploy',
         'concat',
         'sass:deploy',
         'autoprefixer:deploy',
         'uglify',
-        'svgstore:build',
-        'imagemin:deploy',
-        'svgmin:deploy',
+        'svgstore',
+        'imagemin',
+        'svgmin',
         'modernizr',
-        'hashres:deploy'
+        'hashres'
     ]);
 };
