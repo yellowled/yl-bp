@@ -30,14 +30,13 @@ module.exports = function(grunt) {
     // Staging
     grunt.registerTask('stage', [
         'clean:deploy',
-        'fontello:build',
         'assemble:stage',
         'copy:stage',
         'concat',
         'sass:deploy',
         'autoprefixer:deploy',
         'uglify',
-        // 'svgstore:build',
+        'svgstore:build',
         'imagemin:deploy',
         'svgmin:deploy',
         'modernizr',
@@ -47,14 +46,13 @@ module.exports = function(grunt) {
     // Deployment
     grunt.registerTask('deploy', [
         'clean:deploy',
-        'fontello:build',
         'assemble:deploy',
         'copy:deploy',
         'concat',
         'sass:deploy',
         'autoprefixer:deploy',
         'uglify',
-        // 'svgstore:build',
+        'svgstore:build',
         'imagemin:deploy',
         'svgmin:deploy',
         'modernizr',

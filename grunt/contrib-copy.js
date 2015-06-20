@@ -9,7 +9,6 @@ module.exports = function(grunt) {
                       'robots.txt',
                       'apple-touch-icon.png',
                       'favicon.ico',
-                      'font/*',
                       'scripts/jquery/dist/jquery.min.js',
                       'scripts/jquery/dist/jquery.min.map'],
                 dest: 'dist/'
@@ -23,7 +22,6 @@ module.exports = function(grunt) {
                       'robots.txt',
                       'apple-touch-icon.png',
                       'favicon.ico',
-                      'font/*',
                       'scripts/jquery/dist/jquery.min.js',
                       'scripts/jquery/dist/jquery.min.map'],
                 dest: 'dist/'

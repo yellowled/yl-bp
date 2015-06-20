@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     grunt.config('concat', {
         master: {
             src: ['scripts/helpers/log.js',
-                  // 'scripts/svg4everybody/svg4everybody.js',
+                  'scripts/svg4everybody/svg4everybody.js',
                   'scripts/respimage/respimage.js',
                   'scripts/lazysizes/lazysizes.js',
                   'scripts/responsive-nav/responsive-nav.js',
