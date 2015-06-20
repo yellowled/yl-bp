@@ -17,9 +17,8 @@ Some of the variables defined in partials use Sass's `!default` flag. These vari
 
 ## Compiled CSS
 
-The only SCSS partials you might want to exclude if you don't use them (by commenting them out in `scss/master.scss` and `scss/oldie.scss`) are the following lines in the Vendor section:
+The only SCSS partial you might want to exclude if you don't use it (by commenting them out in `scss/master.scss`) is the following line in the Vendor section:
 
-* `ext/iconfont/fontello`
 * `../scripts/magnific-popup/src/css/main`
 
 All other SCSS any given project might not require is either encapsulated in mixins or placeholder selectors or can be excluded in `scss/main/init/_settings.scss`.

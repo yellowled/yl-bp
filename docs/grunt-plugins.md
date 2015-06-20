@@ -11,7 +11,6 @@
 * [grunt-contrib-watch](https://npmjs.org/package/grunt-contrib-watch)
 * [grunt-autoprefixer](https://npmjs.org/package/grunt-autoprefixer)
 * [grunt-browser-sync](https://www.npmjs.com/package/grunt-browser-sync)
-* [grunt-fontello](https://npmjs.org/package/grunt-fontello)
 * [grunt-hashres](https://npmjs.org/package/grunt-hashres)
 * [grunt-htmlhint](https://npmjs.org/package/grunt-htmlhint)
 * [grunt-modernizr](https://npmjs.org/package/grunt-modernizr)
