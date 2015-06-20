@@ -8,7 +8,7 @@ Most of the partials in `scss` and its subdirectories are **not** meant to be ed
 
 * `scss/master.scss` – see [Compiled CSS](#compiled-css)
 * partials in `scss/main/init` – project-based settings and variables
-* partials in `scss/main/scaffold` – styles for IE < 9, `@media` queries and print styles
+* partials in `scss/main/scaffold` – `@media` queries and print styles
 * partials in `scss/main` – common styles and styles for resolutions corresponding to breakpoints
 
 ## Overriding defaults

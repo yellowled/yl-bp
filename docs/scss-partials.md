@@ -2,11 +2,11 @@
 
 # SCSS partials
 
-Apart from the main SCSS files (`master.scss` and `oldie.scss`), the `scss` directory contains partials which are currently organized in four directories. Please also see [SCSS concepts](scss-concepts.md).
+Apart from the main SCSS file (`master.scss`), the `scss` directory contains partials which are currently organized in four directories. Please also see [SCSS concepts](scss-concepts.md).
 
 ## `base`
 
-`_normalize.scss` contains [normalize.css](github.com/necolas/normalize.css). `_elements.scss` contains some useful base styles not covered by normalize – styles that are not set there because they are “too design-related”, yet used very often. `_helpers.scss` contains helpers classes for iconfonts as well as styles needed for the [Browse Happy](http://browsehappy.com) and [Enable JS](http://www.enable-javascript.com) hints.
+`_normalize.scss` contains [normalize.css](github.com/necolas/normalize.css). `_elements.scss` contains some useful base styles not covered by normalize – styles that are not set there because they are “too design-related”, yet used very often. `_helpers.scss` contains helpers classes for iconfonts as well as styles needed for the [Enable JS](http://www.enable-javascript.com) hint.
 
 All partials in `base` should *always* be included in `master.scss`. The content emitted by `_helpers.scss` can be tweaked in `main/init/_settings.scss`.
 
