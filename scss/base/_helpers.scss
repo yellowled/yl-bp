@@ -1,21 +1,3 @@
-// RESPONSIBLE ICONFONTS
-// --------------------------------------------------------------------
-@if $use-icon-fonts {
-    // fontface supported: hide fallback text
-    .fontface .fallback-text {
-        @extend %visuallyhidden;
-    }
-
-    // fontface not supported: hide iconfont icons
-    [class^="icon-"]:before,
-    [class*=" icon-"]:before {
-        .no-fontface & {
-            @extend %hidden;
-        }
-    }
-}
-
-
 // ENABLE JS HINT
 // --------------------------------------------------------------------
 @if $use-enable-js {
