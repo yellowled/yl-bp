@@ -8,12 +8,10 @@ module.exports = function(grunt) {
             config: '.scss-lint.yml',
             exclude: [
                 'scss/base/_normalize.scss',
-                'scss/ext/iconfont/*.scss',
                 'scss/lib/mixins/_typography.scss',
                 'scss/lib/mixins/_units.scss',
                 'scss/lib/parts/_forms.scss',
-                'scss/lib/parts/_images.scss',
-                'scss/main/scaffold/_ie.scss'
+                'scss/lib/parts/_images.scss'
             ],
             reporterOutput: null
         },
