@@ -2,7 +2,7 @@
 
 # SCSS concepts
 
-This boilerplate uses Sass/SCSS to generate the CSS file, `styles/master.css`. SCSS is supposed to be written mobile-first. As a workaround for IE < 9 which do not support media queries, `respond.js` is included in the `<head>` (from a CDN).
+This boilerplate uses Sass/SCSS to generate the CSS file, `styles/master.css`. SCSS is supposed to be written mobile-first based on [normalize.css](https://github.com/necolas/normalize.css/). As a workaround for IE < 9 which do not support media queries, `respond.js` is included in the `<head>` (from a CDN).
 
 Most of the partials in `scss` and its subdirectories are **not** meant to be edited (in order to make it easier to update projects). You should not (need to) edit files in `scss` other than:
 
