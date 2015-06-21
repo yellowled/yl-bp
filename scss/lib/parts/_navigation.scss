@@ -14,6 +14,15 @@ nav ol {
 }
 
 
+// RESPONSIVE NAV ICON FALLBACK
+// --------------------------------------------------------------------
+@if not($use-svg-sprites) {
+    .nav-toggle {
+        @include icon-hamburger;
+    }
+}
+
+
 // RESPONSIVE NAV
 // --------------------------------------------------------------------
 // github.com/viljamis/responsive-nav.js
