@@ -38,10 +38,12 @@ All partials in `lib` should *always* be included in `master.scss`. Most of them
 
 ## `main`
 
-`_common.scss`, `_legacy.scss`, `_tablet.scss`, `_laptop.scss`, and `_desktop.scss` are the proposed files to write project styles in. In this order, they reflect sensible, provisional breakpoints for mobile-first responsive web design. Apart from `_common.scss`, which is supposed to contain the common generic styles, all of them are `@imported` in the scaffolding process (see below).
+`_common.scss`, `_legacy.scss`, `_tablet.scss`, `_laptop.scss`, and `_desktop.scss` are the proposed files to write project styles in. In this order, they reflect sensible, provisional breakpoints for mobile-first responsive web design. Apart from `_common.scss`, which is supposed to contain the common generic styles, all of them are `@imported` in the scaffolding process (see below). In addition, there's `_print.scss` for print styles.
 
-`scaffold` contains `_print.scss` for print styles and `_media.scss` for styles assigned to the various breakpoints via `@media` queries as well as the actual code for those `@media` queries.
+`init` contains
 
-`init` contains `_settings.scss` which is used to enable or disable parts of the partials included in the boilerplate by setting certain variables to `true` or `false`, depending on whether that part of the SCSS is being used. `_variables.scss` is supposed to contain project-specific constants or to override existing variables.
+* `_settings.scss` which is used to enable or disable parts of the partials included in the boilerplate by setting certain variables to `true` or `false`, depending on whether that part of the SCSS is being used
+* `_variables.scss` which is supposed to contain project-specific constants or to override existing variables
+* `_media.scss` which assigns partials to the various breakpoints via `@media` queries as well setting the breakpoints for those `@media` queries through variables which can be overridden
 
 This is the part of the SCSS where “actual work is done”, meaning it's where SCSS is actually being written and scaffolded. Apart from `_print.scss`, which is just a “solid starting point” for print styles, all of the partials in `main` either initially contain no SCSS, contain configurable SCSS or are vital for the boilerplate's SCSS structure. Therefore, they all should *always* be included.
