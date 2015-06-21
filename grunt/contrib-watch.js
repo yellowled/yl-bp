@@ -1,14 +1,14 @@
 // Watch project files for and spawn associated tasks upon changes
 module.exports = function(grunt) {
     grunt.config('watch', {
-        svg: {
-            files: 'src/svg/*.svg',
-            tasks: ['svgstore'],
-            options: {
-                atBegin: true,
-                livereload: true
-            }
-        },
+        // svg: {
+        //     files: 'src/svg/*.svg',
+        //     tasks: ['svgstore'],
+        //     options: {
+        //         atBegin: true,
+        //         livereload: true
+        //     }
+        // },
         assemble: {
             files: ['*.hbs', 'src/inc/*.hbs', 'src/tpl/*.hbs'],
             tasks: ['assemble:dev'],
