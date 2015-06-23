@@ -14,10 +14,13 @@ module.exports = function(grunt) {
     // Default task
     grunt.registerTask('default', ['dev']);
 
-    // Development
-    grunt.registerTask('dev', [
-        'browserSync',
-        'watch'
+    // Init
+    grunt.registerTask('init', [
+        // 'svgstore',
+        'assemble:dev',
+        'sass:dev',
+        'autoprefixer:dev',
+        'concat'
     ]);
 
     // Testing
@@ -25,6 +28,13 @@ module.exports = function(grunt) {
         'htmlhint',
         'jshint',
         'scsslint'
+    ]);
+
+    // Development
+    grunt.registerTask('dev', [
+        'init',
+        'browserSync',
+        'watch'
     ]);
 
     // Staging
