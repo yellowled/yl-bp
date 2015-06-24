@@ -1,4 +1,6 @@
 // Configuration
+var browserSync = require('browser-sync');
+
 module.exports = function(grunt) {
     // Use time-grunt
     require('time-grunt')(grunt);
@@ -14,6 +16,28 @@ module.exports = function(grunt) {
     // Default task
     grunt.registerTask('default', ['dev']);
 
+    // Init browserSync manually
+    grunt.registerTask('bs-init', function () {
+        var done = this.async();
+
+        browserSync({
+            files: [
+                '*.html',
+                'styles/*.css',
+                'scripts/*.js'
+            ],
+            server: './',
+            watchTask: true
+        }, function (err, bs) {
+            done();
+        });
+    });
+
+    // Inject CSS
+    grunt.registerTask('bs-inject', function () {
+        browserSync.reload(['styles/master.css']);
+    });
+
     // Init
     grunt.registerTask('init', [
         // 'svgstore',
@@ -23,17 +47,10 @@ module.exports = function(grunt) {
         'concat'
     ]);
 
-    // Testing
-    grunt.registerTask('test', [
-        'htmlhint',
-        'jshint',
-        'scsslint'
-    ]);
-
     // Development
     grunt.registerTask('dev', [
         'init',
-        'browserSync',
+        'bs-init',
         'watch'
     ]);
 
@@ -67,5 +84,12 @@ module.exports = function(grunt) {
         'svgmin',
         'modernizr',
         'hashres'
+    ]);
+
+    // Testing
+    grunt.registerTask('test', [
+        'htmlhint',
+        'jshint',
+        'scsslint'
     ]);
 };
