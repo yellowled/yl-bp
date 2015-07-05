@@ -42,7 +42,7 @@ module.exports = function(grunt) {
     grunt.registerTask('init', [
         // 'svgstore',
         'assemble:dev',
-        'sass:dev',
+        'sass',
         'autoprefixer:dev',
         'concat'
     ]);
@@ -60,8 +60,9 @@ module.exports = function(grunt) {
         'assemble:stage',
         'copy:stage',
         'concat',
-        'sass:deploy',
+        'sass',
         'autoprefixer:deploy',
+        'cssmin',
         'uglify',
         // 'svgstore',
         'imagemin',
@@ -76,8 +77,9 @@ module.exports = function(grunt) {
         'assemble:deploy',
         'copy:deploy',
         'concat',
-        'sass:deploy',
+        'sass',
         'autoprefixer:deploy',
+        'cssmin',
         'uglify',
         // 'svgstore',
         'imagemin',
