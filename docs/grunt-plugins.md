@@ -5,6 +5,7 @@
 * [grunt-contrib-clean](https://npmjs.org/package/grunt-contrib-clean)
 * [grunt-contrib-concat](https://npmjs.org/package/grunt-contrib-concat)
 * [grunt-contrib-copy](https://npmjs.org/package/grunt-contrib-copy)
+* [grunt-contrib-cssmin](https://www.npmjs.com/package/grunt-contrib-cssmin)
 * [grunt-contrib-imagemin](https://npmjs.org/package/grunt-contrib-imagemin)
 * [grunt-contrib-jshint](https://npmjs.org/package/grunt-contrib-jshint)
 * [grunt-contrib-uglify](https://npmjs.org/package/grunt-contrib-uglify)
