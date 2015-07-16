@@ -36,11 +36,12 @@ $tabs-margin:       $type-rhythm;
 
 
 @mixin tabs-hidden-info {
-    @extend %visuallyhidden;
+    @include visuallyhidden;
 }
 
 @mixin tabs($margin: $tabs-margin, $padding: $tabs-padding) {
     @include x-rem(margin, $margin 0);
+
     max-width: 100%;
     width: $tabswidth;
 

@@ -172,7 +172,7 @@ img {
         width: 100%;
 
         .js & {
-            @extend %hidden;
+            @include hidden;
         }
     }
 

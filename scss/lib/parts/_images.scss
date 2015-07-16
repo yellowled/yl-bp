@@ -23,25 +23,17 @@ $img-right-margin:  .25 0 .75 $type-rhythm !default;
 
 @if $use-pw-classes {
     @media only screen and (min-width: $img-breakpoint) {
-        %image-left {
+        // For use with ProcessWire
+        .align_left {
             @include x-rem(margin, $img-left-margin);
 
             float: left;
         }
 
-        %image-right {
+        .align_right {
             @include x-rem(margin, $img-right-margin);
 
             float: right;
-        }
-
-        // For use with ProcessWire
-        .align_left {
-            @extend %image-left;
-        }
-
-        .align_right {
-            @extend %image-right;
         }
     }
 }
@@ -63,7 +55,7 @@ $svg-fallback-class:    svg-fallback !default;
     // 2. Hide SVG icons if JS is deactivated
     .svg .#{$svg-fallback-class},
     .no-js svg {
-        @extend %hidden;
+        @include hidden;
     }
 
     // 1. Show fallback text on IE < 9

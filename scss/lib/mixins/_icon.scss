@@ -76,6 +76,6 @@ $hicon-active-class:        js-nav-active !default;
     }
 
     .#{$hicon-sr-class} {
-        @extend %visuallyhidden;
+        @include visuallyhidden;
     }
 }
