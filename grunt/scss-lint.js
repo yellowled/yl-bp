@@ -7,7 +7,7 @@ module.exports = function(grunt) {
             compact: true,
             config: '.scss-lint.yml',
             exclude: [
-                'scss/base/_normalize.scss',
+                'scss/ext/_normalize.scss',
                 'scss/lib/mixins/_typography.scss',
                 'scss/lib/mixins/_units.scss',
                 'scss/lib/parts/_forms.scss',
