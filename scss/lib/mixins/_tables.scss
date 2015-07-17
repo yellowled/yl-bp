@@ -50,38 +50,22 @@ $tables-breakpoint: 768px !default; // Breakpoint for responsive tables
 //
 // Note: mixin needs to be applied to a div containing the table
 @mixin responsive-table() {
-    min-height: 0.01%;
+    min-height: .01%;
     overflow-x: auto;
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
 
-    table {
-        > thead,
-        > tbody,
-        > tfoot {
-            > tr {
-                > th,
-                > td {
-                    white-space: nowrap;
-                }
-            }
-        }
+    th,
+    td {
+        white-space: nowrap;
     }
 
     @media only screen and (min-width: $tables-breakpoint) {
         overflow-y: auto;
 
-        table {
-            > thead,
-            > tbody,
-            > tfoot {
-                > tr {
-                    > th,
-                    > td {
-                        white-space: normal;
-                    }
-                }
-            }
+        th,
+        td {
+            white-space: normal;
         }
     }
 }
