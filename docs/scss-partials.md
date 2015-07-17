@@ -17,8 +17,6 @@ All partials in `ext` should *always* be included in `master.scss`. Since they o
 
 ## `lib`
 
-`_extends.scss` contains [placeholder selectors](http://thesassway.com/intermediate/understanding-placeholder-selectors) for use with `@extend` to replace helper classes adopted from [H5BP](https://html5boilerplate.com).
-
 `parts` contains styles and classes for common parts of web sites – forms, images, messages and navigation. The form (base) styles are heavily inspired by [Formalize](http://formalize.me/), images mainly contains image classes used with [ProcessWire](http://processwire.com), and the navigation styles are required by [reponsive-nav.js](http://responsive-nav.com/).
 
 `mixins` is a collection of mixins for various purposes:
@@ -26,13 +24,14 @@ All partials in `ext` should *always* be included in `master.scss`. Since they o
 * `_buttons.scss` – buttons (gradient, flat, bordered)mixins
 * `_figure.scss` – `<figure> (fancy, simple, w/ animated caption)
 * `_grid.scss` – flexible grid system
+* `_helpers.scss` – helper classes adopted from [H5BP](https://html5boilerplate.com)
 * `_icon.scss` – CSS-only animated hamburger icon
 * `_img.scss` – responsive images + SVGs, figures (simple, fancy, animated caption)
 * `_position.scss` – horizontal/vertical centering
 * `_shapes.scss` – CSS-only folded corner, speech bubble, ribbon, triangle
 * `_tables.scss` – tables (simple, striped, responsive)
 * `_typography.scss` – ligatures, smart blockquotes
-* `_unit.scss` – `rem` and `calc`
+* `_units.scss` – `rem` and `calc`
 
 All partials in `lib` should *always* be included in `master.scss`. Most of them contain SCSS that does not emit CSS unless explicity used (extends, mixins and functions). The content emitted by partials in `lib/parts` can be tweaked in `main/init/_settings.scss`.
 
