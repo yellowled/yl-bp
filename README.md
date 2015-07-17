@@ -18,12 +18,10 @@ You'll need [node.js](http://nodejs.org), [Ruby](http://www.ruby-lang.org), [Gru
 
 ### Components included
 
-* [Grunt plugins](docs/grunt-plugins.md)
-* [Additional tasks](docs/additional-tasks.md)
+* [Grunt build script](docs/grunt.md)
 * [SCSS concepts](docs/scss-concepts.md)
 * [SCSS partials](docs/scss-partials.md)
 * [JavaScript](docs/javascript.md)
-
 
 ## License
 
