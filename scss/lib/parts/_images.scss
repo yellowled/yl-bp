@@ -70,9 +70,9 @@ $svg-fallback-class:    svg-fallback !default;
     // 2. Set dimensions of SVG icons
     [class^="icon-"],
     [class*="icon-"] {
-        fill: $off-black;
-
-        @include x-rem(width, 1);
         @include x-rem(height, 1);
+        @include x-rem(width, 1);
+
+        fill: $off-black;
     }
 }
