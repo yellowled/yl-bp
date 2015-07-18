@@ -15,12 +15,12 @@ You'll need [node.js](http://nodejs.org), [Ruby](http://www.ruby-lang.org), [Gru
 
 * [Setting up](docs/setting-up.md)
 * [Basic concepts](docs/basic-concepts.md)
+* [SCSS concepts](docs/scss-concepts.md)
 
 ### Components included
 
-* [Grunt build script](docs/grunt.md)
-* [SCSS concepts](docs/scss-concepts.md)
-* [SCSS partials](docs/scss-partials.md)
+* [Grunt](docs/grunt.md)
+* [SCSS](docs/scss.md)
 * [JavaScript](docs/javascript.md)
 
 ## License
