@@ -1,4 +1,6 @@
 // Check SCSS for code quality
+var config = require('../config');
+
 module.exports = function(grunt) {
     grunt.config('scsslint', {
         options: {
@@ -6,13 +8,7 @@ module.exports = function(grunt) {
             colorizeOutput: true,
             compact: true,
             config: '.scss-lint.yml',
-            exclude: [
-                'scss/ext/_normalize.scss',
-                'scss/lib/mixins/_typography.scss',
-                'scss/lib/mixins/_units.scss',
-                'scss/lib/parts/_forms.scss',
-                'scss/lib/parts/_images.scss'
-            ],
+            exclude: config.scsslint.exclude,
             reporterOutput: null
         },
         all: [

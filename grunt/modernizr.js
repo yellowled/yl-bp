@@ -1,9 +1,11 @@
 // Generate Modernizr custom build from references in SCSS + JS assets
+var config = require('../config');
+
 module.exports = function(grunt) {
     grunt.config('modernizr', {
         deploy: {
-            'devFile' : 'scripts/modernizr/modernizr.js',
-            'outputFile' : 'dist/scripts/modernizr/modernizr.js',
+            'devFile' : config.modernizr.src,
+            'outputFile' : config.modernizr.dest,
             'extra' : {
                 'shiv' : true,
                 'printshiv' : false,
@@ -25,20 +27,11 @@ module.exports = function(grunt) {
             'tests' : [],
             'parseFiles' : true,
             'files' : {
-                src: ['scss/**/*.scss',
-                      'scripts/magnific-popup/dist/jquery.magnific-popup.js',
-                      'scripts/magnific-popup/src/css/main.scss',
-                      'scripts/jquery-cycle2/*.js',
-                      'scripts/jquery-accessible-tabs/js/jquery.syncheight.js',
-                      'scripts/jquery-accessible-tabs/js/jquery.tabs.js',
-                      'scripts/jQuery-Collapse/src/jquery.collapse.js',
-                      'scripts/jQuery-Collapse/src/jquery.collapse_storage.js',
-                      'scripts/gmaps/gmaps.js',
-                      'scripts/*.js']
+                src: config.modernizr.files
             },
             'matchCommunityTests' : false,
             'customTests' : [],
-            'excludeFiles' : ['Gruntfile.js', '*.json']
+            'excludeFiles' : ['*.js', '*.json']
         }
     });
 

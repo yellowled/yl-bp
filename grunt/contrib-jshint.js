@@ -5,6 +5,7 @@ module.exports = function(grunt) {
             jshintrc: true
         },
         all: ['Gruntfile.js',
+              'config.js',
               'grunt/*.js',
               'scripts/main.js']
     });

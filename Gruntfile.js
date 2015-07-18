@@ -58,7 +58,7 @@ module.exports = function(grunt) {
     grunt.registerTask('stage', [
         'clean',
         'assemble:stage',
-        'copy:stage',
+        'copy',
         'concat',
         'sass',
         'autoprefixer:deploy',
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
     grunt.registerTask('deploy', [
         'clean',
         'assemble:deploy',
-        'copy:deploy',
+        'copy',
         'concat',
         'sass',
         'autoprefixer:deploy',
