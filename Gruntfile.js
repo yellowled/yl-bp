@@ -85,7 +85,9 @@ module.exports = function(grunt) {
         'imagemin',
         'svgmin',
         'modernizr',
-        'hashres'
+        'hashres',
+        'sitemap',
+        'compress:sitemap'
     ]);
 
     // Testing
