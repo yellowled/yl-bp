@@ -17,11 +17,14 @@
 * `grunt deploy` – build to `dist` directory for deployment
 * `grunt test` – test HTML, SCSS and JS files
 
-The only difference between `grunt stage` and `grunt deploy` is that the first one uses the `stage` target of the `assemble` task. In the `stage` target, the variable `production` is set to `false`, which makes it possible to use e.g. `{{#unless production}}{{/unless}}` in Handlebars templates (`.hbs`) to alter the generated HTML for staging or production environments. As an example, this can be used to exclude Google Analytics or Piwik snippets on staging servers.
+The major difference between `grunt stage` and `grunt deploy` is that the first one uses the `stage` target of the `assemble` task. In the `stage` target, the variable `production` is set to `false`, which makes it possible to use e.g. `{{#unless production}}{{/unless}}` in Handlebars templates (`.hbs`) to alter the generated HTML for staging or production environments. As an example, this can be used to exclude Google Analytics or Piwik snippets on staging servers.
+
+Also, `grunt deploy` generates and compresses an [XML sitemap](https://support.google.com/webmasters/answer/156184).
 
 ## Plugins included
 
 * [grunt-contrib-clean](https://npmjs.org/package/grunt-contrib-clean)
+* [grunt-contrib-compress](https://www.npmjs.com/package/grunt-contrib-compress)
 * [grunt-contrib-concat](https://npmjs.org/package/grunt-contrib-concat)
 * [grunt-contrib-copy](https://npmjs.org/package/grunt-contrib-copy)
 * [grunt-contrib-cssmin](https://www.npmjs.com/package/grunt-contrib-cssmin)
@@ -36,6 +39,7 @@ The only difference between `grunt stage` and `grunt deploy` is that the first o
 * [grunt-modernizr](https://npmjs.org/package/grunt-modernizr)
 * [grunt-sass](https://npmjs.org/package/grunt-sass)
 * [grunt-scss-lint](https://www.npmjs.org/package/grunt-scss-lint)
+* [grunt-sitemap](https://www.npmjs.com/package/grunt-sitemap)
 * [grunt-svgmin](https://www.npmjs.org/package/grunt-svgmin)
 * [grunt-svgstore](https://www.npmjs.com/package/grunt-svgstore)
 * [assemble](https://www.npmjs.org/package/assemble)
