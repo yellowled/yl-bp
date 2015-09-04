@@ -33,7 +33,6 @@ Also, `grunt deploy` generates and compresses an [XML sitemap](https://support.g
 * [grunt-contrib-uglify](https://npmjs.org/package/grunt-contrib-uglify)
 * [grunt-contrib-watch](https://npmjs.org/package/grunt-contrib-watch)
 * [grunt-autoprefixer](https://npmjs.org/package/grunt-autoprefixer)
-* [grunt-browser-sync](https://www.npmjs.com/package/grunt-browser-sync)
 * [grunt-hashres](https://npmjs.org/package/grunt-hashres)
 * [grunt-htmlhint](https://npmjs.org/package/grunt-htmlhint)
 * [grunt-modernizr](https://npmjs.org/package/grunt-modernizr)
@@ -43,4 +42,5 @@ Also, `grunt deploy` generates and compresses an [XML sitemap](https://support.g
 * [grunt-svgmin](https://www.npmjs.org/package/grunt-svgmin)
 * [grunt-svgstore](https://www.npmjs.com/package/grunt-svgstore)
 * [assemble](https://www.npmjs.org/package/assemble)
+* [browser-sync](https://www.npmjs.com/package/browser-sync)
 * [time-grunt](https://www.npmjs.com/package/time-grunt)
