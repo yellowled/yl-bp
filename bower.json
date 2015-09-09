@@ -4,21 +4,21 @@
     "main":         "",
     "ignore":       [],
     "dependencies": {
-        "fitvids":                  "~1.1.0",
-        "gmaps":                    "~0.4.19",
-        "lazysizes":                "~1.2.0",
-        "jquery":                   "~1.11.3",
-        "jquery-accessible-tabs":   "~1.9.8",
-        "jQuery-Collapse":          "~1.1.1",
-        "jquery-cycle2":            "~2.1.6",
-        "magnific-popup":           "~1.0.0",
-        "modernizr":                "~2.8.3",
-        "respimage":                "~1.4.2",
-        "responsive-nav":           "~1.0.39",
-        "svg4everybody":            "~2.0.0"
+        "fitvids":                  "^1.1.0",
+        "gmaps":                    "^0.4.19",
+        "lazysizes":                "^1.2.0",
+        "jquery":                   "^1.11.3",
+        "jquery-accessible-tabs":   "^1.9.8",
+        "jQuery-Collapse":          "^1.1.1",
+        "jquery-cycle2":            "^2.1.6",
+        "magnific-popup":           "^1.0.0",
+        "modernizr":                "^2.8.3",
+        "respimage":                "^1.4.2",
+        "responsive-nav":           "^1.0.39",
+        "svg4everybody":            "^2.0.0"
     },
     "devDependencies": {},
     "resolutions": {
-        "jquery":                   "~1.11.3"
+        "jquery":                   "^1.11.3"
     }
 }
