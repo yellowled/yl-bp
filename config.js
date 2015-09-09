@@ -64,5 +64,9 @@ module.exports = {
                     'scss/lib/parts/_forms.scss',
                     'scss/lib/parts/_images.scss'
                 ]
+    },
+    sitemap: {
+        domain:     'http://example.org/',
+        changes:    'monthly'
     }
 };
