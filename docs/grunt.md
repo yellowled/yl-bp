@@ -17,6 +17,8 @@
 * `grunt deploy` – build to `dist` directory for deployment
 * `grunt test` – test HTML, SCSS and JS files
 
+Note that the `gruntfile.js` also contains additional tasks not meant to be executed manually – `bs-init`, `bs-inject` and `init`. Those are helper tasks used internally to run [browser-sync](http://www.browsersync.io) properly.
+
 The major difference between `grunt stage` and `grunt deploy` is that the first one uses the `stage` target of the `assemble` task. In the `stage` target, the variable `production` is set to `false`, which makes it possible to use e.g. `{{#unless production}}{{/unless}}` in Handlebars templates (`.hbs`) to alter the generated HTML for staging or production environments. As an example, this can be used to exclude Google Analytics or Piwik snippets on staging servers.
 
 Also, `grunt deploy` generates and compresses an [XML sitemap](https://support.google.com/webmasters/answer/156184).
@@ -43,4 +45,5 @@ Also, `grunt deploy` generates and compresses an [XML sitemap](https://support.g
 * [grunt-svgstore](https://www.npmjs.com/package/grunt-svgstore)
 * [assemble](https://www.npmjs.org/package/assemble)
 * [browser-sync](https://www.npmjs.com/package/browser-sync)
+* [jit-grunt](https://www.npmjs.com/package/jit-grunt)
 * [time-grunt](https://www.npmjs.com/package/time-grunt)

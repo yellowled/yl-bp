@@ -24,4 +24,4 @@ In the project directory:
 
 ## “I don't need …”
 
-If a project doesn't require some of the [JS assets](javascript.md), comment them out in `grunt/contrib-concat.js` before running `grunt`. Optionally, also remove them from `bower.json` before install.
+If a project doesn't require some of the [JS assets](javascript.md), comment them out in the `concat` section of `config.js` before running `grunt`. Optionally, also remove them from `bower.json` before install.

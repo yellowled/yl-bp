@@ -15,7 +15,6 @@ Most of the JS assets are concatenated into a single file (`scripts/master.js`) 
 
 ## JS plugins included
 
-* [H5BP log](https://github.com/h5bp/html5-boilerplate/blob/master/src/js/plugins.js)
 * [lazysizes](https://github.com/aFarkas/lazysizes)
 * [respimage](https://github.com/aFarkas/respimage)
 * [Responsive Nav](https://github.com/viljamis/responsive-nav.js)
