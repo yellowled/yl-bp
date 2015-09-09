@@ -1,8 +1,5 @@
-// Configuration
-var browserSync = require('browser-sync');
-
 module.exports = function(grunt) {
-    // Task loader
+    // Load tasks when needed
     require('jit-grunt')(grunt, {
         scsslint: 'grunt-scss-lint'
     });
@@ -20,37 +17,6 @@ module.exports = function(grunt) {
 
     // Default task
     grunt.registerTask('default', ['dev']);
-
-    // Init browserSync manually
-    grunt.registerTask('bs-init', function () {
-        var done = this.async();
-
-        browserSync({
-            files: [
-                '*.html',
-                'styles/*.css',
-                'scripts/*.js'
-            ],
-            server: './',
-            watchTask: true
-        }, function (err, bs) {
-            done();
-        });
-    });
-
-    // Inject CSS
-    grunt.registerTask('bs-inject', function () {
-        browserSync.reload(['styles/master.css']);
-    });
-
-    // Init
-    grunt.registerTask('init', [
-        // 'svgstore',
-        'assemble:dev',
-        'sass',
-        'autoprefixer:dev',
-        'concat'
-    ]);
 
     // Development
     grunt.registerTask('dev', [
@@ -93,12 +59,5 @@ module.exports = function(grunt) {
         'hashres',
         'sitemap',
         'compress'
-    ]);
-
-    // Testing
-    grunt.registerTask('test', [
-        'htmlhint',
-        'jshint',
-        'scsslint'
     ]);
 };
