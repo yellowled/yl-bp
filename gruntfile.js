@@ -2,6 +2,11 @@
 var browserSync = require('browser-sync');
 
 module.exports = function(grunt) {
+    // Task loader
+    require('jit-grunt')(grunt, {
+        scsslint: 'grunt-scss-lint'
+    });
+
     // Use time-grunt
     require('time-grunt')(grunt);
 

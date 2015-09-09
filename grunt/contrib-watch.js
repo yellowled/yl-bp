@@ -18,6 +18,4 @@ module.exports = function(grunt) {
             tasks: ['concat'],
         }
     });
-
-    grunt.loadNpmTasks('grunt-contrib-watch');
 };

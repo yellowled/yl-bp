@@ -44,6 +44,7 @@
         "grunt-svgstore":           "^0.5.0",
         "assemble":                 "^0.4.42",
         "browser-sync":             "^2.9.3",
+        "jit-grunt":                "^0.9.1",
         "time-grunt":               "^1.2.1"
     }
 }

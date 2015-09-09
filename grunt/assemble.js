@@ -29,6 +29,4 @@ module.exports = function(grunt) {
             dest: 'dist/'
         }
     });
-
-    grunt.loadNpmTasks('assemble');
 };

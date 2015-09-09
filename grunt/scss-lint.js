@@ -15,6 +15,4 @@ module.exports = function(grunt) {
             'scss/**/*.scss'
         ]
     });
-
-    grunt.loadNpmTasks('grunt-scss-lint');
 };

@@ -10,6 +10,4 @@ module.exports = function(grunt) {
             changefreq: config.sitemap.changes
         }
     });
-
-    grunt.loadNpmTasks('grunt-sitemap');
 };

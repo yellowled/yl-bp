@@ -8,6 +8,4 @@ module.exports = function(grunt) {
             dest: config.concat.dest
         }
     });
-
-    grunt.loadNpmTasks('grunt-contrib-concat');
 };
