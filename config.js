@@ -5,7 +5,6 @@ module.exports = {
     },
     concat: {
         src: [
-                    'scripts/helpers/log.js',
                     // 'scripts/svg4everybody/svg4everybody.js',
                     'scripts/respimage/respimage.js',
                     'scripts/lazysizes/lazysizes.js',
@@ -39,7 +38,7 @@ module.exports = {
                     'scripts/jquery/dist/jquery.min.js',
                     'scripts/jquery/dist/jquery.min.map'
               ],
-        dest:       'dist/'
+        dest:       'dist'
     },
     modernizr: {
         files: [

@@ -87,7 +87,7 @@ module.exports = function(grunt) {
         'modernizr',
         'hashres',
         'sitemap',
-        'compress:sitemap'
+        'compress'
     ]);
 
     // Testing

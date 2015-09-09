@@ -9,7 +9,7 @@ module.exports = function(grunt) {
             files: [{
                 expand: true,
                 src: ['./sitemap.xml'],
-                dest: 'dist/',
+                dest: 'dist',
                 ext: '.xml.gz'
             }]
         }

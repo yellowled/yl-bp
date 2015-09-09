@@ -11,7 +11,7 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: '.',
                 src: ['img/**/*.{gif,jpg,png}'],
-                dest: 'dist/'
+                dest: 'dist'
             }]
         }
     });
