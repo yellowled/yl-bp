@@ -3,6 +3,7 @@
 A HTML project boilerplate. Derived from [H5BP](https://github.com/h5bp/html5-boilerplate), inspired by [init](https://github.com/drublic/init).
 
 [![Build Status](https://travis-ci.org/yellowled/yl-bp.svg?branch=master)](https://travis-ci.org/yellowled/yl-bp)
+[![Dependency Status](https://david-dm.org/yellowled/yl-bp.svg)](https://david-dm.org/yellowled/yl-bp)
 [![devDependency Status](https://david-dm.org/yellowled/yl-bp/dev-status.svg)](https://david-dm.org/yellowled/yl-bp#info=devDependencies)
 
 ## Quickstart
