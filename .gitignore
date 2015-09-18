@@ -7,6 +7,7 @@ dist/
 node_modules/
 
 # Generated assets
+sitemap.xml
 scripts/master.js
 styles/
 
