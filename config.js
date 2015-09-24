@@ -5,6 +5,7 @@ module.exports = {
     },
     concat: {
         src: [
+                    // 'scripts/toast/src/toast.js',
                     // 'scripts/svg4everybody/svg4everybody.js',
                     'scripts/respimage/respimage.js',
                     'scripts/lazysizes/lazysizes.js',
