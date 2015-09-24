@@ -5,7 +5,7 @@ module.exports = function(grunt) {
             spawn: false
         },
         // svg: {
-        //     files: 'src/svg/*.svg',
+        //     files: 'src/icons/*.svg',
         //     tasks: ['svgstore'],
         // },
         assemble: {
