@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         deploy: {
             files: [{
                 expand: true,
-                cwd: '.',
+                cwd: 'src',
                 src: ['img/**/*.svg'],
                 dest: 'dist/'
             }]

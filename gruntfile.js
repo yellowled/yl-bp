@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 
     // Staging
     grunt.registerTask('stage', [
-        'clean',
+        'clean:deploy',
         'assemble:stage',
         'copy',
         'concat',
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 
     // Deployment
     grunt.registerTask('deploy', [
-        'clean',
+        'clean:deploy',
         'assemble:deploy',
         'copy',
         'concat',

@@ -3,6 +3,7 @@ module.exports = function(grunt) {
     grunt.config('assemble', {
         options: {
             ext: '.html',
+            flatten: true,
             partials: ['src/inc/*.hbs'],
             layoutdir: 'src/tpl/',
             layout: 'default.hbs'
@@ -11,21 +12,21 @@ module.exports = function(grunt) {
             options: {
                 production: false
             },
-            src: ['*.hbs'],
-            dest: './'
+            src: ['src/*.hbs'],
+            dest: 'src/'
         },
         stage: {
             options: {
                 production: false
             },
-            src: ['*.hbs'],
+            src: ['src/*.hbs'],
             dest: 'dist/'
         },
         deploy: {
             options: {
                 production: true
             },
-            src: ['*.hbs'],
+            src: ['src/*.hbs'],
             dest: 'dist/'
         }
     });

@@ -7,13 +7,11 @@ module.exports = function(grunt) {
         var done = this.async();
 
         browserSync({
+            server: 'src/',
             files: [
-                '*.html',
-                'styles/*.css',
-                'scripts/*.js'
-            ],
-            server: './',
-            watchTask: true
+                'src/*.html',
+                'src/scripts/*.js'
+            ]
         }, function (err, bs) {
             done();
         });

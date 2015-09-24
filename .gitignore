@@ -5,23 +5,23 @@
 node_modules/
 
 # Generated
-*.html
-sitemap.xml
-scripts/master.js
 dist/
-styles/
+src/*.html
+src/sitemap.xml
+src/scripts/master.js
+src/styles/
 
 # Bower
-scripts/fitvids/
-scripts/gmaps/
-scripts/jQuery-Collapse/
-scripts/jquery-accessible-tabs/
-scripts/jquery-cycle2/
-scripts/jquery/
-scripts/lazysizes/
-scripts/magnific-popup/
-scripts/respimage/
-scripts/respond/
-scripts/responsive-nav/
-scripts/svg4everybody/
-scripts/toast/
+src/scripts/fitvids/
+src/scripts/gmaps/
+src/scripts/jQuery-Collapse/
+src/scripts/jquery-accessible-tabs/
+src/scripts/jquery-cycle2/
+src/scripts/jquery/
+src/scripts/lazysizes/
+src/scripts/magnific-popup/
+src/scripts/respimage/
+src/scripts/respond/
+src/scripts/responsive-nav/
+src/scripts/svg4everybody/
+src/scripts/toast/
