@@ -15,8 +15,8 @@ module.exports = function(grunt) {
         dev: {
             expand: true,
             flatten: true,
-            src: 'styles/*.css',
-            dest: 'styles/'
+            src: 'src/styles/*.css',
+            dest: 'src/styles/'
         },
         deploy: {
             expand: true,

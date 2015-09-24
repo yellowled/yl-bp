@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         },
         build: {
             files: {
-                'img/sprite.svg': ['src/svg/*.svg']
+                'src/img/sprite.svg': ['src/svg/*.svg']
             }
         }
     });

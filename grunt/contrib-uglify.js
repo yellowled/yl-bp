@@ -2,7 +2,7 @@
 module.exports = function(grunt) {
     grunt.config('uglify', {
         deploy: {
-            src: 'scripts/master.js',
+            src: 'src/scripts/master.js',
             dest: 'dist/scripts/master.js'
         }
     });

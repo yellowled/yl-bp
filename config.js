@@ -5,30 +5,30 @@ module.exports = {
     },
     concat: {
         src: [
-                    // 'scripts/toast/src/toast.js',
-                    // 'scripts/svg4everybody/svg4everybody.js',
-                    'scripts/respimage/respimage.js',
-                    'scripts/lazysizes/lazysizes.js',
-                    'scripts/responsive-nav/responsive-nav.js',
-                    'scripts/fitvids/jquery.fitvids.js',
-                    'scripts/magnific-popup/dist/jquery.magnific-popup.js',
-                    'scripts/jquery-cycle2/src/jquery.cycle2.core.js',
-                    'scripts/jquery-cycle2/src/jquery.cycle2.autoheight.js',
-                    'scripts/jquery-cycle2/src/jquery.cycle2.caption.js',
-                    'scripts/jquery-cycle2/src/jquery.cycle2.command.js',
-                    'scripts/jquery-cycle2/src/jquery.cycle2.hash.js',
-                    'scripts/jquery-cycle2/src/jquery.cycle2.loader.js',
-                    'scripts/jquery-cycle2/src/jquery.cycle2.pager.js',
-                    'scripts/jquery-cycle2/src/jquery.cycle2.prevnext.js',
-                    'scripts/jquery-cycle2/src/jquery.cycle2.progressive.js',
-                    'scripts/jquery-cycle2/src/jquery.cycle2.tmpl.js',
-                    'scripts/jquery-accessible-tabs/js/jquery.syncheight.js',
-                    'scripts/jquery-accessible-tabs/js/jquery.tabs.js',
-                    'scripts/jQuery-Collapse/src/jquery.collapse.js',
-                    'scripts/jQuery-Collapse/src/jquery.collapse_storage.js',
-                    'scripts/main.js'
+                    // 'src/scripts/toast/src/toast.js',
+                    // 'src/scripts/svg4everybody/svg4everybody.js',
+                    'src/scripts/respimage/respimage.js',
+                    'src/scripts/lazysizes/lazysizes.js',
+                    'src/scripts/responsive-nav/responsive-nav.js',
+                    'src/scripts/fitvids/jquery.fitvids.js',
+                    'src/scripts/magnific-popup/dist/jquery.magnific-popup.js',
+                    'src/scripts/jquery-cycle2/src/jquery.cycle2.core.js',
+                    'src/scripts/jquery-cycle2/src/jquery.cycle2.autoheight.js',
+                    'src/scripts/jquery-cycle2/src/jquery.cycle2.caption.js',
+                    'src/scripts/jquery-cycle2/src/jquery.cycle2.command.js',
+                    'src/scripts/jquery-cycle2/src/jquery.cycle2.hash.js',
+                    'src/scripts/jquery-cycle2/src/jquery.cycle2.loader.js',
+                    'src/scripts/jquery-cycle2/src/jquery.cycle2.pager.js',
+                    'src/scripts/jquery-cycle2/src/jquery.cycle2.prevnext.js',
+                    'src/scripts/jquery-cycle2/src/jquery.cycle2.progressive.js',
+                    'src/scripts/jquery-cycle2/src/jquery.cycle2.tmpl.js',
+                    'src/scripts/jquery-accessible-tabs/js/jquery.syncheight.js',
+                    'src/scripts/jquery-accessible-tabs/js/jquery.tabs.js',
+                    'src/scripts/jQuery-Collapse/src/jquery.collapse.js',
+                    'src/scripts/jQuery-Collapse/src/jquery.collapse_storage.js',
+                    'src/scripts/main.js'
               ],
-        dest:       'scripts/master.js'
+        dest:       'src/scripts/master.js'
     },
     copy: {
         src: [
@@ -42,28 +42,28 @@ module.exports = {
         dest:       'dist'
     },
     modernizr: {
-        dev:        'scripts/modernizr/modernizr.js',
+        dev:        'src/scripts/modernizr/modernizr.js',
         dest:       'dist/scripts/modernizr/modernizr.js',
         srcfiles: [
-                    'scss/**/*.scss',
-                    'scripts/magnific-popup/dist/jquery.magnific-popup.js',
-                    'scripts/magnific-popup/src/css/main.scss',
-                    'scripts/jquery-cycle2/*.js',
-                    'scripts/jquery-accessible-tabs/js/jquery.syncheight.js',
-                    'scripts/jquery-accessible-tabs/js/jquery.tabs.js',
-                    'scripts/jQuery-Collapse/src/jquery.collapse.js',
-                    'scripts/jQuery-Collapse/src/jquery.collapse_storage.js',
-                    'scripts/gmaps/gmaps.js',
-                    'scripts/*.js'
+                    'src/scss/**/*.scss',
+                    'src/scripts/magnific-popup/dist/jquery.magnific-popup.js',
+                    'src/scripts/magnific-popup/src/css/main.scss',
+                    'src/scripts/jquery-cycle2/*.js',
+                    'src/scripts/jquery-accessible-tabs/js/jquery.syncheight.js',
+                    'src/scripts/jquery-accessible-tabs/js/jquery.tabs.js',
+                    'src/scripts/jQuery-Collapse/src/jquery.collapse.js',
+                    'src/scripts/jQuery-Collapse/src/jquery.collapse_storage.js',
+                    'src/scripts/gmaps/gmaps.js',
+                    'src/scripts/*.js'
         ]
     },
     scsslint: {
         exclude: [
-                    'scss/ext/_normalize.scss',
-                    'scss/lib/mixins/_typography.scss',
-                    'scss/lib/mixins/_units.scss',
-                    'scss/lib/parts/_forms.scss',
-                    'scss/lib/parts/_images.scss'
+                    'src/scss/ext/_normalize.scss',
+                    'src/scss/lib/mixins/_typography.scss',
+                    'src/scss/lib/mixins/_units.scss',
+                    'src/scss/lib/parts/_forms.scss',
+                    'src/scss/lib/parts/_images.scss'
                 ]
     },
     sitemap: {

@@ -2,7 +2,7 @@
 
 # JavaScript
 
-Most of the JS assets are concatenated into a single file (`scripts/master.js`) by the build script. Any JS specific to the project should go into the `scripts/main.js` file.
+Most of the JS assets are concatenated into a single file (`src/scripts/master.js`) by the build script. Any JS specific to the project should go into the `src/scripts/main.js` file.
 
 ## jQuery plugins included
 

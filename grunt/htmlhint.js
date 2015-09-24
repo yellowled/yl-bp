@@ -5,7 +5,7 @@ module.exports = function(grunt) {
             htmlhintrc: '.htmlhintrc'
         },
         all: {
-            src: ['*.html']
+            src: ['src/*.html']
         }
     });
 };

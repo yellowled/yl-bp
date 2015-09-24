@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         deploy: {
             files:[{
                 expand: true,
-                cwd: 'styles',
+                cwd: 'src/styles',
                 src: ['*.css'],
                 dest: 'dist/styles',
                 ext: '.css'

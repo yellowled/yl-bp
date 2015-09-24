@@ -4,9 +4,9 @@ module.exports = function(grunt) {
         options: {
             jshintrc: true
         },
-        all: ['Gruntfile.js',
+        all: ['gruntfile.js',
               'config.js',
               'grunt/*.js',
-              'scripts/main.js']
+              'src/scripts/main.js']
     });
 };
