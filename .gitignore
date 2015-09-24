@@ -1,17 +1,17 @@
-# File types
+# System
 .DS_Store
-*.html
 
-# Grunt
-dist/
+# Node
 node_modules/
 
-# Generated assets
+# Generated
+*.html
 sitemap.xml
 scripts/master.js
+dist/
 styles/
 
-# Bower assets
+# Bower
 scripts/fitvids/
 scripts/gmaps/
 scripts/jQuery-Collapse/
@@ -24,4 +24,4 @@ scripts/respimage/
 scripts/respond/
 scripts/responsive-nav/
 scripts/svg4everybody/
-scripts/tablesaw/
+scripts/toast/
