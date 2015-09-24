@@ -21,10 +21,12 @@ Note that the directory `grunt` also contains additional tasks not meant to be e
 
 The major difference between `grunt stage` and `grunt deploy` is that the first one uses the `stage` target of the `assemble` task. In the `stage` target, the variable `production` is set to `false`, which makes it possible to use e.g. `{{#unless production}}{{/unless}}` in Handlebars templates (`.hbs`) to alter the generated HTML for staging or production environments. As an example, this can be used to exclude Google Analytics or Piwik snippets on staging servers.
 
-Also, `grunt deploy` generates and compresses an [XML sitemap](https://support.google.com/webmasters/answer/156184).
+Also, `grunt deploy` generates and compresses an [XML sitemap](https://support.google.com/webmasters/answer/156184). You can set the domain for the live site in `config.js` or it will be retrieved from the `homepage` key in `package.json`.
 
 ## Plugins included
 
+* [assemble](https://www.npmjs.org/package/assemble)
+* [browser-sync](https://www.npmjs.com/package/browser-sync)
 * [grunt-contrib-clean](https://npmjs.org/package/grunt-contrib-clean)
 * [grunt-contrib-compress](https://www.npmjs.com/package/grunt-contrib-compress)
 * [grunt-contrib-concat](https://npmjs.org/package/grunt-contrib-concat)
@@ -43,7 +45,5 @@ Also, `grunt deploy` generates and compresses an [XML sitemap](https://support.g
 * [grunt-sitemap](https://www.npmjs.com/package/grunt-sitemap)
 * [grunt-svgmin](https://www.npmjs.org/package/grunt-svgmin)
 * [grunt-svgstore](https://www.npmjs.com/package/grunt-svgstore)
-* [assemble](https://www.npmjs.org/package/assemble)
-* [browser-sync](https://www.npmjs.com/package/browser-sync)
 * [jit-grunt](https://www.npmjs.com/package/jit-grunt)
 * [time-grunt](https://www.npmjs.com/package/time-grunt)
