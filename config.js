@@ -41,7 +41,9 @@ module.exports = {
         dest:       'dist'
     },
     modernizr: {
-        files: [
+        dev:        'scripts/modernizr/modernizr.js',
+        dest:       'dist/scripts/modernizr/modernizr.js',
+        srcfiles: [
                     'scss/**/*.scss',
                     'scripts/magnific-popup/dist/jquery.magnific-popup.js',
                     'scripts/magnific-popup/src/css/main.scss',
@@ -52,9 +54,7 @@ module.exports = {
                     'scripts/jQuery-Collapse/src/jquery.collapse_storage.js',
                     'scripts/gmaps/gmaps.js',
                     'scripts/*.js'
-              ],
-        src:        'scripts/modernizr/modernizr.js',
-        dest:       'dist/scripts/modernizr/modernizr.js'
+        ]
     },
     scsslint: {
         exclude: [
