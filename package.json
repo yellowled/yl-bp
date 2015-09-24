@@ -38,7 +38,7 @@
         "grunt-autoprefixer":       "^3.0.3",
         "grunt-hashres":            "^0.4.1",
         "grunt-htmlhint":           "^0.4.1",
-        "grunt-modernizr":          "^0.6.1",
+        "grunt-modernizr":          "^1.0.0",
         "grunt-sass":               "^1.0.0",
         "grunt-scss-lint":          "^0.3.8",
         "grunt-sitemap":            "^1.2.1",
