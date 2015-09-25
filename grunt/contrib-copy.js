@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         deploy: {
             files: [{
                 expand: true,
-                cwd: 'src/',
+                cwd: 'src',
                 src: config.copy.src,
                 dest: config.copy.dest
             }]

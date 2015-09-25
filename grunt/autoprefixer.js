@@ -16,13 +16,13 @@ module.exports = function(grunt) {
             expand: true,
             flatten: true,
             src: 'src/styles/*.css',
-            dest: 'src/styles/'
+            dest: 'src/styles'
         },
         deploy: {
             expand: true,
             flatten: true,
             src: 'dist/styles/*.css',
-            dest: 'dist/styles/'
+            dest: 'dist/styles'
         }
     });
 };

@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         var done = this.async();
 
         browserSync({
-            server: 'src/',
+            server: 'src',
             files: [
                 'src/*.html',
                 // 'src/icons/*.svg',

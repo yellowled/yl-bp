@@ -4,7 +4,7 @@ module.exports = function(grunt) {
         options: {
             ext: '.html',
             layout: 'default.hbs',
-            layoutdir: 'src/layouts/',
+            layoutdir: 'src/layouts',
             partials: ['src/partials/*.hbs']
         },
         dev: {
@@ -12,27 +12,27 @@ module.exports = function(grunt) {
                 production: false
             },
             expand: true,
-            cwd: 'src/pages/',
+            cwd: 'src/pages',
             src: ['**/*.hbs'],
-            dest: 'src/'
+            dest: 'src'
         },
         stage: {
             options: {
                 production: false
             },
             expand: true,
-            cwd: 'src/pages/',
+            cwd: 'src/pages',
             src: ['**/*.hbs'],
-            dest: 'dist/'
+            dest: 'dist'
         },
         deploy: {
             options: {
                 production: true
             },
             expand: true,
-            cwd: 'src/pages/',
+            cwd: 'src/pages',
             src: ['**/*.hbs'],
-            dest: 'dist/'
+            dest: 'dist'
         }
     });
 };
