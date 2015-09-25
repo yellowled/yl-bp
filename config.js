@@ -68,6 +68,11 @@ module.exports = {
     },
     sitemap: {
         domain:     '<%= pkg.homepage %>',
-        changes:    'monthly'
+        changes:    'monthly',
+        pattern: [
+                    'src/*.html',
+                    'src/**/*.html',
+                    '!src/scripts/**/*.html'
+                 ]
     }
 };
