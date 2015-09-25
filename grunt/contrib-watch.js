@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         //     tasks: ['svgstore'],
         // },
         assemble: {
-            files: ['src/*.hbs', 'src/inc/*.hbs', 'src/tpl/*.hbs'],
+            files: ['src/*.hbs', 'src/partials/*.hbs', 'src/layouts/*.hbs'],
             tasks: ['assemble:dev'],
         },
         scss: {
