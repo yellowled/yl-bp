@@ -13,7 +13,7 @@ module.exports = function(grunt) {
             },
             expand: true,
             cwd: 'src/pages/',
-            src: ['*.hbs'],
+            src: ['**/*.hbs'],
             dest: 'src/'
         },
         stage: {
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
             },
             expand: true,
             cwd: 'src/pages/',
-            src: ['*.hbs'],
+            src: ['**/*.hbs'],
             dest: 'dist/'
         },
         deploy: {
@@ -31,7 +31,7 @@ module.exports = function(grunt) {
             },
             expand: true,
             cwd: 'src/pages/',
-            src: ['*.hbs'],
+            src: ['**/*.hbs'],
             dest: 'dist/'
         }
     });
