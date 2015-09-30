@@ -5,7 +5,7 @@
     "ignore":       [],
     "dependencies": {
         "fitvids":                  "^1.1.0",
-        "gmaps":                    "^0.4.19",
+        "gmaps":                    "^0.4.21",
         "lazysizes":                "^1.2.2",
         "jquery":                   "^1.11.3",
         "jquery-accessible-tabs":   "^1.9.8",
