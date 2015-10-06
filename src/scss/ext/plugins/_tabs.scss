@@ -23,7 +23,7 @@ $current-color:     $off-black !default;
 $inactive:          $lite-grey !default;
 $inactive-color:    $greyed-out !default;
 
-$tabs-padding:      .625 !default;
+$tabs-padding:      .625rem !default;
 $tabs-gap:          4px !default;
 
 $tab-border:        1px solid $bordercolor !default;
@@ -40,16 +40,14 @@ $tabs-margin:       $type-rhythm;
 }
 
 @mixin tabs($margin: $tabs-margin, $padding: $tabs-padding) {
-    @include x-rem(margin, $margin 0);
-
+    margin: $margin 0;
     max-width: 100%;
     width: $tabswidth;
 
     .content {
-        @include x-rem(padding, 0 $padding);
-
         border: $tab-border;
         border-radius: $content-border;
+        padding: 0 $padding;
     }
 }
 
@@ -64,13 +62,12 @@ $tabs-margin:       $type-rhythm;
     }
 
     a {
-        @include x-rem(padding, ($padding/4) $padding);
-
         background: $inactive;
         border: $tab-border;
         border-radius: $list-border;
         color: $inactive-color;
         display: block;
+        padding: ($padding/4) $padding;
         position: relative;
         text-decoration: none;
         top: 1px;

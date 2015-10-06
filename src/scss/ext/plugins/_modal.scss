@@ -2,15 +2,15 @@
 // github.com/dimsemenov/Magnific-Popup
 // --------------------------------------------------------------------
 // Defaults
-$modal-width:   40 !default;
-$modal-padding: 1 2 !default;
+$modal-width:   40rem !default;
+$modal-padding: 1rem 2rem !default;
 
 
 @mixin modal-overlay($background-color: $off-white, $max-width: $modal-width, $rem-padding: $modal-padding) {
     background: $background-color;
     margin: 0 auto;
-    @include x-rem(max-width, $max-width);
-    @include x-rem(padding, $rem-padding);
+    max-width: $max-width;
+    padding: $rem-padding;
     position: relative;
     width: auto;
 }
