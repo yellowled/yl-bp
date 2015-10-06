@@ -4,7 +4,7 @@ module.exports = function(grunt) {
         // 'svgstore',
         'assemble:dev',
         'sass',
-        'autoprefixer:dev',
+        'postcss:dev',
         'concat'
     ]);
 };

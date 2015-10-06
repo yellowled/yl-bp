@@ -1,16 +1,18 @@
-// Add vendor prefixes to CSS based on caniuse.com
+// Postprocess generated CSS
 var config = require('../config');
 
 module.exports = function(grunt) {
-    grunt.config('autoprefixer', {
+    grunt.config('postcss', {
         options: {
-            browsers: config.autoprefixer.browsers,
-            cascade: false,
-            remove: true,
             diff: false,
             map: true,
-            silent: false,
-            safe: false
+            processors: [
+                require('autoprefixer')({
+                    browsers: config.autoprefixer.browsers,
+                    cascade: false,
+                    remove: true
+                })
+            ]
         },
         dev: {
             expand: true,
