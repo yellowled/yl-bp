@@ -31,7 +31,6 @@ All partials in `ext` should *always* be included in `master.scss`. Since they o
 * `_shapes.scss` – CSS-only folded corner, speech bubble, ribbon, triangle
 * `_tables.scss` – tables (simple, striped, responsive)
 * `_typography.scss` – ligatures, smart blockquotes
-* `_units.scss` – `rem` and `calc`
 
 All partials in `lib` should *always* be included in `master.scss`. Most of them contain SCSS that does not emit CSS unless explicity used (extends, mixins and functions). The content emitted by partials in `lib/parts` can be tweaked in `main/init/_settings.scss`.
 

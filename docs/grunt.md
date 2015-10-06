@@ -7,7 +7,7 @@
 * watches for changes to Handlebars, SCSS and JS files
 * compiles
     * Handlebars to HTML
-    * SCSS to CSS (including autoprefixer)
+    * SCSS to CSS (including pixrem and autoprefixer through PostCSS)
     * multiple JS files into a single file
 * serves the site on a local live-reloading webserver
 
@@ -26,6 +26,7 @@ Also, `grunt deploy` generates and compresses an [XML sitemap](https://support.g
 ## Plugins included
 
 * [assemble](https://www.npmjs.org/package/assemble)
+* [autoprefixer](https://www.npmjs.com/package/autoprefixer)
 * [browser-sync](https://www.npmjs.com/package/browser-sync)
 * [grunt-contrib-clean](https://npmjs.org/package/grunt-contrib-clean)
 * [grunt-contrib-compress](https://www.npmjs.com/package/grunt-contrib-compress)
@@ -36,14 +37,15 @@ Also, `grunt deploy` generates and compresses an [XML sitemap](https://support.g
 * [grunt-contrib-jshint](https://npmjs.org/package/grunt-contrib-jshint)
 * [grunt-contrib-uglify](https://npmjs.org/package/grunt-contrib-uglify)
 * [grunt-contrib-watch](https://npmjs.org/package/grunt-contrib-watch)
-* [grunt-autoprefixer](https://npmjs.org/package/grunt-autoprefixer)
 * [grunt-hashres](https://npmjs.org/package/grunt-hashres)
 * [grunt-htmlhint](https://npmjs.org/package/grunt-htmlhint)
 * [grunt-modernizr](https://npmjs.org/package/grunt-modernizr)
+* [grunt-postcss](https://npmjs.org/package/grunt-postcss)
 * [grunt-sass](https://npmjs.org/package/grunt-sass)
 * [grunt-scss-lint](https://www.npmjs.org/package/grunt-scss-lint)
 * [grunt-sitemap](https://www.npmjs.com/package/grunt-sitemap)
 * [grunt-svgmin](https://www.npmjs.org/package/grunt-svgmin)
 * [grunt-svgstore](https://www.npmjs.com/package/grunt-svgstore)
 * [jit-grunt](https://www.npmjs.com/package/jit-grunt)
+* [pixrem](https://www.npmjs.com/package/pixrem)
 * [time-grunt](https://www.npmjs.com/package/time-grunt)
