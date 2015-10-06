@@ -2,7 +2,7 @@
 // --------------------------------------------------------------------
 // Simple
 @mixin simple-figure($border-color: $grey, $rhythm: $type-rhythm) {
-    @include x-rem(margin, $rhythm 0);
+    margin: $rhythm 0;
 
     img {
         border-bottom: 1px solid $border-color;
@@ -16,7 +16,7 @@
 
 // Fancy
 @mixin fancy-figure($rhythm: $type-rhythm) {
-    @include x-rem(margin, $rhythm 0);
+    margin: $rhythm 0;
     position: relative;
 
     img {
@@ -28,13 +28,12 @@
     }
 
     figcaption {
-        @include x-rem(padding, .125 .625);
-
         background: rgba($black, .7);
         bottom: 0;
         box-sizing: border-box;
         color: $white;
         left: 0;
+        padding: .125rem .625rem;
         position: absolute;
         text-align: center;
         width: 100%;
@@ -47,9 +46,8 @@
 
 // Animated caption
 @mixin animated-figure($position: bottom, $push: true, $rhythm: $type-rhythm) {
-    @include x-rem(margin, $rhythm 0);
-
     box-shadow: 0 0 4px rgba($black, .7);
+    margin: $rhythm 0;
     position: relative;
     overflow: hidden;
 
@@ -68,8 +66,6 @@
     }
 
     figcaption {
-        @include x-rem(padding, 1);
-
         @if $push {
             background-color: $off-black;
         } @else {
@@ -79,6 +75,7 @@
         color: $off-white;
         left: 0;
         opacity: 0;
+        padding: 1rem;
         position: absolute;
         width: 100%;
 

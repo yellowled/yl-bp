@@ -42,7 +42,7 @@ $tables-breakpoint: 768px !default; // Breakpoint for responsive tables
 
     th,
     td {
-        @include x-rem(padding, 0 .25);
+        padding: 0 .25rem;
     }
 }
 

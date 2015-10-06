@@ -20,8 +20,7 @@ dd {
 }
 
 table {
-    @include x-rem(margin, $type-rhythm 0);
-
+    margin: $type-rhythm 0;
     width: 100%;
 
     caption {
@@ -46,12 +45,11 @@ pre code {
 }
 
 hr {
-    @include x-rem(margin, 1.5 0);
-
     border: 0;
     border-top: 1px solid $silver;
     display: block;
     height: 1px;
+    margin: 1.5rem 0;
     padding: 0;
 }
 
@@ -107,19 +105,19 @@ h3,
 h4,
 h5,
 h6 {
-    @include x-rem(margin, $type-rhythm 0);
+    margin: $type-rhythm 0;
 }
 
 h5,
 h6 {
-    @include x-rem(font-size, 1);
+    font-size: 1rem;
 }
 
 pre,
 code,
 samp,
 kbd {
-    @include x-rem(font-size, .875);
+    font-size: .875rem;
 }
 
 

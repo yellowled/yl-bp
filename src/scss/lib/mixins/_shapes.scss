@@ -6,10 +6,9 @@
     position: relative;
 
     &:before {
-        @include x-rem(border-width, 0 1 1 0);
-
         border-color: darken($box-color, 25%) $container-color;
         border-style: solid;
+        border-width: 0 1rem 1rem 0;
         box-shadow: 0 1px 1px rgba(0, 0, 0, .3), -1px 1px 1px rgba(0, 0, 0, .2);
         content: '';
         display: block;
@@ -25,8 +24,8 @@
     background: $box-color;
     border: $border-width solid $border-color;
     border-radius: $border-radius;
-    @include x-rem(margin, 0 0 2);
-    @include x-rem(padding, 1);
+    margin: 0 0 2rem;
+    padding: 1rem;
     position: relative;
 
     &:before,

@@ -3,14 +3,13 @@
 // Defaults
 $img-breakpoint:    768px !default; // Breakpoint for floated images
 $img-margin:        $type-rhythm 0 !default;   // Margins for images
-$img-left-margin:   .25 $type-rhythm .75 0 !default;
-$img-right-margin:  .25 0 .75 $type-rhythm !default;
+$img-left-margin:   .25rem $type-rhythm .75rem 0 !default;
+$img-right-margin:  .25rem 0 .75rem $type-rhythm !default;
 
 
 %image-block {
-    @include x-rem(margin, $img-margin);
-
     display: block;
+    margin: $img-margin;
 }
 
 // For use with ProcessWire
@@ -25,15 +24,13 @@ $img-right-margin:  .25 0 .75 $type-rhythm !default;
     @media only screen and (min-width: $img-breakpoint) {
         // For use with ProcessWire
         .align_left {
-            @include x-rem(margin, $img-left-margin);
-
             float: left;
+            margin: $img-left-margin;
         }
 
         .align_right {
-            @include x-rem(margin, $img-right-margin);
-
             float: right;
+            margin: $img-right-margin;
         }
     }
 }
@@ -70,9 +67,8 @@ $svg-fallback-class:    svg-fallback !default;
     // 2. Set dimensions of SVG icons
     [class^="icon-"],
     [class*="icon-"] {
-        @include x-rem(height, 1);
-        @include x-rem(width, 1);
-
         fill: $off-black;
+        height: 1rem;
+        width: 1rem;
     }
 }

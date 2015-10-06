@@ -11,7 +11,7 @@ $map-height: 400px !default;
 @mixin googlemap {
     box-sizing: border-box;
     color: $off-black;
-    @include x-rem(margin, $type-rhythm 0);
+    margin: $type-rhythm 0;
     @include responsive-media;
 
     .js & {
