@@ -45,6 +45,8 @@ figure {
 // --------------------------------------------------------------------
 // Defaults
 $svg-fallback-class:    svg-fallback !default;
+$svg-icon-fill:         $off-black !default;
+$svg-icon-dims:         1rem !default;
 
 
 @if $use-svg-sprites {
@@ -67,8 +69,8 @@ $svg-fallback-class:    svg-fallback !default;
     // 2. Set dimensions of SVG icons
     [class^="icon-"],
     [class*="icon-"] {
-        fill: $off-black;
-        height: 1rem;
-        width: 1rem;
+        fill: $svg-icon-fill;
+        height: $svg-icon-dims;
+        width: $svg-icon-dims;
     }
 }
