@@ -6,7 +6,7 @@ Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains
 
 ## `ext`
 
-`_normalize.scss` contains [normalize.css](github.com/necolas/normalize.css). `_base.scss` contains some useful base styles not covered by normalize – styles that are not set there because they are “too design-related”, yet used very often – as well as styles needed for the [Enable JS](http://www.enable-javascript.com) hint. `_colors.scss` contains constants for a [better color palette](http://clrs.cc/). `plugins` contains mixins for JS/jQuery plugins included in the boilerplate:
+`_normalize.scss` contains [normalize.css](github.com/necolas/normalize.css). `_base.scss` contains some useful base styles not covered by normalize – styles that are not set there because they are “too design-related”, yet used very often – as well as styles needed for the [Enable JS](http://www.enable-javascript.com) hint. `_colors.scss` contains constants for a [better color palette](http://clrs.cc/). `plugins` contains mixins for JS/jQuery plugins included in the boilerplate, which are included through `_plugins.scss`:
 
 * [AccessibleTabs](https://github.com/ginader/Accessible-Tabs)
 * [Cycle 2](https://github.com/malsup/cycle2)
@@ -16,6 +16,8 @@ Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains
 All partials in `ext` should *always* be included in `master.scss`. Since they only contain constants or mixins, they don't emit CSS unless explicity used. The exception are `_normalize.scss` and `_base.scss`, which contain  CSS which will *always* be useful.
 
 ## `lib`
+
+`lib` contains partials to combine the mixin collections from its respective subdirectories in order to keep `master.scss` tidy – `_parts.scss` and `_mixins.scss`.
 
 `parts` contains styles and classes for common parts of web sites – forms, images, messages and navigation. The form (base) styles are heavily inspired by [Formalize](http://formalize.me/), images mainly contains image classes used with [ProcessWire](http://processwire.com), and the navigation styles are required by [reponsive-nav.js](http://responsive-nav.com/).
 
