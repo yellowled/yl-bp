@@ -4,7 +4,9 @@
 
 ## HTML
 
-HTML is compiled from [Handlebars](http://handlebarsjs.com) templates using [assemble](http://assemble.io). Layouts are in `src/layouts/`, partials in `src/partials/`. Pages should be kept in `src/pages/`, but *can* be in subdirectories; i.e. `src/pages/blog/index.hbs` will generate `blog/index.html`. Generated markup files (`.html`) are explicitly excluded from the repository in the `.gitignore`.
+HTML is compiled from [Handlebars](http://handlebarsjs.com) templates using [assemble](http://assemble.io).
+
+Layouts are in `src/layouts/`, partials in `src/partials/`. Pages should be kept in `src/pages/`, but *can* be in subdirectories; i.e. `src/pages/blog/index.hbs` will generate `blog/index.html`. Generated markup files (`.html`) are explicitly excluded from the repository in the `.gitignore`.
 
 ## SCSS
 
