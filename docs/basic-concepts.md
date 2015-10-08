@@ -4,11 +4,13 @@
 
 ## HTML
 
-HTML is compiled from [Handlebars](http://handlebarsjs.com) templates using [assemble](http://assemble.io). Layouts are in `src/tpl/`, partials in `src/inc/`; pages should be kept in `/`. Generated markup files (`.html`) are explicitly excluded from the repository in the `.gitignore`.
+HTML is compiled from [Handlebars](http://handlebarsjs.com) templates using [assemble](http://assemble.io). Layouts are in `src/layouts/`, partials in `src/partials/`. Pages should be kept in `src/pages/`, but *can* be in subdirectories; i.e. `src/pages/blog/index.hbs` will generate `blog/index.html`. Generated markup files (`.html`) are explicitly excluded from the repository in the `.gitignore`.
 
 ## SCSS
 
-CSS is compiled from [Sass](http://sass-lang.com) using [libsass](http://libsass.org), [pixrem](https://github.com/robwierzbowski/node-pixrem) and [autoprefixer](https://github.com/nDmitry/grunt-autoprefixer) (no need to generate `rem` fallback or write vendor prefixes). The main SCSS file `@import`s partials from the subdirectories of `src/scss/`. `@media` queries should be written [mobile first](http://bradfrostweb.com/blog/web/mobile-first-responsive-web-design/) based on [normalize.css](https://github.com/necolas/normalize.css/).
+CSS is compiled from [Sass](http://sass-lang.com) using [libsass](http://libsass.org), [pixrem](https://github.com/robwierzbowski/node-pixrem) and [autoprefixer](https://github.com/nDmitry/grunt-autoprefixer) (no need to generate `rem` fallback or write vendor prefixes).
+
+The main SCSS file `@import`s partials from the subdirectories of `src/scss/`. `@media` queries should be written [mobile first](http://bradfrostweb.com/blog/web/mobile-first-responsive-web-design/) based on [normalize.css](https://github.com/necolas/normalize.css/).
 
 See [SCSS concepts](scss-concepts.md).
 
