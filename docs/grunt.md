@@ -7,7 +7,7 @@
 * watches for changes to Handlebars, SCSS and JS files
 * compiles
     * Handlebars to HTML
-    * SCSS to CSS (including pixrem and autoprefixer through PostCSS)
+    * SCSS to CSS (including `pixrem` and `autoprefixer` through PostCSS)
     * multiple JS files into a single file
 * serves the site on a local live-reloading webserver
 
