@@ -17,7 +17,7 @@ module.exports = function(grunt) {
             tasks: ['sass', 'postcss:dev', 'bs-inject'],
         },
         js: {
-            files: ['src/scripts/main.js'],
+            files: 'src/scripts/main.js',
             tasks: ['concat'],
         }
     });
