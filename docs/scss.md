@@ -24,12 +24,12 @@ All partials in `ext` should *always* be included in `master.scss`. Since they o
 `mixins` is a collection of mixins for various purposes:
 
 * `_buttons.scss` – buttons (gradient, flat, bordered) mixins
-* `_figure.scss` – `<figure> (fancy, simple, with animated caption)
+* `_figure.scss` – `<figure> (simple, fancy, with animated caption)
 * `_grid.scss` – flexible grid system
 * `_helpers.scss` – helper classes (mostly) adopted from [H5BP](https://html5boilerplate.com)
 * `_icon.scss` – CSS-only animated hamburger icon
 * `_img.scss` – responsive and retina images and SVGs
-* `_position.scss` – horizontal/vertical centering
+* `_position.scss` – horizontal and vertical centering
 * `_shapes.scss` – CSS-only folded corner, speech bubble, ribbon, triangle
 * `_tables.scss` – tables (simple, striped, responsive)
 * `_typography.scss` – ligatures, smart blockquotes
