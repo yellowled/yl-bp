@@ -1,7 +1,7 @@
 {
     "name":         "yl-bp",
     "description":  "HTML project boilerplate",
-    "version":      "1.7.2",
+    "version":      "1.7.3",
     "homepage":     "https://github.com/yellowled/yl-bp/",
     "author": {
         "name":     "Matthias Mees",
