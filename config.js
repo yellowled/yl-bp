@@ -61,8 +61,7 @@ module.exports = {
         exclude: [
                     'src/scss/ext/_normalize.scss',
                     'src/scss/lib/mixins/_typography.scss',
-                    'src/scss/lib/parts/_forms.scss',
-                    'src/scss/lib/parts/_images.scss'
+                    'src/scss/lib/parts/_forms.scss'
                 ]
     },
     sitemap: {

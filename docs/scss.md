@@ -19,7 +19,7 @@ All partials in `ext` should *always* be included in `master.scss`. Since they o
 
 `lib` contains partials to combine the mixin collections from its respective subdirectories in order to keep `master.scss` tidy – `_parts.scss` and `_mixins.scss`.
 
-`parts` contains styles and classes for common parts of web sites – forms, images, messages and navigation. The form (base) styles are heavily inspired by [Formalize](http://formalize.me/), images mainly contains image classes used with [ProcessWire](http://processwire.com), and the navigation styles are required by [reponsive-nav.js](http://responsive-nav.com/).
+`parts` contains styles and classes for common parts of web sites – forms, images, messages and navigation. The form (base) styles are heavily inspired by [Formalize](http://formalize.me/), images mainly contains image positioning classes usually used by CMS/WYSIWYG editors, and the navigation styles are required by [reponsive-nav.js](http://responsive-nav.com/).
 
 `mixins` is a collection of mixins for various purposes:
 
