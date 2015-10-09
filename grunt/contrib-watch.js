@@ -14,11 +14,11 @@ module.exports = function(grunt) {
         },
         scss: {
             files: 'src/scss/**/*.scss',
-            tasks: ['sass', 'postcss:dev', 'bs-inject'],
+            tasks: ['sass', 'postcss:dev', 'bs-inject-css'],
         },
         js: {
             files: 'src/scripts/main.js',
-            tasks: ['concat'],
+            tasks: ['concat', 'bs-inject-js'],
         }
     });
 };
