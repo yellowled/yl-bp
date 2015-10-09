@@ -46,15 +46,9 @@ module.exports = {
         dest:       'dist/scripts/modernizr/modernizr.js',
         srcfiles: [
                     'src/scss/**/*.scss',
-                    'src/scripts/magnific-popup/dist/jquery.magnific-popup.js',
                     'src/scripts/magnific-popup/src/css/main.scss',
-                    'src/scripts/jquery-cycle2/*.js',
-                    'src/scripts/jquery-accessible-tabs/js/jquery.syncheight.js',
-                    'src/scripts/jquery-accessible-tabs/js/jquery.tabs.js',
-                    'src/scripts/jQuery-Collapse/src/jquery.collapse.js',
-                    'src/scripts/jQuery-Collapse/src/jquery.collapse_storage.js',
                     'src/scripts/gmaps/gmaps.js',
-                    'src/scripts/*.js'
+                    'src/scripts/master.js'
         ]
     },
     scsslint: {
