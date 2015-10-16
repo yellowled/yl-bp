@@ -23,6 +23,15 @@ The major difference between `grunt stage` and `grunt deploy` is that the first 
 
 Also, `grunt deploy` generates and compresses an [XML sitemap](https://support.google.com/webmasters/answer/156184). You can set the domain for the live site in `config.js` or it will be retrieved from the `homepage` key in `package.json`.
 
+## Testing a build locally
+
+Note that due to the way that paths are specified in the HTML templates, a build (in `dist`) will not work on the local webserver. To test a build locally (on OS X or Linux), do
+
+* `grunt deploy`
+* `cd dist`
+* `python -m SimpleHTTPServer 8000`
+* point your webbrowser to `http://localhost:8000`
+
 ## Plugins included
 
 * [assemble](https://www.npmjs.org/package/assemble)
