@@ -8,7 +8,7 @@ node_modules/
 dist/
 src/**/*.html
 src/sitemap.xml
-src/scripts/master.js
+src/scripts/master.*
 src/styles/
 
 # Bower
