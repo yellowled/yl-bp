@@ -10,7 +10,7 @@ Layouts are in `src/layouts/`, partials in `src/partials/`. Pages should be kept
 
 ## SCSS
 
-CSS is compiled from [Sass](http://sass-lang.com) using [libsass](http://libsass.org), [pixrem](https://github.com/robwierzbowski/node-pixrem) and [autoprefixer](https://github.com/nDmitry/grunt-autoprefixer) (no need to generate `rem` fallback or write vendor prefixes).
+CSS is compiled from [Sass](http://sass-lang.com) using [libsass](http://libsass.org), [pixrem](https://github.com/robwierzbowski/node-pixrem) and [autoprefixer](https://github.com/nDmitry/grunt-autoprefixer) (no need to write `rem` fallbacks or vendor prefixes).
 
 The main SCSS file `@import`s partials from the subdirectories of `src/scss/`. `@media` queries should be written [mobile first](http://bradfrostweb.com/blog/web/mobile-first-responsive-web-design/) based on [normalize.css](https://github.com/necolas/normalize.css/).
 
@@ -18,7 +18,7 @@ See [SCSS concepts](scss-concepts.md).
 
 ## JavaScript
 
-JS and [jQuery](http://jquery.com) packages are (mostly) managed by Bower, which is configured to import them to the `src/scripts/` directory.
+JS and [jQuery](http://jquery.com) packages are (mostly) managed by [Bower](http://bower.io), which is configured to import them to the `src/scripts/` directory.
 
 See [JS structure](javascript.md)
 

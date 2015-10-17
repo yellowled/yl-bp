@@ -22,6 +22,6 @@ In the project directory:
 
 [Additional Grunt tasks](grunt.md#additional-grunt-tasks) are available for testing and deploying code to staging and live servers.
 
-## “I don't need …”
+## Removing stuff
 
 If a project doesn't require some of the [JS assets](javascript.md), comment them out in the `concat` section of `config.js` before running `grunt`. Optionally, also remove them from `bower.json` before install.
