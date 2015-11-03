@@ -15,7 +15,7 @@
         "respimage":                "^1.4.2",
         "responsive-nav":           "^1.0.39",
         "svg4everybody":            "^2.0.0",
-        "toast":                    "^1.2.4"
+        "toast":                    "^1.2.5"
     },
     "devDependencies": {},
     "resolutions": {
