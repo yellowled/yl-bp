@@ -39,7 +39,7 @@
         "grunt-htmlhint":           "^0.9.12",
         "grunt-modernizr":          "^1.0.1",
         "grunt-postcss":            "^0.7.0",
-        "grunt-sass":               "^1.0.0",
+        "grunt-sass":               "^1.1.0",
         "grunt-scss-lint":          "^0.3.8",
         "grunt-sitemap":            "^1.2.1",
         "grunt-svgmin":             "^2.0.1",
