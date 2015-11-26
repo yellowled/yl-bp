@@ -18,7 +18,7 @@ See [SCSS concepts](scss-concepts.md).
 
 ## JavaScript
 
-JS and [jQuery](http://jquery.com) packages are (mostly) managed by [Bower](http://bower.io), which is configured to import them to the `src/scripts/` directory.
+JS and [jQuery](http://jquery.com) packages are (mostly) managed by [npm](https://www.npmjs.com/package/npm); jQuery is copied to the `src/scripts/` directory in the `postinstall` using the `copy:init` task (for backwards compatibility).
 
 See [JS structure](javascript.md)
 

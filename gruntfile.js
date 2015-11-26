@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     grunt.registerTask('stage', [
         'clean:deploy',
         'assemble:stage',
-        'copy',
+        'copy:deploy',
         'concat',
         'sass',
         'postcss:deploy',
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
     grunt.registerTask('deploy', [
         'clean:deploy',
         'assemble:deploy',
-        'copy',
+        'copy:deploy',
         'concat',
         'sass',
         'postcss:deploy',
