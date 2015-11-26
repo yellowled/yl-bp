@@ -9,6 +9,7 @@ module.exports = function(grunt) {
         },
         dev: {
             options: {
+                legacy: false,
                 production: false
             },
             expand: true,
@@ -18,6 +19,7 @@ module.exports = function(grunt) {
         },
         stage: {
             options: {
+                legacy: false,
                 production: false
             },
             expand: true,
@@ -27,6 +29,7 @@ module.exports = function(grunt) {
         },
         deploy: {
             options: {
+                legacy: false,
                 production: true
             },
             expand: true,
