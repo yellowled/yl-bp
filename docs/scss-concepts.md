@@ -18,6 +18,6 @@ Some of the variables defined in partials use Sass's `!default` flag. These vari
 
 The only SCSS partial you might want to exclude if you don't use it (by commenting them out in `src/scss/master.scss`) is the following line in the Vendor section:
 
-* `../scripts/magnific-popup/src/css/main`
+* `../../node_modules/magnific-popup/src/css/main`
 
 All other SCSS any given project might not require is either encapsulated in mixins or placeholder selectors or can be excluded in `src/scss/main/init/_settings.scss`.
