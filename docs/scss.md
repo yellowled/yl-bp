@@ -8,10 +8,10 @@ Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains
 
 `_normalize.scss` contains [normalize.css](github.com/necolas/normalize.css). `_base.scss` contains some useful base styles not covered by normalize – styles that are not set there because they are “too design-related”, yet used very often – as well as styles needed for the [Enable JS](http://www.enable-javascript.com) hint. `_colors.scss` contains constants for a [better color palette](http://clrs.cc/). `plugins` contains mixins for JS/jQuery plugins included in the boilerplate, which are included through `_plugins.scss`:
 
-* [AccessibleTabs](https://github.com/ginader/Accessible-Tabs)
 * [Cycle 2](https://github.com/malsup/cycle2)
 * [gmaps](https://github.com/hpneo/gmaps)
 * a modal window in [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup).
+* [Tabslet](https://github.com/vdw/Tabslet)
 
 All partials in `ext` should *always* be included in `master.scss`. Since they only contain constants or mixins, they don't emit CSS unless explicity used. The exception are `_normalize.scss` and `_base.scss`, which contain  CSS which will *always* be useful.
 

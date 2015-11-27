@@ -6,11 +6,11 @@ Most of the JS assets are concatenated into a single file (`src/scripts/master.j
 
 ## jQuery plugins included
 
-* [AccessibleTabs](https://github.com/ginader/Accessible-Tabs)
 * [Cycle 2](https://github.com/malsup/cycle2) ([Optional plugins](http://jquery.malsup.com/cycle2/download/#plugins))
 * [gmaps](https://github.com/hpneo/gmaps)
 * [jQuery-Collapse](https://github.com/danielstocks/jQuery-Collapse/)
 * [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup)
+* [Tabslet](https://github.com/vdw/Tabslet)
 
 ## JS plugins included
 
