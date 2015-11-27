@@ -1,22 +1,15 @@
-// Initialize
-@import 'ext/colors';
-@import 'main/init/settings';
-@import 'main/init/variables';
+// Settings
+@import 'settings/constants';
+@import 'settings/settings';
+@import 'settings/variables';
 
-// Mixins
-@import 'lib/mixins';
-@import 'ext/plugins';
-
-// Base
-@import 'ext/normalize';
-@import 'ext/base';
-@import 'lib/parts';
+// Framework
+@import 'mixins/mixins';
+@import 'base/base';
 
 // Vendor
 @import '../../node_modules/magnific-popup/src/css/main';
 @import '../../node_modules/slick-carousel/slick/slick.scss';
 
-// Layout
-@import 'main/common';
-@import 'main/init/media';
-@import 'main/print';
+// Modules
+@import 'modules/global';

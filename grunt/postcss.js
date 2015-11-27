@@ -14,6 +14,9 @@ module.exports = function(grunt) {
                     browsers: config.autoprefixer.browsers,
                     cascade: false,
                     remove: true
+                }),
+                require('css-mqpacker')({
+                    sort: true
                 })
             ]
         },

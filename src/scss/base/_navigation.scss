@@ -1,7 +1,7 @@
 // NAVIGATION STYLES
 // --------------------------------------------------------------------
 // Defaults
-$nav-breakpoint:    768px !default; // Breakpoint for smallscreen nav
+$nav-breakpoint:    $md !default; // Breakpoint for smallscreen nav
 
 
 // General nav styles

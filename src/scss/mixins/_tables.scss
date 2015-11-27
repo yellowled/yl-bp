@@ -1,7 +1,7 @@
 // TABLES
 // --------------------------------------------------------------------
 // Defaults
-$tables-breakpoint: 768px !default; // Breakpoint for responsive tables
+$tables-breakpoint: $md !default; // Breakpoint for responsive tables
 
 
 // Simple table
