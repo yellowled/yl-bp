@@ -49,9 +49,9 @@ module.exports = {
     },
     scsslint: {
         exclude: [
-                    'src/scss/ext/_normalize.scss',
-                    'src/scss/lib/mixins/_typography.scss',
-                    'src/scss/lib/parts/_forms.scss'
+                    'src/scss/base/_forms.scss',
+                    'src/scss/base/_normalize.scss',
+                    'src/scss/mixins/_typography.scss'
                 ]
     },
     sitemap: {
