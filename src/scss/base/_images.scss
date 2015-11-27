@@ -1,7 +1,7 @@
 // RESPONSIVE FLOATED IMAGES
 // --------------------------------------------------------------------
 // Defaults
-$img-breakpoint:    768px !default; // Breakpoint for floated images
+$img-breakpoint:    $md !default; // Breakpoint for floated images
 $img-margin:        $type-rhythm 0 !default;   // Margins for images
 $img-left-margin:   .25rem $type-rhythm .75rem 0 !default;
 $img-right-margin:  .25rem 0 .75rem $type-rhythm !default;

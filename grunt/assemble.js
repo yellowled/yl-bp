@@ -2,6 +2,7 @@
 module.exports = function(grunt) {
     grunt.config('assemble', {
         options: {
+            legacy: false,
             ext: '.html',
             layout: 'default.hbs',
             layoutdir: 'src/layouts',
@@ -9,7 +10,6 @@ module.exports = function(grunt) {
         },
         dev: {
             options: {
-                legacy: false,
                 production: false
             },
             expand: true,
@@ -19,7 +19,6 @@ module.exports = function(grunt) {
         },
         stage: {
             options: {
-                legacy: false,
                 production: false
             },
             expand: true,
@@ -29,7 +28,6 @@ module.exports = function(grunt) {
         },
         deploy: {
             options: {
-                legacy: false,
                 production: true
             },
             expand: true,

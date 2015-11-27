@@ -5,8 +5,9 @@
 ## Requirements
 
 * [Grunt](http://gruntjs.com)
-
-Grunt depends on [node.js](http://nodejs.org). grunt-scss-lint requires [scss-lint](https://github.com/causes/scss-lint), scss-lint depends on [Ruby](http://www.ruby-lang.org).
+* [node.js](http://nodejs.org)
+* [Ruby](http://www.ruby-lang.org).
+* [scss-lint](https://github.com/causes/scss-lint)
 
 ### Installation
 

@@ -7,12 +7,11 @@ This boilerplate uses Sass/SCSS to generate the CSS file, `src/styles/master.css
 Most of the partials in `src/scss` and its subdirectories are **not** meant to be edited (in order to make it easier to update projects). You should not (need to) edit files in `src/scss` other than:
 
 * `src/scss/master.scss` – see [Compiled CSS](#compiled-css)
-* partials in `src/scss/main/init` – project-based settings, variables and `@media` queries
-* partials in `src/scss/main` – common styles, styles for resolutions corresponding to breakpoints as well as print
+* partials in `src/scss/modules` – add project-specific global styles to `_global.scss`, create new partials for project-specific modules
 
 ## Overriding defaults
 
-Some of the variables defined in partials use Sass's `!default` flag. These variables can be easily overridden by setting them in `src/scss/main/init/_variables.scss`. If a given variable with the `!default` flag is **not** set (i.e. in the settings partial), it will fall back to the default value.
+Some of the variables defined in partials use Sass's `!default` flag. These variables can be easily overridden by setting them in `src/scss/settings/_variables.scss`. If a given variable with the `!default` flag is **not** set (i.e. in the settings partial), it will fall back to the default value.
 
 ## Compiled CSS
 
@@ -21,4 +20,4 @@ The only SCSS partials you might want to exclude if you don't use it (by comment
 * `@import '../../node_modules/magnific-popup/src/css/main';`
 * `@import '../../node_modules/slick-carousel/slick/slick.scss';`
 
-All other SCSS any given project might not require is either encapsulated in mixins or placeholder selectors or can be excluded in `src/scss/main/init/_settings.scss`.
+All other SCSS any given project might not require is either encapsulated in mixins or placeholder selectors or can be excluded in `src/scss/settings/_settings.scss`.

@@ -4,45 +4,41 @@
 
 Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains partials which are currently organized in three directories. Please also see [SCSS concepts](scss-concepts.md).
 
-## `ext`
+## `settings`
 
-`_normalize.scss` contains [normalize.css](github.com/necolas/normalize.css). `_base.scss` contains some useful base styles not covered by normalize – styles that are not set there because they are “too design-related”, yet used very often – as well as styles needed for the [Enable JS](http://www.enable-javascript.com) hint. `_colors.scss` contains constants for a [better color palette](http://clrs.cc/). `plugins` contains mixins for JS/jQuery plugins included in the boilerplate, which are included through `_plugins.scss`:
+* `_constants.scss` – color constants
+* `_settings.scss` – enable or disable parts of the partials included in the boilerplate by setting certain variables to `true` or `false`, depending on whether that part of the SCSS is being used
+* `_variables.scss` – project-specific constants or overrides for existing variables
 
-* [gmaps](https://github.com/hpneo/gmaps)
-* a modal window in [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup).
-* [Tabslet](https://github.com/vdw/Tabslet)
-
-All partials in `ext` should *always* be included in `master.scss`. Since they only contain constants or mixins, they don't emit CSS unless explicity used. The exception are `_normalize.scss` and `_base.scss`, which contain  CSS which will *always* be useful.
-
-## `lib`
-
-`lib` contains partials to combine the mixin collections from its respective subdirectories in order to keep `master.scss` tidy – `_parts.scss` and `_mixins.scss`.
-
-`parts` contains styles and classes for common parts of web sites – forms, images, messages and navigation. The form (base) styles are heavily inspired by [Formalize](http://formalize.me/), images mainly contains image positioning classes usually used by CMS/WYSIWYG editors, and the navigation styles are required by [reponsive-nav.js](http://responsive-nav.com/).
-
-`mixins` is a collection of mixins for various purposes:
+## `mixins/_mixins.scss`
 
 * `_buttons.scss` – buttons (gradient, flat, bordered) mixins
-* `_figure.scss` – `<figure> (simple, fancy, with animated caption)
+* `_embed.scss` – responsive media embeds
+* `_figure.scss` – `<figure>` (simple, fancy, with animated caption)
+* `_gmaps.scss` – [gmaps](https://github.com/hpneo/gmaps)
 * `_grid.scss` – flexible grid system
 * `_helpers.scss` – helper classes (mostly) adopted from [H5BP](https://html5boilerplate.com)
 * `_icon.scss` – CSS-only animated hamburger icon
 * `_img.scss` – responsive and retina images and SVGs
+* `_modal.scss` – a modal window in [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup).
 * `_position.scss` – horizontal and vertical centering
 * `_shapes.scss` – CSS-only folded corner, speech bubble, ribbon, triangle
 * `_tables.scss` – tables (simple, striped, responsive)
+* `_tabs.scss` – [Tabslet](https://github.com/vdw/Tabslet)
 * `_typography.scss` – ligatures, smart blockquotes
 
-All partials in `lib` should *always* be included in `master.scss`. Most of them contain SCSS that does not emit CSS unless explicity used (extends, mixins and functions). The content emitted by partials in `lib/parts` can be tweaked in `main/init/_settings.scss`.
+## `base/_base.scss`
 
-## `main`
+* `_normalize.scss` – [normalize.css](github.com/necolas/normalize.css)
+* `defaults.scss` – useful base styles not covered by normalize – styles that are not set there because they are “too design-related”, yet used very often – as well as styles needed for the [Enable JS](http://www.enable-javascript.com) hint
+* `_forms.scss` – styles are heavily inspired by [Formalize](http://formalize.me/)
+* `_images.scss` – image positioning classes usually used by CMS/WYSIWYG editors
+* `_messages.scss` – message classes
+* `_navigation.scss` – required by [reponsive-nav.js](http://responsive-nav.com/)
+* `_print.scss` – basic print styles
 
-`_common.scss`, `_legacy.scss`, `_tablet.scss`, `_laptop.scss`, and `_desktop.scss` are the proposed files to write project styles in. In this order, they reflect sensible, provisional breakpoints for mobile-first responsive web design. Apart from `_common.scss`, which is supposed to contain the common generic styles, all of them are `@imported` in the scaffolding process (see below). In addition, there's `_print.scss` for print styles.
+All partials in `mixins/_mixins.scss` and `base/_base.scss` should *always* be included in `master.scss`. Most of them contain SCSS that does not emit CSS unless explicity used (extends, mixins and functions). The content emitted by some partials in `base` can be tweaked in `settings/_settings.scss`. The exceptions are `_normalize.scss`, `_base.scss` and `_print.scss` which contain  CSS which will *always* be useful.
 
-`init` contains
+## `modules`
 
-* `_settings.scss` which is used to enable or disable parts of the partials included in the boilerplate by setting certain variables to `true` or `false`, depending on whether that part of the SCSS is being used
-* `_variables.scss` which is supposed to contain project-specific constants or to override existing variables
-* `_media.scss` which assigns partials to the various breakpoints via `@media` queries as well setting the breakpoints for those `@media` queries through variables which can be overridden
-
-This is the part of the SCSS where “actual work is done”, meaning it's where SCSS is actually being written and scaffolded. Apart from `_print.scss`, which is just a “solid starting point” for print styles, all of the partials in `main` either initially contain no SCSS, contain configurable SCSS or are vital for the boilerplate's SCSS structure. Therefore, they all should *always* be included.
+This is the part of the SCSS where “actual work is done”, meaning it's where SCSS is actually being written using a modular approach. Apart from `modules/_global.scss` which is really just a placeholder, partials for every project-specific module are supposed to be created and included here.
