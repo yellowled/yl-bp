@@ -21,8 +21,7 @@ module.exports = {
                     'node_modules/jquery-cycle2/src/jquery.cycle2.prevnext.js',
                     'node_modules/jquery-cycle2/src/jquery.cycle2.progressive.js',
                     'node_modules/jquery-cycle2/src/jquery.cycle2.tmpl.js',
-                    'node_modules/jquery-accessible-tabs/js/jquery.syncheight.js',
-                    'node_modules/jquery-accessible-tabs/js/jquery.tabs.js',
+                    'node_modules/tabslet/jquery.tabslet.js',
                     'node_modules/jQuery-Collapse/src/jquery.collapse.js',
                     'node_modules/jQuery-Collapse/src/jquery.collapse_storage.js',
                     'src/scripts/main.js'

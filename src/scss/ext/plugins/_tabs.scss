@@ -1,18 +1,7 @@
-// JQUERY ACCESSIBLE TABS
-// github.com/ginader/Accessible-Tabs
+// TABS
+// github.com/vdw/Tabslet
 // --------------------------------------------------------------------
-// Usage: blog.ginader.de/dev/jquery/accessible-tabs/
-//
-// $('.tabs').accessibleTabs({
-//     currentClass: 'on',
-//     tabhead: 'h2',
-//     tabheadClass: 'tabs-head',
-//     tabbody: '.panel',
-//     fx: 'fadeIn',
-//     currentInfoText: 'Aktuelles Tab: ',
-//     currentInfoClass: 'tabs-info',
-//     syncheights: true
-// });
+// Usage: github.com/vdw/Tabslet/wiki
 //
 // Defaults
 $tabswidth:         480px !default;
@@ -34,10 +23,6 @@ $content-border:    0 $tabs-gap $tabs-gap;
 $list-border:       $tabs-gap $tabs-gap 0 0;
 $tabs-margin:       $type-rhythm;
 
-
-@mixin tabs-hidden-info {
-    @include visuallyhidden;
-}
 
 @mixin tabs($margin: $tabs-margin, $padding: $tabs-padding) {
     margin: $margin 0;
@@ -73,12 +58,12 @@ $tabs-margin:       $type-rhythm;
         top: 1px;
     }
 
-    .on a {
+    .active a {
         background: $background;
         border-bottom: $inverse-border;
     }
 
-    .on a,
+    .active a,
     a:hover,
     a:focus {
         color: $current-color;

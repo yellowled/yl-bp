@@ -25,14 +25,14 @@
         "gmaps":                    "^0.4.21",
         "lazysizes":                "^1.3.1",
         "jquery":                   "^2.1.4",
-        "jquery-accessible-tabs":   "ginader/Accessible-Tabs#6fde9e9b",
         "jquery-cycle2":            "malsup/cycle2#4b48add7",
         "jQuery-Collapse":          "danielstocks/jQuery-Collapse#4dfe0b30",
         "magnific-popup":           "^1.0.0",
         "pyrsmk-toast":             "^1.2.5",
         "respimage":                "^1.4.2",
         "responsive-nav":           "^1.0.39",
-        "svg4everybody":            "^2.0.1"
+        "svg4everybody":            "^2.0.1",
+        "tabslet":                  "^1.7.0"
     },
     "devDependencies":  {
         "assemble":                 "^0.4.42",
