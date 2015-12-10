@@ -10,7 +10,8 @@ module.exports = function(grunt) {
         },
         dev: {
             options: {
-                production: false
+                production: false,
+                assets: 'src'
             },
             expand: true,
             cwd: 'src/pages',
@@ -19,7 +20,8 @@ module.exports = function(grunt) {
         },
         stage: {
             options: {
-                production: false
+                production: false,
+                assets: 'dist'
             },
             expand: true,
             cwd: 'src/pages',
@@ -28,7 +30,8 @@ module.exports = function(grunt) {
         },
         deploy: {
             options: {
-                production: true
+                production: true,
+                assets: 'dist'
             },
             expand: true,
             cwd: 'src/pages',
