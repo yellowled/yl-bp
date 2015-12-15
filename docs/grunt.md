@@ -29,7 +29,9 @@ Note that due to the way that paths are specified in the HTML templates, a build
 
 * `grunt deploy`
 * `cd dist`
-* `python -m SimpleHTTPServer 8000`
+* start a local server, e.g.
+    * `python -m SimpleHTTPServer 8000`
+    * `php -S localhost:8000`
 * point your webbrowser to `http://localhost:8000`
 
 ## Plugins included
