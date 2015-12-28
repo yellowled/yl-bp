@@ -5,7 +5,7 @@ module.exports = function(grunt) {
             'dist'
         ],
         srcdir: [
-            'src/**/*.html',
+            'src/*.html',
             'src/sitemap.xml',
             'src/img/sprite.svg',
             'src/scripts/master.*',

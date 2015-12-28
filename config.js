@@ -58,9 +58,7 @@ module.exports = {
         domain:     '<%= pkg.homepage %>',
         changes:    'monthly',
         pattern: [
-                    'src/*.html',
-                    'src/**/*.html',
-                    '!src/scripts/**/*.html'
+                    'src/*.html'
                  ]
     }
 };

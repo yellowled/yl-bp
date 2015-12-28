@@ -25,27 +25,10 @@ module.exports = function(grunt) {
         'watch'
     ]);
 
-    // Staging
-    grunt.registerTask('stage', [
-        'clean:deploy',
-        'assemble:stage',
-        'copy:deploy',
-        'concat',
-        'sass',
-        'postcss:deploy',
-        'cssmin',
-        'uglify',
-        // 'svgstore',
-        'imagemin',
-        'svgmin',
-        'modernizr',
-        'hashres'
-    ]);
-
     // Deployment
     grunt.registerTask('deploy', [
         'clean:deploy',
-        'assemble:deploy',
+        'processhtml:deploy',
         'copy:deploy',
         'concat',
         'sass',

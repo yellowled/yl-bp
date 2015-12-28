@@ -2,7 +2,7 @@
 module.exports = function(grunt) {
     grunt.registerTask('init', [
         // 'svgstore',
-        'assemble:dev',
+        'processhtml:dev',
         'sass',
         'postcss:dev',
         'concat'
