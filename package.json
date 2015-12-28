@@ -36,7 +36,7 @@
     },
     "devDependencies":  {
         "assemble":                 "^0.4.42",
-        "autoprefixer":             "^6.2.1",
+        "autoprefixer":             "^6.2.2",
         "browser-sync":             "^2.10.1",
         "css-mqpacker":             "^4.0.0",
         "grunt":                    "^0.4.5",
