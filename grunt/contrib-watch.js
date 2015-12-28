@@ -8,9 +8,9 @@ module.exports = function(grunt) {
         //     files: 'src/icons/*.svg',
         //     tasks: ['svgstore'],
         // },
-        assemble: {
-            files: 'src/**/*.hbs',
-            tasks: ['assemble:dev'],
+        processhtml: {
+            files: ['src/pages/*.html', 'src/includes/*.html'],
+            tasks: ['processhtml:dev'],
         },
         scss: {
             files: 'src/scss/**/*.scss',

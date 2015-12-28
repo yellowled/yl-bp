@@ -4,24 +4,21 @@
 
 `grunt` starts a watch task which sets up a development environment that by default
 
-* watches for changes to Handlebars, SCSS and JS files
+* watches for changes to HTML, SCSS and JS files
 * compiles
-    * Handlebars to HTML
+    * pages and includes to HTML
     * SCSS to CSS (including `pixrem` and `autoprefixer` through PostCSS)
     * multiple JS files into a single file
 * serves the site on a local live-reloading webserver
 
 ## Additional Grunt tasks
 
-* `grunt stage` – build to `dist` directory for staging
 * `grunt deploy` – build to `dist` directory for deployment
 * `grunt test` – test HTML, SCSS and JS files
 
 Note that the directory `grunt` also contains additional tasks not meant to be executed manually – `bs-init`, `bs-inject-css`, `bs-inject-js` and `init`. Those are helper tasks used internally to run [browser-sync](http://www.browsersync.io) properly.
 
-The major difference between `grunt stage` and `grunt deploy` is that the first one uses the `stage` target of the `assemble` task. In the `stage` target, the variable `production` is set to `false`, which makes it possible to use e.g. `{{#unless production}}{{/unless}}` in Handlebars templates (`.hbs`) to alter the generated HTML for staging or production environments. As an example, this can be used to exclude Google Analytics or Piwik snippets on staging servers.
-
-Also, `grunt deploy` generates and compresses an [XML sitemap](https://support.google.com/webmasters/answer/156184). You can set the domain for the live site in `config.js` or it will be retrieved from the `homepage` key in `package.json`.
+`grunt deploy` generates and compresses an [XML sitemap](https://support.google.com/webmasters/answer/156184). You can set the domain for the live site in `config.js` or it will be retrieved from the `homepage` key in `package.json`.
 
 ## Testing a build locally
 
@@ -36,7 +33,6 @@ Note that due to the way that paths are specified in the HTML templates, a build
 
 ## Plugins included
 
-* [assemble](https://www.npmjs.org/package/assemble)
 * [autoprefixer](https://www.npmjs.com/package/autoprefixer)
 * [browser-sync](https://www.npmjs.com/package/browser-sync)
 * [grunt-contrib-clean](https://npmjs.org/package/grunt-contrib-clean)
@@ -52,6 +48,7 @@ Note that due to the way that paths are specified in the HTML templates, a build
 * [grunt-htmlhint](https://npmjs.org/package/grunt-htmlhint)
 * [grunt-modernizr](https://npmjs.org/package/grunt-modernizr)
 * [grunt-postcss](https://npmjs.org/package/grunt-postcss)
+* [grunt-processhtml](https://www.npmjs.com/package/grunt-processhtml)
 * [grunt-sass](https://npmjs.org/package/grunt-sass)
 * [grunt-scss-lint](https://www.npmjs.org/package/grunt-scss-lint)
 * [grunt-sitemap](https://www.npmjs.com/package/grunt-sitemap)
