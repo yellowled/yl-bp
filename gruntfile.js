@@ -27,7 +27,7 @@ module.exports = function(grunt) {
 
     // Deployment
     grunt.registerTask('deploy', [
-        'clean:deploy',
+        'clean',
         'processhtml:deploy',
         'copy:deploy',
         'concat',
