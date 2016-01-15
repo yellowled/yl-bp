@@ -50,7 +50,7 @@
         "grunt-contrib-watch":      "^0.6.1",
         "grunt-hashres":            "^0.4.1",
         "grunt-htmlhint":           "^0.9.12",
-        "grunt-modernizr":          "^1.0.1",
+        "grunt-modernizr":          "^1.0.2",
         "grunt-postcss":            "^0.7.1",
         "grunt-processhtml":        "^0.3.8",
         "grunt-sass":               "^1.1.0",
