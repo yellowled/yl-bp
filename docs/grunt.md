@@ -35,6 +35,7 @@ Note that due to the way that paths are specified in the HTML templates, a build
 
 * [autoprefixer](https://www.npmjs.com/package/autoprefixer)
 * [browser-sync](https://www.npmjs.com/package/browser-sync)
+* [css-mqpacker](https://www.npmjs.com/package/css-mqpacker)
 * [grunt-contrib-clean](https://npmjs.org/package/grunt-contrib-clean)
 * [grunt-contrib-compress](https://www.npmjs.com/package/grunt-contrib-compress)
 * [grunt-contrib-concat](https://npmjs.org/package/grunt-contrib-concat)
