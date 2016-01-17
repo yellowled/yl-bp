@@ -4,7 +4,7 @@ module.exports = function(grunt) {
         // 'svgstore',
         'processhtml:dev',
         'sass',
-        'postcss:dev',
+        'postcss',
         'concat'
     ]);
 };

@@ -20,17 +20,11 @@ module.exports = function(grunt) {
                 })
             ]
         },
-        dev: {
+        all: {
             expand: true,
             flatten: true,
             src: 'src/styles/*.css',
             dest: 'src/styles'
-        },
-        deploy: {
-            expand: true,
-            flatten: true,
-            src: 'dist/styles/*.css',
-            dest: 'dist/styles'
         }
     });
 };

@@ -14,7 +14,7 @@ module.exports = function(grunt) {
         },
         scss: {
             files: 'src/scss/**/*.scss',
-            tasks: ['sass', 'postcss:dev', 'bs-inject-css'],
+            tasks: ['sass', 'postcss', 'bs-inject-css'],
         },
         js: {
             files: 'src/scripts/main.js',
