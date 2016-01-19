@@ -1,20 +1,21 @@
 // MESSAGES
 // --------------------------------------------------------------------
 // Defaults
-$warning-bg:    #f2dede !default;
-$warning-bc:    #eed3d7 !default;
-$warning-fg:    #b94a2b !default;
-$success-bg:    #dff0d8 !default;
-$success-bc:    #d6e9c6 !default;
-$success-fg:    #468847 !default;
-$notice-bg:     #d9edf7 !default;
-$notice-bc:     #bce8f1 !default;
-$notice-fg:     #3a87ad !default;
-$question-bg:   #fcf8e3 !default;
-$question-bc:   #fbeed5 !default;
-$question-fg:   #c09853 !default;
-$msg-font-size: .8125rem !default;
-$msg-padding:   .5rem !default;
+$warning-bg:        #f2dede !default;
+$warning-bc:        #eed3d7 !default;
+$warning-fg:        #b94a2b !default;
+$success-bg:        #dff0d8 !default;
+$success-bc:        #d6e9c6 !default;
+$success-fg:        #468847 !default;
+$notice-bg:         #d9edf7 !default;
+$notice-bc:         #bce8f1 !default;
+$notice-fg:         #3a87ad !default;
+$question-bg:       #fcf8e3 !default;
+$question-bc:       #fbeed5 !default;
+$question-fg:       #c09853 !default;
+$msg-font-size:     .8125rem !default;
+$msg-padding:       .5rem !default;
+$msg-class-prefix:  msg- !default;
 
 
 // Basic message
@@ -35,8 +36,8 @@ $msg-padding:   .5rem !default;
 // Types of messages
 // --------------------------------------------------------------------
 @if $use-msg-basic {
-    .msg {
-        &-warning {
+    .#{$msg-class-prefix} {
+        &warning {
             @extend %message;
 
             background: $warning-bg;
@@ -44,7 +45,7 @@ $msg-padding:   .5rem !default;
             color: $warning-fg;
         }
 
-        &-success {
+        &success {
             @extend %message;
 
             background: $success-bg;
@@ -55,8 +56,8 @@ $msg-padding:   .5rem !default;
 }
 
 @if $use-msg-extra {
-    .msg {
-        &-notice {
+    .#{$msg-class-prefix} {
+        &notice {
             @extend %message;
 
             background: $notice-bg;
@@ -64,7 +65,7 @@ $msg-padding:   .5rem !default;
             color: $notice-fg;
         }
 
-        &-question {
+        &question {
             @extend %message;
 
             background: $question-bg;
