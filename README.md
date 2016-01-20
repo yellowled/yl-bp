@@ -1,6 +1,6 @@
 # yl-bp
 
-A HTML project boilerplate. Derived from [H5BP](https://github.com/h5bp/html5-boilerplate), inspired by [init](https://github.com/drublic/init).
+My HTML project boilerplate. Derived from [H5BP](https://github.com/h5bp/html5-boilerplate), inspired by [init](https://github.com/drublic/init).
 
 [![Build Status](https://travis-ci.org/yellowled/yl-bp.svg?branch=master)](https://travis-ci.org/yellowled/yl-bp)
 [![Dependency Status](https://david-dm.org/yellowled/yl-bp.svg)](https://david-dm.org/yellowled/yl-bp)
@@ -26,4 +26,4 @@ Please consult the [documentation](docs/TOC.md) for further details.
 
 ## License
 
-Please note that this project includes components which have their own licenses, which may differ from the license of this project. Everything that was developed specifically for this project is under [MIT license](https://github.com/yellowled/yl-bp/blob/master/LICENSE.md).
+Please note that this project includes components that all have their own licenses which may differ from the license of this project. Everything that was developed specifically for this project is under [MIT license](https://github.com/yellowled/yl-bp/blob/master/LICENSE.md).
