@@ -32,7 +32,7 @@
         "responsive-nav":           "^1.0.39",
         "slick-carousel":           "^1.5.9",
         "svg4everybody":            "^2.0.3",
-        "tabslet":                  "^1.7.1"
+        "tabslet":                  "^1.7.2"
     },
     "devDependencies":  {
         "autoprefixer":             "^6.3.2",
