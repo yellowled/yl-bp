@@ -24,7 +24,7 @@
     "dependencies": {
         "gmaps":                    "^0.4.22",
         "lazysizes":                "^1.4.0",
-        "jquery":                   "^2.2.0",
+        "jquery":                   "^2.2.1",
         "jquery-collapse":          "^1.1.2",
         "magnific-popup":           "^1.0.1",
         "pyrsmk-toast":             "^1.2.7",
