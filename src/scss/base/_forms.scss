@@ -31,9 +31,9 @@ $standard-buttons:      true !default;
         }
     }
 
-    input[type="file"],
-    input[type="radio"],
-    input[type="checkbox"] {
+    input[type='file'],
+    input[type='radio'],
+    input[type='checkbox'] {
         &:focus,
         &:active {
             box-shadow: none;
@@ -91,23 +91,23 @@ $standard-buttons:      true !default;
     }
 
     @if $use-form-advanced {
-        input[type="date"],
-        input[type="datetime"],
-        input[type="datetime-local"],
-        input[type="month"],
-        input[type="number"],
-        input[type="password"],
-        input[type="time"],
-        input[type="week"],
-        input[type="tel"],
-        input[type="url"] {
+        input[type='date'],
+        input[type='datetime'],
+        input[type='datetime-local'],
+        input[type='month'],
+        input[type='number'],
+        input[type='password'],
+        input[type='time'],
+        input[type='week'],
+        input[type='tel'],
+        input[type='url'] {
             @extend %input-elements;
         }
     }
 
-    input[type="email"],
-    input[type="search"],
-    input[type="text"],
+    input[type='email'],
+    input[type='search'],
+    input[type='text'],
     select,
     textarea {
         @extend %input-elements;
@@ -147,9 +147,9 @@ $standard-buttons:      true !default;
     // --------------------------------------------------------------------
     @if $standard-buttons {
         form button,
-        input[type="button"],
-        input[type="reset"],
-        input[type="submit"] {
+        input[type='button'],
+        input[type='reset'],
+        input[type='submit'] {
             @include gradient-button();
         }
     }
