@@ -39,7 +39,7 @@ module.exports = function(grunt) {
         'imagemin',
         'svgmin',
         'modernizr',
-        'hashres',
+        'cacheBust',
         'sitemap',
         'compress'
     ]);
