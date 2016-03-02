@@ -29,7 +29,6 @@ Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains
 
 ## `base/_base.scss`
 
-* `_normalize.scss` – [normalize.css](github.com/necolas/normalize.css)
 * `defaults.scss` – useful base styles not covered by normalize – styles that are not set there because they are “too design-related”, yet used very often – as well as styles needed for the [Enable JS](http://www.enable-javascript.com) hint
 * `_forms.scss` – styles are heavily inspired by [Formalize](http://formalize.me/)
 * `_images.scss` – image positioning classes usually used by CMS/WYSIWYG editors

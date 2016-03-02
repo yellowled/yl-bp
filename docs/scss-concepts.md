@@ -20,4 +20,6 @@ The only SCSS partials you might want to exclude if you don't use it (by comment
 * `@import '../../node_modules/magnific-popup/src/css/main';`
 * `@import '../../node_modules/slick-carousel/slick/slick.scss';`
 
+(Also, [normalize.css](https://github.com/necolas/normalize.css/) is included as a vendor partial (using [node-normalize.scss](https://www.npmjs.com/package/node-normalize-scss)), but you do not want to remove that.)
+
 All other SCSS any given project might not require is either encapsulated in mixins or placeholder selectors or can be excluded in `src/scss/settings/_settings.scss`.
