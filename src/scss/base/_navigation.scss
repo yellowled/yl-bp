@@ -2,6 +2,7 @@
 // --------------------------------------------------------------------
 // Defaults
 $nav-breakpoint:    $md !default; // Breakpoint for smallscreen nav
+$webkit-tap-color:  rgba(0, 0, 0, 0) !default;
 
 
 // General nav styles
@@ -11,17 +12,6 @@ nav ol {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-
-// RESPONSIVE NAV ICON FALLBACK
-// --------------------------------------------------------------------
-@if $use-rnav-classes {
-    @if not($use-svg-sprites) {
-        .nav-toggle {
-            @include icon-hamburger;
-        }
-    }
 }
 
 
@@ -48,6 +38,25 @@ nav ol {
         &.opened {
             max-height: 9999px;
         }
+
+        @media screen and (min-width: $nav-breakpoint) {
+            .js & {
+                clip: auto;
+                height: auto;
+                margin: 0;
+                overflow: visible;
+                position: relative;
+                width: auto;
+
+                &.closed {
+                    max-height: none;
+                }
+            }
+
+            li {
+                width: auto;
+            }
+        }
     }
 
     .disable-pointer-events {
@@ -55,32 +64,15 @@ nav ol {
     }
 
     .nav-toggle {
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-        -webkit-touch-callout: none;
+        // Responsive nav icon fallback
+        @if not($use-svg-sprites) {
+            @include icon-hamburger;
+        }
+
+        -webkit-tap-highlight-color: $webkit-tap-color;
         user-select: none;
-    }
 
-    @media screen and (min-width: $nav-breakpoint) {
-        .js .nav-collapse {
-            clip: auto;
-            height: auto;
-            margin: 0;
-            overflow: visible;
-            position: relative;
-            width: auto;
-
-            &.closed {
-                max-height: none;
-            }
-        }
-
-        .nav-collapse {
-            li {
-                width: auto;
-            }
-        }
-
-        .nav-toggle {
+        @media screen and (min-width: $nav-breakpoint) {
             display: none !important;
             visibility: hidden;
         }

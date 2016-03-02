@@ -47,13 +47,6 @@ module.exports = {
                     'src/scripts/master.js'
         ]
     },
-    scsslint: {
-        exclude: [
-                    'src/scss/base/_forms.scss',
-                    'src/scss/base/_normalize.scss',
-                    'src/scss/mixins/_typography.scss'
-                ]
-    },
     sitemap: {
         domain:     '<%= pkg.homepage %>',
         changes:    'monthly',

@@ -150,7 +150,7 @@ $standard-buttons:      true !default;
         input[type='button'],
         input[type='reset'],
         input[type='submit'] {
-            @include gradient-button();
+            @include gradient-button;
         }
     }
 

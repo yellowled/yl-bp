@@ -54,7 +54,7 @@
         "grunt-postcss":            "^0.7.2",
         "grunt-processhtml":        "^0.3.13",
         "grunt-sass":               "^1.1.0",
-        "grunt-scss-lint":          "^0.3.8",
+        "grunt-sass-lint":          "^0.1.0",
         "grunt-sitemap":            "^1.2.1",
         "grunt-svgmin":             "^3.1.2",
         "grunt-svgstore":           "^1.0.0",

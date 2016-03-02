@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
     // Load tasks when needed
     require('jit-grunt')(grunt, {
-        scsslint: 'grunt-scss-lint'
+        sasslint: 'grunt-sass-lint'
     });
 
     // Use time-grunt
