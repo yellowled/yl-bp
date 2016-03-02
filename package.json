@@ -27,6 +27,7 @@
         "jquery":                   "^2.2.1",
         "jquery-collapse":          "^1.1.2",
         "magnific-popup":           "^1.1.0",
+        "node-normalize-scss":      "^1.1.1",
         "pyrsmk-toast":             "^1.2.7",
         "respimage":                "^1.4.2",
         "responsive-nav":           "^1.0.39",
