@@ -51,7 +51,7 @@ Note that due to the way that paths are specified in the HTML templates, a build
 * [grunt-postcss](https://npmjs.org/package/grunt-postcss)
 * [grunt-processhtml](https://www.npmjs.com/package/grunt-processhtml)
 * [grunt-sass](https://npmjs.org/package/grunt-sass)
-* [grunt-scss-lint](https://www.npmjs.org/package/grunt-scss-lint)
+* [grunt-sass-lint](https://www.npmjs.org/package/grunt-sass-lint)
 * [grunt-sitemap](https://www.npmjs.com/package/grunt-sitemap)
 * [grunt-svgmin](https://www.npmjs.org/package/grunt-svgmin)
 * [grunt-svgstore](https://www.npmjs.com/package/grunt-svgstore)

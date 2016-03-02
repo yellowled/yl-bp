@@ -6,8 +6,6 @@
 
 * [Grunt](http://gruntjs.com)
 * [node.js](http://nodejs.org)
-* [Ruby](http://www.ruby-lang.org).
-* [scss-lint](https://github.com/causes/scss-lint)
 
 ### Installation
 
