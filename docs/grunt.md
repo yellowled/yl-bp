@@ -31,11 +31,10 @@ Note that due to the way that paths are specified in the HTML templates, a build
     * `php -S localhost:8000`
 * point your webbrowser to `http://localhost:8000`
 
-## Plugins included
+## Packages included
 
-* [autoprefixer](https://www.npmjs.com/package/autoprefixer)
-* [browser-sync](https://www.npmjs.com/package/browser-sync)
-* [css-mqpacker](https://www.npmjs.com/package/css-mqpacker)
+### Grunt plugins
+
 * [grunt-cache-bust](https://www.npmjs.com/package/grunt-cache-bust)
 * [grunt-contrib-clean](https://npmjs.org/package/grunt-contrib-clean)
 * [grunt-contrib-compress](https://www.npmjs.com/package/grunt-contrib-compress)
@@ -54,9 +53,21 @@ Note that due to the way that paths are specified in the HTML templates, a build
 * [grunt-sitemap](https://www.npmjs.com/package/grunt-sitemap)
 * [grunt-svgmin](https://www.npmjs.org/package/grunt-svgmin)
 * [grunt-svgstore](https://www.npmjs.com/package/grunt-svgstore)
+
+### Grunt helpers
+
 * [jit-grunt](https://www.npmjs.com/package/jit-grunt)
+* [time-grunt](https://www.npmjs.com/package/time-grunt)
+
+### Node modules
+
+* [browser-sync](https://www.npmjs.com/package/browser-sync)
+* [stylelint](https://www.npmjs.com/package/stylelint)
+
+### PostCSS plugins
+
+* [autoprefixer](https://www.npmjs.com/package/autoprefixer)
+* [css-mqpacker](https://www.npmjs.com/package/css-mqpacker)
 * [pixrem](https://www.npmjs.com/package/pixrem)
 * [postcss-reporter](https://www.npmjs.com/package/postcss-reporter)
 * [postcss-scss](https://www.npmjs.com/package/postcss-scss)
-* [stylelint](https://www.npmjs.com/package/stylelint)
-* [time-grunt](https://www.npmjs.com/package/time-grunt)
