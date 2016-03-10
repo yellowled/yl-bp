@@ -19,22 +19,22 @@ $system-fonts: system, -apple-system, '.SFNSText-Regular', 'San Francisco', 'Rob
         quotes: '“' '”';
     }
 
-    p:before {
+    p::before {
         content: '';
         content: no-open-quote;
     }
 
-    p:after {
+    p::after {
         content: '';
         content: no-close-quote;
     }
 
-    p:first-of-type:before {
+    p:first-of-type::before {
         content: '“';
         content: open-quote;
     }
 
-    p:last-of-type:after {
+    p:last-of-type::after {
         content: '”';
         content: close-quote;
     }
@@ -44,26 +44,26 @@ $system-fonts: system, -apple-system, '.SFNSText-Regular', 'San Francisco', 'Rob
         quotes: '„' '“';
     }
 
-    :lang(de) & p:before,
-    &:lang(de)  p:before {
+    :lang(de) & p::before,
+    &:lang(de)  p::before {
         content: '';
         content: no-open-quote;
     }
 
-    :lang(de) & p:after,
-    &:lang(de)  p:after {
+    :lang(de) & p::after,
+    &:lang(de)  p::after {
         content: '';
         content: no-close-quote;
     }
 
-    :lang(de) & p:first-of-type:before,
-    &:lang(de)  p:first-of-type:before {
+    :lang(de) & p:first-of-type::before,
+    &:lang(de)  p:first-of-type::before {
         content: '„';
         content: open-quote;
     }
 
-    :lang(de) & p:last-of-type:after,
-    &:lang(de)  p:last-of-type:after {
+    :lang(de) & p:last-of-type::after,
+    &:lang(de)  p:last-of-type::after {
         content: '“';
         content: close-quote;
     }
@@ -73,7 +73,7 @@ $system-fonts: system, -apple-system, '.SFNSText-Regular', 'San Francisco', 'Rob
     > footer {
         display: block;
 
-        &:before {
+        &::before {
             content: '– ';
         }
     }

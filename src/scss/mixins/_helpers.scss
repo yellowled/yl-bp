@@ -42,13 +42,13 @@
 // CLEARFIX
 // --------------------------------------------------------------------
 @mixin clearfix {
-    &:before,
-    &:after {
+    &::before,
+    &::after {
         content: ' ';
         display: table;
     }
 
-    &:after {
+    &::after {
         clear: both;
     }
 }
@@ -61,7 +61,7 @@
     border: 0;
     overflow: hidden;
 
-    &:before {
+    &::before {
         content: '';
         display: block;
         height: 150%;

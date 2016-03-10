@@ -29,8 +29,8 @@ $hicon-active-class:        js-nav-active !default;
         transition: background-color $hicon-transition-speed $hicon-transition-type;
 
         &,
-        &:before,
-        &:after {
+        &::before,
+        &::after {
             background-color: $hicon-fg-color;
             display: block;
             height: $hicon-line-height;
@@ -38,18 +38,18 @@ $hicon-active-class:        js-nav-active !default;
             width: $hicon-line-width;
         }
 
-        &:before,
-        &:after {
+        &::before,
+        &::after {
             content: '';
         }
 
-        &:before {
+        &::before {
             top: -($hicon-line-width / 3);
             transition: top  $hicon-transition-speed $hicon-transition-type $hicon-transition-speed,
                         transform $hicon-transition-speed $hicon-transition-type;
         }
 
-        &:after {
+        &::after {
             bottom: -($hicon-line-width / 3);
             transition: bottom  $hicon-transition-speed $hicon-transition-type $hicon-transition-speed,
                         transform $hicon-transition-speed $hicon-transition-type;
@@ -60,14 +60,14 @@ $hicon-active-class:        js-nav-active !default;
         background-color: transparent;
         transition: background-color $hicon-transition-speed $hicon-transition-type;
 
-        &:before {
+        &::before {
             top: 0;
             transform: rotate(-45deg);
             transition: top $hicon-transition-speed $hicon-transition-type,
                         transform $hicon-transition-speed $hicon-transition-type $hicon-transition-speed;
         }
 
-        &:after {
+        &::after {
             bottom: 0;
             transform: rotate(45deg);
             transition: bottom $hicon-transition-speed $hicon-transition-type,

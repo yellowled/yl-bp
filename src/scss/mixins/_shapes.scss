@@ -5,7 +5,7 @@
     background: $box-color;
     position: relative;
 
-    &:before {
+    &::before {
         border-color: darken($box-color, 25%) $container-color;
         border-style: solid;
         border-width: 0 1rem 1rem 0;
@@ -28,8 +28,8 @@
     padding: 1rem;
     position: relative;
 
-    &:before,
-	&:after {
+    &::before,
+    &::after {
         content: '';
         display: block;
         font-size: 100%;
@@ -39,7 +39,7 @@
         width: 0;
 	}
 
-    &:before {
+    &::before {
         border-color: $border-color transparent;
         border-style: solid;
         border-width: (16px + $border-width) (16px + $border-width) 0;
@@ -47,7 +47,7 @@
         left: (42px - $border-width);
 	}
 
-    &:after {
+    &::after {
         border-color: $box-color transparent;
         border-style: solid;
         border-width: 15px 15px 0;
@@ -66,8 +66,8 @@
     margin-right: -1 * ($container-horizontal-padding + $corner-width);
     position: relative;
 
-    &:before,
-	&:after {
+    &::before,
+    &::after {
         border-color: transparent darken($ribbon-color, 25%);
         border-style: solid;
         border-width: 0 $corner-width $corner-width 0;
@@ -77,7 +77,7 @@
         top: 100%;
 	}
 
-    &:after {
+    &::after {
         border-width: 0 0 $corner-width $corner-width;
         left: auto;
         right: 0;
@@ -94,7 +94,7 @@
     text-align: left;
     width: $ribbon-width;
 
-    &:before {
+    &::before {
         border-color: transparent darken($ribbon-color, 25%);
         border-style: solid;
         border-width: 0 $corner-width $corner-width 0;
@@ -116,7 +116,7 @@
     text-align: right;
     width: $ribbon-width;
 
-    &:after {
+    &::after {
         border-color: transparent darken($ribbon-color, 25%);
         border-style: solid;
         border-width: 0 0 $corner-width $corner-width;
@@ -133,7 +133,7 @@
 @mixin triangle($color, $orientation: bottom, $size: 8px) {
     position: relative;
 
-    &:after {
+    &::after {
         @if $orientation == left or $orientation == right {
             border-color: transparent $color;
         } @else {
