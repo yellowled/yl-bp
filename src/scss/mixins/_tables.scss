@@ -51,9 +51,9 @@ $tables-breakpoint: $md !default; // Breakpoint for responsive tables
 // Note: mixin needs to be applied to a div containing the table
 @mixin responsive-table() {
     min-height: .01%;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
     overflow-x: auto;
     overflow-y: hidden;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
 
     th,
     td {

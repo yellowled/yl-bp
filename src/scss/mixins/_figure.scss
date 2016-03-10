@@ -48,8 +48,8 @@
 @mixin animated-figure($position: bottom, $push: true, $rhythm: $type-rhythm) {
     box-shadow: 0 0 4px rgba($black, .7);
     margin: $rhythm 0;
-    position: relative;
     overflow: hidden;
+    position: relative;
 
     .no-boxshadow & {
         border: 1px solid $grey;
@@ -81,7 +81,7 @@
 
         .no-touch & {
             transition: transform .4s,
-                        opacity .1s .3s;
+                        opacity .125s .3s;
             @if $position == bottom {
                 bottom: 0;
                 top: auto;
@@ -126,7 +126,7 @@
             opacity: 1;
             transform: translateY(0);
             transition: transform .4s,
-                        opacity .1s;
+                        opacity .125s;
         }
     }
 

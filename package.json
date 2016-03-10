@@ -55,12 +55,14 @@
         "grunt-postcss":            "^0.8.0",
         "grunt-processhtml":        "^0.3.13",
         "grunt-sass":               "^1.1.0",
-        "grunt-sass-lint":          "^0.1.0",
         "grunt-sitemap":            "^1.2.1",
         "grunt-svgmin":             "^3.1.2",
         "grunt-svgstore":           "^1.0.0",
         "jit-grunt":                "^0.10.0",
         "pixrem":                   "^3.0.0",
+        "postcss-reporter":         "^1.3.3",
+        "postcss-scss":             "^0.1.7",
+        "stylelint":                "^4.5.1",
         "time-grunt":               "^1.3.0"
     }
 }

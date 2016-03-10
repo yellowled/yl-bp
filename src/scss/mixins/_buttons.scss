@@ -8,9 +8,9 @@ $button-padding:    .1875rem .625rem !default;
 
 // Gradient button
 @mixin gradient-button($bg-color: $silver, $fg-color: $black, $radius: $button-radius) {
+    background-clip: padding-box;
     background-color: lighten($bg-color, 13.2%);
     background-image: linear-gradient(to bottom, lighten($bg-color, 13.2%), $bg-color);
-    background-clip: padding-box;
     border: 1px solid;
     border-color: $bg-color darken($bg-color, 13.2%) darken($bg-color, 26.5%);
     border-radius: $radius;

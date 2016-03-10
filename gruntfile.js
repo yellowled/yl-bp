@@ -1,8 +1,6 @@
 module.exports = function(grunt) {
     // Load tasks when needed
-    require('jit-grunt')(grunt, {
-        sasslint: 'grunt-sass-lint'
-    });
+    require('jit-grunt')(grunt);
 
     // Use time-grunt
     require('time-grunt')(grunt);
@@ -32,7 +30,7 @@ module.exports = function(grunt) {
         'copy:deploy',
         'concat',
         'sass',
-        'postcss',
+        'postcss:build',
         'cssmin',
         'uglify',
         // 'svgstore',
