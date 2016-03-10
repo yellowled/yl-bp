@@ -37,7 +37,7 @@
         line-height: 1.5em;
         position: absolute;
         width: 0;
-	}
+    }
 
     &::before {
         border-color: $border-color transparent;
@@ -45,7 +45,7 @@
         border-width: (16px + $border-width) (16px + $border-width) 0;
         bottom: -(16px + $border-width);
         left: (42px - $border-width);
-	}
+    }
 
     &::after {
         border-color: $box-color transparent;
@@ -53,7 +53,7 @@
         border-width: 15px 15px 0;
         bottom: -15px;
         left: 43px;
-	}
+    }
 }
 
 // nicolasgallagher.com/an-introduction-to-css-pseudo-element-hacks/
@@ -75,13 +75,13 @@
         left: 0;
         position: absolute;
         top: 100%;
-	}
+    }
 
     &::after {
         border-width: 0 0 $corner-width $corner-width;
         left: auto;
         right: 0;
-	}
+    }
 }
 
 // Left only
@@ -102,7 +102,7 @@
         left: 0;
         position: absolute;
         top: 100%;
-	}
+    }
 }
 
 // Right only
@@ -124,7 +124,7 @@
         position: absolute;
         right: 0;
         top: 100%;
-	}
+    }
 }
 
 

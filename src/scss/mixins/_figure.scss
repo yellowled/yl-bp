@@ -81,7 +81,7 @@
 
         .no-touch & {
             transition: transform .4s,
-                        opacity .125s .3s;
+                opacity .125s .3s;
             @if $position == bottom {
                 bottom: 0;
                 top: auto;
@@ -126,7 +126,7 @@
             opacity: 1;
             transform: translateY(0);
             transition: transform .4s,
-                        opacity .125s;
+                opacity .125s;
         }
     }
 

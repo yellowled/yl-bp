@@ -19,6 +19,7 @@
         "max-nesting-depth": 4,
         "media-feature-colon-space-after": "always",
         "media-query-parentheses-space-inside": "never",
+        "no-descending-specificity": true,
         "no-eol-whitespace": true,
         "no-unknown-animations": true,
         "number-leading-zero": "never",
