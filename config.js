@@ -41,8 +41,10 @@ module.exports = {
         dev:        'src/scripts/modernizr/modernizr.js',
         dest:       'dist/scripts/modernizr/modernizr.js',
         srcfiles: [
+                    'node_modules/node-normalize-scss/_normalize.scss',
                     'src/scss/**/*.scss',
                     'node_modules/magnific-popup/src/css/main.scss',
+                    'node_modules/slick-carousel/slick/slick.scss',
                     'node_modules/gmaps/gmaps.js',
                     'src/scripts/master.js'
         ]
