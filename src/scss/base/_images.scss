@@ -7,6 +7,7 @@ $img-left-margin:   .25rem $type-rhythm .75rem 0 !default;
 $img-right-margin:  .25rem 0 .75rem $type-rhythm !default;
 $img-left-class:    align_left !default;
 $img-right-class:   align_right !default;
+$img-center-class:  align_center !default;
 
 %image-block {
     display: block;
@@ -32,6 +33,11 @@ $img-right-class:   align_right !default;
         .#{$img-right-class} {
             float: right;
             margin: $img-right-margin;
+        }
+
+        .#{$img-center-class} {
+            margin-left: auto;
+            margin-right: auto;
         }
     }
 }
