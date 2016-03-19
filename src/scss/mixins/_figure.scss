@@ -60,7 +60,7 @@
         display: block;
         position: relative;
 
-        .no-touch & {
+        .no-touchevents & {
             transition: transform .4s;
         }
     }
@@ -79,7 +79,7 @@
         position: absolute;
         width: 100%;
 
-        .no-touch & {
+        .no-touchevents & {
             transition: transform .4s,
                 opacity .125s .3s;
             @if $position == bottom {
@@ -107,7 +107,7 @@
         }
     }
 
-    .no-touch &:hover {
+    .no-touchevents &:hover {
         img {
             @if $push {
                 @if $position == bottom {
