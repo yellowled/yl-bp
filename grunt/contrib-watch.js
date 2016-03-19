@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         //     tasks: ['svgstore'],
         // },
         processhtml: {
-            files: ['src/pages/*.html', 'src/includes/*.html'],
+            files: ['src/pages/*.html', 'src/includes/*.html', 'src/includes/legacy/*.html'],
             tasks: ['processhtml:dev'],
         },
         scss: {
