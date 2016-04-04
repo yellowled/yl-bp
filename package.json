@@ -36,7 +36,7 @@
         "tabslet":                  "^1.7.2"
     },
     "devDependencies":  {
-        "autoprefixer":             "^6.3.5",
+        "autoprefixer":             "^6.3.6",
         "browser-sync":             "^2.11.2",
         "css-mqpacker":             "^4.0.1",
         "grunt":                    "^0.4.5",
