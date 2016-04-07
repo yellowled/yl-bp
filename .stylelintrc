@@ -7,6 +7,7 @@
         "comment-whitespace-inside": "always",
         "declaration-bang-space-after": "never",
         "declaration-bang-space-before": "always",
+        "declaration-block-no-ignored-properties": true,
         "declaration-block-properties-order": "alphabetical",
         "declaration-block-single-line-max-declarations": 1,
         "declaration-block-trailing-semicolon": "always",
