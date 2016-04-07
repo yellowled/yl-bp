@@ -108,3 +108,33 @@ $button-padding:    .1875rem .625rem !default;
         z-index: auto;
     }
 }
+
+
+// Unstyled button
+@mixin unstyled-button($fg-color: $black, $bg-color: transparent, $alt-color: $black) {
+    background: transparent;
+    background-clip: padding-box;
+    border: 0;
+    border-radius: 0;
+    color: $fg-color;
+    display: inline-block;
+    line-height: normal;
+    outline: 0;
+    padding: 0;
+    text-align: left;
+    text-decoration: none;
+    text-shadow: none;
+    width: auto;
+
+    &:active,
+    &:hover,
+    &:focus {
+        background: $bg-color;
+        color: $alt-color;
+    }
+
+    &:focus {
+        box-shadow: none;
+        z-index: auto;
+    }
+}
