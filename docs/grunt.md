@@ -40,7 +40,6 @@ Note that due to the way that paths are specified in the HTML templates, a build
 * [grunt-contrib-compress](https://www.npmjs.com/package/grunt-contrib-compress)
 * [grunt-contrib-concat](https://npmjs.org/package/grunt-contrib-concat)
 * [grunt-contrib-copy](https://npmjs.org/package/grunt-contrib-copy)
-* [grunt-contrib-cssmin](https://www.npmjs.com/package/grunt-contrib-cssmin)
 * [grunt-contrib-imagemin](https://npmjs.org/package/grunt-contrib-imagemin)
 * [grunt-contrib-jshint](https://npmjs.org/package/grunt-contrib-jshint)
 * [grunt-contrib-uglify](https://npmjs.org/package/grunt-contrib-uglify)
@@ -68,6 +67,7 @@ Note that due to the way that paths are specified in the HTML templates, a build
 
 * [autoprefixer](https://www.npmjs.com/package/autoprefixer)
 * [css-mqpacker](https://www.npmjs.com/package/css-mqpacker)
+* [cssnano](https://www.npmjs.com/package/cssnano)
 * [pixrem](https://www.npmjs.com/package/pixrem)
 * [postcss-reporter](https://www.npmjs.com/package/postcss-reporter)
 * [postcss-scss](https://www.npmjs.com/package/postcss-scss)
