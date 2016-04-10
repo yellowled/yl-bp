@@ -28,6 +28,7 @@ module.exports = function(grunt) {
                 map: true,
                 processors: [
                     require('pixrem')({
+                        atrules: true,
                         unitPrecision: 0
                     }),
                     require('css-mqpacker')({
