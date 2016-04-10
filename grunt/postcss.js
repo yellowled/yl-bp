@@ -3,21 +3,15 @@ var config = require('../config');
 
 module.exports = function(grunt) {
     grunt.config('postcss', {
-        build: {
+        dev: {
             options: {
                 diff: false,
                 map: true,
                 processors: [
-                    require('pixrem')({
-                        unitPrecision: 0
-                    }),
                     require('autoprefixer')({
                         browsers: config.autoprefixer.browsers,
                         cascade: false,
                         remove: true
-                    }),
-                    require('css-mqpacker')({
-                        sort: true
                     })
                 ]
             },
@@ -26,6 +20,27 @@ module.exports = function(grunt) {
                 flatten: true,
                 src: 'src/styles/*.css',
                 dest: 'src/styles'
+            }]
+        },
+        deploy: {
+            options: {
+                diff: false,
+                map: true,
+                processors: [
+                    require('pixrem')({
+                        unitPrecision: 0
+                    }),
+                    require('css-mqpacker')({
+                        sort: true
+                    }),
+                    require('cssnano')()
+                ]
+            },
+            files: [{
+                expand: true,
+                flatten: true,
+                src: 'src/styles/*.css',
+                dest: 'dist/styles'
             }]
         },
         lint: {
