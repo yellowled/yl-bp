@@ -6,19 +6,18 @@ Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains
 
 ## `settings`
 
-* `_constants.scss` – color constants
+* `_constants.scss` – color constants and base values for `@media` queries
 * `_settings.scss` – enable or disable parts of the partials included in the boilerplate by setting certain variables to `true` or `false`, depending on whether that part of the SCSS is being used
 * `_variables.scss` – project-specific constants or overrides for existing variables
 
 ## `mixins/_mixins.scss`
 
-* `_buttons.scss` – buttons (gradient, flat, bordered) mixins
+* `_buttons.scss` – button (gradient, flat, bordered, unstyled) mixins
 * `_embed.scss` – responsive media embeds
 * `_figure.scss` – `<figure>` (simple, fancy, with animated caption)
 * `_gmaps.scss` – [gmaps](https://github.com/hpneo/gmaps)
 * `_grid.scss` – flexible grid system
 * `_helpers.scss` – helper classes (mostly) adopted from [H5BP](https://html5boilerplate.com)
-* `_icon.scss` – CSS-only animated hamburger icon
 * `_img.scss` – responsive and retina images and SVGs
 * `_modal.scss` – a modal window in [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup).
 * `_position.scss` – horizontal and vertical centering
@@ -36,7 +35,7 @@ Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains
 * `_navigation.scss` – required by [reponsive-nav.js](http://responsive-nav.com/)
 * `_print.scss` – basic print styles
 
-All partials in `mixins/_mixins.scss` and `base/_base.scss` should *always* be included in `master.scss`. Most of them contain SCSS that does not emit CSS unless explicity used (extends, mixins and functions). The content emitted by some partials in `base` can be tweaked in `settings/_settings.scss`. The exceptions are `_normalize.scss`, `_base.scss` and `_print.scss` which contain  CSS which will *always* be useful.
+All partials in `mixins/_mixins.scss` and `base/_base.scss` should *always* be included in `master.scss`. Most of them contain SCSS that does not emit CSS unless explicity used (extends, mixins and functions). The code emitted by some partials in `base` can be tweaked in `settings/_settings.scss`. The exceptions are `_normalize.scss`, `_base.scss` and `_print.scss` which contain CSS which will *always* be useful.
 
 ## `modules`
 

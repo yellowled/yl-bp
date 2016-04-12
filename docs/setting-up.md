@@ -11,7 +11,7 @@
 
 Please refer to the documentation of your OS and/or the documentation of these requirements.
 
-## Get started
+## Getting started
 
 In the project directory:
 
