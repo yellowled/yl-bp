@@ -62,11 +62,6 @@ nav ol {
     }
 
     .nav-toggle {
-        // Responsive nav icon fallback
-        @if not($use-svg-sprites) {
-            @include icon-hamburger;
-        }
-
         -webkit-tap-highlight-color: $webkit-tap-color;
         user-select: none;
 

@@ -52,7 +52,7 @@ figure {
 // --------------------------------------------------------------------
 // Defaults
 $svg-fallback-class:    svg-fallback !default;
-$svg-icon-dims:         1rem !default;
+$svg-icon-dims:         1.5rem !default;
 
 
 @if $use-svg-sprites {

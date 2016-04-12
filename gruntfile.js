@@ -33,7 +33,7 @@ module.exports = function(grunt) {
         'postcss:dev',
         'postcss:deploy',
         'uglify',
-        // 'svgstore',
+        'svgstore',
         'imagemin',
         'svgmin',
         'modernizr',

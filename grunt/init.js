@@ -1,7 +1,7 @@
 // Init
 module.exports = function(grunt) {
     grunt.registerTask('init', [
-        // 'svgstore',
+        'svgstore',
         'processhtml:dev',
         'sass',
         'postcss:dev',

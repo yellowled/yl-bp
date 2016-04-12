@@ -10,7 +10,7 @@ module.exports = function(grunt) {
             server: 'src',
             files: [
                 'src/*.html',
-                // 'src/icons/*.svg',
+                'src/icons/*.svg',
                 'src/scripts/*.js'
             ]
         }, function (err, bs) {

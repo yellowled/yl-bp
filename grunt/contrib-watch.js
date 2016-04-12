@@ -4,10 +4,10 @@ module.exports = function(grunt) {
         options: {
             spawn: false
         },
-        // svg: {
-        //     files: 'src/icons/*.svg',
-        //     tasks: ['svgstore'],
-        // },
+        svg: {
+            files: 'src/icons/*.svg',
+            tasks: ['svgstore'],
+        },
         processhtml: {
             files: ['src/pages/*.html', 'src/includes/*.html', 'src/includes/legacy/*.html'],
             tasks: ['processhtml:dev'],
