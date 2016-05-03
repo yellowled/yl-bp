@@ -50,7 +50,7 @@
         "grunt-contrib-jshint":     "^1.0.0",
         "grunt-contrib-uglify":     "^1.0.1",
         "grunt-contrib-watch":      "^1.0.0",
-        "grunt-htmlhint":           "^0.9.12",
+        "grunt-htmlhint":           "^0.9.13",
         "grunt-modernizr":          "^1.0.2",
         "grunt-postcss":            "^0.8.0",
         "grunt-processhtml":        "^0.3.13",
