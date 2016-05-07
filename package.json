@@ -31,7 +31,7 @@
         "pyrsmk-toast":             "^2.1.0",
         "respimage":                "^1.4.2",
         "responsive-nav":           "^1.0.39",
-        "slick-carousel":           "^1.5.9",
+        "slick-carousel":           "^1.6.0",
         "svg4everybody":            "^2.0.3",
         "tabslet":                  "^1.7.2"
     },
