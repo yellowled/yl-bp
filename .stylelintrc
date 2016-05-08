@@ -1,5 +1,6 @@
 {
     "rules": {
+        "at-rule-name-space-after": "always",
         "block-no-empty": true,
         "color-hex-case": "lower",
         "color-hex-length": "short",
@@ -21,12 +22,15 @@
         "media-feature-colon-space-after": "always",
         "media-query-parentheses-space-inside": "never",
         "no-eol-whitespace": true,
+        "no-extra-semicolons": true,
         "no-unknown-animations": true,
         "number-leading-zero": "never",
         "number-max-precision": 5,
         "number-no-trailing-zeros": true,
         "number-zero-length-no-unit": true,
         "selector-attribute-brackets-space-inside": "never",
+        "selector-attribute-operator-space-after": "never",
+        "selector-attribute-operator-space-before": "never",
         "selector-combinator-space-after": "always",
         "selector-combinator-space-before": "always",
         "selector-max-specificity": "1,2,2",
