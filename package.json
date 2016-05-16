@@ -37,7 +37,7 @@
     },
     "devDependencies":  {
         "autoprefixer":             "^6.3.6",
-        "browser-sync":             "^2.12.7",
+        "browser-sync":             "^2.12.8",
         "css-mqpacker":             "^5.0.1",
         "cssnano":                  "^3.5.2",
         "grunt":                    "^1.0.1",
