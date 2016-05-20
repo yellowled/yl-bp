@@ -38,7 +38,9 @@
         "selector-pseudo-class-parentheses-space-inside": "never",
         "selector-pseudo-class-no-unknown": true,
         "selector-pseudo-element-colon-notation": "double",
-        "selector-type-no-unknown": true,
+        "selector-type-no-unknown": [true, {
+            "ignoreTypes": ["de", "en"]
+        }],
         "shorthand-property-no-redundant-values": true,
         "string-no-newline": true,
         "string-quotes": "single",
