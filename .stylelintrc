@@ -33,6 +33,7 @@
         "selector-attribute-operator-space-before": "never",
         "selector-combinator-space-after": "always",
         "selector-combinator-space-before": "always",
+        "selector-max-compound-selectors": 3,
         "selector-max-specificity": "1,2,2",
         "selector-pseudo-class-parentheses-space-inside": "never",
         "selector-pseudo-class-no-unknown": true,
