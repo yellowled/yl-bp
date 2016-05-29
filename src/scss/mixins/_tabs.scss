@@ -1,10 +1,10 @@
 // TABS
-// github.com/vdw/Tabslet
+// frend.co/components/tabs/
 // --------------------------------------------------------------------
-// Usage: github.com/vdw/Tabslet/wiki
 //
 // Defaults
 $tabswidth:         480px !default;
+$tabpanel-class:    tabpanel !default;
 
 $bordercolor:       $grey !default;
 $background:        $white !default;
@@ -29,10 +29,14 @@ $tabs-margin:       $type-rhythm;
     max-width: 100%;
     width: $tabswidth;
 
-    .content {
+    .#{$tabpanel-class} {
         border: $tab-border;
         border-radius: $content-border;
         padding: 0 $padding;
+    }
+
+    [aria-hidden="true"] {
+        display: none;
     }
 }
 
@@ -58,12 +62,12 @@ $tabs-margin:       $type-rhythm;
         top: 1px;
     }
 
-    .active a {
+    [aria-selected="true"] {
         background: $background;
         border-bottom: $inverse-border;
     }
 
-    .active a,
+    [aria-selected="true"],
     a:hover,
     a:focus {
         color: $current-color;
