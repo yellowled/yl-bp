@@ -22,7 +22,6 @@
         "postinstall":  "grunt copy:init"
     },
     "dependencies": {
-        "gmaps":                    "^0.4.24",
         "lazysizes":                "^1.5.0",
         "jquery":                   "^2.2.4",
         "jquery-collapse":          "^1.1.2",

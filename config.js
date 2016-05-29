@@ -44,7 +44,6 @@ module.exports = {
                     'src/scss/**/*.scss',
                     'node_modules/magnific-popup/src/css/main.scss',
                     'node_modules/slick-carousel/slick/slick.scss',
-                    'node_modules/gmaps/gmaps.js',
                     'src/scripts/master.js'
         ]
     },

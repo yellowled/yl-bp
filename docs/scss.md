@@ -15,7 +15,6 @@ Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains
 * `_buttons.scss` – button (gradient, flat, bordered, unstyled) mixins
 * `_embed.scss` – responsive media embeds
 * `_figure.scss` – `<figure>` (simple, fancy, with animated caption)
-* `_gmaps.scss` – [gmaps](https://github.com/hpneo/gmaps)
 * `_grid.scss` – flexible grid system
 * `_helpers.scss` – helper classes (mostly) adopted from [H5BP](https://html5boilerplate.com)
 * `_img.scss` – responsive and retina images and SVGs

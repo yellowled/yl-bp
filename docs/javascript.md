@@ -6,7 +6,6 @@ Most of the JS assets are concatenated into a single file (`src/scripts/master.j
 
 ## jQuery plugins included
 
-* [gmaps](https://github.com/hpneo/gmaps)
 * [jQuery-Collapse](https://github.com/danielstocks/jQuery-Collapse/)
 * [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup)
 * [slick](https://github.com/kenwheeler/slick)
