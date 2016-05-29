@@ -5,7 +5,6 @@ module.exports = {
     },
     concat: {
         src: [
-                    // 'node_modules/pyrsmk-toast/src/toast.js',
                     'node_modules/svg4everybody/dist/svg4everybody.js',
                     'node_modules/respimage/respimage.js',
                     'node_modules/lazysizes/lazysizes.js',

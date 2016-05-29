@@ -18,4 +18,3 @@ Most of the JS assets are concatenated into a single file (`src/scripts/master.j
 * [respimage](https://github.com/aFarkas/respimage)
 * [Responsive Nav](https://github.com/viljamis/responsive-nav.js)
 * [svg4everybody](https://github.com/jonathantneal/svg4everybody)
-* [toast](https://github.com/pyrsmk/toast)
