@@ -6,13 +6,13 @@ Most of the JS assets are concatenated into a single file (`src/scripts/master.j
 
 ## jQuery plugins included
 
-* [jQuery-Collapse](https://github.com/danielstocks/jQuery-Collapse/)
 * [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup)
 * [slick](https://github.com/kenwheeler/slick)
-* [Tabslet](https://github.com/vdw/Tabslet)
 
 ## JS plugins included
 
+* [fr-accordion](https://github.com/frend/frend.co/tree/gh-pages/_components/accordion)
+* [fr-tabs](https://github.com/frend/frend.co/tree/gh-pages/_components/tabs)
 * [lazysizes](https://github.com/aFarkas/lazysizes)
 * [respimage](https://github.com/aFarkas/respimage)
 * [Responsive Nav](https://github.com/viljamis/responsive-nav.js)

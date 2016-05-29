@@ -12,6 +12,7 @@ Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains
 
 ## `mixins/_mixins.scss`
 
+* `_accordion.scss` – [accordion](http://frend.co/components/accordion/)
 * `_buttons.scss` – button (gradient, flat, bordered, unstyled) mixins
 * `_embed.scss` – responsive media embeds
 * `_figure.scss` – `<figure>` (simple, fancy, with animated caption)
@@ -22,7 +23,7 @@ Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains
 * `_position.scss` – horizontal and vertical centering
 * `_shapes.scss` – CSS-only folded corner, speech bubble, ribbon, triangle
 * `_tables.scss` – tables (simple, striped, responsive)
-* `_tabs.scss` – [Tabslet](https://github.com/vdw/Tabslet)
+* `_tabs.scss` – [tabs](http://frend.co/components/tabs/)
 * `_typography.scss` – ligatures, smart blockquotes
 
 ## `base/_base.scss`
