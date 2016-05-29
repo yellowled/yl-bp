@@ -1,0 +1,26 @@
+// TABS
+// frend.co/components/accordion/
+// --------------------------------------------------------------------
+
+@mixin accordion {
+    [aria-hidden="true"] {
+        visibility: hidden;
+        height: 0;
+    }
+
+    [aria-hidden="false"] {
+        visibility: visible;
+    }
+}
+
+@mixin accordion-header {
+    .js & {
+        cursor: pointer;
+    }
+}
+
+@mixin accordion-panel {
+    .js & {
+        overflow: hidden;
+    }
+}
