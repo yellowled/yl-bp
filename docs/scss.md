@@ -6,7 +6,7 @@ Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains
 
 ## `settings`
 
-* `_constants.scss` – color constants and base values for `@media` queries
+* `_constants.scss` – constants for  `@media` queries, typography and colors
 * `_settings.scss` – enable or disable parts of the partials included in the boilerplate by setting certain variables to `true` or `false`, depending on whether that part of the SCSS is being used
 * `_variables.scss` – project-specific constants or overrides for existing variables
 
