@@ -23,7 +23,7 @@
     },
     "dependencies": {
         "fr-accordion":             "^1.0.5",
-        "fr-tabs":                  "^1.0.3",
+        "fr-tabs":                  "^1.0.4",
         "lazysizes":                "^2.0.0",
         "jquery":                   "^2.2.4",
         "magnific-popup":           "^1.1.0",
