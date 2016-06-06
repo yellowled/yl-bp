@@ -7,6 +7,8 @@ This boilerplate uses Sass/SCSS to generate the CSS file, `src/styles/master.css
 Most of the partials in `src/scss` and its subdirectories are **not** meant to be edited (in order to make it easier to update projects). You should not (need to) edit files in `src/scss` other than:
 
 * `src/scss/master.scss` – see [Compiled CSS](#compiled-css)
+* `src/scss/settings/_settings.scss` – see [Settings](#settings)
+* `src/scss/settings/_variables.scss` – see [Overriding defaults](#overriding-defaults)
 * partials in `src/scss/modules` – add project-specific global styles to `_global.scss`, create new partials for project-specific modules
 
 ## Overriding defaults
@@ -20,6 +22,8 @@ The only SCSS partials you might want to exclude if you don't use it (by comment
 * `@import '../../node_modules/magnific-popup/src/css/main';`
 * `@import '../../node_modules/slick-carousel/slick/slick.scss';`
 
-(Also, [normalize.css](https://github.com/necolas/normalize.css/) is included as a vendor partial (using [node-normalize.scss](https://www.npmjs.com/package/node-normalize-scss)), but you do not want to remove that.)
+(Also, [normalize.css](https://github.com/necolas/normalize.css/) is included as a vendor partial (using [node-normalize.scss](https://www.npmjs.com/package/node-normalize-scss)), but you most likely do not want to remove that.)
 
-All other SCSS any given project might not require is either encapsulated in mixins or placeholder selectors or can be excluded in `src/scss/settings/_settings.scss`.
+## Settings
+
+All other SCSS any given project might not require is either encapsulated in mixins or placeholder selectors or can be excluded in `src/scss/settings/_settings.scss` by setting boolean variables accordingly.
