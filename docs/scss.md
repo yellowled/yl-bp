@@ -4,9 +4,8 @@
 
 Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains partials which are currently organized in three directories. Please also see [SCSS concepts](scss-concepts.md).
 
-## `settings`
+## `project`
 
-* `_constants.scss` – constants for  `@media` queries, typography and colors
 * `_settings.scss` – enable or disable parts of the partials included in the boilerplate by setting certain variables to `true` or `false`, depending on whether that part of the SCSS is being used
 * `_variables.scss` – project-specific constants or overrides for existing variables
 
@@ -34,6 +33,8 @@ Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains
 * `_messages.scss` – message classes
 * `_navigation.scss` – required by [reponsive-nav.js](http://responsive-nav.com/)
 * `_print.scss` – basic print styles
+
+In `base`, there's also `_constants.scss`, which contains overrideable constants for  `@media` queries, typography and colors. It has been placed in `base` to keep it in a directory with files that are not meant to be edited.
 
 All partials in `mixins/_mixins.scss` and `base/_base.scss` should *always* be included in `master.scss`. Most of them contain SCSS that does not emit CSS unless explicity used (extends, mixins and functions). The code emitted by some partials in `base` can be tweaked in `settings/_settings.scss`. The exceptions are `_normalize.scss`, `_base.scss` and `_print.scss` which contain CSS which will *always* be useful.
 

@@ -7,8 +7,8 @@ This boilerplate uses Sass/SCSS to generate the CSS file, `src/styles/master.css
 Most of the partials in `src/scss` and its subdirectories are **not** meant to be edited (in order to make it easier to update projects). You should not (need to) edit files in `src/scss` other than:
 
 * `src/scss/master.scss` – see [Compiled CSS](#compiled-css)
-* `src/scss/settings/_settings.scss` – see [Settings](#settings)
-* `src/scss/settings/_variables.scss` – see [Overriding defaults](#overriding-defaults)
+* `src/scss/project/_settings.scss` – see [Settings](#settings)
+* `src/scss/project/_variables.scss` – see [Overriding defaults](#overriding-defaults)
 * partials in `src/scss/modules` – add project-specific global styles to `_global.scss`, create new partials for project-specific modules
 
 ## Overriding defaults
@@ -26,4 +26,4 @@ The only SCSS partials you might want to exclude if you don't use it (by comment
 
 ## Settings
 
-All other SCSS any given project might not require is either encapsulated in mixins or placeholder selectors or can be excluded in `src/scss/settings/_settings.scss` by setting boolean variables accordingly.
+All other SCSS any given project might not require is either encapsulated in mixins or placeholder selectors or can be excluded in `src/scss/project/_settings.scss` by setting boolean variables accordingly.
