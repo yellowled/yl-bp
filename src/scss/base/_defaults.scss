@@ -51,7 +51,11 @@ hr {
     padding: 0;
 }
 
-summary {
+summary,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
     cursor: pointer;
 }
 
