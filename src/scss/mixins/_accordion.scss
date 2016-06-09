@@ -2,12 +2,12 @@
 // frend.co/components/accordion/
 // --------------------------------------------------------------------
 @mixin accordion {
-    [aria-hidden="true"] {
-        visibility: hidden;
+    [aria-hidden='true'] {
         height: 0;
+        visibility: hidden;
     }
 
-    [aria-hidden="false"] {
+    [aria-hidden='false'] {
         visibility: visible;
     }
 }

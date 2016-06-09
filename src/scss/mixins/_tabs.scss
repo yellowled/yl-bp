@@ -35,7 +35,7 @@ $tabs-margin:       $type-rhythm;
         padding: 0 $padding;
     }
 
-    [aria-hidden="true"] {
+    [aria-hidden='true'] {
         display: none;
     }
 }
@@ -62,12 +62,12 @@ $tabs-margin:       $type-rhythm;
         top: 1px;
     }
 
-    [aria-selected="true"] {
+    [aria-selected='true'] {
         background: $background;
         border-bottom: $inverse-border;
     }
 
-    [aria-selected="true"],
+    [aria-selected='true'],
     a:hover,
     a:focus {
         color: $current-color;
