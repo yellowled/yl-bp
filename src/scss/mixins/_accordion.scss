@@ -18,8 +18,13 @@
     }
 }
 
-@mixin accordion-panel {
+@mixin accordion-panel($panel-fade: true, $panel-fade-time: 200ms, $panel-fade-effect: linear) {
     .js & {
         overflow: hidden;
+
+        @if $panel-fade {
+            transition: height $panel-fade-time $panel-fade-effect,
+                visibility $panel-fade-time;
+        }
     }
 }
