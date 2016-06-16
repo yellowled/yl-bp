@@ -1,16 +1,15 @@
 // TYPOGRAPHY
 // --------------------------------------------------------------------
 // https://medium.com/@mwichary/system-shock-6b1dc6d6596f#.mw59d05tx
-$system-fonts: system, -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+$system-fonts:          system, -apple-system, '.SFNSText-Regular', 'San Francisco', 'Roboto', 'Segoe UI', 'Helvetica Neue', 'Lucida Grande', sans-serif;
+$full-font-features:    'frac' 1, 'kern' 1, 'swsh' 1 !default;
+$full-font-ligatures:   common-ligatures discretionary-ligatures historical-ligatures contextual !default;
 
 
 // blog.fontdeck.com/post/15777165734/opentype-1
-@mixin ligatures {
-    -moz-font-feature-settings: 'liga=1, dlig=1';
-    -ms-font-feature-settings: 'liga', 'dlig';
-    -o-font-feature-settings: 'liga', 'dlig';
-    -webkit-font-feature-settings: 'liga', 'dlig';
-    font-feature-settings: 'liga', 'dlig';
+@mixin ligatures($font-features: $full-font-features, $font-ligatures: $full-font-ligatures) {
+    font-feature-settings: $font-features;
+    font-variant-ligatures: $font-ligatures;
 }
 
 // html5doctor.com/blockquote-q-cite/
