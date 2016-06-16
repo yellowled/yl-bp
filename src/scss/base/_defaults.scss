@@ -7,6 +7,7 @@ $hint-fg:       $off-black !default;
 
 $helper-vh-class: visuallyhidden !default;
 $helper-cf-class: clearfix !default;
+$helper-js-class: enable-js !default;
 
 
 ::selection {
@@ -176,7 +177,7 @@ img {
 // ENABLE JS HINT
 // --------------------------------------------------------------------
 @if $use-enable-js {
-    #enable-js {
+    .#{$helper-js-class} {
         background: $hint-bg;
         color: $hint-fg;
         left: 0;
