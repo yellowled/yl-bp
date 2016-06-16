@@ -5,6 +5,9 @@ $selection-bg:  #b3d4fc !default;
 $hint-bg:       $silver !default;
 $hint-fg:       $off-black !default;
 
+$helper-vh-class: visuallyhidden !default;
+$helper-cf-class: clearfix !default;
+
 
 ::selection {
     background: $selection-bg;
@@ -154,6 +157,19 @@ p {
 video,
 img {
     @include responsive-media;
+}
+
+
+// HELPER CLASSES
+// --------------------------------------------------------------------
+@if $use-extra-classes {
+    .#{$helper-vh-class} {
+        @include visuallyhidden;
+    }
+
+    .#{$helper-cf-class} {
+        @include clearfix;
+    }
 }
 
 
