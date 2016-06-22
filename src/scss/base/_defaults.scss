@@ -105,18 +105,11 @@ body {
     line-height: $type-height;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: $type-rhythm 0;
-}
-
-h5,
-h6 {
-    font-size: 1rem;
+@each $heading, $factor in $type-headings {
+    #{$heading} {
+        font-size: $factor * 1em;
+        margin: $type-rhythm 0;
+    }
 }
 
 pre,
