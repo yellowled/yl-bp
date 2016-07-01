@@ -1,6 +1,7 @@
 {
     "rules": {
         "at-rule-name-space-after": "always",
+        "at-rule-no-unknown": true,
         "block-no-empty": true,
         "color-hex-case": "lower",
         "color-hex-length": "short",
@@ -22,6 +23,7 @@
         "max-nesting-depth": 4,
         "media-feature-colon-space-after": "always",
         "media-query-parentheses-space-inside": "never",
+        "no-empty-source": true,
         "no-eol-whitespace": true,
         "no-extra-semicolons": true,
         "no-missing-eof-newline": true,
