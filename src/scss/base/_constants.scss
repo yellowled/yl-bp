@@ -10,11 +10,13 @@ $xx:           100em !default; // 1600px
 // TYPOGRAPHY
 // --------------------------------------------------------------------
 // Font stacks
-$font-sans:     -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', Arial, sans-serif !default;
-$font-serif:    Georgia, 'Times New Roman', Times, serif !default;
-$font-mono:     Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
+$default-sans:  -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', Arial, sans-serif !default;
+$default-serif: Georgia, 'Times New Roman', Times, serif !default;
+$default-mono:  Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;
 
-$primary-font:  'Helvetica Neue', Arial, sans-serif !default;
+$primary-font:  $default-sans !default;
+
+// Typographic measures
 $type-height:   1.5 !default;
 $type-rhythm:   1rem !default;
 $type-headings: (
