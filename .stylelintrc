@@ -4,10 +4,12 @@
         "at-rule-no-unknown": [true, {
             "ignoreAtRules": ["debug", "each", "else", "error", "extend", "for", "if", "include", "mixin", "warn", "while"]
         }],
+        "block-closing-brace-empty-line-before": "never",
         "block-no-empty": true,
         "color-hex-case": "lower",
         "color-hex-length": "short",
         "color-no-invalid-hex": true,
+        "comment-no-empty": true,
         "comment-whitespace-inside": "always",
         "declaration-bang-space-after": "never",
         "declaration-bang-space-before": "always",
@@ -25,6 +27,7 @@
         "max-empty-lines": 2,
         "max-nesting-depth": 4,
         "media-feature-colon-space-after": "always",
+        "media-feature-name-case": "lower",
         "media-feature-parentheses-space-inside": "never",
         "no-empty-source": true,
         "no-eol-whitespace": true,
