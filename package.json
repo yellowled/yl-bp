@@ -52,7 +52,7 @@
         "grunt-modernizr":          "^1.0.2",
         "grunt-postcss":            "^0.8.0",
         "grunt-processhtml":        "^0.4.0",
-        "grunt-sass":               "^1.2.0",
+        "grunt-sass":               "^1.2.1",
         "grunt-sitemap":            "^1.2.1",
         "grunt-svgmin":             "^3.3.0",
         "grunt-svgstore":           "^1.0.0",
