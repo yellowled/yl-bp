@@ -13,6 +13,7 @@
         "comment-whitespace-inside": "always",
         "declaration-bang-space-after": "never",
         "declaration-bang-space-before": "always",
+        "declaration-block-no-redundant-longhand-properties": true,
         "declaration-block-no-ignored-properties": true,
         "declaration-block-properties-order": "alphabetical",
         "declaration-block-single-line-max-declarations": 1,
@@ -45,6 +46,7 @@
         "selector-attribute-quotes": "always",
         "selector-combinator-space-after": "always",
         "selector-combinator-space-before": "always",
+        "selector-descendant-combinator-no-non-space": true,
         "selector-max-compound-selectors": 3,
         "selector-max-specificity": "1,2,2",
         "selector-pseudo-class-parentheses-space-inside": "never",
@@ -59,5 +61,6 @@
         "time-no-imperceptible": true,
         "unit-case": "lower",
         "unit-no-unknown": true,
+        "value-list-max-empty-lines": 0,
     }
 }
