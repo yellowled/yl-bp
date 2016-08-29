@@ -42,25 +42,25 @@ $full-font-ligatures:   common-ligatures discretionary-ligatures historical-liga
     }
 
     :lang(de) & p::before,
-    &:lang(de)  p::before {
+    &:lang(de) p::before {
         content: '';
         content: no-open-quote;
     }
 
     :lang(de) & p::after,
-    &:lang(de)  p::after {
+    &:lang(de) p::after {
         content: '';
         content: no-close-quote;
     }
 
     :lang(de) & p:first-of-type::before,
-    &:lang(de)  p:first-of-type::before {
+    &:lang(de) p:first-of-type::before {
         content: '„';
         content: open-quote;
     }
 
     :lang(de) & p:last-of-type::after,
-    &:lang(de)  p:last-of-type::after {
+    &:lang(de) p:last-of-type::after {
         content: '“';
         content: close-quote;
     }
