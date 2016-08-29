@@ -10,6 +10,16 @@ $helper-cf-class: clearfix !default;
 $helper-js-class: enable-js !default;
 
 
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 ::selection {
     background: $selection-bg;
     text-shadow: none;
