@@ -57,7 +57,7 @@
         "grunt-svgmin":             "^3.3.0",
         "grunt-svgstore":           "^1.0.0",
         "jit-grunt":                "^0.10.0",
-        "pixrem":                   "^3.0.1",
+        "pixrem":                   "^3.0.2",
         "postcss-reporter":         "^1.4.1",
         "postcss-scss":             "^0.1.9",
         "stylelint":                "^7.1.0",
