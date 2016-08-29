@@ -60,7 +60,7 @@
         "pixrem":                   "^3.0.2",
         "postcss-reporter":         "^1.4.1",
         "postcss-scss":             "^0.2.1",
-        "stylelint":                "^7.1.0",
+        "stylelint":                "^7.2.0",
         "time-grunt":               "^1.4.0"
     }
 }
