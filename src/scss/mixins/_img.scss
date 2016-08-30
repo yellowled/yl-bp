@@ -25,25 +25,24 @@
 }
 
 
-// RETINA BACKGROUND IMAGES
+// HDPI BACKGROUND IMAGES
 // --------------------------------------------------------------------
-@mixin retina-img($imgname, $imgwidth, $imgheight, $imgtype: 'png', $imgsize: contain) {
+// Defaults
+$hdpi:      'print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi)' !default;
+
+
+@mixin hdpi-img($imgname, $imgwidth, $imgheight, $imgtype: 'png', $imgsize: contain) {
     background: url('../img/#{$imgname}.#{$imgtype}') 0 0 no-repeat;
     background-size: $imgsize;
     height: $imgheight;
     width: $imgwidth;
 
-    @media screen and (-webkit-min-device-pixel-ratio: 2),
-        screen and (min--moz-device-pixel-ratio: 2),
-        screen and (-o-min-device-pixel-ratio: 2/1),
-        screen and (min-device-pixel-ratio: 2),
-        screen and (min-resolution: 192dpi),
-        screen and (min-resolution: 2dppx) {
+    @media #{$hdpi} {
         background-image: url('../img/#{$imgname}-2x.#{$imgtype}');
     }
 }
 
-@mixin retina-svg($imgname, $imgwidth, $imgheight, $imgtype: 'png', $imgsize: contain) {
+@mixin hdpi-svg($imgname, $imgwidth, $imgheight, $imgtype: 'png', $imgsize: contain) {
     background: url('../img/#{$imgname}.svg') 0 0 no-repeat;
     background-size: $imgsize;
     height: $imgheight;
@@ -52,12 +51,7 @@
     .no-svg & {
         background-image: url('../img/#{$imgname}.#{$imgtype}');
 
-        @media screen and (-webkit-min-device-pixel-ratio: 2),
-            screen and (min--moz-device-pixel-ratio: 2),
-            screen and (-o-min-device-pixel-ratio: 2/1),
-            screen and (min-device-pixel-ratio: 2),
-            screen and (min-resolution: 192dpi),
-            screen and (min-resolution: 2dppx) {
+        @media #{$hdpi} {
             background-image: url('../img/#{$imgname}-2x.#{$imgtype}');
         }
     }
