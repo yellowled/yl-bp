@@ -61,7 +61,7 @@ $tables-breakpoint: $md !default; // Breakpoint for responsive tables
         white-space: nowrap;
     }
 
-    @media only screen and (min-width: $tables-breakpoint) {
+    @media screen and (min-width: $tables-breakpoint) {
         overflow-y: auto;
 
         th,

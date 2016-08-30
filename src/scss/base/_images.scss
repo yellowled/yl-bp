@@ -23,7 +23,7 @@ $img-center-class:  align_center !default;
 }
 
 @if $use-cms-classes {
-    @media only screen and (min-width: $img-breakpoint) {
+    @media screen and (min-width: $img-breakpoint) {
         // For use with image positioning classes assigned by CMS/WYSIWYG editor
         .#{$img-left-class} {
             float: left;
