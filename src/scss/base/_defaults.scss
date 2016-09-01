@@ -73,8 +73,13 @@ input[type='submit'] {
     cursor: pointer;
 }
 
-// Remove the gap between images and the bottom of their containers
-img {
+// Remove the gap between media and the bottom of their containers
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
     vertical-align: middle;
 }
 
