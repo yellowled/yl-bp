@@ -18,8 +18,8 @@ module.exports = function(grunt) {
             files: [{
                 expand: true,
                 flatten: true,
-                src: 'src/styles/*.css',
-                dest: 'src/styles'
+                src: config.postcss.src,
+                dest: config.postcss.dev
             }]
         },
         deploy: {
@@ -40,8 +40,8 @@ module.exports = function(grunt) {
             files: [{
                 expand: true,
                 flatten: true,
-                src: 'src/styles/*.css',
-                dest: 'dist/styles'
+                src: config.postcss.src,
+                dest: config.postcss.dest
             }]
         },
         lint: {

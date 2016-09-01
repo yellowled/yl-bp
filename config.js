@@ -46,6 +46,11 @@ module.exports = {
                     'src/scripts/master.js'
         ]
     },
+    postcss: {
+        src:        'src/styles/*.css',
+        dev:        'src/styles',
+        dest:       'dist/styles'
+    },
     sitemap: {
         domain:     '<%= pkg.homepage %>',
         changes:    'monthly',
