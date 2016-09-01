@@ -35,7 +35,6 @@
 // Hide from both screenreaders and browsers
 @mixin hidden {
     display: none !important;
-    visibility: hidden;
 }
 
 
