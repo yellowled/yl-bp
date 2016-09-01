@@ -1,13 +1,15 @@
 // Minify JS
+var config = require('../config');
+
 module.exports = function(grunt) {
     grunt.config('uglify', {
         options: {
             sourceMap: true,
-            sourceMapIn: 'src/scripts/master.js.map'
+            sourceMapIn: config.concat.dest + '.map'
         },
         deploy: {
-            src: 'src/scripts/master.js',
-            dest: 'dist/scripts/master.js'
+            src: config.concat.dest,
+            dest: config.uglify.dest
         }
     });
 };

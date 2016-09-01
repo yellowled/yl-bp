@@ -3,6 +3,24 @@ module.exports = {
     autoprefixer: {
         browsers:   ['> 1%', 'last 2 versions']
     },
+    cachebust: {
+        assets: [
+                    'styles/*.css',
+                    'scripts/*.js'
+                ],
+        cwd:        'dist',
+        src:        ['*.html']
+    },
+    clean: {
+        deploy:     ['dist'],
+        srcdir: [
+                    'src/*.html',
+                    'src/img/sprite.svg',
+                    'src/sitemap.xml',
+                    'src/scripts/master.*',
+                    'src/styles'
+                ]
+    },
     concat: {
         src: [
                     'node_modules/svg4everybody/dist/svg4everybody.js',
@@ -28,12 +46,25 @@ module.exports = {
               ],
         dest:       'dist'
     },
+    imagemin: {
+        cwd:        'src',
+        src:        ['img/**/*.{gif,jpg,png}'],
+        dest:       'dist'
+    },
     init: {
         src: [
                     'jquery/dist/jquery.min.js',
                     'jquery/dist/jquery.min.map'
               ],
         dest:       'src/scripts'
+    },
+    jshint: {
+        srcfiles: [
+                    'gruntfile.js',
+                    'config.js',
+                    'grunt/*.js',
+                    'src/scripts/main.js'
+                  ]
     },
     modernizr: {
         dev:        'src/scripts/modernizr/modernizr.js',
@@ -51,11 +82,32 @@ module.exports = {
         dev:        'src/styles',
         dest:       'dist/styles'
     },
+    sass: {
+        cwd:        'src/scss',
+        dest:       'src/styles',
+    },
     sitemap: {
         domain:     '<%= pkg.homepage %>',
         changes:    'monthly',
-        pattern: [
-                    'src/*.html'
-                 ]
+        pattern:    ['src/*.html']
+    },
+    stylelint: {
+        cwd:        'src/scss',
+        srcfiles: [
+                    'base/**/*.scss',
+                    'mixins/**/*.scss',
+                    'modules/**/*.scss',
+                    'settings/**/*.scss',
+                    '*.scss'
+                  ]
+    },
+    svgmin: {
+        src:        ['img/**/*.svg']
+    },
+    svgstore: {
+        src:        ['src/icons/*.svg']
+    },
+    uglify: {
+        dest:       'dist/scripts/master.js'
     }
 };

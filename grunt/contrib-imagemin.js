@@ -1,4 +1,6 @@
 // Optimize bitmap images (GIF/JPG/PNG)
+var config = require('../config');
+
 module.exports = function(grunt) {
     grunt.config('imagemin', {
         deploy: {
@@ -9,9 +11,9 @@ module.exports = function(grunt) {
             },
             files: [{
                 expand: true,
-                cwd: 'src',
-                src: ['img/**/*.{gif,jpg,png}'],
-                dest: 'dist'
+                cwd: config.imagemin.cwd,
+                src: config.imagemin.src,
+                dest: config.imagemin.dest
             }]
         }
     });

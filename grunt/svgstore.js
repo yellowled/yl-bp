@@ -1,4 +1,6 @@
 // Create SVG sprite from single SVGs
+var config = require('../config');
+
 module.exports = function(grunt) {
     grunt.config('svgstore', {
         options: {
@@ -8,7 +10,7 @@ module.exports = function(grunt) {
         },
         build: {
             files: {
-                'src/img/sprite.svg': ['src/icons/*.svg']
+                'src/img/sprite.svg': config.svgstore.src
             }
         }
     });

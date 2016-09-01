@@ -1,4 +1,6 @@
 // Compile SCSS files to CSS
+var config = require('../config');
+
 module.exports = function(grunt) {
     grunt.config('sass', {
         build: {
@@ -9,9 +11,9 @@ module.exports = function(grunt) {
             },
             files: [{
                 expand: true,
-                cwd: 'src/scss',
+                cwd: config.sass.cwd,
                 src: ['*.scss'],
-                dest: 'src/styles',
+                dest: config.sass.dest,
                 ext: '.css'
             }]
         }

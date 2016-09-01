@@ -57,14 +57,8 @@ module.exports = function(grunt) {
             },
             files: [{
                 expand: true,
-                cwd: 'src/scss',
-                src: [
-                    'base/*.scss',
-                    'mixins/*.scss',
-                    'modules/*.scss',
-                    'settings/*.scss',
-                    '*.scss'
-                ]
+                cwd: config.stylelint.cwd,
+                src: config.stylelint.srcfiles
             }]
         }
     });
