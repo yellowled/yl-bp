@@ -49,6 +49,7 @@
         "selector-descendant-combinator-no-non-space": true,
         "selector-max-compound-selectors": 3,
         "selector-max-specificity": "1,2,2",
+        "selector-no-empty": true,
         "selector-pseudo-class-parentheses-space-inside": "never",
         "selector-pseudo-class-no-unknown": true,
         "selector-pseudo-element-colon-notation": "double",
