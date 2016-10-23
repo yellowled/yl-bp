@@ -24,7 +24,7 @@
     "dependencies": {
         "fr-accordion":             "^1.0.6",
         "fr-tabs":                  "^1.0.5",
-        "lazysizes":                "^2.0.4",
+        "lazysizes":                "^2.0.5",
         "jquery":                   "^3.1.1",
         "magnific-popup":           "^1.1.0",
         "node-normalize-scss":      "^1.4.0",
