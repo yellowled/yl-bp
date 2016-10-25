@@ -1,13 +1,16 @@
 // PROJECT-SPECIFIC SETTINGS
 // --------------------------------------------------------------------
-// responsive-nav.js
-$use-rnav-classes:  true;
-
 // Helper classes
 $use-extra-classes: false;
 
+// responsive-nav.js
+$use-rnav-classes:  true;
+
 // SVG sprites
 $use-svg-sprites:   true;
+
+// Image positioning
+$use-cms-classes:   false;
 
 // Forms
 $use-form-styles:   false;
@@ -19,9 +22,6 @@ $use-msg-extra:     false;
 
 // Enable JS
 $use-enable-js:     false;
-
-// Image positioning
-$use-cms-classes:   false;
 
 
 // DEPENDENCIES – *DON'T* EDIT!
