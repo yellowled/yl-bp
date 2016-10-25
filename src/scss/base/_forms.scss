@@ -143,7 +143,6 @@ $standard-buttons:      true !default;
 
 
     // Form buttons
-    // --------------------------------------------------------------------
     @if $standard-buttons {
         form button,
         input[type='button'],
@@ -155,7 +154,6 @@ $standard-buttons:      true !default;
 
 
     // Disabled form elements
-    // --------------------------------------------------------------------
     @if $use-form-advanced {
         form button[disabled],
         select[disabled],
