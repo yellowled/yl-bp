@@ -31,6 +31,7 @@ module.exports = function(grunt) {
                         atrules: true,
                         unitPrecision: 0
                     }),
+                    require('postcss-flexbugs-fixes')(),
                     require('css-mqpacker')({
                         sort: true
                     }),
