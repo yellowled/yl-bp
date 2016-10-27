@@ -12,9 +12,11 @@ CSS is compiled from [Sass](http://sass-lang.com) using
 
 * [libsass](http://libsass.org)
 * [pixrem](https://github.com/robwierzbowski/node-pixrem)
+* [postcss-flexbugs-fixes](https://www.npmjs.com/package/postcss-flexbugs-fixes)
+* [css-mqpacker](https://www.npmjs.com/package/css-mqpacker)
 * [autoprefixer](https://github.com/nDmitry/grunt-autoprefixer)
 
-No need to write `rem` fallbacks or vendor prefixes.
+No need to write `rem` fallbacks, think about [flexbugs](https://github.com/philipwalton/flexbugs) or add vendor prefixes. Cluttered `@media` queries will be combined.
 
 The main SCSS file `@import`s partials from the subdirectories of `src/scss/`. `@media` queries should be written [mobile first](http://bradfrostweb.com/blog/web/mobile-first-responsive-web-design/) based on [normalize.css](https://github.com/necolas/normalize.css/).
 

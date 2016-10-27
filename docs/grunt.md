@@ -69,5 +69,6 @@ Note that due to the way that paths are specified in the HTML templates, a build
 * [css-mqpacker](https://www.npmjs.com/package/css-mqpacker)
 * [cssnano](https://www.npmjs.com/package/cssnano)
 * [pixrem](https://www.npmjs.com/package/pixrem)
+* [postcss-flexbugs-fixes](https://www.npmjs.com/package/postcss-flexbugs-fixes)
 * [postcss-reporter](https://www.npmjs.com/package/postcss-reporter)
 * [postcss-scss](https://www.npmjs.com/package/postcss-scss)
