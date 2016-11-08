@@ -59,7 +59,7 @@
         "jit-grunt":                "^0.10.0",
         "pixrem":                   "^3.0.2",
         "postcss-flexbugs-fixes":   "^2.0.0",
-        "postcss-reporter":         "^1.4.1",
+        "postcss-reporter":         "^2.0.0",
         "postcss-scss":             "^0.4.0",
         "stylelint":                "^7.5.0",
         "time-grunt":               "^1.4.0"
