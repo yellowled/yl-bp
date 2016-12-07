@@ -58,7 +58,7 @@
         "grunt-svgstore":           "^1.0.0",
         "jit-grunt":                "^0.10.0",
         "pixrem":                   "^3.0.2",
-        "postcss-flexbugs-fixes":   "^2.0.0",
+        "postcss-flexbugs-fixes":   "^2.1.0",
         "postcss-reporter":         "^2.0.0",
         "postcss-scss":             "^0.4.0",
         "stylelint":                "^7.6.0",
