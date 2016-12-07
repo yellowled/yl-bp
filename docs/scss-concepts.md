@@ -9,6 +9,7 @@ Most of the partials in `src/scss` and its subdirectories are **not** meant to b
 * `src/scss/master.scss` – see [Compiled CSS](#compiled-css)
 * `src/scss/project/_settings.scss` – see [Settings](#settings)
 * `src/scss/project/_variables.scss` – see [Overriding defaults](#overriding-defaults)
+* `src/scss/project/_fonts.scss` – see [SCSS docs](scss.md#project)
 * partials in `src/scss/modules` – add project-specific global styles to `_global.scss`, create new partials for project-specific modules
 
 ## Overriding defaults

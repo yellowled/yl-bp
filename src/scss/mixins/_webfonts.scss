@@ -1,0 +1,32 @@
+// SELF-HOSTED WEBFONTS
+// --------------------------------------------------------------------
+// Defaults
+$font-path:     '../fonts' !default;
+
+
+// For modern browsers
+@mixin webfont($family, $src, $style: normal, $weight: normal, $path: $font-path) {
+	@font-face {
+		font-family: $family;
+		src: url('#{$path}/#{$src}.woff2') format('woff2'),                   // new standards
+		     url('#{$path}/#{$src}.woff') format('woff'),                     // standards
+             url('#{$path}/#{$src}.ttf') format('truetype');                  // Safari, Android, iOS
+		font-style: $style;
+		font-weight: $weight;
+	}
+}
+
+// For legacy browsers
+@mixin legacy-webfont($family, $src, $style: normal, $weight: normal, $path: $font-path) {
+	@font-face {
+		font-family: $family;
+		src: url('#{$path}/#{$src}.eot');                                     // IE9 compat
+		src: url('#{$path}/#{$src}.eot?#iefix') format('embedded-opentype'),  // IE8 and below
+             url('#{$path}/#{$src}.woff2') format('woff2'),                   // new standards
+		     url('#{$path}/#{$src}.woff') format('woff'),                     // standards
+             url('#{$path}/#{$src}.ttf') format('truetype'),                  // Safari, Android, iOS
+             url('#{$path}/#{$src}.svg##{$family}') format('svg');            // legacy iOS
+		font-style: $style;
+		font-weight: $weight;
+	}
+}

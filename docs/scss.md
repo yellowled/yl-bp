@@ -8,6 +8,7 @@ Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains
 
 * `_settings.scss` – enable or disable parts of the partials included in the boilerplate by setting certain variables to `true` or `false`, depending on whether that part of the SCSS is being used
 * `_variables.scss` – project-specific constants or overrides for existing variables
+* `_fonts.scss` – project-specific SCSS for (self-hosted) [webfonts](https://github.com/yellowled/yl-bp/blob/master/src/scss/mixins/_webfonts.scss) should be added here to make sure it is included as early as possible in the compiled CSS
 
 ## `mixins/_mixins.scss`
 
@@ -24,6 +25,7 @@ Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains
 * `_tables.scss` – tables (simple, striped, responsive)
 * `_tabs.scss` – [tabs](http://frend.co/components/tabs/)
 * `_typography.scss` – ligatures, smart blockquotes
+* `_webfonts.scss` – self-hosted webfonts
 
 ## `base/_base.scss`
 

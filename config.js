@@ -41,6 +41,7 @@ module.exports = {
                     'robots.txt',
                     'apple-touch-icon.png',
                     'favicon.ico',
+                    'fonts/**/*',
                     'scripts/jquery/dist/jquery.min.js',
                     'scripts/jquery/dist/jquery.min.map'
               ],
