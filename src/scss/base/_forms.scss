@@ -21,7 +21,7 @@ $standard-buttons:      true !default;
         padding: 0;
     }
 
-    form button,
+    button,
     select,
     textarea,
     input {
@@ -144,7 +144,7 @@ $standard-buttons:      true !default;
 
     // Form buttons
     @if $standard-buttons {
-        form button,
+        button,
         input[type='button'],
         input[type='reset'],
         input[type='submit'] {
@@ -155,7 +155,7 @@ $standard-buttons:      true !default;
 
     // Disabled form elements
     @if $use-form-advanced {
-        form button[disabled],
+        button[disabled],
         select[disabled],
         select[disabled] option,
         select[disabled] optgroup,
