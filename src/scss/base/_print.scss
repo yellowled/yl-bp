@@ -31,6 +31,10 @@ $print-color:       #000 !default;
         content: '';
     }
 
+    pre {
+        white-space: pre-wrap !important;
+    }
+
     pre,
     blockquote {
         border: 1px solid $greyed-out;
