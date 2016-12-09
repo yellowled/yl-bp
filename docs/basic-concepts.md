@@ -1,6 +1,6 @@
-[← Back to TOC](TOC.md)
-
 # Basic concepts
+
+[← Back to TOC](index.md)
 
 ## HTML
 

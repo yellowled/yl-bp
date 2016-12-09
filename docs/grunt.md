@@ -1,6 +1,6 @@
-[← Back to TOC](TOC.md)
-
 # Grunt
+
+[← Back to TOC](index.md)
 
 `grunt` starts a watch task which sets up a development environment that by default
 

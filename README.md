@@ -1,6 +1,6 @@
 # yl-bp
 
-My HTML project boilerplate. Derived from [H5BP](https://github.com/h5bp/html5-boilerplate), inspired by [init](https://github.com/drublic/init).
+Derived from [H5BP](https://github.com/h5bp/html5-boilerplate), inspired by [init](https://github.com/drublic/init).
 
 [![Build Status](https://travis-ci.org/yellowled/yl-bp.svg?branch=master)](https://travis-ci.org/yellowled/yl-bp)
 [![Dependency Status](https://david-dm.org/yellowled/yl-bp.svg)](https://david-dm.org/yellowled/yl-bp)
@@ -8,19 +8,7 @@ My HTML project boilerplate. Derived from [H5BP](https://github.com/h5bp/html5-b
 
 ## Quickstart
 
-You'll need [node.js](http://nodejs.org) and [Grunt](http://gruntjs.com). Clone the repository, do `npm i` in the project directory and run `grunt` to start the build script. Please consult the [documentation](docs/TOC.md) for further details.
-
-### Get started
-
-* [Setting up](docs/setting-up.md)
-* [Basic concepts](docs/basic-concepts.md)
-* [SCSS concepts](docs/scss-concepts.md)
-
-### Components included
-
-* [Grunt](docs/grunt.md)
-* [SCSS](docs/scss.md)
-* [JavaScript](docs/javascript.md)
+You'll need [node.js](http://nodejs.org) and [Grunt](http://gruntjs.com). Clone the repository, do `npm i` in the project directory and run `grunt` to start the build script. Please consult the [documentation](https://yellowled.github.io/yl-bp/) for further details.
 
 ## License
 

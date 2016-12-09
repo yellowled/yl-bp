@@ -1,6 +1,6 @@
-[← Back to TOC](TOC.md)
-
 # SCSS concepts
+
+[← Back to TOC](index.md)
 
 This boilerplate uses Sass/SCSS to generate the CSS file, `src/styles/master.css`. SCSS is supposed to be written mobile-first based on [normalize.css](https://github.com/necolas/normalize.css/). As a workaround for IE < 9 which does not support media queries, `respond.js` can optionally be included in the `<head>` (from a CDN) using `src/includes/legacy/head.html`.
 

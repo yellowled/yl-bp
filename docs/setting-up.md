@@ -1,6 +1,6 @@
-[← Back to TOC](TOC.md)
-
 # Setting up
+
+[← Back to TOC](index.md)
 
 ## Requirements
 
