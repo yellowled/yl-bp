@@ -52,10 +52,6 @@ li {
     }
 }
 
-pre code {
-    font-size: 1em;
-}
-
 hr {
     border: 0;
     border-top: 1px solid $silver;
@@ -122,11 +118,18 @@ body {
     }
 }
 
-pre,
+pre {
+    font-size: .875rem;
+}
+
 code,
 samp,
 kbd {
-    font-size: .875rem;
+    font-size: .875em;
+
+    pre & {
+        font-size: 1em;
+    }
 }
 
 
