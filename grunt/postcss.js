@@ -52,7 +52,7 @@ module.exports = function(grunt) {
                 processors: [
                     require('stylelint')(),
                     require('postcss-reporter')({
-                        clearMessages: true
+                        clearReportedMessages: true
                     })
                 ]
             },
