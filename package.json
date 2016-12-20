@@ -61,7 +61,7 @@
         "postcss-flexbugs-fixes":   "^2.1.0",
         "postcss-reporter":         "^3.0.0",
         "postcss-scss":             "^0.4.0",
-        "stylelint":                "^7.6.0",
+        "stylelint":                "^7.7.0",
         "time-grunt":               "^1.4.0"
     }
 }
