@@ -8,7 +8,7 @@ Derived from [H5BP](https://github.com/h5bp/html5-boilerplate), inspired by [ini
 
 ## Quickstart
 
-You'll need [node.js](http://nodejs.org) and [Grunt](http://gruntjs.com). Clone the repository, do `npm i` in the project directory and run `grunt` to start the build script. Please consult the [documentation](https://yellowled.github.io/yl-bp/) for further details.
+You'll need [node.js](http://nodejs.org) and [Grunt](http://gruntjs.com). Clone the repository, do `npm i` in the project directory and run `grunt` to start the build script. Please consult the [documentation](docs/index.md) for further details.
 
 ## License
 

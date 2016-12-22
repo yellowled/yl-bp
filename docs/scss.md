@@ -1,6 +1,6 @@
 # SCSS
 
-[← Back to TOC](index.md)
+[← Back](index.md)
 
 Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains partials which are currently organized in three directories. Please also see [SCSS concepts](scss-concepts.md).
 

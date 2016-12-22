@@ -1,6 +1,6 @@
 # Setting up
 
-[← Back to TOC](index.md)
+[← Back](index.md)
 
 ## Requirements
 
@@ -15,10 +15,10 @@ Please refer to the documentation of your OS and/or the documentation of these r
 
 In the project directory:
 
-1. `npm install` (install [Grunt plugins](grunt.html#packages-included) required for build script and [JS assets](javascript.md) included in this boilerplate)
+1. `npm install` (install [Grunt plugins](grunt.md#packages-included) required for build script and [JS assets](javascript.md) included in this boilerplate)
 2. `grunt` (start build script with default task, which is starting a simple local webserver and running the `watch` task)
 
-[Additional Grunt tasks](grunt.html#additional-grunt-tasks) are available for testing and deploying code to staging and live servers.
+[Additional Grunt tasks](grunt.md#additional-grunt-tasks) are available for testing and deploying code to staging and live servers.
 
 ## Removing stuff
 

@@ -1,6 +1,6 @@
 # JavaScript
 
-[← Back to TOC](index.md)
+[← Back](index.md)
 
 Most of the JS assets are concatenated into a single file (`src/scripts/master.js`) by the build script. Any JS specific to the project should go into the `src/scripts/main.js` file.
 

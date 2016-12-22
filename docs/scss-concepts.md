@@ -1,6 +1,6 @@
 # SCSS concepts
 
-[← Back to TOC](index.md)
+[← Back](index.md)
 
 This boilerplate uses Sass/SCSS to generate the CSS file, `src/styles/master.css`. SCSS is supposed to be written mobile-first based on [normalize.css](https://github.com/necolas/normalize.css/). As a workaround for IE < 9 which does not support media queries, `respond.js` can optionally be included in the `<head>` (from a CDN) using `src/includes/legacy/head.html`.
 
@@ -9,7 +9,7 @@ Most of the partials in `src/scss` and its subdirectories are **not** meant to b
 * `src/scss/master.scss` – see [Compiled CSS](#compiled-css)
 * `src/scss/project/_settings.scss` – see [Settings](#settings)
 * `src/scss/project/_variables.scss` – see [Overriding defaults](#overriding-defaults)
-* `src/scss/project/_fonts.scss` – see [SCSS docs](scss.html#project)
+* `src/scss/project/_fonts.scss` – see [SCSS docs](scss.md#project)
 * partials in `src/scss/modules` – add project-specific global styles to `_global.scss`, create new partials for project-specific modules
 
 ## Overriding defaults
