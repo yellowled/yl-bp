@@ -13,11 +13,3 @@ $use-form-advanced: false;  // Advanced forms
 
 $use-msg-basic:     false;  // Basic messages
 $use-msg-extra:     false;  // Advanced messages
-
-
-// DEPENDENCIES – *DON'T* EDIT!
-// --------------------------------------------------------------------
-// Advanced form support requires basic form support
-@if $use-form-advanced {
-    $use-form-styles: true;
-}
