@@ -28,31 +28,33 @@
 // HDPI BACKGROUND IMAGES
 // --------------------------------------------------------------------
 // Defaults
-$hdpi:      'print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi)' !default;
+$hdpi:          'print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi)' !default;
+$hdpi-suffix:   '-2x';
+$img-path:      '../img/';
 
 
-@mixin hdpi-img($imgname, $imgwidth, $imgheight, $imgtype: 'png', $imgsize: contain) {
-    background: url('../img/#{$imgname}.#{$imgtype}') 0 0 no-repeat;
+@mixin hdpi-img($imgname, $imgwidth, $imgheight, $imgsize: contain, $imgtype: 'png', $path: $img-path) {
+    background: url('#{$path}#{$imgname}.#{$imgtype}') 0 0 no-repeat;
     background-size: $imgsize;
     height: $imgheight;
     width: $imgwidth;
 
     @media #{$hdpi} {
-        background-image: url('../img/#{$imgname}-2x.#{$imgtype}');
+        background-image: url('#{$path}#{$imgname}#{$hdpi-suffix}.#{$imgtype}');
     }
 }
 
-@mixin hdpi-svg($imgname, $imgwidth, $imgheight, $imgtype: 'png', $imgsize: contain) {
-    background: url('../img/#{$imgname}.svg') 0 0 no-repeat;
+@mixin hdpi-svg($imgname, $imgwidth, $imgheight, $imgsize: contain, $imgtype: 'png', $path: $img-path) {
+    background: url('#{$path}#{$imgname}.svg') 0 0 no-repeat;
     background-size: $imgsize;
     height: $imgheight;
     width: $imgwidth;
 
     .no-svg & {
-        background-image: url('../img/#{$imgname}.#{$imgtype}');
+        background-image: url('#{$path}#{$imgname}.#{$imgtype}');
 
         @media #{$hdpi} {
-            background-image: url('../img/#{$imgname}-2x.#{$imgtype}');
+            background-image: url('#{$path}#{$imgname}#{$hdpi-suffix}.#{$imgtype}');
         }
     }
 }

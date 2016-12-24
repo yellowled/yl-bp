@@ -3,6 +3,8 @@
 $full-font-features:    'frac' 1, 'kern' 1, 'swsh' 1 !default;
 $full-font-ligatures:   common-ligatures discretionary-ligatures historical-ligatures contextual !default;
 
+$quote-source:          '> cite' !default;
+
 
 // blog.fontdeck.com/post/15777165734/opentype-1
 @mixin ligatures($font-features: $full-font-features, $font-ligatures: $full-font-ligatures) {
@@ -66,8 +68,7 @@ $full-font-ligatures:   common-ligatures discretionary-ligatures historical-liga
     }
 
     // Quote source attribution
-    > cite,
-    > footer {
+    #{$quote-source} {
         display: block;
 
         &::before {
