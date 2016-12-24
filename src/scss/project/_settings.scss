@@ -1,27 +1,18 @@
 // PROJECT-SPECIFIC SETTINGS
 // --------------------------------------------------------------------
-// Helper classes
-$use-extra-classes: false;
+$use-extra-classes: false;  // Helper classes
 
-// responsive-nav.js
-$use-rnav-classes:  true;
+$use-rnav-classes:  true;   // responsive-nav.js
+$use-svg-sprites:   true;   // SVG sprites
 
-// SVG sprites
-$use-svg-sprites:   true;
+$use-cms-classes:   false;  // Image positioning
+$use-enable-js:     false;  // Enable JS
 
-// Image positioning
-$use-cms-classes:   false;
+$use-form-styles:   false;  // Basic forms
+$use-form-advanced: false;  // Advanced forms
 
-// Forms
-$use-form-styles:   false;
-$use-form-advanced: false;
-
-// Messages
-$use-msg-basic:     false;
-$use-msg-extra:     false;
-
-// Enable JS
-$use-enable-js:     false;
+$use-msg-basic:     false;  // Basic messages
+$use-msg-extra:     false;  // Advanced messages
 
 
 // DEPENDENCIES – *DON'T* EDIT!
