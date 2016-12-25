@@ -1,13 +1,15 @@
 // Process HTML includes
+var config = require('../config');
+
 module.exports = function(grunt) {
     grunt.config('processhtml', {
         options: {
-            includeBase: 'src/includes/'
+            includeBase: config.processhtml.base
         },
         dev: {
             files: [{
                 expand: true,
-                cwd: 'src/pages',
+                cwd: config.processhtml.cwd,
                 src: ['*.html'],
                 dest: 'src'
             }]
@@ -15,7 +17,7 @@ module.exports = function(grunt) {
         deploy: {
             files: [{
                 expand: true,
-                cwd: 'src/pages',
+                cwd: config.processhtml.cwd,
                 src: ['*.html'],
                 dest: 'dist'
             }]

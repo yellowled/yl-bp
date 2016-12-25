@@ -1,4 +1,6 @@
 // Compress files using gzip
+var config = require('../config');
+
 module.exports = function(grunt) {
     grunt.config('compress', {
         sitemap: {
@@ -9,8 +11,8 @@ module.exports = function(grunt) {
             files: [{
                 expand: true,
                 flatten: true,
-                src: ['src/sitemap.xml'],
-                dest: 'dist',
+                src: config.compress.src,
+                dest: config.compress.dest,
                 ext: '.xml.gz'
             }]
         }

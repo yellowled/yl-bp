@@ -21,6 +21,12 @@ module.exports = {
                     'src/styles'
                 ]
     },
+    compress: {
+        src:       [
+                    'src/sitemap.xml'
+                   ],
+        dest:       'dist'
+    },
     concat: {
         src: [
                     'node_modules/svg4everybody/dist/svg4everybody.js',
@@ -83,6 +89,10 @@ module.exports = {
         dev:        'src/styles',
         dest:       'dist/styles'
     },
+    processhtml: {
+        base:       'src/includes/',
+        cwd:        'src/pages'
+    },
     sass: {
         cwd:        'src/scss',
         dest:       'src/styles',
@@ -110,5 +120,15 @@ module.exports = {
     },
     uglify: {
         dest:       'dist/scripts/master.js'
+    },
+    watch: {
+        html:      [
+                    'src/pages/*.html',
+                    'src/includes/*.html',
+                    'src/includes/legacy/*.html'
+                   ],
+        js:         'src/scripts/main.js',
+        scss:       'src/scss/**/*.scss',
+        svg:        'src/icons/*.svg'
     }
 };
