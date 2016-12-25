@@ -16,6 +16,8 @@
     "doctype-html5": true,
     "id-class-value": true,
     "style-disabled": true,
+    "inline-style-disabled": true,
+    "inline-script-disabled": true,
     "space-tab-mixed-disabled": true,
     "id-class-ad-disabled": true,
     "href-abs-or-rel": false,
