@@ -10,6 +10,13 @@ Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains
 * `_variables.scss` – project-specific constants or overrides for existing variables
 * `_fonts.scss` – project-specific SCSS for (self-hosted) [webfonts](https://github.com/yellowled/yl-bp/blob/master/src/scss/mixins/_webfonts.scss) should be added here to make sure it is included as early as possible in the compiled CSS
 
+## `presets/_presets.scss`
+
+* `_breakpoints.scss` – sensible default breakpoints
+* `_font-stacks.scss` – predefined font stacks
+* `_type-rhythm.scss` – base values for establishing a typographic rhythm
+* `_colors.scss` – a nicer web color palette
+
 ## `mixins/_mixins.scss`
 
 * `_accordion.scss` – [accordion](http://frend.co/components/accordion/)
@@ -36,9 +43,7 @@ Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains
 * `_navigation.scss` – required by [reponsive-nav.js](http://responsive-nav.com/)
 * `_print.scss` – basic print styles
 
-In `base`, there's also `_constants.scss`, which contains overrideable constants for  `@media` queries, typography and colors. It has been placed in `base` to keep it in a directory with files that are not meant to be edited.
-
-All partials in `mixins/_mixins.scss` and `base/_base.scss` should *always* be included in `master.scss`. Most of them contain SCSS that does not emit CSS unless explicity used (extends, mixins and functions). The code emitted by some partials in `base` can be tweaked in `settings/_settings.scss`. The exceptions are `_normalize.scss`, `_base.scss` and `_print.scss` which contain CSS which will *always* be useful.
+All partials in `presets/_presets.scss`, `mixins/_mixins.scss` and `base/_base.scss` should *always* be included in `master.scss`. Most of them contain SCSS that does not emit CSS unless explicity used (extends, mixins and functions). The code emitted by some partials in `base` can be tweaked in `settings/_settings.scss`. The exceptions are `_normalize.scss`, `_base.scss` and `_print.scss` which contain CSS which will *always* be useful.
 
 ## `modules`
 
