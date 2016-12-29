@@ -36,7 +36,7 @@ Apart from the main SCSS file (`master.scss`), the `src/scss` directory contains
 
 ## `base/_base.scss`
 
-* `defaults.scss` – useful base styles not covered by normalize – styles that are not set there because they are “too design-related”, yet used very often – as well as styles needed for the [Enable JS](http://www.enable-javascript.com) hint
+* `_defaults.scss` – useful base styles not covered by normalize – styles that are not set there because they are “too design-related”, yet used very often – as well as styles needed for the [Enable JS](http://www.enable-javascript.com) hint
 * `_forms.scss` – styles are heavily inspired by [Formalize](http://formalize.me/)
 * `_images.scss` – image positioning classes usually used by CMS/WYSIWYG editors
 * `_messages.scss` – message classes
@@ -47,4 +47,4 @@ All partials in `presets/_presets.scss`, `mixins/_mixins.scss` and `base/_base.s
 
 ## `modules`
 
-This is the part of the SCSS where “actual work is done”, meaning it's where SCSS is actually being written using a modular approach. Apart from `modules/_global.scss` which is really just a placeholder, partials for every project-specific module are supposed to be created and included here.
+This is the part of the SCSS where “the actual work is done”, meaning it's where SCSS is actually being written using a modular approach. Apart from `modules/_global.scss` which is really just a placeholder, partials for every project-specific module are supposed to be created and included here.
