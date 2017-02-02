@@ -2,13 +2,6 @@
 // --------------------------------------------------------------------
 // Defaults
 $selection-bg:      #b3d4fc !default;
-$hint-bg:           $silver !default;
-$hint-fg:           $off-black !default;
-
-$helper-vh-class:   sr-only !default;
-$helper-cf-class:   clearfix !default;
-$helper-js-class:   enable-js !default;
-
 $primary-font:      $default-sans !default;
 
 
@@ -157,51 +150,5 @@ p {
     samp,
     kbd {
         hyphens: none;
-    }
-}
-
-
-// EXTENDS/INCLUDES
-// --------------------------------------------------------------------
-video,
-img {
-    @include responsive-media;
-}
-
-
-// HELPER CLASSES
-// --------------------------------------------------------------------
-@if $use-extra-classes {
-    .#{$helper-vh-class} {
-        @include visuallyhidden;
-    }
-
-    .#{$helper-cf-class} {
-        @include clearfix;
-    }
-}
-
-
-// ENABLE JS HINT
-// --------------------------------------------------------------------
-@if $use-enable-js {
-    .#{$helper-js-class} {
-        background: $hint-bg;
-        color: $hint-fg;
-        left: 0;
-        margin: 0;
-        padding: 4px;
-        position: absolute;
-        text-align: center;
-        top: 0;
-        width: 100%;
-
-        .js & {
-            @include hidden;
-        }
-    }
-
-    .no-js {
-        padding-top: 32px;
     }
 }
