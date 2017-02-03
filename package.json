@@ -62,6 +62,7 @@
         "postcss-reporter":         "^3.0.0",
         "postcss-scss":             "^0.4.0",
         "stylelint":                "^7.8.0",
+        "stylelint-order":          "^0.2.2",
         "time-grunt":               "^1.4.0"
     }
 }

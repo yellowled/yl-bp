@@ -1,4 +1,7 @@
 {
+    "plugins": [
+        "stylelint-order"
+    ],
     "rules": {
         "at-rule-name-space-after": "always",
         "at-rule-no-unknown": [true, {
@@ -36,6 +39,7 @@
         "number-leading-zero": "never",
         "number-max-precision": 5,
         "number-no-trailing-zeros": true,
+        "order/declaration-block-properties-alphabetical-order": true,
         "property-case": "lower",
         "property-no-unknown": true,
         "selector-attribute-brackets-space-inside": "never",
