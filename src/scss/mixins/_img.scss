@@ -13,7 +13,7 @@
 // apply to container element; remove width/height from svg
 @mixin responsive-svg($svg-width, $svg-height, $container-width: 100%) {
     height: 0;
-    padding-top: ($svg-height/$svg-width) * $container-width;
+    padding-top: ($svg-height / $svg-width) * $container-width;
     position: relative;
     width: $container-width;
 

@@ -1,6 +1,7 @@
 {
     "plugins": [
-        "stylelint-order"
+        "stylelint-order",
+        "stylelint-scss"
     ],
     "rules": {
         "at-rule-name-space-after": "always",
@@ -42,6 +43,11 @@
         "order/declaration-block-properties-alphabetical-order": true,
         "property-case": "lower",
         "property-no-unknown": true,
+        "scss/at-extend-no-missing-placeholder": true,
+        "scss/at-import-no-partial-leading-underscore": true,
+        "scss/double-slash-comment-whitespace-inside": "always",
+        "scss/operator-no-unspaced": true,
+        "scss/selector-no-redundant-nesting-selector": true,
         "selector-attribute-brackets-space-inside": "never",
         "selector-attribute-operator-space-after": "never",
         "selector-attribute-operator-space-before": "never",
