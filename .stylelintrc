@@ -40,7 +40,7 @@
         "number-leading-zero": "never",
         "number-max-precision": 5,
         "number-no-trailing-zeros": true,
-        "order/declaration-block-properties-alphabetical-order": true,
+        "order/properties-alphabetical-order": true,
         "property-case": "lower",
         "property-no-unknown": true,
         "scss/at-extend-no-missing-placeholder": true,
