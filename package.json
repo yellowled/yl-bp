@@ -25,7 +25,7 @@
         "fr-accordion":             "^1.0.6",
         "fr-tabs":                  "^1.0.6",
         "lazysizes":                "^3.0.0",
-        "jquery":                   "^3.1.1",
+        "jquery":                   "^3.2.0",
         "magnific-popup":           "^1.1.0",
         "node-normalize-scss":      "^1.4.0",
         "respimage":                "^1.4.2",
