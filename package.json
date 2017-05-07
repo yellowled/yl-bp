@@ -27,7 +27,7 @@
         "lazysizes":                "^3.0.0",
         "jquery":                   "^3.2.1",
         "magnific-popup":           "^1.1.0",
-        "node-normalize-scss":      "^2.0.0",
+        "node-normalize-scss":      "^3.0.0",
         "respimage":                "^1.4.2",
         "responsive-nav":           "^1.0.39",
         "slick-carousel":           "^1.6.0",
