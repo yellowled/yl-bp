@@ -60,7 +60,7 @@
         "pixrem":                   "^3.0.2",
         "postcss-flexbugs-fixes":   "^2.1.1",
         "postcss-reporter":         "^3.0.0",
-        "postcss-scss":             "^0.4.1",
+        "postcss-scss":             "^1.0.0",
         "stylelint":                "^7.10.1",
         "stylelint-order":          "^0.4.4",
         "stylelint-scss":           "^1.4.4",
