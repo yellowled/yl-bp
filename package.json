@@ -34,8 +34,8 @@
         "svg4everybody":            "^2.1.8"
     },
     "devDependencies":  {
-        "autoprefixer":             "^7.0.1",
-        "browser-sync":             "^2.18.8",
+        "autoprefixer":             "^7.1.0",
+        "browser-sync":             "^2.18.11",
         "css-mqpacker":             "^6.0.0",
         "cssnano":                  "^3.10.0",
         "grunt":                    "^1.0.1",
@@ -46,7 +46,7 @@
         "grunt-contrib-copy":       "^1.0.0",
         "grunt-contrib-imagemin":   "^1.0.1",
         "grunt-contrib-jshint":     "^1.1.0",
-        "grunt-contrib-uglify":     "^2.3.0",
+        "grunt-contrib-uglify":     "^3.0.0",
         "grunt-contrib-watch":      "^1.0.0",
         "grunt-htmlhint":           "^0.9.13",
         "grunt-modernizr":          "^1.0.2",
