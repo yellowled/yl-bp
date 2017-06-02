@@ -1,69 +1,69 @@
 {
-    "name":         "yl-bp",
-    "description":  "HTML project boilerplate",
-    "version":      "3.1.6",
-    "homepage":     "https://github.com/yellowled/yl-bp",
+    "name": "yl-bp",
+    "description": "HTML project boilerplate",
+    "version": "3.1.6",
+    "homepage": "https://github.com/yellowled/yl-bp",
     "author": {
-        "name":     "Matthias Mees",
-        "url":      "http://yellowled.de"
+        "name": "Matthias Mees",
+        "url": "http://yellowled.de"
     },
-    "license":      "MIT",
+    "license": "MIT",
     "repository": {
-        "type":     "git",
-        "url":      "git://github.com/yellowled/yl-bp.git"
+        "type": "git",
+        "url": "git://github.com/yellowled/yl-bp.git"
     },
     "bugs": {
-        "url":      "https://github.com/yellowled/yl-bp/issues"
+        "url": "https://github.com/yellowled/yl-bp/issues"
     },
     "engines": {
-        "node":     ">=4.0.0"
+        "node": ">=4.0.0"
     },
     "scripts": {
-        "postinstall":  "grunt copy:init"
+        "postinstall": "grunt copy:init"
     },
     "dependencies": {
-        "fr-accordion":             "^1.0.6",
-        "fr-tabs":                  "^1.0.6",
-        "lazysizes":                "^3.0.0",
-        "jquery":                   "^3.2.1",
-        "magnific-popup":           "^1.1.0",
-        "node-normalize-scss":      "^3.0.0",
-        "respimage":                "^1.4.2",
-        "responsive-nav":           "^1.0.39",
-        "slick-carousel":           "^1.6.0",
-        "svg4everybody":            "^2.1.8"
+        "fr-accordion": "^1.0.6",
+        "fr-tabs": "^1.0.6",
+        "lazysizes": "^3.0.0",
+        "jquery": "^3.2.1",
+        "magnific-popup": "^1.1.0",
+        "node-normalize-scss": "^3.0.0",
+        "respimage": "^1.4.2",
+        "responsive-nav": "^1.0.39",
+        "slick-carousel": "^1.6.0",
+        "svg4everybody": "^2.1.8"
     },
-    "devDependencies":  {
-        "autoprefixer":             "^7.1.1",
-        "browser-sync":             "^2.18.12",
-        "css-mqpacker":             "^6.0.0",
-        "cssnano":                  "^3.10.0",
-        "grunt":                    "^1.0.1",
-        "grunt-cache-bust":         "^1.5.1",
-        "grunt-contrib-clean":      "^1.1.0",
-        "grunt-contrib-compress":   "^1.4.3",
-        "grunt-contrib-concat":     "^1.0.1",
-        "grunt-contrib-copy":       "^1.0.0",
-        "grunt-contrib-imagemin":   "^1.0.1",
-        "grunt-contrib-jshint":     "^1.1.0",
-        "grunt-contrib-uglify":     "^3.0.1",
-        "grunt-contrib-watch":      "^1.0.0",
-        "grunt-htmlhint":           "^0.9.13",
-        "grunt-modernizr":          "^1.0.2",
-        "grunt-postcss":            "^0.8.0",
-        "grunt-processhtml":        "^0.4.1",
-        "grunt-sass":               "^2.0.0",
-        "grunt-sitemap":            "^1.2.1",
-        "grunt-svgmin":             "^4.0.0",
-        "grunt-svgstore":           "^1.0.0",
-        "jit-grunt":                "^0.10.0",
-        "pixrem":                   "^3.0.2",
-        "postcss-flexbugs-fixes":   "^3.0.0",
-        "postcss-reporter":         "^3.0.0",
-        "postcss-scss":             "^1.0.0",
-        "stylelint":                "^7.10.1",
-        "stylelint-order":          "^0.4.4",
-        "stylelint-scss":           "^1.4.4",
-        "time-grunt":               "^1.4.0"
+    "devDependencies": {
+        "autoprefixer": "^7.1.1",
+        "browser-sync": "^2.18.12",
+        "css-mqpacker": "^6.0.1",
+        "cssnano": "^3.10.0",
+        "grunt": "^1.0.1",
+        "grunt-cache-bust": "^1.5.1",
+        "grunt-contrib-clean": "^1.1.0",
+        "grunt-contrib-compress": "^1.4.3",
+        "grunt-contrib-concat": "^1.0.1",
+        "grunt-contrib-copy": "^1.0.0",
+        "grunt-contrib-imagemin": "^1.0.1",
+        "grunt-contrib-jshint": "^1.1.0",
+        "grunt-contrib-uglify": "^3.0.1",
+        "grunt-contrib-watch": "^1.0.0",
+        "grunt-htmlhint": "^0.9.13",
+        "grunt-modernizr": "^1.0.2",
+        "grunt-postcss": "^0.8.0",
+        "grunt-processhtml": "^0.4.1",
+        "grunt-sass": "^2.0.0",
+        "grunt-sitemap": "^1.2.1",
+        "grunt-svgmin": "^4.0.0",
+        "grunt-svgstore": "^1.0.0",
+        "jit-grunt": "^0.10.0",
+        "pixrem": "^3.0.2",
+        "postcss-flexbugs-fixes": "^3.0.0",
+        "postcss-reporter": "^3.0.0",
+        "postcss-scss": "^1.0.0",
+        "stylelint": "^7.10.1",
+        "stylelint-order": "^0.4.4",
+        "stylelint-scss": "^1.4.4",
+        "time-grunt": "^1.4.0"
     }
 }
