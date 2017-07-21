@@ -24,18 +24,18 @@
     "dependencies": {
         "fr-accordion": "~1.0.6",
         "fr-tabs": "~1.0.6",
-        "lazysizes": "~3.0.0",
         "jquery": "~3.2.1",
+        "lazysizes": "~3.0.0",
         "magnific-popup": "~1.1.0",
         "node-normalize-scss": "~3.0.0",
         "respimage": "~1.4.2",
         "responsive-nav": "~1.0.39",
         "slick-carousel": "~1.6.0",
-        "svg4everybody": "~2.1.8"
+        "svg4everybody": "^2.1.9"
     },
     "devDependencies": {
         "autoprefixer": "~7.1.2",
-        "browser-sync": "~2.18.12",
+        "browser-sync": "~2.18.13",
         "css-mqpacker": "~6.0.1",
         "cssnano": "~3.10.0",
         "grunt": "~1.0.1",
