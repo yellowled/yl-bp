@@ -35,7 +35,7 @@
     },
     "devDependencies": {
         "autoprefixer": "~7.1.2",
-        "browser-sync": "~2.18.13",
+        "browser-sync": "^2.18.13",
         "css-mqpacker": "~6.0.1",
         "cssnano": "~3.10.0",
         "grunt": "~1.0.1",
@@ -58,12 +58,12 @@
         "grunt-svgstore": "~1.0.0",
         "jit-grunt": "~0.10.0",
         "pixrem": "~4.0.1",
-        "postcss-flexbugs-fixes": "~3.0.0",
-        "postcss-reporter": "~5.0.0",
+        "postcss-flexbugs-fixes": "^3.2.0",
+        "postcss-reporter": "^5.0.0",
         "postcss-scss": "~1.0.2",
         "stylelint": "~8.0.0",
         "stylelint-order": "~0.6.0",
-        "stylelint-scss": "~2.0.0",
+        "stylelint-scss": "^2.0.0",
         "time-grunt": "~1.4.0"
     }
 }
