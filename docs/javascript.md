@@ -6,13 +6,13 @@ Most of the JS assets are concatenated into a single file (`src/scripts/master.j
 
 ## jQuery plugins included
 
+* [jquery-accessible-accordion-aria](https://github.com/nico3333fr/jquery-accessible-accordion-aria)
+* [jquery-accessible-tabs-aria](https://github.com/nico3333fr/jquery-accessible-tabs-aria)
 * [MagnificPopup](https://github.com/dimsemenov/Magnific-Popup)
 * [slick](https://github.com/kenwheeler/slick)
 
 ## JS plugins included
 
-* [jquery-accessible-accordion-aria](https://github.com/nico3333fr/jquery-accessible-accordion-aria)
-* [jquery-accessible-tabs-aria](https://github.com/nico3333fr/jquery-accessible-tabs-aria)
 * [lazysizes](https://github.com/aFarkas/lazysizes)
 * [respimage](https://github.com/aFarkas/respimage)
 * [Responsive Nav](https://github.com/viljamis/responsive-nav.js)
