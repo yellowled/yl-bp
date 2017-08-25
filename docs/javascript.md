@@ -12,7 +12,7 @@ Most of the JS assets are concatenated into a single file (`src/scripts/master.j
 ## JS plugins included
 
 * [fr-accordion](https://github.com/frend/frend.co/tree/gh-pages/_components/accordion)
-* [fr-tabs](https://github.com/frend/frend.co/tree/gh-pages/_components/tabs)
+* [jquery-accessible-tabs-aria](https://github.com/nico3333fr/jquery-accessible-tabs-aria)
 * [lazysizes](https://github.com/aFarkas/lazysizes)
 * [respimage](https://github.com/aFarkas/respimage)
 * [Responsive Nav](https://github.com/viljamis/responsive-nav.js)

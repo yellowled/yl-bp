@@ -35,7 +35,7 @@ module.exports = {
                     'node_modules/responsive-nav/responsive-nav.js',
                     'node_modules/magnific-popup/dist/jquery.magnific-popup.js',
                     'node_modules/slick-carousel/slick/slick.js',
-                    'node_modules/fr-tabs/dist/frtabs.min.js',
+                    'node_modules/jquery-accessible-tabpanel-aria/jquery-accessible-tabs.js',
                     'node_modules/fr-accordion/dist/fraccordion.min.js',
                     'src/scripts/main.js'
               ],
