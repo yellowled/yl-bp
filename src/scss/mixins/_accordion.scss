@@ -1,30 +1,26 @@
 // TABS
 // frend.co/components/accordion/
 // --------------------------------------------------------------------
+//
+// Defaults
+$suffix-panel:      panel!default;
+$suffix-header:     header!default;
+
+
 @mixin accordion {
-    [aria-hidden='true'] {
-        height: 0;
-        visibility: hidden;
+    &-#{$suffix-panel}[aria-hidden='true'] {
+        display: none;
     }
 
-    [aria-hidden='false'] {
-        visibility: visible;
-    }
-}
+    &-#{$suffix-header} {
+        display: block;
 
-@mixin accordion-header {
-    .js & {
-        cursor: pointer;
-    }
-}
+        &[aria-expanded="true"]:before {
+            content: "- ";
+        }
 
-@mixin accordion-panel($panel-fade: true, $panel-fade-time: 200ms, $panel-fade-effect: linear) {
-    .js & {
-        overflow: hidden;
-
-        @if $panel-fade {
-            transition: height $panel-fade-time $panel-fade-effect,
-                visibility $panel-fade-time;
+        &[aria-expanded="false"]:before {
+            content: "+ ";
         }
     }
 }
