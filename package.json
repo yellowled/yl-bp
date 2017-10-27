@@ -25,7 +25,7 @@
         "jquery": "~3.2.1",
         "jquery-accessible-accordion-aria": "~2.4.4",
         "jquery-accessible-tabpanel-aria": "~1.6.0",
-        "lazysizes": "~3.0.0",
+        "lazysizes": "~4.0.1",
         "magnific-popup": "~1.1.0",
         "node-normalize-scss": "~3.0.0",
         "respimage": "~1.4.2",
