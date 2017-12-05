@@ -3,8 +3,8 @@
 // --------------------------------------------------------------------
 //
 // Defaults
-$suffix-panel:      panel!default;
-$suffix-header:     header!default;
+$suffix-panel:      panel !default;
+$suffix-header:     header !default;
 
 
 @mixin accordion {
@@ -15,12 +15,12 @@ $suffix-header:     header!default;
     &-#{$suffix-header} {
         display: block;
 
-        &[aria-expanded="true"]:before {
-            content: "- ";
+        &[aria-expanded='true']::before {
+            content: '- ';
         }
 
-        &[aria-expanded="false"]:before {
-            content: "+ ";
+        &[aria-expanded='false']::before {
+            content: '+ ';
         }
     }
 }
