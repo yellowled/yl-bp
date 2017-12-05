@@ -34,7 +34,7 @@
         "svg4everybody": "~2.1.9"
     },
     "devDependencies": {
-        "autoprefixer": "~7.1.6",
+        "autoprefixer": "^7.2.1",
         "browser-sync": "~2.18.13",
         "css-mqpacker": "~6.0.1",
         "cssnano": "~3.10.0",
@@ -46,7 +46,7 @@
         "grunt-contrib-copy": "~1.0.0",
         "grunt-contrib-imagemin": "~2.0.1",
         "grunt-contrib-jshint": "~1.1.0",
-        "grunt-contrib-uglify": "~3.1.0",
+        "grunt-contrib-uglify": "^3.2.1",
         "grunt-contrib-watch": "~1.0.0",
         "grunt-htmlhint": "~0.9.13",
         "grunt-modernizr": "~1.0.2",
@@ -54,16 +54,16 @@
         "grunt-processhtml": "~0.4.1",
         "grunt-sass": "~2.0.0",
         "grunt-sitemap": "~1.2.1",
-        "grunt-svgmin": "~4.0.0",
+        "grunt-svgmin": "^5.0.0",
         "grunt-svgstore": "~1.0.0",
         "jit-grunt": "~0.10.0",
         "pixrem": "~4.0.1",
         "postcss-flexbugs-fixes": "~3.2.0",
         "postcss-reporter": "~5.0.0",
         "postcss-scss": "~1.0.2",
-        "stylelint": "~8.2.0",
+        "stylelint": "^8.3.1",
         "stylelint-order": "~0.7.0",
-        "stylelint-scss": "~2.1.0",
+        "stylelint-scss": "^2.2.0",
         "time-grunt": "~1.4.0"
     }
 }
