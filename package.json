@@ -16,7 +16,7 @@
         "url": "https://github.com/yellowled/yl-bp/issues"
     },
     "engines": {
-        "node": ">=4.0.0"
+        "node": ">=8.0.0"
     },
     "scripts": {
         "postinstall": "grunt copy:init"
@@ -35,7 +35,7 @@
     },
     "devDependencies": {
         "autoprefixer": "~7.2.3",
-        "browser-sync": "~2.18.13",
+        "browser-sync": "~2.23.1",
         "css-mqpacker": "~6.0.1",
         "cssnano": "~3.10.0",
         "grunt": "~1.0.1",
@@ -46,7 +46,7 @@
         "grunt-contrib-copy": "~1.0.0",
         "grunt-contrib-imagemin": "~2.0.1",
         "grunt-contrib-jshint": "~1.1.0",
-        "grunt-contrib-uglify": "~3.2.1",
+        "grunt-contrib-uglify": "~3.3.0",
         "grunt-contrib-watch": "~1.0.0",
         "grunt-htmlhint": "~0.9.13",
         "grunt-modernizr": "~1.0.2",
