@@ -23,7 +23,7 @@
     },
     "dependencies": {
         "jquery": "~3.2.1",
-        "jquery-accessible-accordion-aria": "~2.5.1",
+        "jquery-accessible-accordion-aria": "~2.5.2",
         "jquery-accessible-tabpanel-aria": "~1.6.1",
         "lazysizes": "~4.0.1",
         "magnific-popup": "~1.1.0",
@@ -34,8 +34,8 @@
         "svg4everybody": "~2.1.9"
     },
     "devDependencies": {
-        "autoprefixer": "~7.2.3",
-        "browser-sync": "~2.23.1",
+        "autoprefixer": "~7.2.4",
+        "browser-sync": "~2.23.3",
         "css-mqpacker": "~6.0.1",
         "cssnano": "~3.10.0",
         "grunt": "~1.0.1",
@@ -60,7 +60,7 @@
         "pixrem": "~4.0.1",
         "postcss-flexbugs-fixes": "~3.2.0",
         "postcss-reporter": "~5.0.0",
-        "postcss-scss": "~1.0.2",
+        "postcss-scss": "~1.0.3",
         "stylelint": "~8.4.0",
         "stylelint-order": "~0.8.0",
         "stylelint-scss": "~2.2.0",
