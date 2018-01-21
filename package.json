@@ -22,7 +22,7 @@
         "postinstall": "grunt copy:init"
     },
     "dependencies": {
-        "jquery": "~3.2.1",
+        "jquery": "~3.3.1",
         "jquery-accessible-accordion-aria": "~2.5.2",
         "jquery-accessible-tabpanel-aria": "~1.6.1",
         "lazysizes": "~4.0.1",
