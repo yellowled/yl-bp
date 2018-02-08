@@ -35,10 +35,10 @@
     },
     "devDependencies": {
         "autoprefixer": "~7.2.5",
-        "browser-sync": "~2.23.5",
-        "css-mqpacker": "~6.0.1",
+        "browser-sync": "~2.23.6",
+        "css-mqpacker": "~6.0.2",
         "cssnano": "~3.10.0",
-        "grunt": "~1.0.1",
+        "grunt": "~1.0.2",
         "grunt-cache-bust": "~1.6.0",
         "grunt-contrib-clean": "~1.1.0",
         "grunt-contrib-compress": "~1.4.3",
@@ -52,7 +52,7 @@
         "grunt-modernizr": "~1.0.2",
         "grunt-postcss": "~0.9.0",
         "grunt-processhtml": "~0.4.1",
-        "grunt-sass": "~2.0.0",
+        "grunt-sass": "~2.1.0",
         "grunt-sitemap": "~1.2.1",
         "grunt-svgmin": "~5.0.0",
         "grunt-svgstore": "~1.0.0",
@@ -63,7 +63,7 @@
         "postcss-scss": "~1.0.3",
         "stylelint": "~8.4.0",
         "stylelint-order": "~0.8.0",
-        "stylelint-scss": "~2.2.0",
+        "stylelint-scss": "~2.3.0",
         "time-grunt": "~1.4.0"
     }
 }
