@@ -34,7 +34,7 @@
         "svg4everybody": "~2.1.9"
     },
     "devDependencies": {
-        "autoprefixer": "~7.2.5",
+        "autoprefixer": "~8.0.0",
         "browser-sync": "~2.23.6",
         "css-mqpacker": "~6.0.2",
         "cssnano": "~3.10.0",
