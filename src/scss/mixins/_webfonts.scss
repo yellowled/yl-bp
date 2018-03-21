@@ -11,8 +11,8 @@ $font-path:     '../fonts/' !default;
         font-style: $style;
         font-weight: $weight;
         src: url('#{$path}#{$src}.woff2') format('woff2'),                   // new standards
-		     url('#{$path}#{$src}.woff') format('woff'),                     // standards
-             url('#{$path}#{$src}.ttf') format('truetype');                  // Safari, Android, iOS
+            url('#{$path}#{$src}.woff') format('woff'),                     // standards
+            url('#{$path}#{$src}.ttf') format('truetype');                  // Safari, Android, iOS
     }
 }
 
@@ -24,9 +24,9 @@ $font-path:     '../fonts/' !default;
         font-weight: $weight;
         src: url('#{$path}#{$src}.eot');                                     // IE9 compat
         src: url('#{$path}#{$src}.eot?#iefix') format('embedded-opentype'),  // IE8 and below
-             url('#{$path}#{$src}.woff2') format('woff2'),                   // new standards
-		     url('#{$path}#{$src}.woff') format('woff'),                     // standards
-             url('#{$path}#{$src}.ttf') format('truetype'),                  // Safari, Android, iOS
-             url('#{$path}#{$src}.svg##{$family}') format('svg');            // legacy iOS
+            url('#{$path}#{$src}.woff2') format('woff2'),                   // new standards
+            url('#{$path}#{$src}.woff') format('woff'),                     // standards
+            url('#{$path}#{$src}.ttf') format('truetype'),                  // Safari, Android, iOS
+            url('#{$path}#{$src}.svg##{$family}') format('svg');            // legacy iOS
     }
 }
