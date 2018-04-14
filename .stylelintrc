@@ -74,6 +74,6 @@
         "time-min-milliseconds": 100,
         "unit-case": "lower",
         "unit-no-unknown": true,
-        "value-list-max-empty-lines": 0,
+        "value-list-max-empty-lines": 0
     }
 }
