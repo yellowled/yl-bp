@@ -52,6 +52,7 @@
         "scss/at-import-no-partial-leading-underscore": true,
         "scss/at-mixin-parentheses-space-before": "never",
         "scss/double-slash-comment-whitespace-inside": "always",
+        "scss/no-duplicate-dollar-variables": true,
         "scss/operator-no-unspaced": true,
         "scss/selector-no-redundant-nesting-selector": true,
         "selector-attribute-brackets-space-inside": "never",
