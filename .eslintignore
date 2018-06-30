@@ -1,0 +1,4 @@
+dist/**/*.js
+node_modules/**/*.js
+src/js/*
+bs-config.js

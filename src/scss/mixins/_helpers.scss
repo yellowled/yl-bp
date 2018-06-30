@@ -1,4 +1,4 @@
-// HIDE ELEMENTS
+// HELPERS
 // --------------------------------------------------------------------
 // Hide only visually, but have it available for screenreaders
 @mixin visuallyhidden {
@@ -26,24 +26,7 @@
     width: auto;
 }
 
-// Hide visually and from screenreaders, but maintain layout
-// (also useful for lazy-hiding items which require JS)
-@mixin invisible {
-    visibility: hidden;
-
-    .no-js & {
-        visibility: visible;
-    }
-}
-
-// Hide from both screenreaders and browsers
-@mixin hidden {
-    display: none !important;
-}
-
-
-// CLEARFIX
-// --------------------------------------------------------------------
+// Clearfix
 @mixin clearfix {
     &::before,
     &::after {
@@ -53,21 +36,5 @@
 
     &::after {
         clear: both;
-    }
-}
-
-
-// IMAGE REPLACEMENT
-// --------------------------------------------------------------------
-@mixin ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-
-    &::before {
-        content: '';
-        display: block;
-        height: 150%;
-        width: 0;
     }
 }

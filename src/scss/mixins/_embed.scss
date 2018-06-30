@@ -1,9 +1,5 @@
-// RESPONSIVE MEDIA OBJECTS
+// RESPONSIVE MEDIA OBJECTS, github.com/suitcss/components-flex-embed
 // --------------------------------------------------------------------
-// github.com/suitcss/components-flex-embed
-// getbootstrap.com/components/#responsive-embed
-//
-// Usage: apply mixin to an element containing a media object
 @mixin responsive-object($ratio: 16by9) {
     display: block;
     height: 0;
@@ -13,7 +9,9 @@
 
     @if $ratio == 16by9 {
         padding-bottom: 56.25%;
-    } @else if $ratio == 4by3 {
+    }
+
+    @else if $ratio == 4by3 {
         padding-bottom: 75%;
     }
 

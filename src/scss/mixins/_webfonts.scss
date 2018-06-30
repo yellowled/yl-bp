@@ -1,32 +1,39 @@
 // SELF-HOSTED WEBFONTS
 // --------------------------------------------------------------------
-// Defaults
 $font-path:     '../fonts/' !default;
 
-
-// For modern browsers
 @mixin webfont($family, $src, $style: normal, $weight: normal, $path: $font-path) {
     @font-face {
         font-family: $family;
         font-style: $style;
         font-weight: $weight;
-        src: url('#{$path}#{$src}.woff2') format('woff2'),                   // new standards
-            url('#{$path}#{$src}.woff') format('woff'),                     // standards
-            url('#{$path}#{$src}.ttf') format('truetype');                  // Safari, Android, iOS
+        src:
+            // new standards
+            url('#{$path}#{$src}.woff2') format('woff2'),
+            // standards
+            url('#{$path}#{$src}.woff') format('woff'),
+            // Safari, Android, iOS
+            url('#{$path}#{$src}.ttf') format('truetype');
     }
 }
 
-// For legacy browsers
 @mixin legacy-webfont($family, $src, $style: normal, $weight: normal, $path: $font-path) {
     @font-face {
         font-family: $family;
         font-style: $style;
         font-weight: $weight;
-        src: url('#{$path}#{$src}.eot');                                     // IE9 compat
-        src: url('#{$path}#{$src}.eot?#iefix') format('embedded-opentype'),  // IE8 and below
-            url('#{$path}#{$src}.woff2') format('woff2'),                   // new standards
-            url('#{$path}#{$src}.woff') format('woff'),                     // standards
-            url('#{$path}#{$src}.ttf') format('truetype'),                  // Safari, Android, iOS
-            url('#{$path}#{$src}.svg##{$family}') format('svg');            // legacy iOS
+        // IE9 compat
+        src: url('#{$path}#{$src}.eot');
+        src:
+            // IE8 and below
+            url('#{$path}#{$src}.eot?#iefix') format('embedded-opentype'),
+            // new standards
+            url('#{$path}#{$src}.woff2') format('woff2'),
+            // standards
+            url('#{$path}#{$src}.woff') format('woff'),
+            // Safari, Android, iOS
+            url('#{$path}#{$src}.ttf') format('truetype'),
+            // legacy iOS
+            url('#{$path}#{$src}.svg##{$family}') format('svg');
     }
 }

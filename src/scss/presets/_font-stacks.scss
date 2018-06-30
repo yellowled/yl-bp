@@ -1,24 +1,8 @@
 // FONT STACKS
 // --------------------------------------------------------------------
 // bitsofco.de/the-new-system-font-stack/
-$default-sans:  -apple-system,
-                BlinkMacSystemFont,
-                'Segoe UI',
-                Roboto,
-                Oxygen-Sans,
-                Ubuntu,
-                Cantarell,
-                'Helvetica Neue',
-                sans-serif !default;
+$default-sans:  -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif !default;
 
-$default-serif: Georgia,
-                 Times,
-                'Times New Roman',
-                serif !default;
+$default-serif: Georgia, Times, 'Times New Roman', serif !default;
 
-$default-mono:  Menlo,
-                Monaco,
-                Consolas,
-                'Liberation Mono',
-                'Courier New',
-                monospace !default;
+$default-mono:  Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace !default;

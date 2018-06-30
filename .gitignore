@@ -6,8 +6,6 @@ node_modules/
 
 # Generated
 dist/
-src/*.html
+src/css/
 src/img/sprite.svg
-src/sitemap.xml
-src/scripts/master.*
-src/styles/
+src/js/

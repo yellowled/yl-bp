@@ -1,13 +1,13 @@
 // POSITIONING
 // --------------------------------------------------------------------
-// element needs a defined width
+// Element needs a defined width
 @mixin center-horizontal {
     margin-left: auto;
     margin-right: auto;
 }
 
 // zerosixthree.se/vertical-align-anything-with-just-3-lines-of-css/
-// parent element needs a defined height
+// Parent element needs a defined height
 @mixin center-vertical {
     .csstransforms & {
         position: relative;
@@ -16,7 +16,7 @@
     }
 }
 
-// center an absolutely positioned element
+// Center an absolutely positioned element
 @mixin center-absolute {
     bottom: 0;
     left: 0;

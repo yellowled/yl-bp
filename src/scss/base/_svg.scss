@@ -1,12 +1,8 @@
 // SVG SPRITES
 // --------------------------------------------------------------------
-// Defaults
 $svg-icon-dims:         1.5rem !default;
 
-
 @if $use-svg-sprites {
-    // 1. Set fill color for SVG icons
-    // 2. Set dimensions of SVG icons
     [class^='icon-'],
     [class*='icon-'] {
         fill: currentColor;

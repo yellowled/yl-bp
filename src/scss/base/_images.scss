@@ -1,17 +1,13 @@
 // IMAGES
 // --------------------------------------------------------------------
-// Defaults
-$img-margin:        $type-rhythm 0 !default;   // Margins for images
+$img-margin:        $type-rhythm 0 !default;
 
-
-// Responsive media
 video,
 img {
     @include responsive-media;
 }
 
-// Figures
 figure {
-    display: block;
+    display: inline-block;
     margin: $img-margin;
 }

@@ -1,75 +1,22 @@
 // TABS
-// github.com/nico3333fr/jquery-accessible-tabs-aria
 // --------------------------------------------------------------------
-//
-// Defaults
-$tabswidth:         480px !default;
-$tabpanel-class:    js-tabcontent !default;
+$tab-padding:   0.5rem !default;
 
-$bordercolor:       $grey !default;
-$background:        $white !default;
-$current-color:     $off-black !default;
-$inactive:          $lite-grey !default;
-$inactive-color:    $greyed-out !default;
+@mixin tabs($suffix-toggle: toggle, $suffix-panel:  panel) {
+    margin: $type-rhythm 0;
 
-$tabs-padding:      .625rem !default;
-$tabs-gap:          4px !default;
-
-$tab-border:        1px solid $bordercolor !default;
-$inverse-border:    1px solid $background !default;
-
-// Settings
-$content-border:    0 $tabs-gap $tabs-gap;
-$list-border:       $tabs-gap $tabs-gap 0 0;
-$tabs-margin:       $type-rhythm;
-
-
-@mixin tabs($margin: $tabs-margin, $padding: $tabs-padding) {
-    margin: $margin 0;
-    max-width: 100%;
-    width: $tabswidth;
-
-    .#{$tabpanel-class} {
-        border: $tab-border;
-        border-radius: $content-border;
-        padding: 0 $padding;
+    &-#{$suffix-toggle} {
+        border: 0;
+        padding: ($tab-padding / 2) $tab-padding;
     }
 
-    [aria-hidden='true'] {
+    &-#{$suffix-panel} {
         display: none;
-    }
-}
+        padding: $tab-padding;
+        z-index: 1;
 
-@mixin tabs-list($padding: $tabs-padding) {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-        display: inline-block;
-        margin: 0 $tabs-gap 0 0;
-    }
-
-    a {
-        background: $inactive;
-        border: $tab-border;
-        border-radius: $list-border;
-        color: $inactive-color;
-        display: block;
-        padding: ($padding / 4) $padding;
-        position: relative;
-        text-decoration: none;
-        top: 1px;
-    }
-
-    [aria-selected='true'] {
-        background: $background;
-        border-bottom: $inverse-border;
-    }
-
-    [aria-selected='true'],
-    a:hover,
-    a:focus {
-        color: $current-color;
+        &.is-active {
+            display: block;
+        }
     }
 }

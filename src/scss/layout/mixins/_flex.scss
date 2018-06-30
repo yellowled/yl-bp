@@ -1,0 +1,47 @@
+// FLEXBOX-BASED GRID SYSTEM
+// --------------------------------------------------------------------
+@mixin flex-grid-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: ($grid-gutter-width / 2);
+    padding-left: ($grid-gutter-width / 2);
+    width: 100%;
+}
+
+@mixin flex-grid-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -($grid-gutter-width / 2);
+    margin-left: -($grid-gutter-width / 2);
+}
+
+@mixin flex-grid-box {
+    min-height: 1px;
+    padding-right: ($grid-gutter-width / 2);
+    padding-left: ($grid-gutter-width / 2);
+    position: relative;
+    width: 100%;
+}
+
+@mixin flex-grid-column($columns: $grid-columns) {
+    @if $columns == 0 {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+
+    @else if $columns == auto {
+        flex: 0 0 auto;
+        max-width: none;
+        width: auto;
+    }
+
+    @else {
+        flex: 0 0 (100% * ($columns / $grid-columns));
+        max-width: 100% * ($columns / $grid-columns);
+    }
+}
+
+@mixin flex-grid-offset($columns: $grid-columns) {
+    margin-left: 100% * ($columns / $grid-columns);
+}

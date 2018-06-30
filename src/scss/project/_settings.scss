@@ -1,12 +1,12 @@
 // PROJECT-SPECIFIC SETTINGS
 // --------------------------------------------------------------------
 $use-extra-classes: false;  // Helper classes
-
-$use-rnav-classes:  true;   // responsive-nav.js
+$use-cms-classes:   false;  // Image positioning
 $use-svg-sprites:   true;   // SVG sprites
 
-$use-cms-classes:   false;  // Image positioning
-$use-enable-js:     false;  // Enable JS
+$use-float-grid:    false;  // Float-based grid
+$use-flex-grid:     false;  // Flexbox grid
+$use-css-grid:      false;  // Native CSS grids
 
 $use-form-styles:   false;  // Basic forms
 $use-form-advanced: false;  // Advanced forms

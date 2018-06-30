@@ -1,0 +1,141 @@
+// BOOTSTRAP-STYLE GRID CLASSES (NATIVE CSS GRID)
+// --------------------------------------------------------------------
+@if $use-css-grid {
+    .container {
+        @include css-grid-container;
+
+        @media (min-width: $sm) { max-width: $grid-container-sm; }
+
+        @media (min-width: $md) { max-width: $grid-container-md; }
+
+        @media (min-width: $lg) { max-width: $grid-container-lg; }
+
+        @media (min-width: $xl) { max-width: $grid-container-xl; }
+    }
+
+    .container-fluid {
+        @include css-grid-container;
+    }
+
+    .row {
+        @include css-grid-row;
+    }
+
+    .col-1 { @include css-grid-column(1); }
+    .col-2 { @include css-grid-column(2); }
+    .col-3 { @include css-grid-column(3); }
+    .col-4 { @include css-grid-column(4); }
+    .col-5 { @include css-grid-column(5); }
+    .col-6 { @include css-grid-column(6); }
+    .col-7 { @include css-grid-column(7); }
+    .col-8 { @include css-grid-column(8); }
+    .col-9 { @include css-grid-column(9); }
+    .col-10 { @include css-grid-column(10); }
+    .col-11 { @include css-grid-column(11); }
+    .col-12 { @include css-grid-column(12); }
+
+    .order-first { order: -1; }
+    .order-last { order: ($grid-columns + 1); }
+
+    @for $i from 0 to ($grid-columns + 1) {
+        .order-#{$i} {
+            order: $i;
+        }
+    }
+
+    @media (min-width: $sm) {
+        .col-sm-1 { @include css-grid-column(1); }
+        .col-sm-2 { @include css-grid-column(2); }
+        .col-sm-3 { @include css-grid-column(3); }
+        .col-sm-4 { @include css-grid-column(4); }
+        .col-sm-5 { @include css-grid-column(5); }
+        .col-sm-6 { @include css-grid-column(6); }
+        .col-sm-7 { @include css-grid-column(7); }
+        .col-sm-8 { @include css-grid-column(8); }
+        .col-sm-9 { @include css-grid-column(9); }
+        .col-sm-10 { @include css-grid-column(10); }
+        .col-sm-11 { @include css-grid-column(11); }
+        .col-sm-12 { @include css-grid-column(12); }
+
+        .order-sm-first { order: -1; }
+        .order-sm-last { order: ($grid-columns + 1); }
+
+        @for $i from 0 to ($grid-columns + 1) {
+            .order-sm-#{$i} {
+                order: $i;
+            }
+        }
+    }
+
+    @media (min-width: $md) {
+        .col-md-1 { @include css-grid-column(1); }
+        .col-md-2 { @include css-grid-column(2); }
+        .col-md-3 { @include css-grid-column(3); }
+        .col-md-4 { @include css-grid-column(4); }
+        .col-md-5 { @include css-grid-column(5); }
+        .col-md-6 { @include css-grid-column(6); }
+        .col-md-7 { @include css-grid-column(7); }
+        .col-md-8 { @include css-grid-column(8); }
+        .col-md-9 { @include css-grid-column(9); }
+        .col-md-10 { @include css-grid-column(10); }
+        .col-md-11 { @include css-grid-column(11); }
+        .col-md-12 { @include css-grid-column(12); }
+
+        .order-md-first { order: -1; }
+        .order-md-last { order: ($grid-columns + 1); }
+
+        @for $i from 0 to ($grid-columns + 1) {
+            .order-md-#{$i} {
+                order: $i;
+            }
+        }
+    }
+
+    @media (min-width: $lg) {
+        .col-lg-1 { @include css-grid-column(1); }
+        .col-lg-2 { @include css-grid-column(2); }
+        .col-lg-3 { @include css-grid-column(3); }
+        .col-lg-4 { @include css-grid-column(4); }
+        .col-lg-5 { @include css-grid-column(5); }
+        .col-lg-6 { @include css-grid-column(6); }
+        .col-lg-7 { @include css-grid-column(7); }
+        .col-lg-8 { @include css-grid-column(8); }
+        .col-lg-9 { @include css-grid-column(9); }
+        .col-lg-10 { @include css-grid-column(10); }
+        .col-lg-11 { @include css-grid-column(11); }
+        .col-lg-12 { @include css-grid-column(12); }
+
+        .order-lg-first { order: -1; }
+        .order-lg-last { order: ($grid-columns + 1); }
+
+        @for $i from 0 to ($grid-columns + 1) {
+            .order-lg-#{$i} {
+                order: $i;
+            }
+        }
+    }
+
+    @media (min-width: $xl) {
+        .col-xl-1 { @include css-grid-column(1); }
+        .col-xl-2 { @include css-grid-column(2); }
+        .col-xl-3 { @include css-grid-column(3); }
+        .col-xl-4 { @include css-grid-column(4); }
+        .col-xl-5 { @include css-grid-column(5); }
+        .col-xl-6 { @include css-grid-column(6); }
+        .col-xl-7 { @include css-grid-column(7); }
+        .col-xl-8 { @include css-grid-column(8); }
+        .col-xl-9 { @include css-grid-column(9); }
+        .col-xl-10 { @include css-grid-column(10); }
+        .col-xl-11 { @include css-grid-column(11); }
+        .col-xl-12 { @include css-grid-column(12); }
+
+        .order-xl-first { order: -1; }
+        .order-xl-last { order: ($grid-columns + 1); }
+
+        @for $i from 0 to ($grid-columns + 1) {
+            .order-xl-#{$i} {
+                order: $i;
+            }
+        }
+    }
+}

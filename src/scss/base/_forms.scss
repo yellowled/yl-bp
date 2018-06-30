@@ -1,43 +1,19 @@
-// NORMALIZE FORM ELEMENTS
-// formalize.me
+// FORM ELEMENTS
 // --------------------------------------------------------------------
-// Defaults
 $input-bg:              $off-white !default;
 $input-fg:              $off-black !default;
 $input-focus:           #06f !default;
 $input-placeholder:     $greyed-out !default;
-
 $input-border-radius:   0 !default;
 $input-border-type:     1px solid !default;
 $input-border-color:    #c1c1c1 #c1c1c1 #e1e1e1 !default;
-
 $standard-buttons:      true !default;
-
 
 @if $use-form-styles {
     fieldset {
         border: 0;
         margin: 0;
         padding: 0;
-    }
-
-    button,
-    select,
-    textarea,
-    input {
-        &:focus {
-            box-shadow: 0 0 5px 0 $input-focus;
-            z-index: 1; // Opera
-        }
-    }
-
-    input[type='file'],
-    input[type='radio'],
-    input[type='checkbox'] {
-        &:focus,
-        &:active {
-            box-shadow: none;
-        }
     }
 
     ::-webkit-input-placeholder {
@@ -68,9 +44,7 @@ $standard-buttons:      true !default;
         }
     }
 
-
-    // STYLE FORM ELEMENTS (borrowed heavily from formalize.me)
-    // --------------------------------------------------------------------
+    // Borrowed heavily from formalize.me
     %input-elements {
         -webkit-appearance: none;
         background-clip: padding-box;
@@ -118,6 +92,32 @@ $standard-buttons:      true !default;
         height: auto;
     }
 
+    textarea {
+        min-height: 40px;
+        overflow: auto;
+        resize: vertical;
+        width: 100%;
+    }
+
+    button,
+    select,
+    textarea,
+    input {
+        &:focus {
+            box-shadow: 0 0 5px 0 $input-focus;
+            z-index: 1; // Opera
+        }
+    }
+
+    input[type='file'],
+    input[type='radio'],
+    input[type='checkbox'] {
+        &:focus,
+        &:active {
+            box-shadow: none;
+        }
+    }
+
     // WebKit select appearance
     @media (-webkit-min-device-pixel-ratio: 0) {
         select {
@@ -134,14 +134,6 @@ $standard-buttons:      true !default;
         }
     }
 
-    textarea {
-        min-height: 40px;
-        overflow: auto;
-        resize: vertical;
-        width: 100%;
-    }
-
-
     // Form buttons
     @if $standard-buttons {
         button,
@@ -151,7 +143,6 @@ $standard-buttons:      true !default;
             @include gradient-button;
         }
     }
-
 
     // Disabled form elements
     @if $use-form-advanced {

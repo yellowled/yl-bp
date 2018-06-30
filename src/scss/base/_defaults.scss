@@ -1,9 +1,17 @@
 // ELEMENT STYLES NOT COVERED BY NORMALIZE
 // --------------------------------------------------------------------
-// Defaults
 $selection-bg:      #b3d4fc !default;
 $primary-font:      $default-sans !default;
 
+@-ms-viewport {
+    width: device-width;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: $primary-font;
+    font-size: 100%;
+}
 
 *,
 *::before,
@@ -14,10 +22,6 @@ $primary-font:      $default-sans !default;
 ::selection {
     background: $selection-bg;
     text-shadow: none;
-}
-
-html {
-    box-sizing: border-box;
 }
 
 dt {
@@ -74,34 +78,16 @@ video {
     vertical-align: middle;
 }
 
+// Navigation
+nav ul,
+nav ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 // BASIC TYPOGRAPHY
 // --------------------------------------------------------------------
-%primary-font {
-    font-family: $primary-font;
-}
-
-html {
-    @extend %primary-font;
-
-    font-size: 100%;
-}
-
-@if $use-form-styles {
-    button,
-    input,
-    select,
-    textarea {
-        @extend %primary-font;
-    }
-}
-
-@if $use-form-advanced {
-    optgroup {
-        @extend %primary-font;
-    }
-}
-
 body {
     line-height: $type-height;
 }
@@ -114,23 +100,20 @@ body {
 }
 
 pre {
-    font-size: .875rem;
+    font-size: 0.875rem;
 }
 
 code,
 samp,
 kbd {
-    font-size: .875em;
+    font-size: 0.875em;
 
     pre & {
         font-size: 1em;
     }
 }
 
-
-// QUOTES
 // html5doctor.com/blockquote-q-cite/
-// --------------------------------------------------------------------
 q {
     quotes: '“' '”' '‘' '’';
 }
@@ -139,9 +122,6 @@ q {
     quotes: '„' '“' '‚' '‘';
 }
 
-
-// HYPHENATION
-// --------------------------------------------------------------------
 p {
     hyphens: auto;
 

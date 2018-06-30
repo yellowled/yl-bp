@@ -1,8 +1,6 @@
 // PRINT STYLES
 // --------------------------------------------------------------------
-// Defaults
 $print-color:       #000 !default;
-
 
 @media print {
     *,
@@ -35,7 +33,6 @@ $print-color:       #000 !default;
         content: ' (' attr(title) ')';
     }
 
-    .ir a::after,
     a[href^='javascript:']::after,
     a[href^='#']::after {
         content: '';

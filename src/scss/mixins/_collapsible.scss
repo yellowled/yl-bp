@@ -1,0 +1,42 @@
+// COLLAPSIBLE/ACCORDION
+// --------------------------------------------------------------------
+$collapsible-padding:   0.5rem !default;
+
+@mixin collapsible($suffix-toggle: toggle, $suffix-panel:  panel, $suffix-content: content) {
+    margin: $type-rhythm 0;
+
+    &-#{$suffix-toggle} {
+        align-content: center;
+        border: none;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: $collapsible-padding;
+        text-align: left;
+        width: 100%;
+
+        &::after {
+            content: "+";
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        &.is-active::after {
+            content: "–";
+        }
+    }
+
+    &-#{$suffix-panel} {
+        max-height: 0;
+        overflow: hidden;
+
+        &.is-active {
+            max-height: none;
+        }
+    }
+
+    &-#{$suffix-content} {
+        padding: $collapsible-padding;
+    }
+}

@@ -1,24 +1,5 @@
 // SHAPES
 // --------------------------------------------------------------------
-// nicolasgallagher.com/pure-css-folded-corner-effect/
-@mixin folded-corner($box-color, $container-color) {
-    background: $box-color;
-    position: relative;
-
-    &::before {
-        border-color: darken($box-color, 25%) $container-color;
-        border-style: solid;
-        border-width: 0 1rem 1rem 0;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, .3), -1px 1px 1px rgba(0, 0, 0, .2);
-        content: '';
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 0;
-    }
-}
-
 // nicolasgallagher.com/pure-css-speech-bubbles/
 @mixin speech-bubble($box-color, $border-color: $box-color, $border-width: 2px, $border-radius: 10px) {
     background: $box-color;
@@ -56,116 +37,62 @@
     }
 }
 
-// nicolasgallagher.com/an-introduction-to-css-pseudo-element-hacks/
-// --------------------------------------------------------------------
-// Left and right
-@mixin ribbon-both($ribbon-color, $text-color, $container-horizontal-padding, $corner-width: 10px) {
-    background: $ribbon-color;
-    color: $text-color;
-    margin-left: -1 * ($container-horizontal-padding + $corner-width);
-    margin-right: -1 * ($container-horizontal-padding + $corner-width);
-    position: relative;
-
-    &::before,
-    &::after {
-        border-color: transparent darken($ribbon-color, 25%);
-        border-style: solid;
-        border-width: 0 $corner-width $corner-width 0;
-        content: '';
-        left: 0;
-        position: absolute;
-        top: 100%;
-    }
-
-    &::after {
-        border-width: 0 0 $corner-width $corner-width;
-        left: auto;
-        right: 0;
-    }
-}
-
-// Left only
-@mixin ribbon-left($ribbon-color, $text-color, $container-horizontal-padding, $ribbon-width: 100%, $corner-width: 10px) {
-    background: $ribbon-color;
-    color: $text-color;
-    margin-left: -1 * ($container-horizontal-padding + $corner-width);
-    padding-left: $container-horizontal-padding + $corner-width;
-    position: relative;
-    text-align: left;
-    width: $ribbon-width;
-
-    &::before {
-        border-color: transparent darken($ribbon-color, 25%);
-        border-style: solid;
-        border-width: 0 $corner-width $corner-width 0;
-        content: '';
-        left: 0;
-        position: absolute;
-        top: 100%;
-    }
-}
-
-// Right only
-@mixin ribbon-right($ribbon-color, $text-color, $container-horizontal-padding, $ribbon-width: 100%, $corner-width: 10px) {
-    background: $ribbon-color;
-    color: $text-color;
-    margin-right: -1 * ($container-horizontal-padding + $corner-width);
-    padding-right: $container-horizontal-padding + $corner-width;
-    position: relative;
-    right: -1 * (100% - $ribbon-width);
-    text-align: right;
-    width: $ribbon-width;
-
-    &::after {
-        border-color: transparent darken($ribbon-color, 25%);
-        border-style: solid;
-        border-width: 0 0 $corner-width $corner-width;
-        content: '';
-        position: absolute;
-        right: 0;
-        top: 100%;
-    }
-}
-
-
-// TRIANGLES
-// --------------------------------------------------------------------
+// Triangles
 @mixin triangle($color, $orientation: bottom, $size: 8px) {
     position: relative;
 
     &::after {
         @if $orientation == left or $orientation == right {
             border-color: transparent $color;
-        } @else {
+        }
+
+        @else {
             border-color: $color transparent;
         }
+
         border-style: solid;
+
         @if $orientation == left {
             border-width: $size $size $size 0;
-        } @else if $orientation == right {
+        }
+
+        @else if $orientation == right {
             border-width: $size 0 $size $size;
-        } @else if $orientation == top {
+        }
+
+        @else if $orientation == top {
             border-width: 0 $size $size;
-        } @else {
+        }
+
+        @else {
             border-width: $size $size 0;
         }
+
         content: '';
         display: block;
         margin: -($size);
         position: absolute;
+
         @if $orientation == left {
             left: 0;
             top: 50%;
-        } @else if $orientation == right {
+        }
+
+        @else if $orientation == right {
             right: 0;
             top: 50%;
-        } @else if $orientation == top {
+        }
+
+        @else if $orientation == top {
             left: 50%;
             top: 0;
-        } @else {
+        }
+
+        @else {
             bottom: 0;
             left: 50%;
         }
+
         width: 0;
         z-index: 10;
     }
