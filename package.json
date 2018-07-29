@@ -1,7 +1,7 @@
 {
     "name": "yl-bp",
     "description": "HTML project boilerplate",
-    "version": "4.0.0-beta2",
+    "version": "4.0.0",
     "homepage": "https://github.com/yellowled/yl-bp",
     "author": {
         "name": "Matthias Mees",
@@ -71,7 +71,7 @@
         "stylelint-config-recommended-scss": "^3.2.0",
         "stylelint-config-standard": "^18.2.0",
         "stylelint-scss": "^3.2.0",
-        "svg-sprite-generator": "0.0.7",
+        "svg-sprite-generator": "^0.0.7",
         "svgo": "^1.0.5",
         "uglify-js": "^3.4.6"
     }
