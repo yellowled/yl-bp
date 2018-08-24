@@ -1,4 +1,4 @@
-var ready = function (fn) {
+var ready = function(fn) {
     if (typeof fn !== 'function') return;
     // If document is already loaded, run method
     if (document.readyState === 'complete') {
@@ -8,7 +8,7 @@ var ready = function (fn) {
     document.addEventListener('DOMContentLoaded', fn, false);
 };
 
-ready(function () {
+ready(function() {
     // SVG polyfill
     svg4everybody(); // eslint-disable-line no-undef
 });
