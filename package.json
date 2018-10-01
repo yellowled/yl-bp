@@ -54,9 +54,9 @@
         "svg4everybody": "^2.1.9"
     },
     "devDependencies": {
-        "@babel/cli": "^7.0.0",
-        "@babel/core": "^7.0.0",
-        "@babel/preset-env": "^7.0.0",
+        "@babel/cli": "^7.1.2",
+        "@babel/core": "^7.1.2",
+        "@babel/preset-env": "^7.1.0",
         "autoprefixer": "^9.1.5",
         "browser-sync": "^2.24.7",
         "clean-css-cli": "^4.2.1",
