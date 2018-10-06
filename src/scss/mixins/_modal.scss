@@ -1,7 +1,7 @@
 // MODAL
 // --------------------------------------------------------------------
-$modal-class-toggle:    is-active !default;
-$modal-class-inner:     modal-container !default;
+$modal-class-toggle: is-active !default;
+$modal-class-inner: modal-container !default;
 
 @mixin modal() {
     background-color: rgba($black, 0.8);

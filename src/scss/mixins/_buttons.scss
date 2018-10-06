@@ -1,13 +1,21 @@
 // BUTTONS
 // --------------------------------------------------------------------
-$button-radius:     4px !default;
-$button-focus:      #06f !default;
-$button-padding:    0.1875rem 0.625rem !default;
+$button-radius: 4px !default;
+$button-focus: #06f !default;
+$button-padding: 0.1875rem 0.625rem !default;
 
-@mixin gradient-button($bg-color: $silver, $fg-color: $black, $radius: $button-radius) {
+@mixin gradient-button(
+    $bg-color: $silver,
+    $fg-color: $black,
+    $radius: $button-radius
+) {
     background-clip: padding-box;
     background-color: lighten($bg-color, 13.2%);
-    background-image: linear-gradient(to bottom, lighten($bg-color, 13.2%), $bg-color);
+    background-image: linear-gradient(
+        to bottom,
+        lighten($bg-color, 13.2%),
+        $bg-color
+    );
     border: 1px solid;
     border-color: $bg-color darken($bg-color, 13.2%) darken($bg-color, 26.5%);
     border-radius: $radius;
@@ -23,13 +31,22 @@ $button-padding:    0.1875rem 0.625rem !default;
 
     &:hover {
         background-color: lighten($bg-color, 13.2%);
-        background-image: linear-gradient(to bottom, lighten($bg-color, 13.2%), darken($bg-color, 6.5%));
+        background-image: linear-gradient(
+            to bottom,
+            lighten($bg-color, 13.2%),
+            darken($bg-color, 6.5%)
+        );
     }
 
     &:active {
         background-color: lighten($bg-color, 13.2%);
-        background-image: linear-gradient(to bottom, lighten($bg-color, 13.2%), darken($bg-color, 6.5%));
-        border-color: darken($bg-color, 26.5%) darken($bg-color, 13.2%) $bg-color;
+        background-image: linear-gradient(
+            to bottom,
+            lighten($bg-color, 13.2%),
+            darken($bg-color, 6.5%)
+        );
+        border-color: darken($bg-color, 26.5%) darken($bg-color, 13.2%)
+            $bg-color;
         box-shadow: inset rgba($black, 0.25) 0 1px 2px 0;
     }
 
@@ -46,7 +63,12 @@ $button-padding:    0.1875rem 0.625rem !default;
     }
 }
 
-@mixin flat-button($bg-color: $silver, $fg-color: $black, $radius: $button-radius, $alt-color: complement($bg-color)) {
+@mixin flat-button(
+    $bg-color: $silver,
+    $fg-color: $black,
+    $radius: $button-radius,
+    $alt-color: complement($bg-color)
+) {
     background: $bg-color;
     background-clip: padding-box;
     border: 1px solid $bg-color;
@@ -75,7 +97,12 @@ $button-padding:    0.1875rem 0.625rem !default;
     }
 }
 
-@mixin border-button($fg-color: $black, $alt-color: $white, $border-width: 1px, $radius: $button-radius) {
+@mixin border-button(
+    $fg-color: $black,
+    $alt-color: $white,
+    $border-width: 1px,
+    $radius: $button-radius
+) {
     background: transparent;
     background-clip: padding-box;
     border: $border-width solid $fg-color;
@@ -103,7 +130,11 @@ $button-padding:    0.1875rem 0.625rem !default;
     }
 }
 
-@mixin unstyled-button($fg-color: $black, $bg-color: transparent, $alt-color: $black) {
+@mixin unstyled-button(
+    $fg-color: $black,
+    $bg-color: transparent,
+    $alt-color: $black
+) {
     background: transparent;
     background-clip: padding-box;
     border: 0;

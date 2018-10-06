@@ -9,9 +9,7 @@
 
     @if $ratio == 16by9 {
         padding-bottom: 56.25%;
-    }
-
-    @else if $ratio == 4by3 {
+    } @else if $ratio == 4by3 {
         padding-bottom: 75%;
     }
 

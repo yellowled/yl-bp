@@ -1,13 +1,13 @@
 // FORM ELEMENTS
 // --------------------------------------------------------------------
-$input-bg:              $off-white !default;
-$input-fg:              $off-black !default;
-$input-focus:           #06f !default;
-$input-placeholder:     $greyed-out !default;
-$input-border-radius:   0 !default;
-$input-border-type:     1px solid !default;
-$input-border-color:    #c1c1c1 #c1c1c1 #e1e1e1 !default;
-$standard-buttons:      true !default;
+$input-bg: $off-white !default;
+$input-fg: $off-black !default;
+$input-focus: #06f !default;
+$input-placeholder: $greyed-out !default;
+$input-border-radius: 0 !default;
+$input-border-type: 1px solid !default;
+$input-border-color: #c1c1c1 #c1c1c1 #e1e1e1 !default;
+$standard-buttons: true !default;
 
 @if $use-form-styles {
     fieldset {

@@ -1,15 +1,21 @@
 // PROJECT-SPECIFIC SETTINGS
 // --------------------------------------------------------------------
-$use-extra-classes: false;  // Helper classes
-$use-cms-classes:   false;  // Image positioning
-$use-svg-sprites:   true;   // SVG sprites
+// Helper classes
+$use-extra-classes: false;
+$use-cms-classes: false;
 
-$use-float-grid:    false;  // Float-based grid
-$use-flex-grid:     false;  // Flexbox grid
-$use-css-grid:      false;  // Native CSS grids
+// SVG sprites
+$use-svg-sprites: true;
 
-$use-form-styles:   false;  // Basic forms
-$use-form-advanced: false;  // Advanced forms
+// Grid systems
+$use-float-grid: false;
+$use-flex-grid: false;
+$use-css-grid: false;
 
-$use-msg-basic:     false;  // Basic messages
-$use-msg-extra:     false;  // Advanced messages
+// Forms
+$use-form-styles: false;
+$use-form-advanced: false;
+
+// Messages
+$use-msg-basic: false;
+$use-msg-extra: false;

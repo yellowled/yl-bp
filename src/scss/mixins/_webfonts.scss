@@ -1,39 +1,41 @@
 // SELF-HOSTED WEBFONTS
 // --------------------------------------------------------------------
-$font-path:     '../fonts/' !default;
+$font-path: '../fonts/' !default;
 
-@mixin webfont($family, $src, $style: normal, $weight: normal, $path: $font-path) {
+@mixin webfont(
+    $family,
+    $src,
+    $style: normal,
+    $weight: normal,
+    $path: $font-path
+) {
     @font-face {
         font-family: $family;
         font-style: $style;
         font-weight: $weight;
-        src:
-            // new standards
-            url('#{$path}#{$src}.woff2') format('woff2'),
-            // standards
+        src: url('#{$path}#{$src}.woff2') format('woff2'),
             url('#{$path}#{$src}.woff') format('woff'),
-            // Safari, Android, iOS
             url('#{$path}#{$src}.ttf') format('truetype');
     }
 }
 
-@mixin legacy-webfont($family, $src, $style: normal, $weight: normal, $path: $font-path) {
+@mixin legacy-webfont(
+    $family,
+    $src,
+    $style: normal,
+    $weight: normal,
+    $path: $font-path
+) {
     @font-face {
         font-family: $family;
         font-style: $style;
         font-weight: $weight;
         // IE9 compat
         src: url('#{$path}#{$src}.eot');
-        src:
-            // IE8 and below
-            url('#{$path}#{$src}.eot?#iefix') format('embedded-opentype'),
-            // new standards
+        src: url('#{$path}#{$src}.eot?#iefix') format('embedded-opentype'),
             url('#{$path}#{$src}.woff2') format('woff2'),
-            // standards
             url('#{$path}#{$src}.woff') format('woff'),
-            // Safari, Android, iOS
             url('#{$path}#{$src}.ttf') format('truetype'),
-            // legacy iOS
             url('#{$path}#{$src}.svg##{$family}') format('svg');
     }
 }

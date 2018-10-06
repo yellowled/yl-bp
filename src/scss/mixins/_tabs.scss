@@ -1,8 +1,8 @@
 // TABS
 // --------------------------------------------------------------------
-$tab-padding:   0.5rem !default;
+$tab-padding: 0.5rem !default;
 
-@mixin tabs($suffix-toggle: toggle, $suffix-panel:  panel) {
+@mixin tabs($suffix-toggle: toggle, $suffix-panel: panel) {
     margin: $type-rhythm 0;
 
     &-#{$suffix-toggle} {

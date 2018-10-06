@@ -10,7 +10,13 @@ $tables-breakpoint: $md !default;
     }
 }
 
-@mixin striped-table($border-color: $grey, $odd-color: $lite-grey, $even-color: $silver, $head-color: $silver, $foot-color: $head-color) {
+@mixin striped-table(
+    $border-color: $grey,
+    $odd-color: $lite-grey,
+    $even-color: $silver,
+    $head-color: $silver,
+    $foot-color: $head-color
+) {
     border: 1px solid $border-color;
     border-top: 0 none;
 

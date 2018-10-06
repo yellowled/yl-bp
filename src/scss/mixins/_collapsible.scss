@@ -1,8 +1,12 @@
 // COLLAPSIBLE/ACCORDION
 // --------------------------------------------------------------------
-$collapsible-padding:   0.5rem !default;
+$collapsible-padding: 0.5rem !default;
 
-@mixin collapsible($suffix-toggle: toggle, $suffix-panel:  panel, $suffix-content: content) {
+@mixin collapsible(
+    $suffix-toggle: toggle,
+    $suffix-panel: panel,
+    $suffix-content: content
+) {
     margin: $type-rhythm 0;
 
     &-#{$suffix-toggle} {
@@ -17,13 +21,13 @@ $collapsible-padding:   0.5rem !default;
         width: 100%;
 
         &::after {
-            content: "+";
+            content: '+';
             font-size: 1.5rem;
             line-height: 1;
         }
 
         &.is-active::after {
-            content: "–";
+            content: '–';
         }
     }
 

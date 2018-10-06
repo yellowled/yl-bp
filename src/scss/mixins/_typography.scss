@@ -1,11 +1,15 @@
 // TYPOGRAPHY
 // --------------------------------------------------------------------
-$full-font-features:    'frac' 1, 'kern' 1, 'swsh' 1 !default;
-$full-font-ligatures:   common-ligatures discretionary-ligatures historical-ligatures contextual !default;
-$quote-source:          '> footer' !default;
+$full-font-features: 'frac' 1, 'kern' 1, 'swsh' 1 !default;
+$full-font-ligatures: common-ligatures discretionary-ligatures
+    historical-ligatures contextual !default;
+$quote-source: '> footer' !default;
 
 // blog.fontdeck.com/post/15777165734/opentype-1
-@mixin ligatures($font-features: $full-font-features, $font-ligatures: $full-font-ligatures) {
+@mixin ligatures(
+    $font-features: $full-font-features,
+    $font-ligatures: $full-font-ligatures
+) {
     font-feature-settings: $font-features;
     font-variant-ligatures: $font-ligatures;
 }

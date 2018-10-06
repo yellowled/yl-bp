@@ -1,12 +1,12 @@
 // FLOATED IMAGES
 // --------------------------------------------------------------------
-$img-breakpoint:    $md !default;
-$img-margin:        $type-rhythm 0 !default;
-$img-left-margin:   0.25rem $type-rhythm 0.75rem 0 !default;
-$img-right-margin:  0.25rem 0 0.75rem $type-rhythm !default;
-$img-left-class:    align_left !default;
-$img-right-class:   align_right !default;
-$img-center-class:  align_center !default;
+$img-breakpoint: $md !default;
+$img-margin: $type-rhythm 0 !default;
+$img-left-margin: 0.25rem $type-rhythm 0.75rem 0 !default;
+$img-right-margin: 0.25rem 0 0.75rem $type-rhythm !default;
+$img-left-class: align_left !default;
+$img-right-class: align_right !default;
+$img-center-class: align_center !default;
 
 %image-block {
     display: block;

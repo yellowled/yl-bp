@@ -1,7 +1,7 @@
 // HELPER CLASSES
 // --------------------------------------------------------------------
-$helper-vh-class:   sr-only !default;
-$helper-cf-class:   clearfix !default;
+$helper-vh-class: sr-only !default;
+$helper-cf-class: clearfix !default;
 
 @if $use-extra-classes {
     .#{$helper-vh-class} {
