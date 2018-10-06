@@ -6,7 +6,8 @@
     },
     "extends": [
         "eslint:recommended",
-        "prettier"
+        "prettier",
+        "plugin:prettier/recommended"
     ],
     "rules": {
         "indent": [
