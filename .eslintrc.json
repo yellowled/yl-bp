@@ -5,9 +5,7 @@
         "jquery": true
     },
     "extends": [
-        "eslint:recommended",
-        "prettier",
-        "plugin:prettier/recommended"
+        "eslint:recommended"
     ],
     "rules": {
         "indent": [
@@ -25,10 +23,6 @@
         "semi": [
             "error",
             "always"
-        ],
-        "prettier/prettier": "error"
-    },
-    "plugins": [
-        "prettier"
-    ]
+        ]
+    }
 }
