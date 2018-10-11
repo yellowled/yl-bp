@@ -28,15 +28,11 @@
         flex-basis: 0;
         flex-grow: 1;
         max-width: 100%;
-    }
-
-    @else if $columns == auto {
+    } @else if $columns == auto {
         flex: 0 0 auto;
         max-width: none;
         width: auto;
-    }
-
-    @else {
+    } @else {
         flex: 0 0 (100% * ($columns / $grid-columns));
         max-width: 100% * ($columns / $grid-columns);
     }
