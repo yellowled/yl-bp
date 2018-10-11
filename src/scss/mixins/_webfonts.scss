@@ -13,7 +13,8 @@ $font-path: '../fonts/' !default;
         font-family: $family;
         font-style: $style;
         font-weight: $weight;
-        src: url('#{$path}#{$src}.woff2') format('woff2'),
+        src:
+            url('#{$path}#{$src}.woff2') format('woff2'),
             url('#{$path}#{$src}.woff') format('woff'),
             url('#{$path}#{$src}.ttf') format('truetype');
     }
@@ -32,7 +33,8 @@ $font-path: '../fonts/' !default;
         font-weight: $weight;
         // IE9 compat
         src: url('#{$path}#{$src}.eot');
-        src: url('#{$path}#{$src}.eot?#iefix') format('embedded-opentype'),
+        src:
+            url('#{$path}#{$src}.eot?#iefix') format('embedded-opentype'),
             url('#{$path}#{$src}.woff2') format('woff2'),
             url('#{$path}#{$src}.woff') format('woff'),
             url('#{$path}#{$src}.ttf') format('truetype'),

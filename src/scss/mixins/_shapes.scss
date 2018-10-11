@@ -49,7 +49,9 @@
     &::after {
         @if $orientation == left or $orientation == right {
             border-color: transparent $color;
-        } @else {
+        }
+
+        @else {
             border-color: $color transparent;
         }
 
@@ -57,11 +59,17 @@
 
         @if $orientation == left {
             border-width: $size $size $size 0;
-        } @else if $orientation == right {
+        }
+
+        @else if $orientation == right {
             border-width: $size 0 $size $size;
-        } @else if $orientation == top {
+        }
+
+        @else if $orientation == top {
             border-width: 0 $size $size;
-        } @else {
+        }
+
+        @else {
             border-width: $size $size 0;
         }
 
@@ -73,13 +81,19 @@
         @if $orientation == left {
             left: 0;
             top: 50%;
-        } @else if $orientation == right {
+        }
+
+        @else if $orientation == right {
             right: 0;
             top: 50%;
-        } @else if $orientation == top {
+        }
+
+        @else if $orientation == top {
             left: 50%;
             top: 0;
-        } @else {
+        }
+
+        @else {
             bottom: 0;
             left: 50%;
         }
