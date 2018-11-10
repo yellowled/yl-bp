@@ -1,8 +1,5 @@
 # yl-bp
 
-[![Dependency Status](https://david-dm.org/yellowled/yl-bp.svg)](https://david-dm.org/yellowled/yl-bp)
-[![devDependency Status](https://david-dm.org/yellowled/yl-bp/dev-status.svg)](https://david-dm.org/yellowled/yl-bp#info=devDependencies)
-
 ## Getting started
 
 -   Requirements: [node.js](http://nodejs.org)
