@@ -49,14 +49,14 @@
         "watch": "npm-run-all --parallel css:watch js:watch svg:watch serve"
     },
     "dependencies": {
-        "easy-toggle-state": "^1.9.3",
+        "easy-toggle-state": "^1.9.4",
         "node-normalize-scss": "^8.0.0",
         "svg4everybody": "^2.1.9"
     },
     "devDependencies": {
         "@babel/cli": "^7.1.5",
-        "@babel/core": "^7.1.5",
-        "@babel/preset-env": "^7.1.5",
+        "@babel/core": "^7.1.6",
+        "@babel/preset-env": "^7.1.6",
         "autoprefixer": "^9.3.1",
         "browser-sync": "^2.26.3",
         "clean-css-cli": "^4.2.1",
