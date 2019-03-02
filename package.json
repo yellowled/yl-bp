@@ -62,7 +62,7 @@
         "clean-css-cli": "^4.2.1",
         "copyfiles": "^2.1.0",
         "del-cli": "^1.1.0",
-        "eslint": "^5.14.1",
+        "eslint": "^5.15.0",
         "html-minifier": "^3.5.21",
         "htmlhint": "^0.11.0",
         "mkdirp": "^0.5.1",
