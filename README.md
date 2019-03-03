@@ -27,7 +27,7 @@ JS is transpiled using [Babel](https://babeljs.io) and combined and minified usi
 
 ## SVG build
 
-An SVG sprite is generated from single icons using [svg-sprite-generator](https://www.npmjs.com/package/svg-sprite-generator) and [svgo](https://www.npmjs.com/package/svgo). [svg4everybody](https://www.npmjs.com/package/svg4everybody) polyfill is included in the JS build.
+An SVG sprite is generated from single icons using [svgstore-cli](https://github.com/svgstore/svgstore-cli) and [svgo](https://www.npmjs.com/package/svgo). [svg4everybody](https://www.npmjs.com/package/svg4everybody) is included in the JS build.
 
 ## License
 
