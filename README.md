@@ -10,7 +10,7 @@
 
 ## CSS build
 
-CSS is compiled from [Sass](http://sass-lang.com) (SCSS) using [node-sass](https://www.npmjs.com/package/node-sass), [postcss](https://www.npmjs.com/package/postcss-cli), [autoprefixer](https://www.npmjs.com/package/autoprefixer) and [postcss-flexbugs-fixes](https://www.npmjs.com/package/postcss-flexbugs-fixes), then minified and optimized using [cleancss](https://www.npmjs.com/package/clean-css). [normalize.css](https://www.npmjs.com/package/node-normalize-scss) is included, sourcemaps are generated.
+CSS is compiled from [Sass](http://sass-lang.com) (SCSS) using [node-sass](https://www.npmjs.com/package/node-sass), [postcss](https://www.npmjs.com/package/postcss-cli), [autoprefixer](https://www.npmjs.com/package/autoprefixer) and [postcss-flexbugs-fixes](https://www.npmjs.com/package/postcss-flexbugs-fixes), then minified and optimized using [cleancss](https://www.npmjs.com/package/clean-css). [normalize.css](https://www.npmjs.com/package/node-normalize-scss) is included; sourcemaps are generated.
 
 ### SCSS structure
 
@@ -22,7 +22,7 @@ CSS is compiled from [Sass](http://sass-lang.com) (SCSS) using [node-sass](https
 
 ## JS build
 
-JS is transpiled using [Babel](https://babeljs.io) and combined and minified using [uglify-js](https://www.npmjs.com/package/uglify-js). Sourcemaps are generated.
+JS is transpiled using [Babel](https://babeljs.io) and combined and minified using [uglify-js](https://www.npmjs.com/package/uglify-js); sourcemaps are generated.
 
 ## SVG build
 
