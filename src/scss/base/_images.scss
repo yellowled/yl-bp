@@ -1,6 +1,13 @@
 // IMAGES
 // --------------------------------------------------------------------
+$img-breakpoint: $md !default;
 $img-margin: $type-rhythm 0 !default;
+$img-left-margin: 0.25rem $type-rhythm 0.75rem 0 !default;
+$img-right-margin: 0.25rem 0 0.75rem $type-rhythm !default;
+$img-left-class: align_left !default;
+$img-right-class: align_right !default;
+$img-center-class: align_center !default;
+$svg-icon-dims: 1.5rem !default;
 
 video,
 img {
@@ -10,4 +17,45 @@ img {
 figure {
     display: inline-block;
     margin: $img-margin;
+}
+
+%image-block {
+    display: block;
+    margin: $img-margin;
+}
+
+// For use with image positioning classes assigned by CMS/WYSIWYG editor
+@if $use-cms-classes {
+    .#{$img-left-class},
+    .#{$img-right-class} {
+        @extend %image-block;
+    }
+}
+
+@if $use-cms-classes {
+    @media screen and (min-width: $img-breakpoint) {
+        // For use with image positioning classes assigned by CMS/WYSIWYG editor
+        .#{$img-left-class} {
+            float: left;
+            margin: $img-left-margin;
+        }
+
+        .#{$img-right-class} {
+            float: right;
+            margin: $img-right-margin;
+        }
+
+        .#{$img-center-class} {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+// SVG Sprites
+@if $use-svg-sprites {
+    [class^='icon-'],
+    [class*='icon-'] {
+        @include svg-icon;
+    }
 }

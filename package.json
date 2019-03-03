@@ -31,7 +31,7 @@
         "html:build": "html-minifier -c .htmlminifierrc --input-dir src --output-dir dist --file-ext html",
         "html:lint": "htmlhint src/*.html",
         "js:build": "npm-run-all --sequential js:lint js:compile js:minify",
-        "js:bundle": "uglifyjs --comments \"/^!/\" --source-map \"url=main.js.map\" --output src/js/main.js -- node_modules/svg4everybody/dist/svg4everybody.js node_modules/easy-toggle-state/dist/easy-toggle-state.js src/js/bundle.js",
+        "js:bundle": "uglifyjs --comments \"/^!/\" --source-map \"url=main.js.map\" --output src/js/main.js -- node_modules/svg4everybody/dist/svg4everybody.js src/js/bundle.js",
         "js:compile": "npm-run-all --sequential js:prefix js:bundle",
         "js:lint": "eslint src/scripts/**/*",
         "js:minify": "mkdirp dist/js/ && uglifyjs --compress --mangle --comments \"/^!/\" --source-map \"content=src/js/main.js.map,includeSources,url=main.js.map\" --output dist/js/main.js -- src/js/main.js",
@@ -49,7 +49,6 @@
         "watch": "npm-run-all --parallel css:watch js:watch svg:watch serve"
     },
     "dependencies": {
-        "easy-toggle-state": "^1.10.0",
         "node-normalize-scss": "^8.0.0",
         "svg4everybody": "^2.1.9"
     },

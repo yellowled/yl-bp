@@ -1,9 +1,28 @@
 // TYPOGRAPHY
 // --------------------------------------------------------------------
+$font-path: '../fonts/' !default;
 $full-font-features: 'frac' 1, 'kern' 1, 'swsh' 1 !default;
 $full-font-ligatures: common-ligatures discretionary-ligatures
     historical-ligatures contextual !default;
 $quote-source: '> footer' !default;
+
+// Self-hosted webfonts
+@mixin webfont(
+    $family,
+    $src,
+    $style: normal,
+    $weight: normal,
+    $path: $font-path
+) {
+    @font-face {
+        font-family: $family;
+        font-style: $style;
+        font-weight: $weight;
+        src: url('#{$path}#{$src}.woff2') format('woff2'),
+            url('#{$path}#{$src}.woff') format('woff'),
+            url('#{$path}#{$src}.ttf') format('truetype');
+    }
+}
 
 // blog.fontdeck.com/post/15777165734/opentype-1
 @mixin ligatures(

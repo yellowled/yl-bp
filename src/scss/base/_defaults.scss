@@ -1,5 +1,7 @@
 // ELEMENT STYLES NOT COVERED BY NORMALIZE
 // --------------------------------------------------------------------
+$helper-vh-class: sr-only !default;
+$helper-cf-class: clearfix !default;
 $selection-bg: #b3d4fc !default;
 $primary-font: $default-sans !default;
 
@@ -130,5 +132,16 @@ p {
     samp,
     kbd {
         hyphens: none;
+    }
+}
+
+// Helper classes
+@if $use-extra-classes {
+    .#{$helper-vh-class} {
+        @include visuallyhidden;
+    }
+
+    .#{$helper-cf-class} {
+        @include clearfix;
     }
 }

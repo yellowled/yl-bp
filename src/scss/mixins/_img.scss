@@ -20,3 +20,16 @@
         top: 0;
     }
 }
+
+// SVG icons
+$svg-icon-dims: 1.5rem !default;
+
+@mixin svg-icon(
+    $icon-height: $svg-icon-dims,
+    $icon-width: $icon-height,
+    $fill-color: currentColor
+) {
+    fill: $fill-color;
+    height: $icon-height;
+    width: $icon-width;
+}

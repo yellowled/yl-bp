@@ -1,16 +1,13 @@
-// Preset constants
-@import 'presets/presets';
+// Settings
+@import 'settings';
+@import 'variables';
 
-// Project-specific settings
-@import 'project/settings';
-@import 'project/variables';
-@import 'project/fonts';
+// Vendor
+@import '../../node_modules/node-normalize-scss/normalize';
 
 // Framework
-@import '../../node_modules/node-normalize-scss/normalize';
-@import 'mixins/mixins';
-@import 'base/base';
-@import 'layout/layout';
+@import 'mixins';
+@import 'base';
 
 // Modules
 @import 'modules/global';
