@@ -8,6 +8,7 @@
         "autoprefixer": {
             "grid": true
         },
-        "postcss-flexbugs-fixes": {}
+        "postcss-flexbugs-fixes": {},
+        "postcss-focus-within": {}
     }
 }

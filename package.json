@@ -71,6 +71,7 @@
         "onchange": "^5.2.0",
         "postcss-cli": "^6.1.2",
         "postcss-flexbugs-fixes": "^4.1.0",
+        "postcss-focus-within": "^3.0.0",
         "stylelint": "^9.10.1",
         "stylelint-config-prettier": "^5.0.0",
         "stylelint-config-recommended-scss": "^3.2.0",
