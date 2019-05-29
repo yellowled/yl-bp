@@ -60,7 +60,7 @@
         "browser-sync": "^2.26.5",
         "clean-css-cli": "^4.3.0",
         "copyfiles": "^2.1.0",
-        "del-cli": "^1.1.0",
+        "del-cli": "^2.0.0",
         "eslint": "^5.16.0",
         "eslint-plugin-compat": "^3.1.1",
         "html-minifier": "^4.0.0",
