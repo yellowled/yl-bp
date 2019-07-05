@@ -21,9 +21,9 @@
     "scripts": {
         "build": "npm-run-all --parallel html:build srv:build css:build js:build svg:build",
         "clean": "del-cli src/css/ src/js/ src/img/sprite.svg dist/",
-        "css:build": "npm-run-all --sequential lint:scss css:compile css:process",
+        "css:build": "npm-run-all --sequential lint:scss css:compile css:minify",
         "css:compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 5 src/scss/main.scss src/css/main.css",
-        "css:process": "postcss --config .postcssrc src/css/main.css --output dist/css/main.css",
+        "css:minify": "postcss --config .postcssrc src/css/main.css --output dist/css/main.css",
         "html:build": "npm-run-all --sequential lint:html html:minify",
         "html:minify": "html-minifier -c .htmlminifierrc --input-dir src --output-dir dist --file-ext html",
         "js:build": "npm-run-all --sequential lint:js js:compile js:minify",
