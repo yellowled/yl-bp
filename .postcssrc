@@ -9,6 +9,9 @@
             "grid": true
         },
         "postcss-flexbugs-fixes": {},
-        "postcss-focus-within": {}
+        "postcss-focus-within": {},
+        "cssnano": {
+            "preset": "default"
+        }
     }
 }
