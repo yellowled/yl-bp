@@ -48,7 +48,7 @@
         "watch:svg": "onchange src/icons/*.svg -i -- npm run svg:compile"
     },
     "dependencies": {
-        "node-normalize-scss": "^8.0.0",
+        "node-normalize-scss": "^8.0.1",
         "svg4everybody": "^2.1.9"
     },
     "devDependencies": {
