@@ -12,5 +12,8 @@
         "quotes": ["error", "single"],
         "semi": ["error", "always"],
         "compat/compat": "error"
+    },
+    "parserOptions": {
+        "sourceType": "module"
     }
 }

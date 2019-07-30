@@ -1,3 +1,5 @@
+import svg4everybody from 'svg4everybody';
+
 var ready = function(fn) {
     if (typeof fn !== 'function') return;
     // If document is already loaded, run method
@@ -10,5 +12,5 @@ var ready = function(fn) {
 
 ready(function() {
     // SVG polyfill
-    svg4everybody(); // eslint-disable-line no-undef
+    svg4everybody();
 });
