@@ -57,7 +57,7 @@
         "copyfiles": "^2.1.1",
         "cssnano": "^4.1.10",
         "del-cli": "^2.0.0",
-        "eslint": "^6.1.0",
+        "eslint": "^6.2.0",
         "eslint-plugin-compat": "^3.3.0",
         "html-minifier": "^4.0.0",
         "htmlhint": "^0.11.0",
