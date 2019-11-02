@@ -19,55 +19,42 @@
         "node": ">=10.0.0"
     },
     "scripts": {
-        "build": "npm-run-all --parallel html:build srv:build css:build js:build svg:build",
-        "clean": "del-cli src/css/ src/js/ src/img/sprite.svg dist/",
+        "build": "npm-run-all --parallel html:build srv:build css:build js:build",
         "css:build": "npm-run-all --sequential lint:scss css:compile css:minify",
         "css:compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 5 src/scss/main.scss src/css/main.css",
         "css:minify": "postcss --config .postcssrc src/css/main.css --output dist/css/main.css",
-        "html:build": "npm-run-all --sequential lint:html html:minify",
-        "html:minify": "html-minifier -c .htmlminifierrc --input-dir src --output-dir dist --file-ext html",
+        "html:build": "copyfiles -u 1 src/*.html dist/",
         "js:build": "npm-run-all --sequential lint:js js:compile js:minify",
         "js:compile": "rollup -c .rollup.config.js",
         "js:minify": "mkdirp dist/js/ && uglifyjs --compress --mangle --comments \"/^!/\" --source-map content=src/js/main.js.map,includeSources,url=main.js.map --output dist/js/main.js -- src/js/main.js",
-        "lint": "npm-run-all --parallel lint:html lint:js lint:scss",
-        "lint:html": "htmlhint src/*.html",
+        "lint": "npm-run-all --parallel lint:js lint:scss",
         "lint:js": "eslint src/scripts/**/*",
         "lint:scss": "stylelint --syntax scss src/scss/**/*.scss",
-        "serve": "browser-sync start --config .bs-config.js",
+        "serve": "live-server --ignore=**/*.map,scss/**/*,scripts/**/*,srv/* src/",
         "start": "npm run watch",
         "srv:build": "copyfiles -u 2 src/srv/* src/srv/.htaccess dist/",
-        "svg:build": "npm-run-all --sequential svg:compile svg:minify",
-        "svg:compile": "mkdirp src/img/ && svgstore -o src/img/sprite.svg src/icons/*.svg",
-        "svg:minify": "mkdirp dist/img/ && svgo --config=.svgorc src/img/sprite.svg -o dist/img/sprite.svg",
         "test": "npm run lint",
-        "watch": "npm-run-all --parallel watch:js watch:scss watch:svg serve",
+        "watch": "npm-run-all --parallel watch:js watch:scss serve",
         "watch:js": "onchange src/scripts/*.js -i -- npm run js:compile",
-        "watch:scss": "onchange src/scss/**/*.scss -i -- npm run css:compile",
-        "watch:svg": "onchange src/icons/*.svg -i -- npm run svg:compile"
+        "watch:scss": "onchange src/scss/**/*.scss -i -- npm run css:compile"
     },
     "dependencies": {
-        "node-normalize-scss": "^8.0.1",
-        "svg4everybody": "^2.1.9"
+        "node-normalize-scss": "^8.0.1"
     },
     "devDependencies": {
         "@babel/core": "^7.6.4",
         "@babel/preset-env": "^7.6.3",
         "autoprefixer": "^9.7.1",
-        "browser-sync": "^2.26.7",
         "copyfiles": "^2.1.1",
         "cssnano": "^4.1.10",
-        "del-cli": "^3.0.0",
         "eslint": "^6.6.0",
-        "eslint-plugin-compat": "^3.3.0",
-        "html-minifier": "^4.0.0",
-        "htmlhint": "^0.11.0",
+        "live-server": "^1.2.1",
         "mkdirp": "^0.5.1",
         "node-sass": "^4.13.0",
         "npm-run-all": "^4.1.5",
         "onchange": "^6.1.0",
         "postcss-cli": "^6.1.3",
         "postcss-flexbugs-fixes": "^4.1.0",
-        "postcss-focus-within": "^3.0.0",
         "rollup": "^1.26.3",
         "rollup-plugin-babel": "^4.3.3",
         "rollup-plugin-commonjs": "^10.1.0",
@@ -77,8 +64,74 @@
         "stylelint-config-recommended-scss": "^4.0.0",
         "stylelint-config-standard": "^19.0.0",
         "stylelint-scss": "^3.12.0",
-        "svgo": "^1.3.2",
-        "svgstore-cli": "^1.3.1",
         "uglify-js": "^3.6.7"
+    },
+    "babel": {
+        "presets": [
+            "@babel/preset-env"
+        ]
+    },
+    "browserslist": [
+        ">= 1%",
+        "IE 11"
+    ],
+    "eslintConfig": {
+        "env": {
+            "browser": true,
+            "es6": true
+        },
+        "extends": [
+            "eslint:recommended"
+        ],
+        "rules": {
+            "indent": [
+                "error",
+                4
+            ],
+            "linebreak-style": [
+                "error",
+                "unix"
+            ],
+            "quotes": [
+                "error",
+                "single"
+            ],
+            "semi": [
+                "error",
+                "always"
+            ]
+        },
+        "parserOptions": {
+            "sourceType": "module"
+        }
+    },
+    "postcss": {
+        "map": {
+            "inline": false,
+            "annotation": true,
+            "sourcesContent": true
+        },
+        "plugins": {
+            "autoprefixer": {
+                "grid": true
+            },
+            "postcss-flexbugs-fixes": {},
+            "cssnano": {
+                "preset": "default"
+            }
+        }
+    },
+    "prettier": {
+        "singleQuote": true,
+        "tabWidth": 4,
+        "trailingComma": "es5",
+        "useTabs": false
+    },
+    "stylelint": {
+        "extends": [
+            "stylelint-config-standard",
+            "stylelint-config-recommended-scss",
+            "stylelint-config-prettier"
+        ]
     }
 }

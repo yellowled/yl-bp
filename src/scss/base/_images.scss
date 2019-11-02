@@ -52,10 +52,9 @@ figure {
     }
 }
 
-// SVG Sprites
-@if $use-svg-sprites {
-    [class^='icon-'],
-    [class*='icon-'] {
+// SVG
+@if $use-svg {
+    [class^='icon-'] {
         @include svg-icon;
     }
 }
