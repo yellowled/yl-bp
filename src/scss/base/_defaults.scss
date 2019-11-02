@@ -5,10 +5,6 @@ $helper-cf-class: clearfix !default;
 $selection-bg: #b3d4fc !default;
 $primary-font: $default-sans !default;
 
-@-ms-viewport {
-    width: device-width;
-}
-
 html {
     box-sizing: border-box;
     font-family: $primary-font;
