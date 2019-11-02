@@ -31,15 +31,6 @@ $standard-buttons: true !default;
         margin: 0;
     }
 
-    button {
-        border-radius: 0;
-
-        &:focus {
-            outline: 1px dotted;
-            outline: 5px auto -webkit-focus-ring-color;
-        }
-    }
-
     button,
     input {
         overflow: visible;
@@ -58,7 +49,17 @@ $standard-buttons: true !default;
     [type='button'],
     [type='reset'],
     [type='submit'] {
+        font-weight: 400;
+        user-select: none;
+        vertical-align: middle;
         -webkit-appearance: button;
+    }
+
+    button {
+        &:focus {
+            outline: 1px dotted;
+            outline: 5px auto -webkit-focus-ring-color;
+        }
     }
 
     button:not(:disabled),
@@ -140,14 +141,6 @@ $standard-buttons: true !default;
             border: 0;
         }
 
-        &:focus {
-            background-color: $input-bg;
-            border-color: $input-focus;
-            box-shadow: $input-focus-shadow;
-            color: $input-fg;
-            outline: 0;
-        }
-
         &::-webkit-input-placeholder {
             color: $input-placeholder;
             opacity: 1;
@@ -158,12 +151,12 @@ $standard-buttons: true !default;
             opacity: 1;
         }
 
-        &:-ms-input-placeholder {
+        &::-ms-input-placeholder {
             color: $input-placeholder;
             opacity: 1;
         }
 
-        &::-ms-input-placeholder {
+        &:-ms-input-placeholder {
             color: $input-placeholder;
             opacity: 1;
         }
@@ -171,6 +164,14 @@ $standard-buttons: true !default;
         &::placeholder {
             color: $input-placeholder;
             opacity: 1;
+        }
+
+        &:focus {
+            background-color: $input-bg;
+            border-color: $input-focus;
+            box-shadow: $input-focus-shadow;
+            color: $input-fg;
+            outline: 0;
         }
 
         &:disabled,
@@ -241,11 +242,10 @@ $standard-buttons: true !default;
         margin-bottom: 0.125rem;
         min-height: 1.5rem;
         padding-left: 1.75em;
+    }
 
-        & .form-check-input {
-            float: left;
-            margin-left: -1.75em;
-        }
+    .form-check-label {
+        margin-bottom: 0;
     }
 
     .form-check-input {
@@ -303,9 +303,10 @@ $standard-buttons: true !default;
         &[disabled] ~ .form-check-label {
             opacity: 0.5;
         }
-    }
 
-    .form-check-label {
-        margin-bottom: 0;
+        .form-check & {
+            float: left;
+            margin-left: -1.75em;
+        }
     }
 }
