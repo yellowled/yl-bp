@@ -19,8 +19,8 @@
         "node": ">=10.0.0"
     },
     "scripts": {
-        "build": "npm-run-all --parallel html:build srv:build css:build js:build svg:build",
-        "clean": "del-cli src/css/ src/js/ src/img/sprite.svg dist/",
+        "build": "npm-run-all --parallel html:build srv:build css:build js:build",
+        "clean": "del-cli src/css/ src/js/ dist/",
         "css:build": "npm-run-all --sequential lint:scss css:compile css:minify",
         "css:compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 5 src/scss/main.scss src/css/main.css",
         "css:minify": "postcss --config .postcssrc src/css/main.css --output dist/css/main.css",
@@ -34,18 +34,13 @@
         "serve": "browser-sync start --config .bs-config.js",
         "start": "npm run watch",
         "srv:build": "copyfiles -u 2 src/srv/* src/srv/.htaccess dist/",
-        "svg:build": "npm-run-all --sequential svg:compile svg:minify",
-        "svg:compile": "mkdirp src/img/ && svgstore -o src/img/sprite.svg src/icons/*.svg",
-        "svg:minify": "mkdirp dist/img/ && svgo --config=.svgorc src/img/sprite.svg -o dist/img/sprite.svg",
         "test": "npm run lint",
-        "watch": "npm-run-all --parallel watch:js watch:scss watch:svg serve",
+        "watch": "npm-run-all --parallel watch:js watch:scss serve",
         "watch:js": "onchange src/scripts/*.js -i -- npm run js:compile",
-        "watch:scss": "onchange src/scss/**/*.scss -i -- npm run css:compile",
-        "watch:svg": "onchange src/icons/*.svg -i -- npm run svg:compile"
+        "watch:scss": "onchange src/scss/**/*.scss -i -- npm run css:compile"
     },
     "dependencies": {
-        "node-normalize-scss": "^8.0.1",
-        "svg4everybody": "^2.1.9"
+        "node-normalize-scss": "^8.0.1"
     },
     "devDependencies": {
         "@babel/core": "^7.6.4",
@@ -73,8 +68,6 @@
         "stylelint-config-recommended-scss": "^4.0.0",
         "stylelint-config-standard": "^19.0.0",
         "stylelint-scss": "^3.12.0",
-        "svgo": "^1.3.2",
-        "svgstore-cli": "^1.3.1",
         "uglify-js": "^3.6.7"
     }
 }
