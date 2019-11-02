@@ -7,5 +7,4 @@ node_modules/
 # Generated
 dist/
 src/css/
-src/img/sprite.svg
 src/js/

@@ -65,5 +65,76 @@
         "stylelint-config-standard": "^19.0.0",
         "stylelint-scss": "^3.12.0",
         "uglify-js": "^3.6.7"
+    },
+    "babel": {
+        "presets": [
+            "@babel/preset-env"
+        ]
+    },
+    "browserslist": [
+        ">= 1%",
+        "IE 11"
+    ],
+    "eslintConfig": {
+        "env": {
+            "browser": true,
+            "es6": true
+        },
+        "plugins": [
+            "compat"
+        ],
+        "extends": [
+            "eslint:recommended"
+        ],
+        "rules": {
+            "indent": [
+                "error",
+                4
+            ],
+            "linebreak-style": [
+                "error",
+                "unix"
+            ],
+            "quotes": [
+                "error",
+                "single"
+            ],
+            "semi": [
+                "error",
+                "always"
+            ]
+        },
+        "parserOptions": {
+            "sourceType": "module"
+        }
+    },
+    "postcss": {
+        "map": {
+            "inline": false,
+            "annotation": true,
+            "sourcesContent": true
+        },
+        "plugins": {
+            "autoprefixer": {
+                "grid": true
+            },
+            "postcss-flexbugs-fixes": {},
+            "cssnano": {
+                "preset": "default"
+            }
+        }
+    },
+    "prettier": {
+        "singleQuote": true,
+        "tabWidth": 4,
+        "trailingComma": "es5",
+        "useTabs": false
+    },
+    "stylelint": {
+        "extends": [
+            "stylelint-config-standard",
+            "stylelint-config-recommended-scss",
+            "stylelint-config-prettier"
+        ]
     }
 }
