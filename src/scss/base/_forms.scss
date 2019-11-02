@@ -1,161 +1,311 @@
 // FORM ELEMENTS
 // --------------------------------------------------------------------
-$input-bg: $off-white !default;
-$input-fg: $off-black !default;
-$input-focus: #06f !default;
-$input-placeholder: $greyed-out !default;
-$input-border-radius: 0 !default;
+$input-bg: #fff !default;
+$input-fg: #495057 !default;
+$input-focus: #8bbafe !default;
+$input-focus-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25) !default;
+$input-disabled-bg: #e9ecef !default;
+$input-disabled-fg: #6c757d !default;
+$input-placeholder: #6c757d !default;
+$input-check-bg: #0d6efd !default;
+$input-check-size: 1.25em !default;
+$input-border-radius: 0.25rem !default;
 $input-border-type: 1px solid !default;
-$input-border-color: #c1c1c1 #c1c1c1 #e1e1e1 !default;
+$input-border-color: #ced4da !default;
 $standard-buttons: true !default;
 
-@if $use-form-styles {
-    fieldset {
-        border: 0;
-        margin: 0;
-        padding: 0;
-    }
-
-    ::-webkit-input-placeholder {
-        color: $input-placeholder;
-    }
-
-    // Separate rule for Firefox. Cannot stack with WebKit's.
-    ::-moz-placeholder {
-        color: $input-placeholder;
-    }
-
-    // Separate rule for IE, too. Cannot stack with WebKit's.
-    :-ms-input-placeholder {
-        color: $input-placeholder;
-    }
-
-    :invalid {
-        // Suppress red glow that Firefox adds to form fields
-        // by default, even when user is still typing.
-        box-shadow: none;
-    }
-
-    @if $use-form-advanced {
-        optgroup {
-            background: $input-bg;
-            color: $input-fg;
-            font-style: normal;
-        }
-    }
-
-    // Borrowed heavily from formalize.me
-    %input-elements {
-        -webkit-appearance: none;
-        background-clip: padding-box;
-        background-color: $input-bg;
-        border: $input-border-type;
-        border-color: $input-border-color;
-        border-radius: $input-border-radius;
-        color: $input-fg;
-        height: 1.8em;
-        outline: 0;
-        padding: 2px 3px;
-        text-align: left;
-
-        &[disabled] {
-            background-color: $lite-grey;
-        }
-    }
-
-    @if $use-form-advanced {
-        input[type='date'],
-        input[type='datetime'],
-        input[type='datetime-local'],
-        input[type='month'],
-        input[type='number'],
-        input[type='password'],
-        input[type='time'],
-        input[type='week'],
-        input[type='tel'],
-        input[type='url'] {
-            @extend %input-elements;
-        }
-    }
-
-    input[type='email'],
-    input[type='search'],
-    input[type='text'],
-    select,
-    textarea {
-        @extend %input-elements;
-    }
-
-    select[size],
-    select[multiple],
-    textarea {
-        height: auto;
-    }
-
-    textarea {
-        min-height: 40px;
-        overflow: auto;
-        resize: vertical;
-        width: 100%;
+@if $use-forms {
+    label {
+        display: inline-block;
+        margin-bottom: 0.5rem;
     }
 
     button,
+    input,
+    optgroup,
     select,
-    textarea,
-    input {
+    textarea {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        margin: 0;
+    }
+
+    button {
+        border-radius: 0;
+
         &:focus {
-            box-shadow: 0 0 5px 0 $input-focus;
-            z-index: 1; // Opera
+            outline: 1px dotted;
+            outline: 5px auto -webkit-focus-ring-color;
         }
     }
 
-    input[type='file'],
-    input[type='radio'],
-    input[type='checkbox'] {
-        &:focus,
-        &:active {
-            box-shadow: none;
-        }
+    button,
+    input {
+        overflow: visible;
     }
 
-    // WebKit select appearance
-    @media (-webkit-min-device-pixel-ratio: 0) {
-        select {
-            background-image: url('data:image/gif;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==');
-            background-position: right center;
-            background-repeat: no-repeat;
-            padding-right: 20px;
-        }
+    button,
+    select {
+        text-transform: none;
+    }
 
-        select[size],
-        select[multiple] {
-            background-image: none;
-            padding: 0;
-        }
+    select {
+        word-wrap: normal;
+    }
+
+    button,
+    [type='button'],
+    [type='reset'],
+    [type='submit'] {
+        -webkit-appearance: button;
+    }
+
+    button:not(:disabled),
+    [type='button']:not(:disabled),
+    [type='reset']:not(:disabled),
+    [type='submit']:not(:disabled) {
+        cursor: pointer;
+    }
+
+    input[type='date'],
+    input[type='time'],
+    input[type='datetime-local'],
+    input[type='month'] {
+        -webkit-appearance: textfield;
+    }
+
+    textarea {
+        overflow: auto;
+        resize: vertical;
+    }
+
+    fieldset {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        min-width: 0;
+    }
+
+    legend {
+        color: inherit;
+        font-size: 1rem;
+        line-height: inherit;
+        margin-bottom: 0.5rem;
+        padding: 0;
+        white-space: normal;
+        width: 100%;
+    }
+
+    [type='search'] {
+        outline-offset: -2px;
+        -webkit-appearance: textfield;
+    }
+
+    ::-webkit-search-decoration {
+        -webkit-appearance: none;
     }
 
     // Form buttons
     @if $standard-buttons {
         button,
-        input[type='button'],
-        input[type='reset'],
-        input[type='submit'] {
+        [type='button'],
+        [type='reset'],
+        [type='submit'] {
             @include gradient-button;
         }
     }
 
-    // Disabled form elements
-    @if $use-form-advanced {
-        button[disabled],
-        select[disabled],
-        select[disabled] option,
-        select[disabled] optgroup,
-        textarea[disabled],
-        input[disabled] {
-            box-shadow: none;
-            color: $greyed-out;
-            cursor: default;
-            user-select: none;
+    .form-control {
+        background-clip: padding-box;
+        background-color: $input-bg;
+        border-radius: $input-border-radius;
+        border: $input-border-type $input-border-color;
+        color: $input-fg;
+        display: block;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        min-height: calc(1.5em + 0.75rem + 2px);
+        padding: 0.375rem 0.75rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        width: 100%;
+
+        @media (prefers-reduced-motion: reduce) {
+            transition: none;
         }
+
+        &::-ms-expand {
+            background-color: transparent;
+            border: 0;
+        }
+
+        &:focus {
+            background-color: $input-bg;
+            border-color: $input-focus;
+            box-shadow: $input-focus-shadow;
+            color: $input-fg;
+            outline: 0;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $input-placeholder;
+            opacity: 1;
+        }
+
+        &::-moz-placeholder {
+            color: $input-placeholder;
+            opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+            color: $input-placeholder;
+            opacity: 1;
+        }
+
+        &::-ms-input-placeholder {
+            color: $input-placeholder;
+            opacity: 1;
+        }
+
+        &::placeholder {
+            color: $input-placeholder;
+            opacity: 1;
+        }
+
+        &:disabled,
+        &[readonly] {
+            background-color: $input-disabled-bg;
+            opacity: 1;
+        }
+    }
+
+    .form-select {
+        appearance: none;
+        background: $input-bg
+            url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e")
+            no-repeat
+            right
+            0.75rem
+            center/16px
+            12px;
+        border-radius: $input-border-radius;
+        border: $input-border-type $input-border-color;
+        color: $input-fg;
+        display: inline-block;
+        font-size: 1rem;
+        font-weight: 400;
+        height: calc(1.5em + 0.75rem + 2px);
+        line-height: 1.5;
+        padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+        vertical-align: middle;
+        width: 100%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        &:focus {
+            border-color: $input-focus;
+            outline: 0;
+            box-shadow: $input-focus-shadow;
+        }
+
+        &:focus::-ms-value {
+            background-color: $input-bg;
+            color: $input-fg;
+        }
+
+        &[multiple],
+        &[size]:not([size='1']) {
+            background-image: none;
+            height: auto;
+            padding-right: 0.75rem;
+        }
+
+        &:disabled {
+            background-color: $input-disabled-bg;
+            color: $input-disabled-fg;
+        }
+
+        &::-ms-expand {
+            display: none;
+        }
+
+        &:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 $input-fg;
+        }
+    }
+
+    .form-check {
+        display: block;
+        margin-bottom: 0.125rem;
+        min-height: 1.5rem;
+        padding-left: 1.75em;
+
+        & .form-check-input {
+            float: left;
+            margin-left: -1.75em;
+        }
+    }
+
+    .form-check-input {
+        appearance: none;
+        background-color: $input-bg;
+        border: $input-border-type $input-border-color;
+        height: $input-check-size;
+        margin-top: 0.125em;
+        width: $input-check-size;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        &[type='checkbox'] {
+            border-radius: $input-border-radius;
+        }
+
+        &[type='radio'] {
+            border-radius: 50%;
+        }
+
+        &:active {
+            -webkit-filter: brightness(90%);
+            filter: brightness(90%);
+        }
+
+        &:focus {
+            border-color: $input-focus;
+            box-shadow: $input-focus-shadow;
+            outline: 0;
+        }
+
+        &:checked {
+            background-color: $input-check-bg;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 1em;
+            border-color: $input-check-bg;
+        }
+
+        &:checked[type='checkbox'] {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M4 8.5L6.5 11l6-6'/%3e%3c/svg%3e");
+        }
+
+        &:checked[type='radio'] {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+        }
+
+        &[disabled] {
+            pointer-events: none;
+            -webkit-filter: none;
+            filter: none;
+            opacity: 0.5;
+        }
+
+        &[disabled] ~ .form-check-label {
+            opacity: 0.5;
+        }
+    }
+
+    .form-check-label {
+        margin-bottom: 0;
     }
 }

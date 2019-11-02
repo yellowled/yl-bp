@@ -4,16 +4,13 @@
 $use-extra-classes: false !default;
 $use-cms-classes: false !default;
 
-// SVG sprites
-$use-svg-sprites: true !default;
+// Features
+$use-svg: true !default;
+$use-forms: false !default;
 
-// Grid systems
+// Layout
 $use-flex-grid: false !default;
 $use-css-grid: false !default;
-
-// Forms
-$use-form-styles: false !default;
-$use-form-advanced: false !default;
 
 // Messages
 $use-msg-basic: false !default;
