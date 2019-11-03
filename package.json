@@ -19,24 +19,11 @@
         "node": ">=10.0.0"
     },
     "scripts": {
-        "build": "npm-run-all --parallel html:build srv:build css:build js:build",
-        "css:build": "npm-run-all --sequential lint:scss css:compile css:minify",
-        "css:compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 5 src/scss/main.scss src/css/main.css",
-        "css:minify": "postcss --config .postcssrc src/css/main.css --output dist/css/main.css",
-        "html:build": "copyfiles -u 1 src/*.html dist/",
-        "js:build": "npm-run-all --sequential lint:js js:compile js:minify",
-        "js:compile": "rollup -c .rollup.config.js",
-        "js:minify": "mkdirp dist/js/ && uglifyjs --compress --mangle --comments \"/^!/\" --source-map content=src/js/main.js.map,includeSources,url=main.js.map --output dist/js/main.js -- src/js/main.js",
-        "lint": "npm-run-all --parallel lint:js lint:scss",
-        "lint:js": "eslint src/scripts/**/*",
-        "lint:scss": "stylelint --syntax scss src/scss/**/*.scss",
-        "serve": "live-server --ignore=**/*.map,scss/**/*,scripts/**/*,srv/* src/",
-        "start": "npm run watch",
-        "srv:build": "copyfiles -u 2 src/srv/* src/srv/.htaccess dist/",
-        "test": "npm run lint",
-        "watch": "npm-run-all --parallel watch:js watch:scss serve",
-        "watch:js": "onchange src/scripts/*.js -i -- npm run js:compile",
-        "watch:scss": "onchange src/scss/**/*.scss -i -- npm run css:compile"
+        "build": "parcel build src/*.html",
+        "start": "parcel src/index.html --open",
+        "test": "npm-run-all --parallel test:js test:scss",
+        "test:js": "eslint src/scripts/**/*",
+        "test:scss": "stylelint --syntax scss src/scss/**/*.scss"
     },
     "dependencies": {
         "node-normalize-scss": "^8.0.1"
@@ -44,27 +31,15 @@
     "devDependencies": {
         "@babel/core": "^7.6.4",
         "@babel/preset-env": "^7.6.3",
-        "autoprefixer": "^9.7.1",
-        "copyfiles": "^2.1.1",
-        "cssnano": "^4.1.10",
         "eslint": "^6.6.0",
-        "live-server": "^1.2.1",
-        "mkdirp": "^0.5.1",
-        "node-sass": "^4.13.0",
-        "npm-run-all": "^4.1.5",
-        "onchange": "^6.1.0",
-        "postcss-cli": "^6.1.3",
+        "parcel-bundler": "^1.12.4",
         "postcss-flexbugs-fixes": "^4.1.0",
-        "rollup": "^1.26.3",
-        "rollup-plugin-babel": "^4.3.3",
-        "rollup-plugin-commonjs": "^10.1.0",
-        "rollup-plugin-node-resolve": "^5.2.0",
+        "sass": "^1.23.3",
         "stylelint": "^11.1.1",
         "stylelint-config-prettier": "^6.0.0",
         "stylelint-config-recommended-scss": "^4.0.0",
         "stylelint-config-standard": "^19.0.0",
-        "stylelint-scss": "^3.12.0",
-        "uglify-js": "^3.6.7"
+        "stylelint-scss": "^3.12.0"
     },
     "babel": {
         "presets": [
@@ -115,10 +90,7 @@
             "autoprefixer": {
                 "grid": true
             },
-            "postcss-flexbugs-fixes": {},
-            "cssnano": {
-                "preset": "default"
-            }
+            "postcss-flexbugs-fixes": {}
         }
     },
     "prettier": {
