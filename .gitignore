@@ -4,7 +4,8 @@
 # Node
 node_modules/
 
+# Parcel
+.cache/
+
 # Generated
 dist/
-src/css/
-src/js/
