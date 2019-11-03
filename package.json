@@ -20,10 +20,9 @@
     },
     "scripts": {
         "build": "parcel build src/*.html",
-        "start": "parcel src/index.html --open",
-        "test": "npm-run-all --parallel test:js test:scss",
-        "test:js": "eslint src/scripts/**/*",
-        "test:scss": "stylelint --syntax scss src/scss/**/*.scss"
+        "lint:js": "eslint src/js/**/*",
+        "lint:scss": "stylelint --syntax scss src/css/**/*.scss",
+        "start": "parcel src/index.html --open"
     },
     "dependencies": {
         "node-normalize-scss": "^8.0.1"
