@@ -93,12 +93,6 @@
             "postcss-flexbugs-fixes": {}
         }
     },
-    "prettier": {
-        "singleQuote": true,
-        "tabWidth": 4,
-        "trailingComma": "es5",
-        "useTabs": false
-    },
     "stylelint": {
         "extends": [
             "stylelint-config-standard",
