@@ -28,8 +28,8 @@
         "node-normalize-scss": "^8.0.1"
     },
     "devDependencies": {
-        "@babel/core": "^7.6.4",
-        "@babel/preset-env": "^7.6.3",
+        "@babel/core": "^7.7.2",
+        "@babel/preset-env": "^7.7.1",
         "eslint": "^6.6.0",
         "parcel-bundler": "^1.12.4",
         "parcel-plugin-static-files-copy": "^2.2.1",
