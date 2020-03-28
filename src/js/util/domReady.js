@@ -1,3 +1,7 @@
+/**
+ * Wait for the document to be loaded
+ */
+
 const ready = function(fn) {
     if (typeof fn !== 'function') return;
     // If document is already loaded, run method

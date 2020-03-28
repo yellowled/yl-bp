@@ -1,5 +1,6 @@
-import ready from './util/domready';
+import ready from './util/domReady';
+import switchClass from './util/switchClass';
 
 ready(function() {
-    // Here be dragons
+    switchClass();
 });
