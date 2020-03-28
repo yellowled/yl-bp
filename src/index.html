@@ -463,7 +463,7 @@ I'm readonly</textarea
 
                         <div class="form-group">
                             <label for="select-element">Select Element:</label>
-                            <select class="form-control" id="select-element">
+                            <select class="form-select" id="select-element">
                                 <optgroup label="Option Group 1">
                                     <option value="1">Option 1</option>
                                     <option value="2">Option 2</option>
@@ -483,7 +483,7 @@ I'm readonly</textarea
                                 >Disabled Select Element:</label
                             >
                             <select
-                                class="form-control"
+                                class="form-select"
                                 id="select-element-disabled"
                                 disabled
                             >
@@ -502,8 +502,12 @@ I'm readonly</textarea
                                     name="radio-button"
                                     value="radio-1"
                                     id="radio-1"
+                                    class="form-check-input"
+                                    checked
                                 />
-                                <label for="radio-1">Radio 1</label>
+                                <label class="form-check-label" for="radio-1"
+                                    >Radio 1</label
+                                >
                             </div>
                             <div class="form-check">
                                 <input
@@ -511,8 +515,11 @@ I'm readonly</textarea
                                     name="radio-button"
                                     value="radio-2"
                                     id="radio-2"
+                                    class="form-check-input"
                                 />
-                                <label for="radio-2">Radio 2</label>
+                                <label class="form-check-label" for="radio-2"
+                                    >Radio 2</label
+                                >
                             </div>
                             <div class="form-check">
                                 <input
@@ -520,8 +527,11 @@ I'm readonly</textarea
                                     name="radio-button"
                                     value="radio-3"
                                     id="radio-3"
+                                    class="form-check-input"
                                 />
-                                <label for="radio-3">Radio 3</label>
+                                <label class="form-check-label" for="radio-3"
+                                    >Radio 3</label
+                                >
                             </div>
                             <div class="form-check">
                                 <input
@@ -529,9 +539,12 @@ I'm readonly</textarea
                                     name="radio-button"
                                     value="radio-4"
                                     id="radio-4"
+                                    class="form-check-input"
                                     disabled
                                 />
-                                <label for="radio-4">Radio Disabled</label>
+                                <label class="form-check-label" for="radio-4"
+                                    >Radio Disabled</label
+                                >
                             </div>
                         </fieldset>
 
@@ -543,8 +556,12 @@ I'm readonly</textarea
                                     name="checkboxes"
                                     value="check-1"
                                     id="check-1"
+                                    class="form-check-input"
+                                    checked
                                 />
-                                <label for="check-1">Checkbox 1</label>
+                                <label class="form-check-label" for="check-1"
+                                    >Checkbox 1</label
+                                >
                             </div>
                             <div class="form-check">
                                 <input
@@ -552,8 +569,11 @@ I'm readonly</textarea
                                     name="checkboxes"
                                     value="check-2"
                                     id="check-2"
+                                    class="form-check-input"
                                 />
-                                <label for="check-2">Checkbox 2</label>
+                                <label class="form-check-label" for="check-2"
+                                    >Checkbox 2</label
+                                >
                             </div>
                             <div class="form-check">
                                 <input
@@ -561,8 +581,11 @@ I'm readonly</textarea
                                     name="checkboxes"
                                     value="check-3"
                                     id="check-3"
+                                    class="form-check-input"
                                 />
-                                <label for="check-3">Checkbox 3</label>
+                                <label class="form-check-label" for="check-3"
+                                    >Checkbox 3</label
+                                >
                             </div>
                             <div class="form-check">
                                 <input
@@ -570,9 +593,12 @@ I'm readonly</textarea
                                     name="checkboxes"
                                     value="check-4"
                                     id="check-4"
+                                    class="form-check-input"
                                     disabled
                                 />
-                                <label for="check-4">Checkbox Disabled</label>
+                                <label class="form-check-label" for="check-4"
+                                    >Checkbox Disabled</label
+                                >
                             </div>
                         </fieldset>
 

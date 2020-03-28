@@ -2,16 +2,16 @@
 // --------------------------------------------------------------------
 $input-bg: #fff !default;
 $input-fg: #495057 !default;
-$input-focus: #8bbafe !default;
-$input-focus-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25) !default;
-$input-disabled-bg: #e9ecef !default;
-$input-disabled-fg: #6c757d !default;
 $input-placeholder: #6c757d !default;
-$input-check-bg: #0d6efd !default;
-$input-check-size: 1.25em !default;
 $input-border-radius: 0.25rem !default;
 $input-border-type: 1px solid !default;
 $input-border-color: #ced4da !default;
+$input-check-bg: #0d6efd !default;
+$input-check-size: 1.25em !default;
+$input-focus: #8bbafe !default;
+$input-focus-shadow: 0 0 0 0.2rem rgba($input-check-bg, 0.25) !default;
+$input-disabled-bg: #e9ecef !default;
+$input-disabled-fg: #6c757d !default;
 $standard-buttons: true !default;
 
 @if $use-forms {
@@ -206,8 +206,8 @@ $standard-buttons: true !default;
 
         &:focus {
             border-color: $input-focus;
-            outline: 0;
             box-shadow: $input-focus-shadow;
+            outline: 0;
         }
 
         &:focus::-ms-value {
