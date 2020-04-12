@@ -5,8 +5,8 @@ $button-focus: #06f !default;
 $button-padding: 0.1875rem 0.625rem !default;
 
 @mixin gradient-button(
-    $bg-color: $silver,
-    $fg-color: $black,
+    $bg-color: #ddd,
+    $fg-color: #000,
     $radius: $button-radius
 ) {
     background-clip: padding-box;
@@ -23,7 +23,7 @@ $button-padding: 0.1875rem 0.625rem !default;
     display: inline-block;
     line-height: normal;
     outline: 0;
-    padding: $button-padding;
+    padding: $padding;
     text-align: center;
     text-decoration: none;
     text-shadow: invert($fg-color) 0 1px 1px;
@@ -47,7 +47,7 @@ $button-padding: 0.1875rem 0.625rem !default;
         );
         border-color: darken($bg-color, 26.5%) darken($bg-color, 13.2%)
             $bg-color;
-        box-shadow: inset rgba($black, 0.25) 0 1px 2px 0;
+        box-shadow: inset rgba(#000, 0.25) 0 1px 2px 0;
     }
 
     &:focus {
@@ -64,8 +64,8 @@ $button-padding: 0.1875rem 0.625rem !default;
 }
 
 @mixin flat-button(
-    $bg-color: $silver,
-    $fg-color: $black,
+    $bg-color: #ddd,
+    $fg-color: #000,
     $radius: $button-radius,
     $alt-color: complement($bg-color)
 ) {
@@ -98,8 +98,8 @@ $button-padding: 0.1875rem 0.625rem !default;
 }
 
 @mixin border-button(
-    $fg-color: $black,
-    $alt-color: $white,
+    $fg-color: #000,
+    $alt-color: #fff,
     $border-width: 1px,
     $radius: $button-radius
 ) {
@@ -131,9 +131,9 @@ $button-padding: 0.1875rem 0.625rem !default;
 }
 
 @mixin unstyled-button(
-    $fg-color: $black,
+    $fg-color: #000,
     $bg-color: transparent,
-    $alt-color: $black
+    $alt-color: #000
 ) {
     background: transparent;
     background-clip: padding-box;

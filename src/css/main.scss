@@ -1,13 +1,11 @@
-// Settings
-@import 'settings';
+// Variables
 @import 'variables';
 
-// Vendor
+// Base
 @import '../../node_modules/node-normalize-scss/normalize';
-
-// Framework
 @import 'mixins';
 @import 'base';
+@import 'forms';
 
 // Modules
 @import 'modules/global';

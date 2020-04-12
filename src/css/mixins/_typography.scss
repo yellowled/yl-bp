@@ -19,8 +19,7 @@ $quote-source: '> footer' !default;
         font-style: $style;
         font-weight: $weight;
         src: url('#{$path}#{$src}.woff2') format('woff2'),
-            url('#{$path}#{$src}.woff') format('woff'),
-            url('#{$path}#{$src}.ttf') format('truetype');
+            url('#{$path}#{$src}.woff') format('woff');
     }
 }
 

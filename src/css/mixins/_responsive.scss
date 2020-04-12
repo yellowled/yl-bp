@@ -1,5 +1,6 @@
-// RESPONSIVE MEDIA OBJECTS, github.com/suitcss/components-flex-embed
+// RESPONSIVE HELPERS
 // --------------------------------------------------------------------
+// github.com/suitcss/components-flex-embed
 @mixin responsive-object($ratio: 16by9) {
     display: block;
     height: 0;
@@ -24,5 +25,27 @@
         position: absolute;
         top: 0;
         width: 100%;
+    }
+}
+
+// mixin needs to be applied to a div containing the table
+@mixin responsive-table($breakpoint: 576px) {
+    min-height: 0.01%;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    th,
+    td {
+        white-space: nowrap;
+    }
+
+    @media screen and (min-width: $breakpoint) {
+        overflow-y: auto;
+
+        th,
+        td {
+            white-space: normal;
+        }
     }
 }

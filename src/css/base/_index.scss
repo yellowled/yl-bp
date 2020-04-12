@@ -1,13 +1,18 @@
-// ELEMENT STYLES NOT COVERED BY NORMALIZE
+// BASE STYLES NOT COVERED BY NORMALIZE
 // --------------------------------------------------------------------
-$helper-vh-class: sr-only !default;
-$helper-cf-class: clearfix !default;
-$selection-bg: #b3d4fc !default;
-$primary-font: $default-sans !default;
+$headings-scale: (
+    h1: 2,
+    h2: 1.5,
+    h3: 1.25,
+    h4: 1.125,
+    h5: 1,
+    h6: 1,
+) !default;
 
 html {
     box-sizing: border-box;
-    font-family: $primary-font;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     font-size: 100%;
 }
 
@@ -18,7 +23,7 @@ html {
 }
 
 ::selection {
-    background: $selection-bg;
+    background: #b3d4fc;
     text-shadow: none;
 }
 
@@ -33,7 +38,7 @@ dd {
 table {
     border-collapse: collapse;
     border-spacing: 0;
-    margin: $type-rhythm 0;
+    margin: 1rem 0;
     width: 100%;
 }
 
@@ -51,10 +56,10 @@ li {
 
 hr {
     border: 0;
-    border-top: 1px solid $silver;
+    border-top: 1px solid;
     display: block;
     height: 1px;
-    margin: $type-rhythm 0;
+    margin: 1rem 0;
     padding: 0;
 }
 
@@ -72,6 +77,23 @@ video {
     vertical-align: middle;
 }
 
+video,
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+figure {
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+[class^='icon-'] {
+    fill: currentColor;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
 // Navigation
 nav ul,
 nav ol {
@@ -80,16 +102,15 @@ nav ol {
     padding: 0;
 }
 
-// BASIC TYPOGRAPHY
-// --------------------------------------------------------------------
 body {
-    line-height: $type-height;
+    line-height: 1.5;
 }
 
-@each $heading, $factor in $type-headings {
+// Headings
+@each $heading, $factor in $headings-scale {
     #{$heading} {
         font-size: $factor * 1em;
-        margin: $type-rhythm 0;
+        margin: 1rem 0;
     }
 }
 
@@ -124,16 +145,5 @@ p {
     samp,
     kbd {
         hyphens: none;
-    }
-}
-
-// Helper classes
-@if $use-extra-classes {
-    .#{$helper-vh-class} {
-        @include visuallyhidden;
-    }
-
-    .#{$helper-cf-class} {
-        @include clearfix;
     }
 }
