@@ -25,6 +25,7 @@
         "start": "parcel src/index.html --open"
     },
     "dependencies": {
+        "core-js": "^3.6.5",
         "node-normalize-scss": "^8.0.1"
     },
     "devDependencies": {
