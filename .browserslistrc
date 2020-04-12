@@ -1,2 +1,4 @@
 >= 1%
 IE 11
+not op_mini all
+not and_uc > 0
