@@ -1,0 +1,201 @@
+// RESET
+// --------------------------------------------------------------------
+html {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+body {
+    line-height: 1.5;
+    margin: 0;
+}
+
+main {
+    display: block;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+p {
+    hyphens: auto;
+
+    code,
+    samp,
+    kbd {
+        hyphens: none;
+    }
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid;
+    box-sizing: content-box;
+    display: block;
+    height: 1px;
+    margin: 1rem 0;
+    overflow: visible;
+    padding: 0;
+}
+
+pre {
+    font-size: 0.875rem;
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin: 0;
+}
+
+li {
+    ul,
+    ol {
+        margin: 0;
+    }
+}
+
+nav {
+    ul,
+    ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+a {
+    background-color: transparent;
+}
+
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+// html5doctor.com/blockquote-q-cite/
+q {
+    quotes: '“' '”' '‘' '’';
+}
+
+:lang(de) q {
+    quotes: '„' '“' '‚' '‘';
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 0.875em;
+
+    pre & {
+        font-size: 1em;
+    }
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+img {
+    border-style: none;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+video,
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+figure {
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+[class^='icon-'] {
+    fill: currentColor;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+details {
+    display: block;
+}
+
+summary {
+    cursor: pointer;
+    display: list-item;
+}
+
+template,
+[hidden] {
+    display: none;
+}

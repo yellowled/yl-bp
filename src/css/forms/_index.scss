@@ -17,6 +17,17 @@ $input-focus-shadow: 0 0 0 0.2rem rgba($input-check-bg, 0.25) !default;
 $input-disabled-bg: #e9ecef !default;
 $input-disabled-fg: #6c757d !default;
 
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
 label {
     display: inline-block;
     margin-bottom: 0.5rem;
@@ -57,6 +68,21 @@ button,
     -webkit-appearance: button;
 }
 
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
 button {
     &:focus {
         outline: 1px dotted;
@@ -78,6 +104,12 @@ input[type='month'] {
     -webkit-appearance: textfield;
 }
 
+[type='checkbox'],
+[type='radio'] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
 textarea {
     overflow: auto;
     resize: vertical;
@@ -92,6 +124,7 @@ fieldset {
 
 legend {
     color: inherit;
+    display: table;
     font-size: 1rem;
     line-height: inherit;
     margin-bottom: 0.5rem;
@@ -107,6 +140,18 @@ legend {
 
 ::-webkit-search-decoration {
     -webkit-appearance: none;
+}
+
+[type='number'] {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+        height: auto;
+    }
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
 }
 
 .#{$classname-wrapper} {
