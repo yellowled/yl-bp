@@ -17,17 +17,6 @@ $input-focus-shadow: 0 0 0 0.2rem rgba($input-check-bg, 0.25) !default;
 $input-disabled-bg: #e9ecef !default;
 $input-disabled-fg: #6c757d !default;
 
-button,
-input,
-optgroup,
-select,
-textarea {
-    font-family: inherit;
-    font-size: 100%;
-    line-height: 1.15;
-    margin: 0;
-}
-
 label {
     display: inline-block;
     margin-bottom: 0.5rem;
@@ -76,18 +65,16 @@ button::-moz-focus-inner,
     padding: 0;
 }
 
+button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
 button:-moz-focusring,
 [type='button']:-moz-focusring,
 [type='reset']:-moz-focusring,
 [type='submit']:-moz-focusring {
     outline: 1px dotted ButtonText;
-}
-
-button {
-    &:focus {
-        outline: 1px dotted;
-        outline: 5px auto -webkit-focus-ring-color;
-    }
 }
 
 button:not(:disabled),

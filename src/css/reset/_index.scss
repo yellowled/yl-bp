@@ -34,16 +34,6 @@ h1 {
     margin: 0.67em 0;
 }
 
-p {
-    hyphens: auto;
-
-    code,
-    samp,
-    kbd {
-        hyphens: none;
-    }
-}
-
 hr {
     border: 0;
     border-top: 1px solid;
@@ -56,9 +46,8 @@ hr {
 }
 
 pre {
+    font-family: monospace, monospace; // stylelint-disable-line font-family-no-duplicate-names
     font-size: 0.875rem;
-    font-family: monospace, monospace;
-    font-size: 1em;
 }
 
 dt {
@@ -124,7 +113,7 @@ q {
 code,
 kbd,
 samp {
-    font-family: monospace, monospace;
+    font-family: monospace, monospace; // stylelint-disable-line font-family-no-duplicate-names
     font-size: 0.875em;
 
     pre & {
@@ -198,4 +187,14 @@ summary {
 template,
 [hidden] {
     display: none;
+}
+
+p {
+    hyphens: auto;
+
+    code,
+    samp,
+    kbd {
+        hyphens: none;
+    }
 }
